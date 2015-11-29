@@ -1,0 +1,66 @@
+<template name = 'information'>
+  <p>Fill out information about yourself.</p>
+  {{> pi}}
+  {{> educ}}
+</template>
+
+
+<template name = 'pi'>
+  <form>
+      <fieldset>
+        <legend>
+          Personal Information
+        </legend>
+        Email
+        <input type = "text" name = "email">
+        <br>
+        Zip Code
+        <input type = "text" name = "zip">
+        <input type = "submit" value = "Enter information">
+    </fieldset>
+  </form>
+</template>
+
+<template name = 'educ'>
+  <form>
+    <fieldset>
+      <legend>
+        Education
+      </legend>
+      School
+      <input type = "text" name = "school">
+      Degree Earned
+      <input type = "text" name = "degree">
+      <br>
+      Field of Study
+      <input type = "text" name = "subject">
+      <br>
+      Education level
+      <br>
+      <input type = "checkbox" name = "level" value = "somehs">Some high school
+      <br>
+      <input type = "checkbox" name = "level" value = "diploma">high school diploma
+      <br>
+      <input type = "checkbox" name = "level" value = "assoc">associates degree
+      <br>
+      <input type = "checkbox" name = "level" value = "ba">BAchelors degree
+      <br>
+      <input type = "checkbox" name = "level" value = "somegr">Some graduate school
+      <br>
+      <input type = "checkbox" name = "level" value = "ms">Master's degree
+      <br>
+      <input type = "checkbox" name = "level" value = "diff">'all but differation' doctoral work
+      <br>
+      <input type = "checkbox" name = "level" value = "jd">Juris Doctor degree
+      <br>
+      <input type = "checkbox" name = "level" value = "phd">PhD degree
+      <br>
+      <input type = "checkbox" name = "level" value = "other">Other Please explain:
+      <br>
+      <input type = "submit" value = "Enter education">
+    </fieldset>
+  </form>
+
+
+  
+</template>

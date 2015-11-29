@@ -1,0 +1,16 @@
+<template name = 'home'>
+  <h1>Welcome to JobFit!</h1>
+
+  {{> loginButtons}}
+
+  <br>
+  <br>
+  Are you a job-seeker or an employer rep?
+  <br>
+  <input type = 'radio' name = 'userType' value = 'talent'>Job Seeker
+  <input type = 'radio' name = 'userType' value = 'rep'>Employer Rep
+
+  <br>
+  <br>
+  <a href="{{pathFor route='information'}}">Personal Info</a>
+</template>
