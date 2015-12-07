@@ -92,4 +92,49 @@ Template.educ.events({
 
     }
 
+
 });
+
+
+Template.home.events({
+  "click input": function (event, template) {
+          // Prevent default browser form submit
+          event.preventDefault();
+
+          /*
+          var user = Meteor.users.findOne(Meteor.userId);
+
+
+          // Insert a task into the collection
+          Meteor.users.update(
+            {_id: user._id}, {$set: {"profile.education": [school,degree,subject]} }
+          );
+
+          */
+
+
+
+          var thing1 = template.find('input:radio[name= userType]:checked').value;
+
+          console.log(thing1);
+
+        }
+
+      });
+
+
+      
+
+      Template.home.helpers({
+        'checkType': function(typeUser)
+        {
+          if (typeUser == 'talent')
+          {
+            return true;
+          }
+          else
+          {
+            return false;
+          }
+        }
+      });
