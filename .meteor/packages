@@ -21,3 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 accounts-ui
 accounts-password
+aldeed:autoform
+aldeed:collection2
+joshowens:simple-form

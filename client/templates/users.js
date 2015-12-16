@@ -43,7 +43,7 @@ Template.pi.events({
 
       // Insert a task into the collection
       Meteor.users.update(
-        {_id: user._id}, {$set: {"profile.address": zipCode} }
+        {_id: Meteor.userId()}, {$set: {"profile.address": zipCode} }
       );
 
 
@@ -65,12 +65,12 @@ Template.educ.events({
       var school = event.target.school.value;
       var degree= event.target.degree.value;
       var subject= event.target.subject.value;
-      var user = Meteor.users.findOne(Meteor.userId);
+      var user = Meteor.userId;
 
 
       // Insert a task into the collection
       Meteor.users.update(
-        {_id: user._id}, {$set: {"profile.education": [school,degree,subject]} }
+        {_id: Meteor.userId()}, {$set: {"profile.education": [school,degree,subject]} }
       );
 
 
@@ -123,7 +123,7 @@ Template.home.events({
       });
 
 
-      
+
 
       Template.home.helpers({
         'checkType': function(typeUser)
@@ -137,4 +137,10 @@ Template.home.events({
             return false;
           }
         }
+      });
+
+
+      Accounts.ui.config
+      ({
+        passwordSignupFields: "USERNAME_ONLY"
       });
