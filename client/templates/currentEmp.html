@@ -1,32 +1,72 @@
-<template name = 'information'>
-  <p>Fill out information about yourself.</p>
-  {{> pi}}
-  {{> educ}}
+<template name = 'currentEmp'>
+  <p>
+    Please fill out your current Employer information.
+  </p>
+
+  {{> employerInfo}}
+  {{> jobInfo}}
   {{> skills}}
   {{> occupationInfo}}
 
   <a href="{{pathFor route='home'}}">Home</a>
-  <a href="{{pathFor route='currentEmp'}}">Current Employer</a>
 </template>
 
 
 
 
-<template name = 'pi'>
+<template name = 'employerInfo'>
   <form>
       <fieldset>
         <legend>
-          Personal Information
+          Employer Information
         </legend>
-        Email
-        <input type = "text" name = "email">
+        Company Name:
+        <input type = "text" name = "companyName">
         <br>
+        Do you work remotely?
+        <input type = 'radio' name = 'remote' value="yes">Yes
+        <input type = 'radio' name = 'remote' value="no">No
+        <br>
+        Street Address
+        <input type = "text" name = "street">
+        <br>
+        City
+        <input type = "text" name = "city">
+        <br>
+        State
+        <input type = "text" name = "state">
         Zip Code
         <input type = "text" name = "zip">
-        <input type = "submit" value = "Enter information">
     </fieldset>
   </form>
 </template>
+
+<template name = 'jobInfo'>
+  <form>
+      <fieldset>
+        <legend>
+          Job Information
+        </legend>
+        Job Title
+        <input type = "text" name = "title">
+        Have you been promoted?
+        <input type = 'radio' name = 'promotion' value="yes">Yes
+        <input type = 'radio' name = 'promotion' value="no">No
+        <br>
+        if yes, how many times:
+        <input type = "text" name = "timespromoted">
+        <br>
+        Date of Promotion
+        <input type = "text" name = "promotiondate">
+        <br>
+        Start Date
+        <input type = "text" name = "startdate">
+      </fieldset>
+    </form>
+</template>
+
+
+
 
 <template name = 'educ'>
   <form>
