@@ -5,10 +5,11 @@
 
   {{> employerInfo}}
   {{> jobInfo}}
-  {{> skills}}
-  {{> occupationInfo}}
+  {{> empStatus}}
+  {{> jobFeeling}}
 
   <a href="{{pathFor route='home'}}">Home</a>
+  <a href="{{pathFor route='formerEmp'}}">Former Employer</a>
 </template>
 
 
@@ -68,43 +69,21 @@
 
 
 
-<template name = 'educ'>
+<template name = 'empStatus'>
   <form>
     <fieldset>
       <legend>
-        Education
+        Employment Status
       </legend>
-      School
-      <input type = "text" name = "school">
-      Degree Earned
-      <input type = "text" name = "degree">
+      Status
+      <input type = 'radio' name = 'status' value="full-time">Full Time
+      <input type = 'radio' name = 'status' value="part-time">Part Time
+      <input type = 'radio' name = 'status' value="other">Other
       <br>
-      Field of Study
-      <input type = "text" name = "subject">
-      <br>
-      Education level
-      <br>
-      <input type = "checkbox" name = "level" value = "somehs">Some high school
-      <br>
-      <input type = "checkbox" name = "level" value = "diploma">high school diploma
-      <br>
-      <input type = "checkbox" name = "level" value = "assoc">associates degree
-      <br>
-      <input type = "checkbox" name = "level" value = "ba">BAchelors degree
-      <br>
-      <input type = "checkbox" name = "level" value = "somegr">Some graduate school
-      <br>
-      <input type = "checkbox" name = "level" value = "ms">Master's degree
-      <br>
-      <input type = "checkbox" name = "level" value = "diff">'all but differation' doctoral work
-      <br>
-      <input type = "checkbox" name = "level" value = "jd">Juris Doctor degree
-      <br>
-      <input type = "checkbox" name = "level" value = "phd">PhD degree
-      <br>
-      <input type = "checkbox" name = "level" value = "other">Other Please explain:
-      <br>
-      <input type = "submit" value = "Enter education">
+      if other
+      <input type = "text" name = "other status">
+      Average hours worked per week
+      <input type = "text" name = "hours">
     </fieldset>
   </form>
 
@@ -112,64 +91,75 @@
 
 
 
-<template name = 'skills'>
+<template name = 'jobFeeling'>
   <form>
     <fieldset>
       <legend>
-        Skills
+        Feelings toward Job
       </legend>
-      Skill 1
-      <input type = "text" name = "skill1">
+      Overall, I am satisfied with my current job.
       <br>
-      Skill 2
-      <input type = "text" name = "skill2">
+      <input type = "radio" name = "job satisfaction" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "job satisfaction" value = "disagree">Disagree
+      <input type = "radio" name = "job satisfaction" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "job satisfaction" value = "agree">Agree
+      <input type = "radio" name = "job satisfaction" value = "strongly agree">Strongly Agree
       <br>
-      Skill 3
-      <input type = "text" name = "skill3">
+      I perform my job well.
       <br>
-      Skill 4
-      <input type = "text" name = "skill4">
+      <input type = "radio" name = "performance" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "performance" value = "disagree">Disagree
+      <input type = "radio" name = "performance" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "performance" value = "agree">Agree
+      <input type = "radio" name = "performance" value = "strongly agree">Strongly Agree
       <br>
-      Skill 5
-      <input type = "text" name = "skill5">
-      </fieldset>
-    </form>
-
-</template>
-
-
-<template name = 'creds'>
-  <form>
-    <fieldset>
-      <legend>
-      Credentials and certificates
-      </legend>
-      Certificate
-      <input type = "text" name = "cert1">
+      I would be glad to spend my whole career with my current employer.
       <br>
-      Credential
-      <input type = "text" name = "cred1">
+      <input type = "radio" name = "career" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "career" value = "disagree">Disagree
+      <input type = "radio" name = "career" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "career" value = "agree">Agree
+      <input type = "radio" name = "career" value = "strongly agree">Strongly Agree
       <br>
-    </fieldset>
-  </form>
-
-</template>
-
-
-<template name = 'occupationInfo'>
-  <form>
-    <fieldset>
-      <legend>
-        Occupation
-      </legend>
-      Industry
-      <input type = "text" name = "industry">
+      I often think about leaving my current employer.
       <br>
-      Occupation
-      <input type = "text" name = "occupation">
+      <input type = "radio" name = "leave" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "leave" value = "disagree">Disagree
+      <input type = "radio" name = "leave" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "leave" value = "agree">Agree
+      <input type = "radio" name = "leave" value = "strongly agree">Strongly Agree
       <br>
-      Job Level
-      <input type = "text" name = "jobLevel">
+      My current employer and I share the same values.
+      <br>
+      <input type = "radio" name = "share" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "share" value = "disagree">Disagree
+      <input type = "radio" name = "share" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "share" value = "agree">Agree
+      <input type = "radio" name = "share" value = "strongly agree">Strongly Agree
+      <br>
+      I cooperate with my coworkers.
+      <br>
+      <input type = "radio" name = "cooperate" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "cooperate" value = "disagree">Disagree
+      <input type = "radio" name = "cooperate" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "cooperate" value = "agree">Agree
+      <input type = "radio" name = "cooperate" value = "strongly agree">Strongly Agree
+      <br>
+      I assist my coworkers when they need help.
+      <br>
+      <input type = "radio" name = "assist" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "assist" value = "disagree">Disagree
+      <input type = "radio" name = "assist" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "assist" value = "agree">Agree
+      <input type = "radio" name = "assist" value = "strongly agree">Strongly Agree
+      <br>
+      I think about how my actions affect my coworkers.
+      <br>
+      <input type = "radio" name = "actions" value = "strongly disagree">Strongly Disagree
+      <input type = "radio" name = "actions" value = "disagree">Disagree
+      <input type = "radio" name = "actions" value = "neutral">Neither Agree nor Disagree
+      <input type = "radio" name = "actions" value = "agree">Agree
+      <input type = "radio" name = "actions" value = "strongly agree">Strongly Agree
       <br>
     </fieldset>
   </form>

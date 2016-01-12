@@ -1,0 +1,144 @@
+<template name = 'formerEmp'>
+  <p>
+    Please fill out your former Employer information.
+  </p>
+
+  {{> formerEmployerInfo}}
+  {{> formerJobInfo}}
+  {{> formerempStatus}}
+  {{> reason}}
+
+  <a href="{{pathFor route='home'}}">Home</a>
+
+</template>
+
+
+
+
+<template name = 'formerEmployerInfo'>
+  <form>
+      <fieldset>
+        <legend>
+          Employer Information
+        </legend>
+        Company Name:
+        <input type = "text" name = "companyName">
+        <br>
+        Did you work remotely?
+        <input type = 'radio' name = 'remote' value="yes">Yes
+        <input type = 'radio' name = 'remote' value="no">No
+        <br>
+        Street Address
+        <input type = "text" name = "street">
+        <br>
+        City
+        <input type = "text" name = "city">
+        <br>
+        State
+        <input type = "text" name = "state">
+        Zip Code
+        <input type = "text" name = "zip">
+    </fieldset>
+  </form>
+</template>
+
+<template name = 'formerJobInfo'>
+  <form>
+      <fieldset>
+        <legend>
+          Job Information
+        </legend>
+        Job Title
+        <input type = "text" name = "title">
+        Were you promoted?
+        <input type = 'radio' name = 'promotion' value="yes">Yes
+        <input type = 'radio' name = 'promotion' value="no">No
+        <br>
+        if yes, how many times:
+        <input type = "text" name = "timespromoted">
+        <br>
+        Date of Promotion
+        <input type = "text" name = "promotiondate">
+        <br>
+        Start Date
+        <input type = "text" name = "startdate">
+      </fieldset>
+    </form>
+</template>
+
+
+
+
+<template name = 'formerempStatus'>
+  <form>
+    <fieldset>
+      <legend>
+        Employment Status
+      </legend>
+      Status
+      <input type = 'radio' name = 'status' value="full-time">Full Time
+      <input type = 'radio' name = 'status' value="part-time">Part Time
+      <input type = 'radio' name = 'status' value="other">Other
+      <br>
+      if other
+      <input type = "text" name = "other status">
+      Average hours worked per week
+      <input type = "text" name = "hours">
+    </fieldset>
+  </form>
+
+</template>
+
+
+
+<template name = 'reason'>
+  <form>
+    <fieldset>
+      <legend>
+        Reason for leaving former employer
+      </legend>
+      Did you leave your former employer by choice?
+      <br>
+      <input type = 'radio' name = 'voluntary' value="yes">Yes
+      <input type = 'radio' name = 'voluntary' value="no">No
+      <br>
+      If Yes, please select reason (select all that apply)
+      <br>
+      <input type = "checkbox" name = "reason" value = "hpjob">Found a higher paying job
+      <br>
+      <input type = "checkbox" name = "reason" value = "chjob">Found a more challenging job
+      <br>
+      <input type = "checkbox" name = "reason" value = "change">Made a career change
+      <br>
+      <input type = "checkbox" name = "reason" value = "super">Conflict with supervisor
+      <br>
+      <input type = "checkbox" name = "reason" value = "cowrkers">conflict with coworkers
+      <br>
+      <input type = "checkbox" name = "reason" value = "lack">Lack of career opportunities for advancement
+      <br>
+      <input type = "checkbox" name = "reason" value = "family">Left due to family responibilities
+      <br>
+      <input type = "checkbox" name = "reason" value = "moved">Geographically relocated in order
+      <br>
+      <input type = "checkbox" name = "reason" value = "other">Other: please explain
+      <br>
+      <br>
+      If No, please select reason (select all that apply)
+      <br>
+      <input type = "checkbox" name = "reason" value = "poor">Poor performance
+      <br>
+      <input type = "checkbox" name = "reason" value = "conflictsup">Conflit with supervisor
+      <br>
+      <input type = "checkbox" name = "reason" value = "conflictco">Conflict with coworkers
+      <br>
+      <input type = "checkbox" name = "reason" value = "closed">Organization closed or went out of business
+      <br>
+      <input type = "checkbox" name = "reason" value = "down">My job was eliminated due to downsizing, merger, and/or restructuring
+      <br>
+      <input type = "checkbox" name = "reason" value = "other">Other: please explain
+      <br>
+
+    </fieldset>
+  </form>
+
+</template>
