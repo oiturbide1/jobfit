@@ -3,7 +3,9 @@ Router.route('/information',{name: 'information', template: 'information'})
 Router.route('/profile');
 Router.route('/currentEmp');
 Router.route('/formerEmp');
-
+Router.route('/tSurvey');
+Router.route('/rateCEmployer');
+Router.route('/rateFEmployer');
 
 
 /*

@@ -1,0 +1,104 @@
+<template name = 'tSurvey'>
+
+  <h2>
+    Views
+  </h2>
+
+  <p>
+    When you think about life at work, how important are these things to you?
+  </p>
+
+  {{> talentviewsurvey}}
+
+  <a href="{{pathFor route='home'}}">Home</a>
+  <a href="{{pathFor route='rateCEmployer'}}">Rate Current Employer</a>
+
+</template>
+
+
+
+<template name = 'talentviewsurvey'>
+  <form>
+      Work Life Balance
+      <br>
+      <input type = "radio" name = "wl balance" value = "not important">Not important at all
+      <input type = "radio" name = "wl balance" value = "little">Of little importance
+      <input type = "radio" name = "wl balance" value = "neutral">Of average importance
+      <input type = "radio" name = "wl balance" value = "important">Very important
+      <input type = "radio" name = "wl balance" value = "essential">Absolutely essential
+      <br>
+      Job Security
+      <br>
+      <input type = "radio" name = "security" value = "not important">Not important at all
+      <input type = "radio" name = "security" value = "little">Of little importance
+      <input type = "radio" name = "security" value = "neutral">Of average importance
+      <input type = "radio" name = "security" value = "important">Very important
+      <input type = "radio" name = "security" value = "essential">Absolutely essential
+      <br>
+      Training and development opportunities
+      <br>
+      <input type = "radio" name = "develop" value = "not important">Not important at all
+      <input type = "radio" name = "develop" value = "little">Of little importance
+      <input type = "radio" name = "develop" value = "neutral">Of average importance
+      <input type = "radio" name = "develop" value = "important">Very important
+      <input type = "radio" name = "develop" value = "essential">Absolutely essential
+      <br>
+      A Manageable Workload
+      <br>
+      <input type = "radio" name = "wload" value = "not important">Not important at all
+      <input type = "radio" name = "wload" value = "little">Of little importance
+      <input type = "radio" name = "wload" value = "neutral">Of average importance
+      <input type = "radio" name = "wload" value = "important">Very important
+      <input type = "radio" name = "wload" value = "essential">Absolutely essential
+      <br>
+      A clear career path at my employer
+      <br>
+      <input type = "radio" name = "path" value = "not important">Not important at all
+      <input type = "radio" name = "path" value = "little">Of little importance
+      <input type = "radio" name = "path" value = "neutral">Of average importance
+      <input type = "radio" name = "path" value = "important">Very important
+      <input type = "radio" name = "path" value = "essential">Absolutely essential
+      <br>
+      Clear promotion criteria
+      <br>
+      <input type = "radio" name = "criteria" value = "not important">Not important at all
+      <input type = "radio" name = "criteria" value = "little">Of little importance
+      <input type = "radio" name = "criteria" value = "neutral">Of average importance
+      <input type = "radio" name = "criteria" value = "important">Very important
+      <input type = "radio" name = "criteria" value = "essential">Absolutely essential
+      <br>
+      Opportunities for promotion
+      <br>
+      <input type = "radio" name = "prom" value = "not important">Not important at all
+      <input type = "radio" name = "prom" value = "little">Of little importance
+      <input type = "radio" name = "prom" value = "neutral">Of average importance
+      <input type = "radio" name = "prom" value = "important">Very important
+      <input type = "radio" name = "prom" value = "essential">Absolutely essential
+      <br>
+      The freedom to perform my job in the way that i think is best
+      <br>
+      <input type = "radio" name = "freedom" value = "not important">Not important at all
+      <input type = "radio" name = "freedom" value = "little">Of little importance
+      <input type = "radio" name = "freedom" value = "neutral">Of average importance
+      <input type = "radio" name = "freedom" value = "important">Very important
+      <input type = "radio" name = "freedom" value = "essential">Absolutely essential
+      <br>
+      A high salary
+      <br>
+      <input type = "radio" name = "salary" value = "not important">Not important at all
+      <input type = "radio" name = "salary" value = "little">Of little importance
+      <input type = "radio" name = "salary" value = "neutral">Of average importance
+      <input type = "radio" name = "salary" value = "important">Very important
+      <input type = "radio" name = "salary" value = "essential">Absolutely essential
+      <br>
+      Good supervisors and managers
+      <br>
+      <input type = "radio" name = "super" value = "not important">Not important at all
+      <input type = "radio" name = "super" value = "little">Of little importance
+      <input type = "radio" name = "super" value = "neutral">Of average importance
+      <input type = "radio" name = "super" value = "important">Very important
+      <input type = "radio" name = "super" value = "essential">Absolutely essential
+      <br>
+  </form>
+
+</template>
