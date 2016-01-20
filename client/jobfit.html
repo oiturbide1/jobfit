@@ -1,22 +1,54 @@
 <template name = 'home'>
-  <h1>Welcome to JobFit!</h1>
-
-  {{> loginButtons}}
-
-  <br>
-  <br>
-  Are you a job-seeker or an employer rep?
-  <br>
-  <input type = 'radio' name = 'userType' value = 'talent'>Job Seeker
-  <input type = 'radio' name = 'userType' value = 'rep'>Employer Rep
+  <div id = 'mainBox'>
+    <h1>Welcome to JobFit!</h1>
 
 
-  <br>
-  <br>
-  <br>
+    {{#if currentUser}}
+      <p>You're logged in!</p>
+    {{else}}
+      {{ >register}}
+      {{> login}}
+    {{/if}}
+    
+    
 
 
-<a href="{{pathFor route='information'}}">Personal Info</a>
+
+    <br>
+    <br>
+    Are you a job-seeker or an employer rep?
+    <br>
+    <input type = 'radio' name = 'userType' value = 'talent'>Job Seeker
+    <input type = 'radio' name = 'userType' value = 'rep'>Employer Rep
 
 
+    <br>
+    <br>
+    <br>
+
+
+  <a href="{{pathFor route='information'}}" class="button_link">Personal Info</a>
+</div>
+
+
+</template>
+
+
+<template name="register">
+  <h2>Register</h2>
+  <form>
+    <input type="text" name="registerUsername" placeholder="Username">
+    <input type="password" name="registerPassword" placeholder="Password">
+    <input type="submit" value="Register">
+  </form>
+</template>
+
+
+<template name="login">
+  <h2>Log in</h2>
+  <form>
+    <input type="text" name="loginUsername" placeholder="Username">
+    <input type="password" name="loginPassword" placeholder="Password">
+    <input type="submit" value="Login">
+  </form>
 </template>

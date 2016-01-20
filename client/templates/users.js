@@ -1,33 +1,21 @@
+Template.register.events({
+        'submit form': function(event) {
+          event.preventDefault();
+          console.log('form submitted');
+          var userVar = event.target.registerUsername.value;
+          var passwordVar = event.target.registerPassword.value;
 
-Template.addUser.events({
-  "submit form": function (event) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-      // Get value from form element
-      var userName = event.target.user.value;
-      var pw = event.target.password.value;
-
-      var currentUserId = Meteor.userId();
-
-
-      // Insert a task into the collection
-      Users.insert({
-        username: userName,
-        password: pw,
-        createdBy: currentUserId,
-        createdAt: new Date() // current time
-
+          console.log(userVar);
+          Accounts.createUser({
+            user: userVar,
+            password: passwordVar
+          });
+        }
       });
 
 
-      // Clear form
-      event.target.user.value = "";
-      event.target.password.value = '';
 
-      console.log('worked');
-    }
-});
+
 
 Template.pi.events({
   "submit form": function (event) {
@@ -279,9 +267,9 @@ Template.home.events({
 
 
 
-          var thing1 = template.find('input:radio[name= userType]:checked').value;
+          //var thing1 = template.find('input:radio[name= userType]:checked').value;
 
-          console.log(thing1);
+          //console.log(thing1);
 
         }
 
@@ -304,8 +292,3 @@ Template.home.events({
         }
       });
 
-
-      Accounts.ui.config
-      ({
-        passwordSignupFields: "USERNAME_ONLY"
-      });
