@@ -104,7 +104,7 @@ Template.skills.events({
         {_id: Meteor.userId()}, {$set: {"profile.skills": [skill1,skill2,skill3,skill4,skill5]} }
       );
 
-      
+
 
 
       // Clear form
@@ -133,7 +133,7 @@ Template.occupationInfo.events({
       var industry = event.target.industry.value;
       var occupation= event.target.occupation.value;
       var jobLevel= event.target.jobLevel.value;
-  
+
       var user = Meteor.userId;
 
 
@@ -142,14 +142,14 @@ Template.occupationInfo.events({
         {_id: Meteor.userId()}, {$set: {"profile.occupation": [industry,occupation,jobLevel,]} }
       );
 
-      
+
 
 
       // Clear form
       event.target.industry.value = "";
       event.target.occupation.value = '';
       event.target.jobLevel.value = '';
-      
+
 
       console.log(occupation);
 
@@ -190,7 +190,7 @@ Template.employerInfo.events({
       event.target.zip.value = '';
 
       console.log('company info');
-     
+
 
       var selected = template.findAll( "input[type=checkbox]:checked");
 
@@ -230,10 +230,10 @@ Template.jobInfo.events({
       event.target.promotiondate.value = '';
       event.target.startdate.value = '';
       event.target.timespromoted.value = '';
-      
+
 
       console.log('job info');
-     
+
 
       var selected = template.findAll( "input[type=checkbox]:checked");
 
@@ -292,3 +292,8 @@ Template.home.events({
         }
       });
 
+
+      Accounts.ui.config
+      ({
+        passwordSignupFields: "USERNAME_ONLY"
+      });

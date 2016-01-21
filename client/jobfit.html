@@ -3,14 +3,9 @@
     <h1>Welcome to JobFit!</h1>
 
 
-    {{#if currentUser}}
-      <p>You're logged in!</p>
-    {{else}}
-      {{ >register}}
-      {{> login}}
-    {{/if}}
-    
-    
+    {{ >loginButtons}}
+
+
 
 
 
