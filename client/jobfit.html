@@ -5,6 +5,13 @@
 
     {{ >loginButtons}}
 
+    {{#if currentUser}}
+      currentUser.profile.address
+    {{/if}}
+
+    {{ >register}}
+
+
 
 
 

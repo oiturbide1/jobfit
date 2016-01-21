@@ -1,6 +1,8 @@
 body
 {
-	background-image: url("company-logos.png");
+	background-image: url("ShakingHands2.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 
@@ -10,11 +12,13 @@ body
 	height: 25em;
 	padding: 5em;
 	border: 2em solid blue;
+	border-radius: 25%;
 	margin:2em;
-	background-color: black;
+	background-color: rgba(255,255,240,0.6);
 	position: relative;
 	left: 5em;
 	color: red;
+	
 }
 
 

@@ -7,7 +7,7 @@ Template.register.events({
 
           console.log(userVar);
           Accounts.createUser({
-            user: userVar,
+            username: userVar,
             password: passwordVar
           });
         }
