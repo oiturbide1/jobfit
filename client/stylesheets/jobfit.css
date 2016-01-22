@@ -6,7 +6,7 @@ body
 }
 
 
-#mainBox
+.mainBox
 {
 	width: 50em;
 	height: 25em;
@@ -18,13 +18,20 @@ body
 	position: relative;
 	left: 5em;
 	color: red;
-	
+	word-wrap: break-word;
+
 }
 
 
 h1
 {
 	color: green;
+}
+
+h2
+{
+	color:brown;
+	font-size: 2em;
 }
 
 .button_link

@@ -1,15 +1,14 @@
 <template name = 'home'>
-  <div id = 'mainBox'>
+  <div class = 'mainBox'>
     <h1>Welcome to JobFit!</h1>
 
 
     {{ >loginButtons}}
 
     {{#if currentUser}}
-      currentUser.profile.address
+      LOgged in
     {{/if}}
 
-    {{ >register}}
 
 
 

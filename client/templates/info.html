@@ -1,12 +1,14 @@
 <template name = 'information'>
-  <p>Fill out information about yourself.</p>
+  <h2>Please enter your personal information</h2>
+  <div class = mainBox>
   {{> pi}}
   {{> educ}}
   {{> skills}}
   {{> occupationInfo}}
 
-  <a href="{{pathFor route='home'}}">Home</a>
-  <a href="{{pathFor route='currentEmp'}}">Current Employer</a>
+  <a href="{{pathFor route='home'}}" class="button_link">Home</a>
+  <a href="{{pathFor route='currentEmp'}}" class="button_link">Current Employer</a>
+</div>
 </template>
 
 
