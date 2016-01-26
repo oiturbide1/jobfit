@@ -1,15 +1,89 @@
 Template.register.events({
         'submit form': function(event) {
+
           event.preventDefault();
-          console.log('form submitted');
-          var userVar = event.target.registerUsername.value;
+          
+          var emailVar = event.target.registerEmail.value;
           var passwordVar = event.target.registerPassword.value;
 
-          console.log(userVar);
+          console.log(emailVar);
+          console.log('submitted');
           Accounts.createUser({
-            username: userVar,
+            email: emailVar,
             password: passwordVar
           });
+        }
+      });
+
+Template.login.events({
+        'submit form': function(event) {
+
+          event.preventDefault();
+          
+          var emailVar = event.target.loginEmail.value;
+          var passwordVar = event.target.loginPassword.value;
+
+          Meteor.loginWithPassword(emailVar, passwordVar);
+          console.log('logged in');
+          
+        }
+      });
+
+
+Template.dashboard.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+    }
+});
+
+
+
+/* commented out for account stuff to work
+   grabs radio button value 
+
+Template.home.events({
+  "click input": function (event, template) {
+          // Prevent default browser form submit
+          event.preventDefault();
+
+          
+          var user = Meteor.users.findOne(Meteor.userId);
+
+
+          // Insert a task into the collection
+          Meteor.users.update(
+            {_id: user._id}, {$set: {"profile.education": [school,degree,subject]} }
+          );
+
+          
+
+
+
+          var thing1 = template.find('input:radio[name= userType]:checked').value;
+
+          console.log(thing1);
+
+        }
+
+      });
+*/
+      
+
+
+
+
+      Template.home.helpers({
+        'checkType': function(typeUser)
+        {
+          if (typeUser == 'talent')
+          {
+            return true;
+          }
+          else
+          {
+            return false;
+          }
         }
       });
 
@@ -248,52 +322,31 @@ Template.jobInfo.events({
 
 });
 
-
-Template.home.events({
-  "click input": function (event, template) {
-          // Prevent default browser form submit
-          event.preventDefault();
-
-          /*
-          var user = Meteor.users.findOne(Meteor.userId);
-
-
-          // Insert a task into the collection
-          Meteor.users.update(
-            {_id: user._id}, {$set: {"profile.education": [school,degree,subject]} }
-          );
-
-          */
+/*
+// first, remove configuration entry in case service is already configured
+Accounts.loginServiceConfiguration.remove({
+  service: "google"
+});
+*/
+Accounts.loginServiceConfiguration.insert({
+  service: "google",
+  clientId: "1046984722241-buu74qqfs42dvrimo004vlllropr6hlu.apps.googleusercontent.com",
+  secret: "z_xtCwnsiRIErRR3YGDGM0i1"
+});
 
 
 
-          //var thing1 = template.find('input:radio[name= userType]:checked').value;
+Template.google.events({
+  "click button": function (event, template) {
 
-          //console.log(thing1);
-
-        }
-
-      });
+      console.log('clicked google login')
+    
 
 
 
+     
 
-      Template.home.helpers({
-        'checkType': function(typeUser)
-        {
-          if (typeUser == 'talent')
-          {
-            return true;
-          }
-          else
-          {
-            return false;
-          }
-        }
-      });
+    }
 
 
-      Accounts.ui.config
-      ({
-        passwordSignupFields: "USERNAME_ONLY"
-      });
+});
