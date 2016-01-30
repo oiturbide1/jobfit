@@ -1,14 +1,14 @@
 <template name = 'information'>
   <h2>Please enter your personal information</h2>
   <div class = mainBox>
-  {{> pi}}
-  {{> educ}}
-  {{> skills}}
-  {{> occupationInfo}}
+    {{> pi}}
+    {{> educ}}
+    {{> skills}}
 
+
+  </div>
   <a href="{{pathFor route='home'}}" class="button_link">Home</a>
   <a href="{{pathFor route='currentEmp'}}" class="button_link">Current Employer</a>
-</div>
 </template>
 
 
@@ -80,12 +80,20 @@
       <legend>
         Skills
       </legend>
-      Skill 1
-      <input type = "text" name = "skill1">
-      <br>
-      Skill 2
-      <input type = "text" name = "skill2">
-      <br>
+      {{#dropdownTrigger name="SkillsTest" }}
+      <button>Skills</button>
+      {{/dropdownTrigger}}
+
+      {{#dropdown name="SkillsTest"}}
+        <p>Skill 1</p>
+        <input type = "text" name = "skill1">
+        <br>
+        Skill 2
+        <input type = "text" name = "skill2">
+        <br>
+      {{/dropdown}}
+
+
       Skill 3
       <input type = "text" name = "skill3">
       <br>

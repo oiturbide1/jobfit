@@ -3,13 +3,13 @@ Template.register.events({
 
           event.preventDefault();
 
-          var emailVar = event.target.registerEmail.value;
+          var usernameVar = event.target.registerUsername.value;
           var passwordVar = event.target.registerPassword.value;
 
-          console.log(emailVar);
+          console.log(usernameVar);
           console.log('submitted');
           Accounts.createUser({
-            username: emailVar,
+            username: usernameVar,
             password: passwordVar
           });
         }
@@ -20,10 +20,10 @@ Template.login.events({
 
           event.preventDefault();
 
-          var emailVar = event.target.loginEmail.value;
+          var usernameVar = event.target.loginUsername.value;
           var passwordVar = event.target.loginPassword.value;
 
-          Meteor.loginWithPassword(emailVar, passwordVar);
+          Meteor.loginWithPassword(usernameVar, passwordVar);
           console.log('logged in');
 
         }

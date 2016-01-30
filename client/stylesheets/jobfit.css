@@ -8,8 +8,8 @@ body
 
 .mainBox
 {
-	width: 50em;
-	height: 25em;
+	width: 60em;
+	height: 35em;
 	padding: 5em;
 	border: 2em solid blue;
 	border-radius: 25%;
@@ -19,6 +19,7 @@ body
 	left: 5em;
 	color: red;
 	word-wrap: break-word;
+	overflow: overlay;
 
 }
 
