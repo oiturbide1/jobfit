@@ -99,6 +99,18 @@
       <legend>
         Feelings toward Job
       </legend>
+      <script type="text/javascript">
+        function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+      }
+      </script>
+      <p>test</p>
+      <input type="text" id="textInput" value="">
+      <input type = 'range' min='0' max = '100' value = '50' step = '20' onchange="updateTextInput(this.value);" >
+
+      <br>
+      <br>
+      
       Overall, I am satisfied with my current job.
       <br>
       <input type = "radio" name = "job satisfaction" value = "strongly disagree">Strongly Disagree
