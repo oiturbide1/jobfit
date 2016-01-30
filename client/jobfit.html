@@ -3,14 +3,14 @@
     <h1>Welcome to JobFit!</h1>
 
 
-   
+
 
     {{#if currentUser}}
       {{> dashboard}}
     {{else}}
       {{> register}}
       {{> login}}
-      {{> google}}
+
     {{/if}}
 
 
@@ -42,7 +42,7 @@
 <template name="register">
   <h2>Register</h2>
   <form>
-    <input type="email" name="registerEmail" placeholder="Email">
+    <input type="text" name="registerEmail" placeholder="Email">
     <input type="password" name="registerPassword" placeholder="Password">
     <input type="submit" value="Register">
   </form>

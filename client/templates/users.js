@@ -2,14 +2,14 @@ Template.register.events({
         'submit form': function(event) {
 
           event.preventDefault();
-          
+
           var emailVar = event.target.registerEmail.value;
           var passwordVar = event.target.registerPassword.value;
 
           console.log(emailVar);
           console.log('submitted');
           Accounts.createUser({
-            email: emailVar,
+            username: emailVar,
             password: passwordVar
           });
         }
@@ -19,13 +19,13 @@ Template.login.events({
         'submit form': function(event) {
 
           event.preventDefault();
-          
+
           var emailVar = event.target.loginEmail.value;
           var passwordVar = event.target.loginPassword.value;
 
           Meteor.loginWithPassword(emailVar, passwordVar);
           console.log('logged in');
-          
+
         }
       });
 
@@ -40,14 +40,14 @@ Template.dashboard.events({
 
 
 /* commented out for account stuff to work
-   grabs radio button value 
+   grabs radio button value
 
 Template.home.events({
   "click input": function (event, template) {
           // Prevent default browser form submit
           event.preventDefault();
 
-          
+
           var user = Meteor.users.findOne(Meteor.userId);
 
 
@@ -56,7 +56,7 @@ Template.home.events({
             {_id: user._id}, {$set: {"profile.education": [school,degree,subject]} }
           );
 
-          
+
 
 
 
@@ -68,7 +68,7 @@ Template.home.events({
 
       });
 */
-      
+
 
 
 
@@ -327,7 +327,7 @@ Template.jobInfo.events({
 Accounts.loginServiceConfiguration.remove({
   service: "google"
 });
-*/
+
 Accounts.loginServiceConfiguration.insert({
   service: "google",
   clientId: "1046984722241-buu74qqfs42dvrimo004vlllropr6hlu.apps.googleusercontent.com",
@@ -340,13 +340,14 @@ Template.google.events({
   "click button": function (event, template) {
 
       console.log('clicked google login')
-    
 
 
 
-     
+
+
 
     }
 
 
 });
+*/
