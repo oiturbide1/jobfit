@@ -160,16 +160,13 @@ Template.educ.events({
 
 
 Template.skills.events({
-  "submit form": function (event, template) {
+  "click #enterSkills": function (event, template) {
       // Prevent default browser form submit
       event.preventDefault();
 
       // Get value from form element
-      var skill1 = event.target.skill1.value;
-      var skill2= event.target.skill2.value;
-      var skill3= event.target.skill3.value;
-      var skill4 = event.target.skill4.value;
-      var skill5 = event.target.skill5.value;
+      var skill1 = event.target.skill.value;
+
       var user = Meteor.userId;
 
 
@@ -180,22 +177,11 @@ Template.skills.events({
 
 
 
-
-      // Clear form
-      event.target.skill1.value = "";
-      event.target.skill2.value = '';
-      event.target.skill3.value = '';
-      event.target.skill4.value = '';
-      event.target.skill5.value = '';
-
-      console.log(skill3);
-
-
-
     }
 
 
 });
+
 
 
 Template.occupationInfo.events({
@@ -363,11 +349,31 @@ function addElement(parentId, elementTag, elementId, html) {
     p.appendChild(newElement);
 }
 
+function removeElement(elementId) {
+    // Removes an element from the document
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
 
 var fileId = 0; // used by the addFile() function to keep track of IDs
 function addFile() {
     fileId++; // increment fileId to get a unique ID for the new element
-    var html = '<input type="file" name="uploaded_files[]" /> ' +
-               '<a href="" onclick="javascript:removeElement('file-' + fileId + ''); return false;">Remove</a>';
-    addElement('files', 'p', 'file-' + fileId, html);
+    var html = '<input type = "text" name = "skill[]"> '  +
+               '<a href="" onclick="javascript:removeElement(\'file-\' + fileId + \'\'); return false;">Remove</a>';
+    addElement('skillsList', 'p', 'file-' + fileId, html);
 }
+
+
+Template.skills.events({
+  "click #addButton": function (event, template) {
+      // Prevent default browser form submit
+      event.preventDefault();
+
+
+      addFile()
+
+
+    }
+
+
+});

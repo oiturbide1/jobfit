@@ -86,24 +86,15 @@
 
       {{#dropdown name="SkillsTest"}}
         <p>Skill 1</p>
-        <input type = "text" name = "skill1"> <button onclick="addFile();">Add</button>
-        <br>
+        <div id = 'skillsList'>
+        <p><input type = "text" name = "skill"> <button id = 'addButton'>Add</button></p>
+        </div>
       {{/dropdown}}
-      Skill 2
-      <input type = "text" name = "skill2">
-      <br>
 
-      Skill 3
-      <input type = "text" name = "skill3">
-      <br>
-      Skill 4
-      <input type = "text" name = "skill4">
-      <br>
-      Skill 5
-      <input type = "text" name = "skill5">
-      <input type = "submit" value = "Enter Skills">
+      <button id = 'enterSkills'>Enter skills</button>
       </fieldset>
     </form>
+
 
 </template>
 
