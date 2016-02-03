@@ -1,57 +1,52 @@
 <template name = 'home'>
-  <div class = 'mainBox'>
-    <h1>Welcome to JobFit!</h1>
+  <h1>Welcome to JobFit!</h1>
 
 
 
 
-    {{#if currentUser}}
-      {{> dashboard}}
-    {{else}}
-      {{> register}}
-      {{> login}}
+  {{#if currentUser}}
+    {{> dashboard}}
+  {{else}}
+    {{> selectTalent}}
+    {{> selectRep}}
 
-    {{/if}}
-
-
-
-
-
-
-
-    <br>
-    <br>
-    Are you a job-seeker or an employer rep?
-    <br>
-    <input type = 'radio' name = 'userType' value = 'talent'>Job Seeker
-    <input type = 'radio' name = 'userType' value = 'rep'>Employer Rep
-
-
-    <br>
-    <br>
-    <br>
-
-
-
-</div>
-
-  <a href="{{pathFor route='information'}}" class="button_link">Personal Info</a>
-
+  {{/if}}
 
 </template>
 
 
-<template name="register">
+
+<template name = 'selectTalent'>
+  <div id = 'talentBox'>
+    <p>Are you happy with your job?</p>
+    <a href="{{pathFor route='registerTalent'}}" class="button_link">Start your journey to find perfect fit!</a>
+  </div>
+</template>
+
+<template name = 'selectRep'>
+  <div id = 'repBox'>
+    <p>Finding the right employee is crucial for success</p>
+    <a href="{{pathFor route='registerRep'}}" class="button_link">Find your next star employee</a>
+  </div>
+</template>
+
+
+<template name="registerTalent">
   <h2>Register</h2>
-  <form>
-    <input type="text" name="registerUsername" placeholder="Username">
-    <input type="password" name="registerPassword" placeholder="Password">
-    <input type="submit" value="Register">
-  </form>
+  <div class = 'registerBox'>
+    <form>
+      <input type="text" name="registerUsername" placeholder="Username">
+      <input type="password" name="registerPassword" placeholder="Password">
+      <input type="submit" value="Find your best fit">
+    </form>
+  </div>
+
+  <a href="{{pathFor route='home'}}" class="button_link">Home</a>
+
 </template>
 
 
-<template name="login">
+<template name="loginTalent">
   <h2>Log in</h2>
   <form>
     <input type="text" name="loginUsername" placeholder="Username">
@@ -59,6 +54,32 @@
     <input type="submit" value="Login">
   </form>
 </template>
+
+
+
+<template name = 'registerRep'>
+  <h2>Register</h2>
+  <div class = 'registerBox'>
+    <form>
+      <input type="text" name="registerUsername" placeholder="Username">
+      <input type="password" name="registerPassword" placeholder="Password">
+      <input type="submit" value="Find the best fit">
+    </form>
+  </div>
+  <a href="{{pathFor route='home'}}" class="button_link">Home</a>
+
+</template>
+
+
+<template name="loginRep">
+  <h2>Log in</h2>
+  <form>
+    <input type="text" name="loginUsername" placeholder="Username">
+    <input type="password" name="loginPassword" placeholder="Password">
+    <input type="submit" value="Login">
+  </form>
+</template>
+
 
 
 <template name="dashboard">
@@ -70,7 +91,4 @@
   <button>Login with Google</button>
 </template>
 
-<template name = 'talent'>
-  <p>Are you happy with your job?</p>
-  <button>Find  your perfect match</button>
-</template>
+  

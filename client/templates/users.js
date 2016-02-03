@@ -1,4 +1,5 @@
- Template.register.events({
+
+ Template.registerTalent.events({
         'submit form': function(event) {
 
           event.preventDefault();
@@ -6,16 +7,21 @@
           var usernameVar = event.target.registerUsername.value;
           var passwordVar = event.target.registerPassword.value;
 
-          console.log(usernameVar);
-          console.log('submitted');
+          
           Accounts.createUser({
             username: usernameVar,
-            password: passwordVar
+            password: passwordVar,
+            profile: { role: "talent" }
           });
+
+          Router.go("/information");
+          console.log('submitted');
+
+  
         }
       });
 
-Template.login.events({
+Template.loginTalent.events({
         'submit form': function(event) {
 
           event.preventDefault();
@@ -25,6 +31,45 @@ Template.login.events({
 
           Meteor.loginWithPassword(usernameVar, passwordVar);
           console.log('logged in');
+
+        }
+      });
+
+
+Template.registerRep.events({
+        'submit form': function(event) {
+
+          event.preventDefault();
+
+          var usernameVar = event.target.registerUsername.value;
+          var passwordVar = event.target.registerPassword.value;
+
+
+          Accounts.createUser({
+            username: usernameVar,
+            password: passwordVar,
+            profile: { role: "rep" }
+          });
+
+
+          Router.go("/information");
+          console.log(usernameVar);
+          console.log('submittedR');
+
+  
+        }
+      });
+
+Template.loginRep.events({
+        'submit form': function(event) {
+
+          event.preventDefault();
+
+          var usernameVar = event.target.loginUsername.value;
+          var passwordVar = event.target.loginPassword.value;
+
+          Meteor.loginWithPassword(usernameVar, passwordVar);
+          console.log('logged inR');
 
         }
       });

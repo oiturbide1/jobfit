@@ -6,20 +6,41 @@ body
 }
 
 
-.mainBox
-{
-	width: 60em;
-	height: 35em;
-	padding: 5em;
-	border: 2em solid blue;
-	border-radius: 25%;
-	margin:2em;
-	background-color: rgba(255,255,240,0.6);
+#talentBox
+{	
+	width: 20em;
+	height:10em;
 	position: relative;
-	left: 5em;
-	color: red;
-	word-wrap: break-word;
-	overflow: overlay;
+	left:5em;
+	top:5em;
+	padding: 1em;
+	border: 1em solid purple;
+	border-radius: 25%;
+
+
+}
+
+
+#repBox
+{	
+	width: 20em;
+	height:10em;
+	position: relative;
+	left:30em;
+	bottom:9em;
+	padding: 1em;
+	border: 1em solid purple;
+	border-radius: 25%;
+
+
+}
+
+.registerBox
+{
+	width: 10em;
+	height: 5em;
+	position: relative;
+	border-radius: 1em solid blue;
 
 }
 
@@ -27,6 +48,7 @@ body
 h1
 {
 	color: green;
+	text-align: center;
 }
 
 h2
