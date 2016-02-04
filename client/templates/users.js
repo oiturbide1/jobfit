@@ -7,7 +7,7 @@
           var usernameVar = event.target.registerUsername.value;
           var passwordVar = event.target.registerPassword.value;
 
-          
+
           Accounts.createUser({
             username: usernameVar,
             password: passwordVar,
@@ -17,7 +17,7 @@
           Router.go("/information");
           console.log('submitted');
 
-  
+
         }
       });
 
@@ -56,7 +56,7 @@ Template.registerRep.events({
           console.log(usernameVar);
           console.log('submittedR');
 
-  
+
         }
       });
 
@@ -417,6 +417,31 @@ Template.skills.events({
 
       addFile()
 
+
+    }
+
+
+});
+
+
+Template.jobFeeling.events({
+  "submit form": function (event, template) {
+      // Prevent default browser form submit
+      event.preventDefault();
+
+      // Get value from form element
+      var test = event.target.jobSatTest.value;
+
+      var user = Meteor.userId;
+
+
+      // Add current employer info to profile
+      Meteor.users.update(
+        {_id: Meteor.userId()}, {$set: {"profile.jobSatisfaction": [test]} }
+      );
+
+
+      console.log(test);
 
     }
 

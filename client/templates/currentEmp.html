@@ -101,31 +101,23 @@
       </legend>
       <script type="text/javascript">
         function updateTextInput(val) {
-          document.getElementById('textInput').value=val; 
+          document.getElementById('textInput').value=val;
       }
       </script>
       <p>test</p>
-      <input type="text" id="textInput" value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '20' onchange="updateTextInput(this.value);" >
+      <input type="text" id="textInput" name = 'jobSatTest' value="">
+      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value);" >
 
       <br>
       <br>
-      
+
       Overall, I am satisfied with my current job.
       <br>
-      <input type = "radio" name = "job satisfaction" value = "strongly disagree">Strongly Disagree
-      <input type = "radio" name = "job satisfaction" value = "disagree">Disagree
-      <input type = "radio" name = "job satisfaction" value = "neutral">Neither Agree nor Disagree
-      <input type = "radio" name = "job satisfaction" value = "agree">Agree
-      <input type = "radio" name = "job satisfaction" value = "strongly agree">Strongly Agree
+      <input type = 'range' min='0' max = '100' name = 'job sat' value = '50' step = '1' onchange="updateTextInput(this.value);" >
       <br>
       I perform my job well.
       <br>
-      <input type = "radio" name = "performance" value = "strongly disagree">Strongly Disagree
-      <input type = "radio" name = "performance" value = "disagree">Disagree
-      <input type = "radio" name = "performance" value = "neutral">Neither Agree nor Disagree
-      <input type = "radio" name = "performance" value = "agree">Agree
-      <input type = "radio" name = "performance" value = "strongly agree">Strongly Agree
+      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value);" >
       <br>
       I would be glad to spend my whole career with my current employer.
       <br>
@@ -175,6 +167,7 @@
       <input type = "radio" name = "actions" value = "agree">Agree
       <input type = "radio" name = "actions" value = "strongly agree">Strongly Agree
       <br>
+      <input type = "submit" value = "Enter job satisfaction">
     </fieldset>
   </form>
 
