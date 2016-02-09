@@ -9,6 +9,7 @@
   {{else}}
     {{> selectTalent}}
     {{> selectRep}}
+    {{> login}}
 
   {{/if}}
 
@@ -34,8 +35,8 @@
 <template name="registerTalent">
   <h2>Register</h2>
   <div class = 'registerBox'>
-    <form>
-      <input type="text" name="registerUsername" placeholder="Username">
+    <form id = 'registerT'>
+      <input type="email" name="registerEmail" placeholder="Email">
       <input type="password" name="registerPassword" placeholder="Password">
       <input type="submit" value="Find your best fit">
     </form>
@@ -46,11 +47,11 @@
 </template>
 
 
-<template name="loginTalent">
+<template name="login">
   <h2>Log in</h2>
   <form>
-    <input type="text" name="loginUsername" placeholder="Username">
-    <input type="password" name="loginPassword" placeholder="Password">
+    <input type="email" name="loginEmail" placeholder="Email" required>
+    <input type="password" name="loginPassword" placeholder="Password" required>
     <input type="submit" value="Login">
   </form>
 </template>
@@ -61,7 +62,7 @@
   <h2>Register</h2>
   <div class = 'registerBox'>
     <form>
-      <input type="text" name="registerUsername" placeholder="Username">
+      <input type="email" name="registerEmail" placeholder="Email">
       <input type="password" name="registerPassword" placeholder="Password">
       <input type="submit" value="Find the best fit">
     </form>
@@ -90,5 +91,3 @@
 <template name = 'google'>
   <button>Login with Google</button>
 </template>
-
-  

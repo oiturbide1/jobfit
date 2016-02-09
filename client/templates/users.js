@@ -3,13 +3,13 @@
         'submit form': function(event) {
 
           event.preventDefault();
-
-          var usernameVar = event.target.registerUsername.value;
+          /*
+          var emailVar = event.target.registerEmail.value;
           var passwordVar = event.target.registerPassword.value;
 
 
           Accounts.createUser({
-            username: usernameVar,
+            email: emailVar,
             password: passwordVar,
             profile: { role: "talent" }
           });
@@ -17,22 +17,58 @@
           Router.go("/information");
           console.log('submitted');
 
-
+          */
         }
       });
 
-Template.loginTalent.events({
+Template.login.events({
         'submit form': function(event) {
 
           event.preventDefault();
 
+          /*
           var usernameVar = event.target.loginUsername.value;
           var passwordVar = event.target.loginPassword.value;
 
           Meteor.loginWithPassword(usernameVar, passwordVar);
           console.log('logged in');
-
+          */
         }
+      });
+
+
+Template.registerTalent.onRendered(function(){
+        $('.registerT').validate({
+          rules: {
+            registerEmail:
+            {
+              required: true,
+              email: true
+            },
+
+            registerPassword:
+            {
+              required: true,
+              minlength: 6
+            }
+
+              },
+
+            messages:
+            {
+              registerEmail:
+              {
+                required: "You must enter an email address.",
+                email: "You've entered an invalid email address."
+              },
+
+              registerPassword:
+              {
+                required: "You must enter a password.",
+                minlength: "Your password must be at least {0} characters."
+              }
+            }
+          });
       });
 
 
@@ -41,19 +77,18 @@ Template.registerRep.events({
 
           event.preventDefault();
 
-          var usernameVar = event.target.registerUsername.value;
+          var emailVar = event.target.registerEmail.value;
           var passwordVar = event.target.registerPassword.value;
 
 
           Accounts.createUser({
-            username: usernameVar,
+            email: emailVar,
             password: passwordVar,
             profile: { role: "rep" }
           });
 
 
           Router.go("/information");
-          console.log(usernameVar);
           console.log('submittedR');
 
 
