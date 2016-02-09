@@ -8,6 +8,7 @@ Router.route('/rateCEmployer');
 Router.route('/rateFEmployer');
 Router.route('/registerTalent');
 Router.route('/registerRep');
+Router.route('/login');
 
 
 /*

@@ -38,7 +38,7 @@ Template.login.events({
 
 
 Template.registerTalent.onRendered(function(){
-        $('.registerT').validate({
+        $('#registerT').validate({
           rules: {
             registerEmail:
             {
@@ -49,7 +49,14 @@ Template.registerTalent.onRendered(function(){
             registerPassword:
             {
               required: true,
-              minlength: 6
+              minlength: 8,
+              number: true
+            },
+
+            registerPasswordMatched:
+            {
+              required: true,
+              equalTo: password
             }
 
               },
@@ -66,6 +73,11 @@ Template.registerTalent.onRendered(function(){
               {
                 required: "You must enter a password.",
                 minlength: "Your password must be at least {0} characters."
+              },
+
+              registerPasswordMatched:
+              {
+
               }
             }
           });
@@ -94,7 +106,7 @@ Template.registerRep.events({
 
         }
       });
-
+/*
 Template.loginRep.events({
         'submit form': function(event) {
 
@@ -109,7 +121,7 @@ Template.loginRep.events({
         }
       });
 
-
+*/
 Template.dashboard.events({
     'click .logout': function(event){
         event.preventDefault();
@@ -119,35 +131,18 @@ Template.dashboard.events({
 
 
 
-/* commented out for account stuff to work
-   grabs radio button value
 
 Template.home.events({
-  "click input": function (event, template) {
+  "click #loginButton": function (event, template) {
           // Prevent default browser form submit
           event.preventDefault();
 
-
-          var user = Meteor.users.findOne(Meteor.userId);
-
-
-          // Insert a task into the collection
-          Meteor.users.update(
-            {_id: user._id}, {$set: {"profile.education": [school,degree,subject]} }
-          );
-
-
-
-
-
-          var thing1 = template.find('input:radio[name= userType]:checked').value;
-
-          console.log(thing1);
+          Router.go("/login");
+          console.log('clicked login')
 
         }
 
       });
-*/
 
 
 

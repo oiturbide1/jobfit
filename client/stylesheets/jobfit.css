@@ -5,6 +5,12 @@ body
 	background-repeat: no-repeat;
 }
 
+#loginButton
+{
+	right: 2em;
+
+}
+
 
 #talentBox
 {
@@ -18,6 +24,27 @@ body
 	border-radius: 25%;
 
 
+}
+
+.regEmail
+{
+	border-radius: 3em;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+
+.password
+{
+	border-radius: 3em;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+.matchedPassword
+{
+	border-radius: 3em;
+	padding: 1em;
 }
 
 
@@ -45,6 +72,7 @@ input.error
 	width: 10em;
 	height: 5em;
 	position: relative;
+	margin: 0 auto;
 	border-radius: 1em solid blue;
 
 }

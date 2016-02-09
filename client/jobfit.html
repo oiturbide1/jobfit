@@ -1,5 +1,6 @@
 <template name = 'home'>
   <h1>Welcome to JobFit!</h1>
+  <button id = 'loginButton'>Login</button>
 
 
 
@@ -9,7 +10,6 @@
   {{else}}
     {{> selectTalent}}
     {{> selectRep}}
-    {{> login}}
 
   {{/if}}
 
@@ -36,8 +36,9 @@
   <h2>Register</h2>
   <div class = 'registerBox'>
     <form id = 'registerT'>
-      <input type="email" name="registerEmail" placeholder="Email">
-      <input type="password" name="registerPassword" placeholder="Password">
+      <input class = 'regEmail' type="email" name="registerEmail" placeholder="Email" required>
+      <input class = 'password' type="password" name="registerPassword" placeholder="Password" required>
+      <input class = 'matchedPassword' type="password" name="registerPasswordMatched" placeholder="Confirm Password" required>
       <input type="submit" value="Find your best fit">
     </form>
   </div>
@@ -54,6 +55,7 @@
     <input type="password" name="loginPassword" placeholder="Password" required>
     <input type="submit" value="Login">
   </form>
+  <a href="{{pathFor route='home'}}" class="button_link">Home</a>
 </template>
 
 
@@ -72,13 +74,8 @@
 </template>
 
 
-<template name="loginRep">
-  <h2>Log in</h2>
-  <form>
-    <input type="text" name="loginUsername" placeholder="Username">
-    <input type="password" name="loginPassword" placeholder="Password">
-    <input type="submit" value="Login">
-  </form>
+<template name="loginButton">
+  <button></button>
 </template>
 
 
