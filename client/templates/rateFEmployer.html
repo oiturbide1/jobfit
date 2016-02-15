@@ -19,95 +19,82 @@
 
 <template name = 'formerEmployerRatings'>
   <form>
+	<fieldset>
+	  <script type="text/javascript">
+        function updateTextInput(val, input) {
+          document.getElementById(input).value=val;
+      }
+	  </script>
       Supporting Work Life Balance
       <br>
-      <input type = "radio" name = "wl balance" value = "not important">Not important at all
-      <input type = "radio" name = "wl balance" value = "little">Of little importance
-      <input type = "radio" name = "wl balance" value = "neutral">Of average importance
-      <input type = "radio" name = "wl balance" value = "important">Very important
-      <input type = "radio" name = "wl balance" value = "essential">Absolutely essential
+      <input type="text" id="work_life_bal" name = 'jobBal' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'work_life_bal');" >
       <br>
       <br>
       Providing Job Security
       <br>
-      <input type = "radio" name = "security" value = "not important">Not important at all
-      <input type = "radio" name = "security" value = "little">Of little importance
-      <input type = "radio" name = "security" value = "neutral">Of average importance
-      <input type = "radio" name = "security" value = "important">Very important
-      <input type = "radio" name = "security" value = "essential">Absolutely essential
+	  <input type="text" id="job_sec" name = 'jobSec' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'job_sec');" >
       <br>
       <br>
-      Providing Training and development opportunities
+      Providing Training and Development Opportunities
       <br>
-      <input type = "radio" name = "develop" value = "not important">Not important at all
-      <input type = "radio" name = "develop" value = "little">Of little importance
-      <input type = "radio" name = "develop" value = "neutral">Of average importance
-      <input type = "radio" name = "develop" value = "important">Very important
-      <input type = "radio" name = "develop" value = "essential">Absolutely essential
+	  <input type="text" id="train_dev_opp" name = 'jobDev' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'train_dev_opp');" >
       <br>
       <br>
-      Providing A Manageable Workload
+      Providing a Manageable Workload
       <br>
-      <input type = "radio" name = "wload" value = "not important">Not important at all
-      <input type = "radio" name = "wload" value = "little">Of little importance
-      <input type = "radio" name = "wload" value = "neutral">Of average importance
-      <input type = "radio" name = "wload" value = "important">Very important
-      <input type = "radio" name = "wload" value = "essential">Absolutely essential
+      <input type="text" id="work_load" name = 'jobWorkLoad' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'work_load');" >
       <br>
       <br>
-      Providing A clear career path at my employer
+      Providing a Clear Career Path at My Employer
       <br>
-      <input type = "radio" name = "path" value = "not important">Not important at all
-      <input type = "radio" name = "path" value = "little">Of little importance
-      <input type = "radio" name = "path" value = "neutral">Of average importance
-      <input type = "radio" name = "path" value = "important">Very important
-      <input type = "radio" name = "path" value = "essential">Absolutely essential
+      <input type="text" id="career_path" name = 'jobCareer' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'career_path');" >
       <br>
       <br>
-      Providing Clear promotion criteria
+      Providing Clear Promotion Criteria
       <br>
-      <input type = "radio" name = "criteria" value = "not important">Not important at all
-      <input type = "radio" name = "criteria" value = "little">Of little importance
-      <input type = "radio" name = "criteria" value = "neutral">Of average importance
-      <input type = "radio" name = "criteria" value = "important">Very important
-      <input type = "radio" name = "criteria" value = "essential">Absolutely essential
+      <input type="text" id="promo_criteria" name = 'jobPromoCrit' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'promo_criteria');" >
       <br>
       <br>
-      Providing Opportunities for promotion
+      Providing Opportunities for Promotion
       <br>
-      <input type = "radio" name = "prom" value = "not important">Not important at all
-      <input type = "radio" name = "prom" value = "little">Of little importance
-      <input type = "radio" name = "prom" value = "neutral">Of average importance
-      <input type = "radio" name = "prom" value = "important">Very important
-      <input type = "radio" name = "prom" value = "essential">Absolutely essential
+	  <input type="text" id="promo_opp" name = 'jobPromoOpp' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'promo_opp');" >
       <br>
       <br>
-      Providing employees with The freedom to perform my job in the way that i think is best
+      Providing Employees with the Freedom to Perform My Job in the Way that I Think is Best
       <br>
-      <input type = "radio" name = "freedom" value = "not important">Not important at all
-      <input type = "radio" name = "freedom" value = "little">Of little importance
-      <input type = "radio" name = "freedom" value = "neutral">Of average importance
-      <input type = "radio" name = "freedom" value = "important">Very important
-      <input type = "radio" name = "freedom" value = "essential">Absolutely essential
+	  <input type="text" id="work_freedom" name = 'jobFree' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'work_freedom');" >
       <br>
       <br>
-      Providing A high salary
+      Providing A High Salary
       <br>
-      <input type = "radio" name = "salary" value = "not important">Not important at all
-      <input type = "radio" name = "salary" value = "little">Of little importance
-      <input type = "radio" name = "salary" value = "neutral">Of average importance
-      <input type = "radio" name = "salary" value = "important">Very important
-      <input type = "radio" name = "salary" value = "essential">Absolutely essential
+      <input type="text" id="salary_range" name = 'jobSalary' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'salary_range');" >
       <br>
       <br>
-      Providing Good supervisors and managers
+      Providing Good Supervisors and Managers
       <br>
-      <input type = "radio" name = "super" value = "not important">Not important at all
-      <input type = "radio" name = "super" value = "little">Of little importance
-      <input type = "radio" name = "super" value = "neutral">Of average importance
-      <input type = "radio" name = "super" value = "important">Very important
-      <input type = "radio" name = "super" value = "essential">Absolutely essential
+      <input type="text" id="manager_quality" name = 'jobManager' value="">
+      <input type = 'range' min='0' max = '100' name = 'job sat' 
+		value = '50' step = '1' onchange="updateTextInput(this.value, 'manager_quality');" >
       <br>
+	  </fieldset>
   </form>
 
 </template>
