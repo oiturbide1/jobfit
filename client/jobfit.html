@@ -1,6 +1,7 @@
 <template name = 'home'>
-  <h1>Welcome to JobFit!</h1>
-  <button id = 'loginButton'>Login</button>
+  <div id = 'mainBox'>
+    <h1>Welcome to JobFit!</h1>
+    <button id = 'loginButton'>Login</button>
 
 
 
@@ -12,6 +13,7 @@
     {{> selectRep}}
 
   {{/if}}
+</div>
 
 </template>
 
@@ -20,30 +22,30 @@
 <template name = 'selectTalent'>
   <div id = 'talentBox'>
     <p>Are you happy with your job?</p>
-    <a href="{{pathFor route='registerTalent'}}" class="button_link">Start your journey to find perfect fit!</a>
+    <a href="{{pathFor route='registerTalent'}}" class="reg_button_link">Start your journey to find perfect fit!</a>
   </div>
 </template>
 
 <template name = 'selectRep'>
   <div id = 'repBox'>
     <p>Finding the right employee is crucial for success</p>
-    <a href="{{pathFor route='registerRep'}}" class="button_link">Find your next star employee</a>
+    <a href="{{pathFor route='registerRep'}}" class="reg_button_link">Find your next star employee</a>
   </div>
 </template>
 
 
 <template name="registerTalent">
-  <h2>Register</h2>
+  
   <div class = 'registerBox'>
     <form id = 'registerT'>
       <input class = 'regEmail' type="email" name="registerEmail" placeholder="Email" required>
       <input class = 'password' type="password" name="registerPassword" placeholder="Password" required>
-      <input class = 'matchedPassword' type="password" name="registerPasswordMatched" placeholder="Confirm Password" required>
-      <input type="submit" value="Find your best fit">
+      <input class = 'matchedPassword' type="password" name="matchedPassword" placeholder="Confirm Password" required>
+      <input class = "reg_button_link"  type="submit" value="Find your best fit">
     </form>
   </div>
 
-  <a href="{{pathFor route='home'}}" class="button_link">Home</a>
+  <a href="{{pathFor route='home'}}" class="home_link">Home</a>
 
 </template>
 

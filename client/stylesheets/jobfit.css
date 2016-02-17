@@ -5,23 +5,37 @@ body
 	background-repeat: no-repeat;
 }
 
+#mainBox
+{
+	width: 80%
+	margin: 0 auto;
+	border: solid green;
+}
+
+
 #loginButton
 {
-	right: 2em;
+	
+	left: 80%;
+	position: relative;
+    background-color: gray;
+  	-moz-border-radius: 15px;
+  	-webkit-border-radius: 15px;
+  	border: 5px solid black;
+  	padding: 5px;
 
 }
 
 
 #talentBox
 {
-	width: 20em;
-	height:10em;
+	width: 25%;
+	height:25%;
 	position: relative;
-	left:5em;
-	top:5em;
 	padding: 1em;
 	border: 1em solid purple;
 	border-radius: 25%;
+	margin:0 auto;
 
 
 }
@@ -50,15 +64,14 @@ body
 
 #repBox
 {
-	width: 20em;
-	height:10em;
+	width: 25%;
+	height:25%;
+	top: 85%;
 	position: relative;
-	left:30em;
-	bottom:9em;
 	padding: 1em;
 	border: 1em solid purple;
 	border-radius: 25%;
-
+	margin:0 auto;
 
 }
 
@@ -69,18 +82,21 @@ input.error
 
 .registerBox
 {
+	top: 25%;
 	width: 10em;
 	height: 5em;
 	position: relative;
 	margin: 0 auto;
 	border-radius: 1em solid blue;
+	border: 1 em solid yellow;
 
 }
 
 
 h1
 {
-	color: green;
+	color: blue;
+	font-size: 3em;
 	text-align: center;
 }
 
@@ -88,6 +104,29 @@ h2
 {
 	color:brown;
 	font-size: 2em;
+}
+
+
+.reg_button_link
+{
+	position: relative;
+    background-color: #33FF00;
+  	-moz-border-radius: 15px;
+  	-webkit-border-radius: 15px;
+  	border: 5px solid #009900;
+  	padding: 5px;
+  	margin: 0 auto;
+}
+
+.home_link
+{
+	position: relative;
+    background-color: #33FF00;
+  	-moz-border-radius: 15px;
+  	-webkit-border-radius: 15px;
+  	border: 5px solid #009900;
+  	padding: 5px;
+  	top: 10%;
 }
 
 .button_link

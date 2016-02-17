@@ -3,7 +3,7 @@
         'submit form': function(event) {
 
           event.preventDefault();
-          /*
+          
           var emailVar = event.target.registerEmail.value;
           var passwordVar = event.target.registerPassword.value;
 
@@ -17,7 +17,7 @@
           Router.go("/information");
           console.log('submitted');
 
-          */
+          
         }
       });
 
@@ -26,13 +26,37 @@ Template.login.events({
 
           event.preventDefault();
 
-          /*
-          var usernameVar = event.target.loginUsername.value;
+          
+          var emailVar = event.target.loginEmail.value;
           var passwordVar = event.target.loginPassword.value;
 
-          Meteor.loginWithPassword(usernameVar, passwordVar);
-          console.log('logged in');
-          */
+          Meteor.loginWithPassword(emailVar, passwordVar, function(err){
+            if(err)
+            {
+                Session.set('alert','login failed!');
+                return false;
+            }
+            else
+            {
+                Session.set('alert',null);
+            }
+
+          });
+          
+
+
+          //user =
+            //email: $('[name="loginEmail"]').val()
+            //password: $('[name="loginPassword"]').val()
+
+          
+          //Meteor.loginWithPassword(user.email, user.password, (error)->
+            //alert error.reason if error
+
+          
+          Router.go("/information");
+          //var user = Meteor.userId().email;
+          //console.log(user)
         }
       });
 
@@ -50,14 +74,15 @@ Template.registerTalent.onRendered(function(){
             {
               required: true,
               minlength: 8,
-              number: true
+              //number: true
             },
-
-            registerPasswordMatched:
+            
+            matchedPassword:
             {
               required: true,
               equalTo: password
             }
+            
 
               },
 
@@ -74,11 +99,14 @@ Template.registerTalent.onRendered(function(){
                 required: "You must enter a password.",
                 minlength: "Your password must be at least {0} characters."
               },
-
-              registerPasswordMatched:
+              
+              matchedPassword:
               {
+                required: "You must enter matching password",
+                equalTo: "Passwords do not match"
 
               }
+              
             }
           });
       });
@@ -235,12 +263,18 @@ Template.educ.events({
 
 
 Template.skills.events({
-  "click #enterSkills": function (event, template) {
+  "submit form": function (event, template) {
       // Prevent default browser form submit
       event.preventDefault();
 
       // Get value from form element
-      var skill1 = event.target.skill.value;
+      var skill1 = event.target.skill1.value;
+      var skill2= event.target.skill2.value;
+      var skill3= event.target.skill3.value;
+      var skill4 = event.target.skill4.value;
+      var skill5 = event.target.skill5.value;
+
+      console.log(skill2)
 
       var user = Meteor.userId;
 
