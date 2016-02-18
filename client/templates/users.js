@@ -3,7 +3,7 @@
         'submit form': function(event) {
 
           event.preventDefault();
-          
+
           var emailVar = event.target.registerEmail.value;
           var passwordVar = event.target.registerPassword.value;
 
@@ -17,7 +17,7 @@
           Router.go("/information");
           console.log('submitted');
 
-          
+
         }
       });
 
@@ -26,7 +26,7 @@ Template.login.events({
 
           event.preventDefault();
 
-          
+
           var emailVar = event.target.loginEmail.value;
           var passwordVar = event.target.loginPassword.value;
 
@@ -42,18 +42,18 @@ Template.login.events({
             }
 
           });
-          
+
 
 
           //user =
             //email: $('[name="loginEmail"]').val()
             //password: $('[name="loginPassword"]').val()
 
-          
+
           //Meteor.loginWithPassword(user.email, user.password, (error)->
             //alert error.reason if error
 
-          
+
           Router.go("/information");
           //var user = Meteor.userId().email;
           //console.log(user)
@@ -76,13 +76,13 @@ Template.registerTalent.onRendered(function(){
               minlength: 8,
               //number: true
             },
-            
+
             matchedPassword:
             {
               required: true,
-              equalTo: password
+              equalTo: registerPassword
             }
-            
+
 
               },
 
@@ -99,14 +99,14 @@ Template.registerTalent.onRendered(function(){
                 required: "You must enter a password.",
                 minlength: "Your password must be at least {0} characters."
               },
-              
+
               matchedPassword:
               {
                 required: "You must enter matching password",
                 equalTo: "Passwords do not match"
 
               }
-              
+
             }
           });
       });

@@ -15,7 +15,7 @@ body
 
 #loginButton
 {
-	
+
 	left: 80%;
 	position: relative;
     background-color: gray;
@@ -26,6 +26,19 @@ body
 
 }
 
+
+#rateBox
+{
+	width: 25%;
+	height:25%;
+	position: relative;
+	padding: 1em;
+	border: 1em solid purple;
+	border-radius: 25%;
+	margin:0 auto;
+
+
+}
 
 #talentBox
 {
@@ -49,6 +62,13 @@ body
 
 
 .password
+{
+	border-radius: 3em;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+#registerPassword
 {
 	border-radius: 3em;
 	margin-bottom: 2em;

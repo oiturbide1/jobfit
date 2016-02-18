@@ -9,6 +9,7 @@
   {{#if currentUser}}
     {{> dashboard}}
   {{else}}
+    {{> rateOnly}}
     {{> selectTalent}}
     {{> selectRep}}
 
@@ -17,6 +18,13 @@
 
 </template>
 
+
+<template name = 'rateOnly'>
+  <div id = 'rateBox'>
+    <p>Do you want to rate your employers?</p>
+    <a href="{{pathFor route='rateCEmployer'}}" class="reg_button_link">Rate employers</a>
+  </div>
+</template>
 
 
 <template name = 'selectTalent'>
@@ -35,11 +43,11 @@
 
 
 <template name="registerTalent">
-  
+
   <div class = 'registerBox'>
     <form id = 'registerT'>
       <input class = 'regEmail' type="email" name="registerEmail" placeholder="Email" required>
-      <input class = 'password' type="password" name="registerPassword" placeholder="Password" required>
+      <input id = 'registerPassword' type="password" name="registerPassword" placeholder="Password" required>
       <input class = 'matchedPassword' type="password" name="matchedPassword" placeholder="Confirm Password" required>
       <input class = "reg_button_link"  type="submit" value="Find your best fit">
     </form>
