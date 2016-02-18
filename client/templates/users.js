@@ -21,12 +21,84 @@
         }
       });
 
+
+$.validator.setDefaults({
+    rules: {
+            registerEmail:
+            {
+              required: true,
+              email: true
+            },
+
+            registerPassword:
+            {
+              required: true,
+              minlength: 8,
+              //number: true
+            },
+
+            matchedPassword:
+            {
+              required: true,
+              equalTo: registerPassword
+            },
+
+            loginPassword:
+            {
+              required: true
+            },
+
+            loginEmail:
+            {
+              required: true,
+              email: true
+            }
+
+
+              },
+
+            messages:
+            {
+              registerEmail:
+              {
+                required: "You must enter an email address.",
+                email: "You've entered an invalid email address."
+              },
+
+              registerPassword:
+              {
+                required: "You must enter a password.",
+                minlength: "Your password must be at least {0} characters."
+              },
+
+              matchedPassword:
+              {
+                required: "You must enter matching password",
+                equalTo: "Passwords do not match"
+
+              },
+
+              loginEmail:
+              {
+                required: "You need to enter your email address."
+              },
+
+              loginPassword:
+              {
+                required: "You need to enter your password."
+              }
+
+            }
+});
+
+
+
 Template.login.events({
         'submit form': function(event) {
 
           event.preventDefault();
 
-
+          /*
           var emailVar = event.target.loginEmail.value;
           var passwordVar = event.target.loginPassword.value;
 
@@ -39,9 +111,11 @@ Template.login.events({
             else
             {
                 Session.set('alert',null);
+                Router.go("/information");
             }
 
           });
+          */
 
 
 
@@ -54,15 +128,21 @@ Template.login.events({
             //alert error.reason if error
 
 
-          Router.go("/information");
+          
           //var user = Meteor.userId().email;
           //console.log(user)
         }
       });
 
+Template.login.onRendered(function(){
+    $('#login').validate();
+});
+
 
 Template.registerTalent.onRendered(function(){
-        $('#registerT').validate({
+        $('#registerT').validate();
+        /*
+        {
           rules: {
             registerEmail:
             {
@@ -109,6 +189,7 @@ Template.registerTalent.onRendered(function(){
 
             }
           });
+          */
       });
 
 
@@ -219,6 +300,12 @@ Template.pi.events({
       console.log('updated');
     }
 
+});
+
+Template.user.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
 });
 
 Template.educ.events({

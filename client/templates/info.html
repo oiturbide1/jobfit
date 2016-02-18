@@ -1,9 +1,13 @@
 <template name = 'information'>
   <h2>Please enter your personal information</h2>
   <div class = mainBox>
+    {{#if currentUser}}
+      {{> user}}
+    {{/if}}
     {{> pi}}
     {{> educ}}
     {{> skills}}
+    
 
 
   </div>
@@ -13,6 +17,10 @@
 
 
 
+
+<template name = 'user'>
+  <p>Welcome {{email}}</p>
+</template>
 
 <template name = 'pi'>
   <form>
