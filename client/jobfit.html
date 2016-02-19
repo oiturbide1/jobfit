@@ -1,7 +1,7 @@
 <template name = 'home'>
   <div id = 'mainBox'>
-    <h1>Welcome to JobFit!</h1>
-    <button id = 'loginButton'>Login</button>
+    <h1>JobFit</h1>
+    
 
 
 
@@ -9,9 +9,11 @@
   {{#if currentUser}}
     {{> dashboard}}
   {{else}}
+    <button id = 'loginButton'>Login</button>
     {{> rateOnly}}
     {{> selectTalent}}
     {{> selectRep}}
+
 
   {{/if}}
 </div>
@@ -22,7 +24,7 @@
 <template name = 'rateOnly'>
   <div id = 'rateBox'>
     <p>Do you want to rate your employers?</p>
-    <a href="{{pathFor route='rateCEmployer'}}" class="reg_button_link">Rate employers</a>
+    <a href="{{pathFor route='rateWhich'}}" class="reg_button_link">Rate employers</a>
   </div>
 </template>
 
@@ -91,7 +93,7 @@
 
 
 <template name="dashboard">
-    <p>You're logged in.</p>
+    <p>You're logged in as {{email}}</p>
     <p><a href="#" class="logout">Logout</a></p>
 </template>
 

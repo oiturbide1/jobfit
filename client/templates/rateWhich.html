@@ -1,0 +1,73 @@
+<template name = 'rateWhich'>
+	<div id = 'rateCurrentBox'>
+    	<p>Would you like to rate current employer(s)?</p>
+    	<a href="{{pathFor route='rateCurrentEmployerInfo'}}" class="reg_button_link">Enter employer information</a>
+  </div>
+
+  <div id = 'rateFormerBox'>
+    <p>Would you like to rate former employer(s)?</p>
+    <a href="{{pathFor route='rateFormerEmployerInfo'}}" class="reg_button_link">Enter employer information</a>
+  </div>
+
+  <a href="{{pathFor route='home'}}" class="button_link">Home</a>
+
+
+</template>
+
+
+
+<template name = 'rateCurrentEmployerInfo'>
+  <form>
+      <fieldset>
+        <legend>
+          Employer Information
+        </legend>
+        Company Name:
+        <input type = "text" name = "companyName">
+        <br>
+        Do you work remotely?
+        <input type = 'radio' name = 'remote' value="yes">Yes
+        <input type = 'radio' name = 'remote' value="no">No
+        <br>
+        Street Address
+        <input type = "text" name = "street">
+        <br>
+        City
+        <input type = "text" name = "city">
+        <br>
+        State
+        <input type = "text" name = "state">
+        Zip Code
+        <input type = "text" name = "zip">
+        <input type = "submit" value = "Rate Employer">
+    </fieldset>
+  </form>
+</template>
+
+<template name = 'rateFormerEmployerInfo'>
+  <form>
+      <fieldset>
+        <legend>
+          Employer Information
+        </legend>
+        Company Name:
+        <input type = "text" name = "companyName">
+        <br>
+        Did you work remotely?
+        <input type = 'radio' name = 'remote' value="yes">Yes
+        <input type = 'radio' name = 'remote' value="no">No
+        <br>
+        Street Address
+        <input type = "text" name = "street">
+        <br>
+        City
+        <input type = "text" name = "city">
+        <br>
+        State
+        <input type = "text" name = "state">
+        Zip Code
+        <input type = "text" name = "zip">
+        <input type = "submit" value = "Rate Employer">
+    </fieldset>
+  </form>
+</template>

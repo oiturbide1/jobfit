@@ -21,7 +21,7 @@
         }
       });
 
-
+/*
 $.validator.setDefaults({
     rules: {
             registerEmail:
@@ -91,14 +91,20 @@ $.validator.setDefaults({
             }
 });
 
+*/
 
+//function to check password for criteria of at least 1 number and 1 alphabet
+$.validator.addMethod('valid', function(value, element) {
+        return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
+    },
+    'Password must contain at least one numeric and one alphabetic character.');
 
 Template.login.events({
         'submit form': function(event) {
 
           event.preventDefault();
 
-          /*
+          
           var emailVar = event.target.loginEmail.value;
           var passwordVar = event.target.loginPassword.value;
 
@@ -107,15 +113,17 @@ Template.login.events({
             {
                 Session.set('alert','login failed!');
                 return false;
+                console.log('error');
             }
             else
             {
                 Session.set('alert',null);
                 Router.go("/information");
+                console.log('correct');
             }
 
           });
-          */
+          
 
 
 
@@ -135,13 +143,44 @@ Template.login.events({
       });
 
 Template.login.onRendered(function(){
-    $('#login').validate();
-});
+    $('#login').validate(
+
+      {
+          rules: 
+          {
+            loginEmail:
+            {
+              required: true,
+              email: true
+            },
+
+            loginPassword:
+            {
+              required: true
+            }
+          },
+
+          messages:
+          {
+              loginEmail:
+              {
+                required: "You must enter an email address.",
+                email: "You've entered an invalid email address."
+              },
+
+              loginPassword:
+              {
+                required: "Please enter your password.",
+              }
+          }
+
+      });
+    });
 
 
 Template.registerTalent.onRendered(function(){
-        $('#registerT').validate();
-        /*
+        $('#registerT').validate(
+        
         {
           rules: {
             registerEmail:
@@ -153,8 +192,8 @@ Template.registerTalent.onRendered(function(){
             registerPassword:
             {
               required: true,
-              minlength: 8,
-              //number: true
+              minlength: 10,
+              valid: true
             },
 
             matchedPassword:
@@ -189,7 +228,7 @@ Template.registerTalent.onRendered(function(){
 
             }
           });
-          */
+          
       });
 
 
@@ -252,25 +291,6 @@ Template.home.events({
         }
 
       });
-
-
-
-
-
-      Template.home.helpers({
-        'checkType': function(typeUser)
-        {
-          if (typeUser == 'talent')
-          {
-            return true;
-          }
-          else
-          {
-            return false;
-          }
-        }
-      });
-
 
 
 
@@ -598,3 +618,30 @@ Template.jobFeeling.events({
 
 
 });
+
+
+Template.rateCurrentEmployerInfo.events({
+  "submit form": function(event, template)
+  {
+    event.preventDefault();
+
+    //need to add logic for capturing data and inserting into companys in DB
+
+    Router.go('/rateCEmployer');
+
+  }
+});
+
+
+Template.rateFormerEmployerInfo.events({
+  "submit form": function(event, template)
+  {
+    event.preventDefault();
+
+    //need to add logic for capturing data and inserting into companys in DB
+
+    Router.go('/rateFEmployer');
+
+  }
+});
+

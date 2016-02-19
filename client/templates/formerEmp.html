@@ -1,21 +1,21 @@
-<template name = 'currentEmp'>
+<template name = 'formerEmp'>
   <p>
-    Please fill out your current Employer information.
+    Please fill out your former Employer information.
   </p>
 
-  {{> employerInfo}}
-  {{> jobInfo}}
-  {{> empStatus}}
-  {{> jobFeeling}}
+  {{> formerEmployerInfo}}
+  {{> formerJobInfo}}
+  {{> formerempStatus}}
+  {{> reason}}
 
   <a href="{{pathFor route='home'}}">Home</a>
-  <a href="{{pathFor route='formerEmp'}}">Former Employer</a>
+  <a href="{{pathFor route='rateFEmployer'}}">Rate Former Employer</a>
 </template>
 
 
 
 
-<template name = 'employerInfo'>
+<template name = 'formerEmployerInfo'>
   <form>
       <fieldset>
         <legend>
@@ -24,7 +24,7 @@
         Company Name:
         <input type = "text" name = "companyName">
         <br>
-        Do you work remotely?
+        Did you work remotely?
         <input type = 'radio' name = 'remote' value="yes">Yes
         <input type = 'radio' name = 'remote' value="no">No
         <br>
@@ -43,7 +43,7 @@
   </form>
 </template>
 
-<template name = 'jobInfo'>
+<template name = 'formerJobInfo'>
   <form>
       <fieldset>
         <legend>
@@ -51,7 +51,7 @@
         </legend>
         Job Title
         <input type = "text" name = "jobtitle">
-        Have you been promoted?
+        Were you promoted?
         <input type = 'radio' name = 'promotion' value="yes">Yes
         <input type = 'radio' name = 'promotion' value="no">No
         <br>
@@ -71,7 +71,7 @@
 
 
 
-<template name = 'empStatus'>
+<template name = 'formerempStatus'>
   <form>
     <fieldset>
       <legend>
@@ -93,61 +93,49 @@
 
 
 
-<template name = 'jobFeeling'>
+<template name = 'reason'>
   <form>
     <fieldset>
       <legend>
-        Feelings toward Job
+        Reason for leaving former employer
       </legend>
-      <script type="text/javascript">
-        function updateTextInput(val, input) {
-          document.getElementById(input).value=val;
-      }
-      </script>
-	  
-
-      Overall, I am satisfied with my current job.
+      Did you leave your former employer by choice?
       <br>
-	  <input type="text" id="current_job_satisf" name = 'jobSat' value="">
-      <input type = 'range' min='0' max = '100' name = 'job sat' 
-		value = '50' step = '1' onchange="updateTextInput(this.value, 'current_job_satisf');" >
+      <input type = 'radio' name = 'voluntary' value="yes">Yes
+      <input type = 'radio' name = 'voluntary' value="no">No
       <br>
-      I perform my job well.
+      If Yes, please select reason (select all that apply)
       <br>
-	  <input type="text" id="job_perf" name = 'jobPerform' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, 'job_perf');" >
+      <input type = "checkbox" name = "reason" value = "hpjob">Found a higher paying job
       <br>
-      I would be glad to spend my whole career with my current employer.
+      <input type = "checkbox" name = "reason" value = "chjob">Found a more challenging job
       <br>
-	  <input type="text" id="career_with_emp" name = 'jobFuture' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, 'career_with_emp');" >
+      <input type = "checkbox" name = "reason" value = "change">Made a career change
       <br>
-      I often think about leaving my current employer.
+      <input type = "checkbox" name = "reason" value = "super">Conflict with supervisor
       <br>
-	  <input type="text" id="leave_curr_emp" name = 'jobExit' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, 'leave_curr_emp');" >
+      <input type = "checkbox" name = "reason" value = "cowrkers">conflict with coworkers
       <br>
-      My current employer and I share the same values.
+      <input type = "checkbox" name = "reason" value = "lack">Lack of career opportunities for advancement
       <br>
-	  <input type="text" id="shr_val_emp" name = 'jobValue' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, 'shr_val_emp');" >
+      <input type = "checkbox" name = "reason" value = "family">Left due to family responibilities
       <br>
-      I cooperate with my coworkers.
+      <input type = "checkbox" name = "reason" value = "moved">Geographically relocated in order
       <br>
-	  <input type="text" id="coop_with_emp" name = 'jobCoop' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, 'coop_with_emp');" >
+      <input type = "checkbox" name = "reason" value = "other">Other: please explain
       <br>
-      I assist my coworkers when they need help.
+      If No, please select reason (select all that apply)
+      <input type = "checkbox" name = "reason" value = "poor">Poor performance
       <br>
-	  <input type="text" id="cowork_assist" name = 'jobAssist' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, '	cowork_assist');" >
+      <input type = "checkbox" name = "reason" value = "conflictsup">Conflit with supervisor
       <br>
-      I think about how my actions affect my coworkers.
+      <input type = "checkbox" name = "reason" value = "conflictco">Conflict with coworkers
       <br>
-	  <input type="text" id="action_extern" name = 'jobAffect' value="">
-      <input type = 'range' min='0' max = '100' value = '50' step = '1' onchange="updateTextInput(this.value, 'action_extern');" >
+      <input type = "checkbox" name = "reason" value = "closed">Organization closed or went out of business
       <br>
-      <input type = "submit" value = "Enter job satisfaction">
+      <input type = "checkbox" name = "reason" value = "down">My job was eliminated due to downsizing, merger, and/or restructuring
+      <br>
+      <input type = "checkbox" name = "reason" value = "other">Other: please explain
     </fieldset>
   </form>
 
