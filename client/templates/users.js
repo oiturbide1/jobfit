@@ -104,7 +104,7 @@ Template.login.events({
 
           event.preventDefault();
 
-          
+
           var emailVar = event.target.loginEmail.value;
           var passwordVar = event.target.loginPassword.value;
 
@@ -123,7 +123,7 @@ Template.login.events({
             }
 
           });
-          
+
 
 
 
@@ -136,7 +136,7 @@ Template.login.events({
             //alert error.reason if error
 
 
-          
+
           //var user = Meteor.userId().email;
           //console.log(user)
         }
@@ -146,7 +146,7 @@ Template.login.onRendered(function(){
     $('#login').validate(
 
       {
-          rules: 
+          rules:
           {
             loginEmail:
             {
@@ -180,7 +180,7 @@ Template.login.onRendered(function(){
 
 Template.registerTalent.onRendered(function(){
         $('#registerT').validate(
-        
+
         {
           rules: {
             registerEmail:
@@ -228,7 +228,7 @@ Template.registerTalent.onRendered(function(){
 
             }
           });
-          
+
       });
 
 
@@ -625,6 +625,14 @@ Template.rateCurrentEmployerInfo.events({
   {
     event.preventDefault();
 
+    var company = event.target.companyName.value;
+    var address = event.target.street.value;
+    var city = event.target.city.value;
+    var state = event.target.state.value;
+    var zip = event.target.zip.value;
+
+    console.log(state);
+
     //need to add logic for capturing data and inserting into companys in DB
 
     Router.go('/rateCEmployer');
@@ -644,4 +652,3 @@ Template.rateFormerEmployerInfo.events({
 
   }
 });
-
