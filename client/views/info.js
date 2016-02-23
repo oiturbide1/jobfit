@@ -12,7 +12,7 @@ Template.pi.events({
 
       // Insert a task into the collection
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.address": [email,zipCode]} }
+        {_id: Meteor.userId()}, {$set: {"profile.zipCode": zipCode} }
       );
 
 
