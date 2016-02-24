@@ -1,0 +1,4811 @@
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33500"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb334fe")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb334ff")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Strategy and Management", 
+    "joblevel" : "Senior-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "5", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33503"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33501")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33502")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : null, 
+    "joblevel" : "Senior-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "5", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33506"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33504")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33505")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "HR Software ", 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "4", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33509"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33507")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33508")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "International Relations", 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "Some college", 
+    "education_other" : null, 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb3350c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3350a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3350b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : null, 
+    "joblevel" : null, 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "4", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb3350f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3350d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3350e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Product Management", 
+    "joblevel" : "Senior-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "3", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33512"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33510")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33511")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : null, 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "6", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33515"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33513")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33514")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Membership program management", 
+    "joblevel" : "First-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "3", 
+    "education_other" : null, 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb33518"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33516")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33517")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Education", 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "4", 
+    "education_other" : null, 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb3351b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb33519")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3351a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "technical communication", 
+    "joblevel" : "Mid-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "4", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8474e7ebfe1d2cb3351e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3351c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8474e7ebfe1d2cb3351d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Education", 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "5", 
+    "education_other" : null, 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33521"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3351f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33520")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : null, 
+    "joblevel" : "WAS senior level contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "5", 
+    "education_other" : null, 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33524"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33522")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33523")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : null, 
+    "joblevel" : "Mid-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "6", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33527"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33525")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33526")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT project management", 
+    "joblevel" : "Mid-level manager", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "3", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3352a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33528")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33529")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IO psychology", 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : null, 
+    "education" : "6", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3352d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3352b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3352c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Consultant", 
+    "joblevel" : "Mid-level individual contributor", 
+    "joblevel_other" : null, 
+    "expertise" : "Functional/Marketing/Change Management", 
+    "education" : "3", 
+    "education_other" : null, 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33530"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3352e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3352f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Educator", 
+    "joblevel" : null, 
+    "joblevel_other" : "Lecturer", 
+    "expertise" : "Psychology", 
+    "education" : "4", 
+    "education_other" : null, 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33533"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33531")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33532")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retail", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33536"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33534")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33535")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "REALTOR", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "MARKETING", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33539"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33537")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33538")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "software dev", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3353c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3353a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3353b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT Analyst", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "IT", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3353f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3353d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3353e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Controller", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Accounting", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33542"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33540")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33541")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Retail", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33545"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33543")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33544")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "teacher", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Chemistry", 
+    "education" : "8", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33548"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33546")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33547")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sales Associate", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Shoes", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3354b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33549")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3354a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Warehouse Worker", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Customer Returns", 
+    "education" : "0", 
+    "education_other" : "Some college", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3354e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3354c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3354d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "CFH Manager", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Managment", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33551"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3354f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33550")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Researcher", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Chemistry", 
+    "education" : "8", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33554"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33552")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33553")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Scientist", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Science", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33557"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33555")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33556")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "writer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "editing", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3355a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33558")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33559")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "assistant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "admin", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3355d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3355b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3355c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "cashier", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "customer service", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33560"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3355e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3355f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Teacher", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Geology", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33563"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33561")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33562")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Scientist", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Bioanalytical chemistry", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33566"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33564")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33565")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33569"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33567")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33568")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Nurse", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Healthcare", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3356c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3356a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3356b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sales Manager", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3356f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3356d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3356e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Nonprofit program manager", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Operations management, quality improvement", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33572"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33570")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33571")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33575"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33573")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33574")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "photo editor", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "art/photo", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33578"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33576")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33577")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Underwriter", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Insurance", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3357b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33579")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3357a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Student Services Manager", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Student Placement", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3357e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3357c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3357d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Computer Technician", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Information Technology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33581"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3357f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33580")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Administrative Assistant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Data Entry/Records/General Office", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33584"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33582")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33583")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Landscaper", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "N/A", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33587"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33585")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33586")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales associate", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3358a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33588")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33589")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "accounting", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "accounting", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3358d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3358b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3358c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "farmer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "n/a", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33590"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3358e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3358f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "hospitality", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "assistant", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33593"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33591")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33592")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Forklift Driver", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Forklift Driver", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33596"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33594")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33595")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sales", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Real Esate", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33599"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33597")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33598")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Critical Event Manager", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "IT Systems/ Innovative Technology", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3359c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3359a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3359b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "engineering", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "nautical engineering", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3359f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3359d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3359e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Merchandising", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "IT", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335a2"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a0")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a1")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "online retailer", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "accounts receivable", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335a5"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a3")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a4")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Audio Engineer", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "0", 
+    "education_other" : "Trade school", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335a8"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a6")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a7")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "self-employed consultant", 
+    "joblevel" : "0", 
+    "joblevel_other" : "self-employed writer", 
+    "expertise" : "unsure how to answer this.  I had HIGH expertise in old situation, medium in new self-employed situation.", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335ab"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335a9")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335aa")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Server admin", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Server / Backup Admin", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335ae"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ac")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ad")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "contractor", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "skilled laborer", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335b1"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335af")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b0")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Therapist", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Healthcare", 
+    "education" : "7", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335b4"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b2")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b3")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Hydrologist", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Water resources", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335b7"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b5")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b6")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "EDI Analyst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "HIPAA", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335ba"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b8")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335b9")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Consulting", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335bd"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335bb")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335bc")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Assistant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Consumer", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335c0"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335be")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335bf")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Production Worker", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Production", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335c3"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335c1")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335c2")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "System Administrator", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Technology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335c6"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335c4")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335c5")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sales", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Oil and Gas, Land", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335c9"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335c7")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335c8")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "engineer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "engineering", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335cc"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ca")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335cb")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales associate", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "hardware and tools", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335cf"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335cd")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ce")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "hospitality supervisor", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "beverages", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335d2"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d0")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d1")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Finance", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Technology", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335d5"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d3")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d4")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Attorney", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Legal", 
+    "education" : "0", 
+    "education_other" : "JD", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335d8"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d6")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d7")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Operations Analyst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Information Technology", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335db"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335d9")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335da")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Teacher", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "ESL", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335de"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335dc")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335dd")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retail gm", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "management", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335e1"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335df")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e0")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Musician", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Business Owner", 
+    "expertise" : "Lead vocals and guitar", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335e4"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e2")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e3")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "pastry chef", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "pastry arts", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335e7"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e5")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e6")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Unemployed", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Biology", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335ea"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e8")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335e9")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "art", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335ed"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335eb")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ec")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Security Officer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Access control systems", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335f0"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ee")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335ef")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Bookeeper", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Bookeeper", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335f3"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335f1")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335f2")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "management", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "security equipment", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335f6"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335f4")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335f5")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Event planner", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Higher Ed", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335f9"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335f7")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335f8")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Administrative", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Marketing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335fc"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335fa")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335fb")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Systems Analyst", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Information Technology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb335ff"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335fd")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb335fe")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "technical advisor", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "software", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33602"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33600")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33601")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Janitor", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Janitorial", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33605"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33603")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33604")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "psychiatric specialist", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "psychiatry", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33608"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33606")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33607")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Insurance collections", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Negotiations", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3360b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33609")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3360a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "designer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "web design", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3360e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3360c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3360d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "shipping manager", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "shipping and inventory", 
+    "education" : "0", 
+    "education_other" : "3 years college", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33611"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3360f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33610")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT Manager", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Computers", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33614"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33612")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33613")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Network Administrator (IT)", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Information Technology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33617"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33615")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33616")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sales", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3361a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33618")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33619")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Office support", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Office support", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3361d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3361b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3361c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Education", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Instructional technology", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33620"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3361e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3361f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Research Associate", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Crowdsourcing tasks that cover every type of job where human intelligence and discernment is still needed", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33623"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33621")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33622")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Coordinator", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33626"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33624")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33625")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retail", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "grocery", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33629"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33627")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33628")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "SEO Content Analyst/Consultant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "SEO Content composition and editing.", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3362c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3362a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3362b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Tax Preparer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Tax Law", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3362f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3362d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3362e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "homemaker", 
+    "joblevel" : "0", 
+    "joblevel_other" : "N/A", 
+    "expertise" : "caregiving", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33632"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33630")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33631")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sudent", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Senior in College", 
+    "expertise" : "Health Sciences", 
+    "education" : "0", 
+    "education_other" : "Still in College, 1 year until Bachelors Degree", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33635"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33633")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33634")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "unemployed", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "management", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33638"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33636")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33637")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Student", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Student", 
+    "expertise" : "Student", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3363b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33639")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3363a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Technical Training Coordinator", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Professional Development", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3363e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3363c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3363d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Self-Employed", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Self-Employed", 
+    "expertise" : "N/A", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33641"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3363f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33640")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Independent Contractor", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Data Entry", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33644"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33642")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33643")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retail", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "na", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33647"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33645")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33646")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales representative", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "telephone sales", 
+    "education" : "0", 
+    "education_other" : "JD", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3364a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33648")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33649")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Unemployed", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Unemployed", 
+    "expertise" : "Web development", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3364d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3364b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3364c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "laborer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Health and nutrition", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33650"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3364e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3364f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33653"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33651")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33652")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Agent", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33656"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33654")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33655")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "GIS specialist", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "geospatial", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33659"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33657")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33658")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Teacher", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "English, French, Media", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3365c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3365a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3365b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "computer technician", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "computer repair", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3365f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3365d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3365e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "veterinarian", 
+    "joblevel" : "6", 
+    "joblevel_other" : "NA", 
+    "expertise" : "veterinary medicine", 
+    "education" : "0", 
+    "education_other" : "DVM", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33662"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33660")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33661")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Consultant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Telecommuncations", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33665"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33663")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33664")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Oracle Anaylst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Oracle programming", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33668"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33666")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33667")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "LPN", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "nursing", 
+    "education" : "0", 
+    "education_other" : "vocational degree", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3366b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33669")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3366a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "business admin", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "administrating", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3366e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3366c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3366d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33671"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3366f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33670")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Admin Asst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Clerical Support", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33674"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33672")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33673")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Professor", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Instruction", 
+    "expertise" : "Philosophy/Humanities", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33677"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33675")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33676")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Teacher", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sp. Ed.", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3367a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33678")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33679")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Assembler", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Assembly", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3367d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3367b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3367c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Customer Service Rep", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Customer Service and Account Management", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33680"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3367e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3367f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retail manager", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "retail", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33683"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33681")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33682")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "client support", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "education", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33686"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33684")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33685")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT Analyst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Application support", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33689"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33687")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33688")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Bookkeeper", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Accounts Payable", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3368c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3368a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3368b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "it specialist", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "information technology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3368f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3368d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3368e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Data Entry", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Tech support", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33692"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33690")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33691")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "customer service", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "logistics", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33695"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33693")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33694")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "student", 
+    "joblevel" : "0", 
+    "joblevel_other" : "n/a", 
+    "expertise" : "psychology", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33698"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33696")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33697")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "director of community", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "technology, social media", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3369b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33699")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3369a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "manager retail", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "antiques", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3369e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3369c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3369d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Courier driver", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Delivery", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336a1"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3369f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a0")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "technical writer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "engineering and manufacturing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336a4"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a2")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a3")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Student", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Geology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336a7"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a5")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a6")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Unemployed", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Unemployed", 
+    "expertise" : "NA", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336aa"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a8")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336a9")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "self employed", 
+    "joblevel" : "0", 
+    "joblevel_other" : "I work for myself at home", 
+    "expertise" : "self employed", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336ad"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ab")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ac")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "student", 
+    "joblevel" : "0", 
+    "joblevel_other" : "student", 
+    "expertise" : "was a sales associate", 
+    "education" : "0", 
+    "education_other" : "currently attending college", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336b0"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ae")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336af")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Scientist", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Science", 
+    "education" : "8", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336b3"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336b1")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336b2")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Self Employed", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Owner", 
+    "expertise" : "Crowdsourcing", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336b6"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336b4")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336b5")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "student", 
+    "joblevel" : "0", 
+    "joblevel_other" : "student", 
+    "expertise" : "public relations", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336b9"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336b7")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336b8")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Pharmaceutical Quality", 
+    "joblevel" : "6", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Chemistry", 
+    "education" : "8", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336bc"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ba")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336bb")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "self-employed, author, freelancer", 
+    "joblevel" : "0", 
+    "joblevel_other" : "self-employed", 
+    "expertise" : "writing", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336bf"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336bd")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336be")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "educator", 
+    "joblevel" : "0", 
+    "joblevel_other" : "self emploted", 
+    "expertise" : "math, science, writing, grammar", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336c2"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c0")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c1")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Editor", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Publishing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336c5"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c3")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c4")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Mechanic", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Transmission Repair", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336c8"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c6")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c7")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "teacher", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "mathmatics", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336cb"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336c9")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ca")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Media Sales", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336ce"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336cc")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336cd")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "account manager", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "retirement plans", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336d1"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336cf")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d0")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Line Cook", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Burritos", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336d4"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d2")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d3")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Sub. Teacher", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Education", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336d7"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d5")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d6")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Customer Service Agent", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Dispatch", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336da"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d8")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336d9")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Storefront Mechanic", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Window Construction", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336dd"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336db")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336dc")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Project Manager", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "IT", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336e0"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336de")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336df")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Chef", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Cooking", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336e3"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336e1")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336e2")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "manager", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "staff", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336e6"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336e4")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336e5")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "ASST MGR", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "MANAGEMENT", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336e9"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336e7")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336e8")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336ec"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ea")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336eb")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT support", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "IT support", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336ef"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ed")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ee")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Office support staff", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "logistics", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336f2"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f0")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f1")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "HR Consultant", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Human Resources - internal investigations", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336f5"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f3")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f4")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Contractor", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Very little", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336f8"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f6")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f7")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "I have an MSW; My job title is Substance Abuse Counselor", 
+    "joblevel" : "0", 
+    "joblevel_other" : "I'm the senior therapist", 
+    "expertise" : "I have 30 years of treatment experience, in both inpatient and out patient settings.  I consider myself an expert in trauma treatment, mental health and substance abuse.", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336fb"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336f9")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336fa")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Consultant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Quality control", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb336fe"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336fc")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336fd")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Moderator", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Internet", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33701"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb336ff")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33700")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Barista/Kitchen", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "KItchen", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33704"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33702")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33703")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retired computer programmer", 
+    "joblevel" : "0", 
+    "joblevel_other" : "retired", 
+    "expertise" : "business computer programming", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33707"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33705")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33706")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "x-ray technologist", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "radiologic sciences", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3370a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33708")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33709")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Convention Manager", 
+    "joblevel" : "6", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Meetings and Conventions", 
+    "education" : "0", 
+    "education_other" : "Two years of college and travel to 63 countries", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3370d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3370b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3370c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "self-employed", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "plant science", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33710"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3370e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3370f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "unemployed", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "language/writing", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33713"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33711")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33712")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Graphic Designer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Graphic Design", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33716"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33714")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33715")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT", 
+    "joblevel" : "0", 
+    "joblevel_other" : "unemployed", 
+    "expertise" : "hardware troubleshooting", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33719"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33717")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33718")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Author", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Freelance", 
+    "expertise" : "Writing", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3371c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3371a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3371b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Retail/Sales", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3371f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3371d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3371e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "finance assistant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "finance", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33722"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33720")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33721")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Dietary assistant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "nutrition", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33725"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33723")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33724")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Copy editor", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Copy editing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33728"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33726")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33727")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "programmer", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "database", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3372b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33729")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3372a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Editor", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "writing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3372e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3372c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3372d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Real Estate", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Real Estate", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33731"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3372f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33730")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "senior network engineer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "information technology", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33734"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33732")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33733")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Accountant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Tax", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33737"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33735")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33736")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "research assistant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "biology", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3373a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33738")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33739")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "cashier", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "cashier", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3373d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3373b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3373c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "resort management", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "inspector", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33740"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3373e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3373f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Real Estate Agent", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Real Estate Sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33743"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33741")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33742")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "carpenter", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "house building aand repair", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33746"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33744")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33745")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "process technician", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "maintenance", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33749"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33747")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33748")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Customer Service Rep", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Computers/Electronics", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3374c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3374a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3374b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Internal Auditor", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Auditing/accounting", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3374f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3374d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3374e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33752"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33750")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33751")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "ECommerce Manager", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Photography, phote editing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33755"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33753")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33754")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Post-doctoral chemistry research fellow", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Chemistry", 
+    "education" : "8", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33758"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33756")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33757")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "copywriter", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "seo writing", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3375b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33759")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3375a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Teacher", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "English", 
+    "education" : "7", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3375e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3375c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3375d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Closing Coordinator", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Loan applications/Customer Service", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33761"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3375f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33760")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "admin asst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "creative communications", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33764"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33762")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33763")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "admin", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "general office work", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33767"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33765")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33766")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Facilities Manager", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Carpentry", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3376a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33768")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33769")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "bartender", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "customer service and speed", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3376d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3376b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3376c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Freelance Writer-Teacher", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Self-employed", 
+    "expertise" : "Writing, Teaching", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33770"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3376e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3376f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "currently homemaker formerly insurance clerk", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "insurance/general office", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33773"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33771")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33772")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Urban Planner", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Urban Planning", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33776"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33774")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33775")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "buyer", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "strategic sourcing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33779"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33777")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33778")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Craftsperson", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Owner", 
+    "expertise" : "visual art, graphic design, contemporary craft", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3377c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3377a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3377b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "mturk worker", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "survey taking", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3377f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3377d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3377e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33782"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33780")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33781")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Vintage Seller", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Vintage clothes", 
+    "education" : "0", 
+    "education_other" : "Some college", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33785"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33783")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33784")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Manager", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Tech", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33788"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33786")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33787")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Nurse Health Aide", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Healthcare Support", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3378b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33789")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3378a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "analyst", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "benefits", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3378e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3378c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3378d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "cashier", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "cashier/dairy clerk", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33791"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3378f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33790")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Document Specialist", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Real Estate", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33794"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33792")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33793")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Aide", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "speech", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33797"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33795")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33796")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "librarian", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "library circulation", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3379a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33798")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33799")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "cashier", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "cash handeling", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3379d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3379b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3379c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sr. electrical engineer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "eletrical engineering", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337a0"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3379e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3379f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "retail", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337a3"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337a1")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337a2")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Auditor", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Financial Institutions", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337a6"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337a4")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337a5")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "electrical tech", 
+    "joblevel" : "0", 
+    "joblevel_other" : "electrical tech", 
+    "expertise" : "electrical development", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337a9"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337a7")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337a8")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Retail sales", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "n/a", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337ac"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337aa")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ab")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Academic Adviser", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Academic Advisiing", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337af"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ad")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ae")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Food Service", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Customer Service", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337b2"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b0")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b1")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Baker", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Food preparation, planning, sales, supervising other employees in my area", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337b5"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b3")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b4")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Wedding Blogger", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Co-founder", 
+    "expertise" : "Weddings & Events", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337b8"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b6")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b7")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Pianist", 
+    "joblevel" : "0", 
+    "joblevel_other" : "Self-employed", 
+    "expertise" : "Music, Political Economics", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337bb"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337b9")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ba")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "unemployed", 
+    "joblevel" : "0", 
+    "joblevel_other" : "n/a", 
+    "expertise" : "auto parts sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337be"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337bc")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337bd")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "stay at home mom", 
+    "joblevel" : "0", 
+    "joblevel_other" : "non", 
+    "expertise" : "social work", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337c1"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337bf")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c0")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Assistant Manager of Jewelry Shop", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337c4"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c2")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c3")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Writer/Assistant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Communications", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337c7"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c5")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c6")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "cashier", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337ca"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c8")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337c9")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Costume designer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Costume design", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337cd"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337cb")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337cc")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Educator", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Mathematics", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337d0"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ce")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337cf")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Associate", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Cooking", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337d3"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337d1")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337d2")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Composer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Music", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337d6"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337d4")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337d5")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Christian School Principal", 
+    "joblevel" : "6", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Education", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337d9"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337d7")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337d8")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Storeroom Clerk", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Inventory Management", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337dc"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337da")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337db")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "CUSTOMER SERVICE REP", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "CUSTOMER RELATIONS", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337df"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337dd")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337de")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "writer", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "writing and editing", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337e2"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e0")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e1")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "University administration", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Finance", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337e5"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e3")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e4")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "paralegal", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "administration & law", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337e8"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e6")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e7")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "line packer", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "packing", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337eb"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337e9")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ea")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "IT Consultant", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Information Technology", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337ee"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ec")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ed")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "letter carrier", 
+    "joblevel" : "0", 
+    "joblevel_other" : "retired", 
+    "expertise" : "being retired", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337f1"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ef")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f0")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337f4"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f2")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f3")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "laborer", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "managing the shop", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337f7"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f5")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f6")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Computer Tech", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Information Technology", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337fa"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f8")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337f9")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales associate", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb337fd"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337fb")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337fc")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales rep", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "5", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33800"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337fe")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb337ff")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Educator", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Arts", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33803"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33801")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33802")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Associate", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Everythin", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33806"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33804")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33805")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Product Demonstration Supervisor", 
+    "joblevel" : "5", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33809"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33807")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33808")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Customer Service Rep", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Tech support", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3380c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3380a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3380b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Field Engineer", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "MWD/LWD", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3380f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3380d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3380e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Research Associate", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Biochemistry", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33812"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33810")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33811")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "graphic designer and writer", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "content creation", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33815"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33813")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33814")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Administrative Assistant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Administrative", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33818"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33816")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33817")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Server/Bartender", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Customer service", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3381b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33819")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3381a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "panner", 
+    "joblevel" : "0", 
+    "joblevel_other" : "self", 
+    "expertise" : "marketing /sales", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3381e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3381c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3381d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Designer", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Web Design", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33821"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3381f")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33820")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "sales", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "sales", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33824"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33822")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33823")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Weight Loss Consultant", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Consulting clients", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33827"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33825")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33826")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Server", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Food service", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3382a"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33828")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33829")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Nurse", 
+    "joblevel" : "3", 
+    "joblevel_other" : "NA", 
+    "expertise" : "pediatrcs", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3382d"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3382b")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3382c")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "copywriter/student", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "marketing", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33830"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3382e")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3382f")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Network Administrator", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Computer Networking", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33833"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33831")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33832")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Criminal justice professional", 
+    "joblevel" : "4", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Parole", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33836"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33834")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33835")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "preschool teacher", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "early childhood education", 
+    "education" : "3", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33839"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33837")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33838")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Social Worker", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Social Work", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3383c"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3383a")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3383b")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Pharmacy Technician", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Medicine", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3383f"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3383d")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3383e")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "archivist", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "audiovisual archiving", 
+    "education" : "6", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33842"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33840")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33841")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "consultant", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "consulting", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33845"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33843")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33844")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "Broadcast Engineer", 
+    "joblevel" : "2", 
+    "joblevel_other" : "NA", 
+    "expertise" : "Television, video, broadcasting", 
+    "education" : "4", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb33848"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33846")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33847")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "test tech", 
+    "joblevel" : "1", 
+    "joblevel_other" : "NA", 
+    "expertise" : "test lcd panels", 
+    "education" : "2", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3384b"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb33849")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3384a")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}
+{ 
+    "_id" : ObjectId("56bf8475e7ebfe1d2cb3384e"), 
+    "personalSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3384c")
+    ], 
+    "employerSurveys" : [
+        ObjectId("56bf8475e7ebfe1d2cb3384d")
+    ], 
+    "IC" : NumberInt(1), 
+    "occupation" : "NA", 
+    "joblevel" : "-99", 
+    "joblevel_other" : "NA", 
+    "expertise" : "NA", 
+    "education" : "-99", 
+    "education_other" : "NA", 
+    "gender" : NumberInt(-99)
+}

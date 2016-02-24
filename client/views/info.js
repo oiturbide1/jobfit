@@ -9,6 +9,9 @@ Template.pi.events({
       var currentUserId = Meteor.userId;
       var user = Meteor.users.findOne(Meteor.userId);
 
+      
+  
+
 
       // Insert a task into the collection
       Meteor.users.update(
@@ -20,7 +23,9 @@ Template.pi.events({
       event.target.email.value = "";
       event.target.zip.value = '';
 
-      console.log('updated');
+      //console.log('updated');
+      //console.log(zipCode);
+    
     }
 
 });
@@ -42,10 +47,15 @@ Template.educ.events({
       var subject= event.target.subject.value;
       var user = Meteor.userId;
 
+      var selected = template.findAll( "input[type=checkbox]:checked");
+
+      var array = selected.map(function(item)
+      { return item.value})
+
 
       // Add education info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.education": [school,degree,subject]} }
+        {_id: Meteor.userId()}, {$set: {"profile.education": [{"school": school},{"degree": degree}, {"field": subject}, {"level": array} ]} }
       );
 
 
@@ -56,14 +66,8 @@ Template.educ.events({
 
       console.log('school');
       console.log('test');
-
-      var selected = template.findAll( "input[type=checkbox]:checked");
-
-      var array = selected.map(function(item)
-      { return item.value})
-
-
       console.log(array);
+
 
     }
 

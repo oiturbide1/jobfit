@@ -23,19 +23,13 @@
 </template>
 
 <template name = 'pi'>
-  <form>
-      <fieldset>
-        <legend>
-          Personal Information
-        </legend>
-        Email
-        <input type = "text" name = "email">
-        <br>
-        Zip Code
-        <input type = "text" name = "zip">
-        <input type = "submit" value = "Enter information">
+  {{#autoForm collection='PersonalInfo' id='personalInFoForm' type= 'insert'}} 
+    <fieldset>
+      {{> afQuickField name='email'}}
+      {{> afQuickField name='zip' }}
     </fieldset>
-  </form>
+    <button type="submit">Insert</button>
+  {{/autoForm}}
 </template>
 
 <template name = 'educ'>
