@@ -1,32 +1,32 @@
 Company = new Meteor.Collection( 'company' );
 
 CompanySchema = new SimpleSchema({
-  "name":
+  companyName:
   {
    type: String,
    label: "Company Name"
   },
- "address":
+ address:
  {
    type: String,
    label: "Company Address"
  },
- "city":
+ city:
  {
    type: String,
    label: "City"
  },
- "state":
+ state:
  {
    type: String,
    label: "State"
  },
- "zip":
+ zip:
  {
    type: Number,
    label: "Zip Code"
  },
- "created":
+ created:
  {
    type: Date,
    label: "Date Company Added",
@@ -36,7 +36,7 @@ CompanySchema = new SimpleSchema({
      }
    }
  },
- "updated":
+ updated:
  {
    type: Date,
    label: "Date Company Updated",
@@ -52,9 +52,51 @@ CompanySchema = new SimpleSchema({
 Company.attachSchema(CompanySchema);
 
 
-Company.insert({name: "Duke", address: "55 main st"}, function(error, result) {
-  //The insert will fail, error will be set,
-  //and result will be undefined or false because "copies" is required.
-  //
-  //The list of errors is available on `error.invalidKeys` or by calling Books.simpleSchema().namedContext().invalidKeys()
+
+Company.allow(
+{
+  insert() 
+  {
+    if ( Meteor.user() ) 
+    {
+      return true;
+    } 
+    else 
+    {
+      return false;
+      console.log('not logged in');
+    }
+  },
+  update() 
+  {
+    // When we will ALLOW updates on the client.
+  },
+  remove() 
+  {
+    // When we will ALLOW removes on the client.
+  }
+});
+
+
+Company.deny(
+{
+  insert() 
+  {
+    if ( Meteor.user() ) 
+    {
+      return false;
+    } 
+    else 
+    {
+      return true;
+    }
+  },
+  update() 
+  {
+    // When we will ALLOW updates on the client.
+  },
+  remove() 
+  {
+    // When we will ALLOW removes on the client.
+  }
 });

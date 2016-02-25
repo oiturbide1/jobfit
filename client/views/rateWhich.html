@@ -17,27 +17,23 @@
 
 
 <template name = 'rateCurrentEmployerInfo'>
-  <form>
+  {{#autoForm collection='Company' id='companyInfoForm' type= 'insert'}} 
       <fieldset>
         <legend>
           Employer Information
         </legend>
-        Company Name:
-        <input type = "text" name = "companyName">
+        {{> afQuickField name='companyName'}}
         <br>
-        Street Address
-        <input type = "text" name = "street">
+        {{> afQuickField name='address'}}
         <br>
-        City
-        <input type = "text" name = "city">
+        {{> afQuickField name='city'}}
         <br>
-        State
-        <input type = "text" name = "state">
-        Zip Code
-        <input type = "text" name = "zip">
-        <input type = "submit" value = "Rate Employer">
+        {{> afQuickField name='state'}}
+        <br>
+        {{> afQuickField name='zip'}}
     </fieldset>
-  </form>
+    <input type = "submit" value = "Rate Employer">
+  {{/autoForm}}
 </template>
 
 <template name = 'rateFormerEmployerInfo'>

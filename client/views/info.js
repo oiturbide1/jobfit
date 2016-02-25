@@ -23,7 +23,7 @@ Template.pi.events({
       event.target.email.value = "";
       event.target.zip.value = '';
 
-      //console.log('updated');
+      console.log('updated');
       //console.log(zipCode);
     
     }
