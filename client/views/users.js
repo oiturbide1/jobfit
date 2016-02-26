@@ -11,8 +11,12 @@
           Accounts.createUser({
             email: emailVar,
             password: passwordVar,
-            profile: { role: "talent" }
+            profile: { role: "talent" },
+            profile: {education: Object},
+            profile: {information: Object}
           });
+
+          
 
           Router.go("/information");
           console.log('submitted');
@@ -186,7 +190,8 @@ Template.registerTalent.onRendered(function(){
             registerEmail:
             {
               required: true,
-              email: true
+              email: true,
+              valid: false
             },
 
             registerPassword:

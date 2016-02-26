@@ -44,19 +44,19 @@ Template.educ.events({
       // Get value from form element
       var school = event.target.school.value;
       var degree= event.target.degree.value;
-      var subject= event.target.subject.value;
+      var subject= event.target.field.value;
       var user = Meteor.userId;
 
-      var selected = template.findAll( "input[type=checkbox]:checked");
+      //var selected = template.findAll( "input[type=checkbox]:checked");
 
-      var array = selected.map(function(item)
-      { return item.value})
+      //var array = selected.map(function(item)
+      //{ return item.value})
 
 
       // Add education info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.education": [{"school": school},{"degree": degree}, {"field": subject}, {"level": array} ]} }
-      );
+      //Meteor.users.update(
+        //{_id: Meteor.userId()}, {$set: {"profile.education": [{"school": school},{"degree": degree}, {"field": subject}, {"level": array} ]} }
+      //);
 
 
       // Clear form
@@ -64,9 +64,9 @@ Template.educ.events({
       event.target.degree.value = '';
       event.target.subject.value = '';
 
-      console.log('school');
+      console.log(school);
       console.log('test');
-      console.log(array);
+      //console.log(array);
 
 
     }

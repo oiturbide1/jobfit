@@ -5,7 +5,7 @@
       {{> user}}
     {{/if}}
     {{> pi}}
-    {{> educ}}
+    
     {{> skills}}
     
 
@@ -33,44 +33,22 @@
 </template>
 
 <template name = 'educ'>
-  <form>
+  {{#autoForm collection='UserEducation' id='educationForm' type= 'insert'}} 
     <fieldset>
       <legend>
         Education
       </legend>
-      School
-      <input type = "text" name = "school">
-      Degree Earned
-      <input type = "text" name = "degree">
+      {{> afQuickField name='school'}}
       <br>
-      Field of Study
-      <input type = "text" name = "subject">
+      {{> afQuickField name='degree'}}
       <br>
+      {{> afQuickField name='field'}}
+      <br>
+      {{> afQuickField name='educationLevel'}}
       Education level
-      <br>
-      <input type = "checkbox" name = "level" value = "somehs">Some high school
-      <br>
-      <input type = "checkbox" name = "level" value = "diploma">high school diploma
-      <br>
-      <input type = "checkbox" name = "level" value = "assoc">associates degree
-      <br>
-      <input type = "checkbox" name = "level" value = "ba">BAchelors degree
-      <br>
-      <input type = "checkbox" name = "level" value = "somegr">Some graduate school
-      <br>
-      <input type = "checkbox" name = "level" value = "ms">Master's degree
-      <br>
-      <input type = "checkbox" name = "level" value = "diff">'all but differation' doctoral work
-      <br>
-      <input type = "checkbox" name = "level" value = "jd">Juris Doctor degree
-      <br>
-      <input type = "checkbox" name = "level" value = "phd">PhD degree
-      <br>
-      <input type = "checkbox" name = "level" value = "other">Other Please explain:
-      <br>
       <input type = "submit" value = "Enter education">
     </fieldset>
-  </form>
+  {{/autoForm}}
 
 </template>
 

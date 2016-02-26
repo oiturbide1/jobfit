@@ -20,6 +20,8 @@ PersonalInfo.attachSchema(new SimpleSchema({
 
 //Schema = {};
 
+//UserEducation = new Mongo.Collection('usereducation');
+
 UserEducation = new SimpleSchema({
     school: {
         type: String,
@@ -41,21 +43,24 @@ UserEducation = new SimpleSchema({
 
 });
 
+
+
 UserProfile = new SimpleSchema({
-    role: {
+    role: 
+    {
         type: String
     },
     zipCode: {
         type: Number,
         optional: true
-    },
-    information:
-    {
-        type: PersonalInfo
     }
+    //information:
+    //{
+        //type: PersonalInfo
+    //}
     //education:
     //{
-        //type: Schema.UserEducation,
+        //type: UserEducation,
         //optional: true
     //}
 });
@@ -102,11 +107,11 @@ User = new SimpleSchema({
         }
       }
     },
-    profile:
-    {
-        type: UserProfile,
-        optional: true
-    },
+    //profile:
+    //{
+        //type: UserProfile,
+        //optional: true
+    //},
     // Make sure this services field is in your schema if you're using any of the accounts packages
     services: {
         type: Object,
