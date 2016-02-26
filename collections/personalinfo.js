@@ -1,3 +1,4 @@
+/*
 PersonalInfo = new Mongo.Collection('personalinfo');
 
 PersonalInfo.attachSchema(new SimpleSchema({
@@ -13,5 +14,6 @@ PersonalInfo.attachSchema(new SimpleSchema({
 		type: Number,
 		label: 'Zip Code'
 	}
-	
+
 }));
+*/

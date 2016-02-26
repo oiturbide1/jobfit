@@ -1,6 +1,26 @@
-Schema = {};
+PersonalInfo = new Mongo.Collection('personalinfo');
 
-Schema.UserEducation = new SimpleSchema({
+PersonalInfo.attachSchema(new SimpleSchema({
+	email:
+	{
+		type:String,
+		label: 'Email',
+		optional:true
+	},
+
+	zip:
+	{
+		type: Number,
+		label: 'Zip Code'
+	}
+
+}));
+
+
+
+//Schema = {};
+
+UserEducation = new SimpleSchema({
     school: {
         type: String,
         label: "School"
@@ -21,7 +41,7 @@ Schema.UserEducation = new SimpleSchema({
 
 });
 
-Schema.UserProfile = new SimpleSchema({
+UserProfile = new SimpleSchema({
     role: {
         type: String
     },
@@ -29,14 +49,19 @@ Schema.UserProfile = new SimpleSchema({
         type: Number,
         optional: true
     },
-    education: {
-        type: Schema.UserEducation,
-        optional: true
+    information:
+    {
+        type: PersonalInfo
     }
+    //education:
+    //{
+        //type: Schema.UserEducation,
+        //optional: true
+    //}
 });
 
 
-Schema.User = new SimpleSchema({
+User = new SimpleSchema({
     username: {
         type: String,
         // For accounts-password, either emails or username is required, but not both. It is OK to make this
@@ -77,8 +102,9 @@ Schema.User = new SimpleSchema({
         }
       }
     },
-    profile: {
-        type: Schema.UserProfile,
+    profile:
+    {
+        type: UserProfile,
         optional: true
     },
     // Make sure this services field is in your schema if you're using any of the accounts packages
@@ -116,4 +142,4 @@ Schema.User = new SimpleSchema({
 });
 
 
-Meteor.users.attachSchema(Schema.User);
+Meteor.users.attachSchema(User);
