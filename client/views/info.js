@@ -9,13 +9,26 @@ Template.pi.events({
       var currentUserId = Meteor.userId;
       var user = Meteor.users.findOne(Meteor.userId);
 
+      var loggedInUser = Meteor.user();
       
-  
+
+      if (Roles.userIsInRole(loggedInUser, 'talent')) {
+        // NOTE: This example assumes the user is not using groups.
+        console.log('in role');
+        return true;
+
+      }
+      else {
+        console.log('nope');
+      }
+
+
+
 
 
       // Insert a task into the collection
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.zipCode": zipCode} }
+        {_id: Meteor.userId()}, {$set: {"profile.information": PersonalInfo.User} }
       );
 
 
@@ -25,7 +38,7 @@ Template.pi.events({
 
       console.log('updated');
       //console.log(zipCode);
-    
+
     }
 
 });

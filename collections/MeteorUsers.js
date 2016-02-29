@@ -18,7 +18,7 @@ PersonalInfo.attachSchema(new SimpleSchema({
 
 
 
-//Schema = {};
+Schema = {};
 
 //UserEducation = new Mongo.Collection('usereducation');
 
@@ -44,20 +44,44 @@ UserEducation = new SimpleSchema({
 });
 
 
+UserSkills = new SimpleSchema({
+    skills:
+		{
+        type: Array,
+        label: "Skills",
+				optional: true,
+				minCount: 1,
+				maxCount:4
+    },
+		'skills.$':
+		{
+			type: String
+		}
 
-UserProfile = new SimpleSchema({
-    role: 
+
+
+});
+
+
+
+Schema.UserProfile = new SimpleSchema({
+		UserProfile:
+		{
+				type: Object
+		},
+    'UserProfile.role':
     {
         type: String
     },
-    zipCode: {
+
+		UserProfileInfo:
+		{
+				type: Object
+		},
+    'UserProfileInfo.zipcode': {
         type: Number,
-        optional: true
+				maxCount: 5
     }
-    //information:
-    //{
-        //type: PersonalInfo
-    //}
     //education:
     //{
         //type: UserEducation,
@@ -91,26 +115,14 @@ User = new SimpleSchema({
     "emails.$.verified": {
         type: Boolean
     },
-    /* Use this registered_emails field if you are using splendido:meteor-accounts-emails-field / splendido:meteor-accounts-meld
-    registered_emails: {
-        type: [Object],
-        optional: true,
-        blackbox: true
-    },
-    */
-    createdAt: {
-      type: Date,
-      label: "Date user Added",
-      autoValue: function() {
-        if ( this.isInsert ) {
-          return new Date;
-        }
-      }
+    createdAt:
+    {
+      type: Date
     },
     //profile:
     //{
-        //type: UserProfile,
-        //optional: true
+        //type: Schema.UserProfile,
+				//optional:true
     //},
     // Make sure this services field is in your schema if you're using any of the accounts packages
     services: {
@@ -131,14 +143,16 @@ User = new SimpleSchema({
         optional: true,
         blackbox: true
     },
+		*/
     // Option 2: [String] type
     // If you are sure you will never need to use role groups, then
     // you can specify [String] as the type
     roles: {
         type: [String],
-        optional: true
+        optional: true,
+				blackbox: true,
+				allowedValues: ['talent','rep', 'admin']
     },
-    */
     // In order to avoid an 'Exception in setInterval callback' from Meteor
     heartbeat: {
         type: Date,

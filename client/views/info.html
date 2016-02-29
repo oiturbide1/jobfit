@@ -5,9 +5,9 @@
       {{> user}}
     {{/if}}
     {{> pi}}
-    
+
     {{> skills}}
-    
+
 
 
   </div>
@@ -23,7 +23,7 @@
 </template>
 
 <template name = 'pi'>
-  {{#autoForm collection='PersonalInfo' id='personalInFoForm' type= 'insert'}} 
+  {{#autoForm collection='PersonalInfo' id='personalInFoForm' type= 'insert'}}
     <fieldset>
       {{> afQuickField name='email'}}
       {{> afQuickField name='zip' }}
@@ -33,7 +33,7 @@
 </template>
 
 <template name = 'educ'>
-  {{#autoForm collection='UserEducation' id='educationForm' type= 'insert'}} 
+  {{#autoForm collection='UserEducation' id='educationForm' type= 'insert'}}
     <fieldset>
       <legend>
         Education
@@ -55,7 +55,7 @@
 
 
 <template name = 'skills'>
-  <form>
+  {{> quickForm collection='UserSkills' id='skillsForm' type= 'insert'}}
     <fieldset>
       <legend>
         Skills
@@ -66,19 +66,10 @@
       Skill 2
       <input type = "text" name = "skill2">
       <br>
-      Skill 3
-      <input type = "text" name = "skill3">
-      <br>
-      Skill 4
-      <input type = "text" name = "skill4">
-      <br>
-      Skill 5
-      <input type = "text" name = "skill5">
-      <br>
 
       <button id = 'enterSkills'>Enter skills</button>
       </fieldset>
-    </form>
+    {{/autoForm}}
 
 
 </template>

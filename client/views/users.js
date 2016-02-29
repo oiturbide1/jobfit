@@ -10,13 +10,15 @@
 
           Accounts.createUser({
             email: emailVar,
-            password: passwordVar,
-            profile: { role: "talent" },
-            profile: {education: Object},
-            profile: {information: Object}
+            password: passwordVar
           });
 
-          
+          var currentUserId = Meteor.userId;
+          var userId = Meteor.userId();
+
+          Roles.addUsersToRoles(userId,'talent');
+
+
 
           Router.go("/information");
           console.log('submitted');
@@ -522,5 +524,3 @@ Template.jobFeeling.events({
 
 
 });
-
-
