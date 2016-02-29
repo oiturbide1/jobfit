@@ -7,6 +7,7 @@
     {{> pi}}
 
     {{> skills}}
+    {{> occupationInfo}}
 
 
 
@@ -55,7 +56,7 @@
 
 
 <template name = 'skills'>
-  {{> quickForm collection='UserSkills' id='skillsForm' type= 'insert'}}
+  {{#autoForm schema='UserSkills' id='skillsForm' type= 'insert'}}
     <fieldset>
       <legend>
         Skills
@@ -94,22 +95,19 @@
 
 
 <template name = 'occupationInfo'>
-  <form>
+  {{#autoForm schema='UserOccupation' id='occupationForm' type= 'insert'}}
     <fieldset>
       <legend>
         Occupation
       </legend>
-      Industry
-      <input type = "text" name = "industry">
+      {{> afQuickField name='industry'}}
       <br>
-      Occupation
-      <input type = "text" name = "occupation">
+      {{> afQuickField name='occupation'}}
       <br>
-      Job Level
-      <input type = "text" name = "jobLevel">
+      {{> afQuickField name='jobLevel'}}
       <br>
       <input type = "submit" value = "Enter occupation info">
     </fieldset>
-  </form>
+  {{/autoForm}}
 
 </template>

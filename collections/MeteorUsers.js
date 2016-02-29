@@ -47,18 +47,28 @@ UserEducation = new SimpleSchema({
 UserSkills = new SimpleSchema({
     skills:
 		{
-        type: Array,
+        type: String,
         label: "Skills",
-				optional: true,
-				minCount: 1,
-				maxCount:4
+		optional: true
+    }
+
+
+});
+
+
+UserOccupation = new SimpleSchema({
+    industry: {
+        type: String,
+        label: "Job Industry"
     },
-		'skills.$':
-		{
-			type: String
-		}
-
-
+    occupation: {
+        type: String,
+        label: "Occupation"
+    },
+    jobLevel: {
+      type: String,
+      label: "Job Level"
+    }
 
 });
 
