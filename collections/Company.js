@@ -29,7 +29,6 @@ CompanySchema = new SimpleSchema({
  created:
  {
    type: Date,
-   label: "Date Company Added",
    autoValue: function() {
      if ( this.isInsert ) {
        return new Date;
@@ -39,20 +38,71 @@ CompanySchema = new SimpleSchema({
  updated:
  {
    type: Date,
-   label: "Date Company Updated",
    optional:true,
    autoValue: function() {
      if ( this.isUpdate ) {
        return new Date;
      }
    }
+ },
+ work_life_balance:
+ {
+    type: Number,
+    optional: true 
+ },
+ job_security:
+ {
+    type: Number,
+    optional: true
+ },
+ development_opportunities:
+ {
+    type: Number,
+    optional: true
+ },
+ workload:
+ {
+    type: Number,
+    optional: true
+ },
+ career_path:
+ {
+    type: Number,
+    optional: true
+ },
+ promotion_criteria:
+ {
+    type: Number,
+    optional: true
+ },
+ promotion_opportunities:
+ {
+    type: Number,
+    optional: true
+ },
+ freedom:
+ {
+    type: Number,
+    optional: true
+ },
+ salary:
+ {
+    type: Number,
+    optional: true
+ },
+ management:
+ {
+    type: Number,
+    optional: true
  }
+
+
 });
 
 Company.attachSchema(CompanySchema);
 
 
-
+/*
 Company.allow(
 {
   insert() 
@@ -98,5 +148,23 @@ Company.deny(
   remove() 
   {
     // When we will ALLOW removes on the client.
+  }
+});
+*/
+
+
+CollectionSchema = new SimpleSchema({
+  slider: {
+    type: Number,
+    max: 150,
+    min: 30,
+    autoform: {
+      type: "noUiSlider",
+      step: 10,    
+      noUiSlider_pipsOptions: {
+        mode: 'steps',
+        density: 5
+      }
+    }
   }
 });

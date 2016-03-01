@@ -44,6 +44,3 @@ AutoForm.hooks({
     }
 	} 
 });
-
-var af = AutoForm.getFieldValue('zip');
-console.log(af);
