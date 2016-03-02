@@ -5,8 +5,9 @@
       {{> user}}
     {{/if}}
     {{> pi}}
-
+    {{> educ}}
     {{> skills}}
+    {{> creds}}
     {{> occupationInfo}}
 
 
@@ -24,7 +25,7 @@
 </template>
 
 <template name = 'pi'>
-  {{#autoForm collection='PersonalInfo' id='personalInFoForm' type= 'insert'}}
+  {{#autoForm schema='PersonalInfo' id='personalInFoForm'}}
     <fieldset>
       {{> afQuickField name='email'}}
       {{> afQuickField name='zip' }}
@@ -34,7 +35,7 @@
 </template>
 
 <template name = 'educ'>
-  {{#autoForm collection='UserEducation' id='educationForm' type= 'insert'}}
+  {{#autoForm schema='UserEducation' id='educationForm'}}
     <fieldset>
       <legend>
         Education
@@ -56,19 +57,18 @@
 
 
 <template name = 'skills'>
-  {{#autoForm schema='UserSkills' id='skillsForm' type= 'insert'}}
+  {{#autoForm schema='UserSkills' id='skillsForm'}}
     <fieldset>
       <legend>
         Skills
       </legend>
-      Skill 1
-      <input type = "text" name = "skill1">
+      {{> afQuickField name='skill1'}}
       <br>
-      Skill 2
-      <input type = "text" name = "skill2">
+      {{> afQuickField name='skill2'}}
       <br>
-
-      <button id = 'enterSkills'>Enter skills</button>
+      {{> afQuickField name='skill3'}}
+      <br>
+      <input type = "submit" value = "Enter skills">
       </fieldset>
     {{/autoForm}}
 
@@ -77,25 +77,24 @@
 
 
 <template name = 'creds'>
-  <form>
+  {{#autoForm schema='UserCreds' id='credsForm'}}
     <fieldset>
       <legend>
       Credentials and certificates
       </legend>
-      Certificate
-      <input type = "text" name = "cert1">
+      {{> afQuickField name='certificate'}}
       <br>
-      Credential
-      <input type = "text" name = "cred1">
+      {{> afQuickField name='creds'}}
       <br>
+      <input type = "submit" value = "Enter creds">
     </fieldset>
-  </form>
+  {{/autoForm}}
 
 </template>
 
 
 <template name = 'occupationInfo'>
-  {{#autoForm schema='UserOccupation' id='occupationForm' type= 'insert'}}
+  {{#autoForm schema='UserOccupation' id='occupationForm'}}
     <fieldset>
       <legend>
         Occupation

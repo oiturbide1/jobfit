@@ -1,6 +1,63 @@
-PersonalInfo = new Mongo.Collection('personalinfo');
+PersonalSurvey = new Meteor.Collection('personal_survey');
 
-PersonalInfo.attachSchema(new SimpleSchema({
+PersonalSurveySchema = new SimpleSchema({
+    timeStamp: 
+    {
+        type: Date,
+        autoValue: function() {
+            if ( this.isInsert ) {
+                return new Date;
+     }
+   }
+    },
+    worklife_self:
+    {
+        type: Number
+    },
+    jobsec_self: 
+    {
+        type: Number
+    }, 
+    td_self: 
+    {
+        type: Number
+    },
+    workload_self:
+    {
+        type: Number
+    }, 
+    careerpath_self:
+    {
+        type: Number
+    }, 
+    promocrit_self: 
+    {
+        type: Number
+    }, 
+    promo_self: 
+    {
+        type: Number
+    }, 
+    auton_self: 
+    {
+        type: Number
+    }, 
+    salary_self: 
+    {
+        type: Number
+    }, 
+    goodsup_self: 
+    {
+        type: Number
+    }
+});
+
+PersonalSurvey.attachSchema(PersonalSurveySchema);
+
+
+
+
+PersonalInfo = new SimpleSchema({
 	email:
 	{
 		type:String,
@@ -13,14 +70,8 @@ PersonalInfo.attachSchema(new SimpleSchema({
 		type: Number,
 		label: 'Zip Code'
 	}
+});
 
-}));
-
-
-
-Schema = {};
-
-//UserEducation = new Mongo.Collection('usereducation');
 
 UserEducation = new SimpleSchema({
     school: {
@@ -45,13 +96,38 @@ UserEducation = new SimpleSchema({
 
 
 UserSkills = new SimpleSchema({
-    skills:
+    skill1:
 		{
         type: String,
-        label: "Skills",
+        label: "Skill1",
 		optional: true
+        },
+    skill2: {
+        type: String,
+        label: 'Skill2',
+        optional: true
+    },
+    skill3: {
+        type: String,
+        label: 'Skill3',
+        optional: true
     }
 
+});
+
+
+UserCreds = new SimpleSchema({
+    certificate:
+        {
+        type: String,
+        label: "Certificate",
+        optional: true
+        },
+    creds: {
+        type: String,
+        label: 'Credentials',
+        optional: true
+    }
 
 });
 
@@ -74,29 +150,37 @@ UserOccupation = new SimpleSchema({
 
 
 
-Schema.UserProfile = new SimpleSchema({
-		UserProfile:
+UserProfile = new SimpleSchema({
+		info:
 		{
-				type: Object
+		  type: PersonalInfo,
+          optional: true
 		},
-    'UserProfile.role':
-    {
-        type: String
-    },
-
-		UserProfileInfo:
+        education:
+        {
+            type: UserEducation,
+            optional: true
+        },
+        skills:
+        {
+            type: UserSkills,
+            optional: true
+        },
+        credentials:
+        {
+            type: UserCreds,
+            optional: true
+        },
+		occupation_info:
 		{
-				type: Object
+			type: UserOccupation,
+            optional: true
 		},
-    'UserProfileInfo.zipcode': {
-        type: Number,
-				maxCount: 5
-    }
-    //education:
-    //{
-        //type: UserEducation,
-        //optional: true
-    //}
+        personal_survey:
+        {
+            type: [PersonalSurvey],
+            optional: true
+        }
 });
 
 
@@ -125,15 +209,22 @@ User = new SimpleSchema({
     "emails.$.verified": {
         type: Boolean
     },
-    createdAt:
+    created:
     {
-      type: Date
+        type: Date,
+        autoValue: function() 
+        {
+            if ( this.isInsert ) 
+            {
+                return new Date;
+            }
+        }
     },
-    //profile:
-    //{
-        //type: Schema.UserProfile,
-				//optional:true
-    //},
+    profile:
+    {
+        type: UserProfile,
+		optional:true
+    },
     // Make sure this services field is in your schema if you're using any of the accounts packages
     services: {
         type: Object,

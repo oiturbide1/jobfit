@@ -1,0 +1,5 @@
+insert all
+	-if company in db and address same
+		-do not change info, just update
+	-if company in db and address different
+		-insert

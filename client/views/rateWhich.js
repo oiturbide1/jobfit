@@ -9,7 +9,18 @@ Template.rateCurrentEmployerInfo.events({
     var state = event.target.state.value;
     var zip = event.target.zip.value;
 
-    console.log(state);
+
+    var cName = Company.find({companyName: company, address: address}).fetch();
+
+    Session.set('name',cName);
+    var check = Session.get('name');
+    //if(check){
+      //console.log('found');
+    //}
+    //else{
+      //console.log('not found');
+    //}
+    //console.log(check);
 
     //need to add logic for capturing data and inserting into companys in DB
 

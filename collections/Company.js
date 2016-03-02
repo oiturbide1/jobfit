@@ -1,3 +1,147 @@
+// schemas for field objects
+wlbSchema = new SimpleSchema({
+  work_life_balance: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+securitySchema = new SimpleSchema({
+  security: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+developmentSchema = new SimpleSchema({
+  development: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+workloadSchema = new SimpleSchema({
+  workload: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+pathSchema = new SimpleSchema({
+  career_path: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+criteriaSchema = new SimpleSchema({
+  promotion_criteria: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+opportunitiesSchema = new SimpleSchema({
+  promotion_opportunities: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+freedomSchema = new SimpleSchema({
+  freedom: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+salarySchema = new SimpleSchema({
+  salary: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+managementSchema = new SimpleSchema({
+  management: 
+  {
+    type: Number,
+    max: 100,
+    min: 0,
+  },
+  count:
+  {
+    type: Number
+  }
+  
+});
+
+
+
+//schema to define companies
 Company = new Meteor.Collection( 'company' );
 
 CompanySchema = new SimpleSchema({
@@ -47,52 +191,52 @@ CompanySchema = new SimpleSchema({
  },
  work_life_balance:
  {
-    type: Number,
+    type: wlbSchema,
     optional: true 
  },
  job_security:
  {
-    type: Number,
+    type: securitySchema,
     optional: true
  },
  development_opportunities:
  {
-    type: Number,
+    type: developmentSchema,
     optional: true
  },
  workload:
  {
-    type: Number,
+    type: workloadSchema,
     optional: true
  },
  career_path:
  {
-    type: Number,
+    type: pathSchema,
     optional: true
  },
  promotion_criteria:
  {
-    type: Number,
+    type: criteriaSchema,
     optional: true
  },
  promotion_opportunities:
  {
-    type: Number,
+    type: opportunitiesSchema,
     optional: true
  },
  freedom:
  {
-    type: Number,
+    type: freedomSchema,
     optional: true
  },
  salary:
  {
-    type: Number,
+    type: salarySchema,
     optional: true
  },
  management:
  {
-    type: Number,
+    type: managementSchema,
     optional: true
  }
 
@@ -153,18 +297,3 @@ Company.deny(
 */
 
 
-CollectionSchema = new SimpleSchema({
-  slider: {
-    type: Number,
-    max: 150,
-    min: 30,
-    autoform: {
-      type: "noUiSlider",
-      step: 10,    
-      noUiSlider_pipsOptions: {
-        mode: 'steps',
-        density: 5
-      }
-    }
-  }
-});

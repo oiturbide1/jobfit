@@ -301,49 +301,6 @@ Template.home.events({
 
 
 
-
-
-
-
-
-Template.occupationInfo.events({
-  "submit form": function (event, template) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-      // Get value from form element
-      var industry = event.target.industry.value;
-      var occupation= event.target.occupation.value;
-      var jobLevel= event.target.jobLevel.value;
-
-      var user = Meteor.userId;
-
-
-      // Add occupation info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.occupation": [industry,occupation,jobLevel,]} }
-      );
-
-
-
-
-      // Clear form
-      event.target.industry.value = "";
-      event.target.occupation.value = '';
-      event.target.jobLevel.value = '';
-
-
-      console.log(occupation);
-
-
-
-    }
-
-
-});
-
-
-
 Template.employerInfo.events({
   "submit form": function (event, template) {
       // Prevent default browser form submit
