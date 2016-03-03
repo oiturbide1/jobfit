@@ -16,8 +16,11 @@ Template.talentviewsurvey.events({
 
       // Add skill info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.survey": [{"worklifebalance": balance},{"jobsecurity": security}]} }
-      );
+        {_id: Meteor.userId()}, {$set: {
+					"profile.personal_survey.worklife_self": balance,
+					"profile.personal_survey.jobsec_self": security
+				}
+			});
 
 
   }

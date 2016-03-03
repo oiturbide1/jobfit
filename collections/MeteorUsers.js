@@ -1,7 +1,7 @@
 PersonalSurvey = new Meteor.Collection('personal_survey');
 
 PersonalSurveySchema = new SimpleSchema({
-    timeStamp: 
+    timeStamp:
     {
         type: Date,
         autoValue: function() {
@@ -14,39 +14,39 @@ PersonalSurveySchema = new SimpleSchema({
     {
         type: Number
     },
-    jobsec_self: 
+    jobsec_self:
     {
         type: Number
-    }, 
-    td_self: 
+    },
+    td_self:
     {
         type: Number
     },
     workload_self:
     {
         type: Number
-    }, 
+    },
     careerpath_self:
     {
         type: Number
-    }, 
-    promocrit_self: 
+    },
+    promocrit_self:
     {
         type: Number
-    }, 
-    promo_self: 
+    },
+    promo_self:
     {
         type: Number
-    }, 
-    auton_self: 
+    },
+    auton_self:
     {
         type: Number
-    }, 
-    salary_self: 
+    },
+    salary_self:
     {
         type: Number
-    }, 
-    goodsup_self: 
+    },
+    goodsup_self:
     {
         type: Number
     }
@@ -133,17 +133,23 @@ UserCreds = new SimpleSchema({
 
 
 UserOccupation = new SimpleSchema({
-    industry: {
+    industry:
+    {
         type: String,
-        label: "Job Industry"
+        label: "Job Industry",
+        optional: true
     },
-    occupation: {
+    occupation:
+    {
         type: String,
-        label: "Occupation"
+        label: "Occupation",
+        optional: true
     },
-    jobLevel: {
+    jobLevel:
+    {
       type: String,
-      label: "Job Level"
+      label: "Job Level",
+      optional: true
     }
 
 });
@@ -156,31 +162,31 @@ UserProfile = new SimpleSchema({
 		  type: PersonalInfo,
           optional: true
 		},
-        education:
-        {
-            type: UserEducation,
-            optional: true
-        },
-        skills:
-        {
-            type: UserSkills,
-            optional: true
-        },
-        credentials:
-        {
-            type: UserCreds,
-            optional: true
-        },
+    education:
+    {
+        type: UserEducation,
+        optional: true
+    },
+    skills:
+    {
+        type: UserSkills,
+        optional: true
+    },
+    credentials:
+    {
+        type: UserCreds,
+        optional: true
+    },
 		occupation_info:
 		{
 			type: UserOccupation,
-            optional: true
+      optional: true
 		},
-        personal_survey:
-        {
-            type: [PersonalSurvey],
-            optional: true
-        }
+    personal_survey:
+    {
+        type: [PersonalSurvey],
+        optional: true
+    }
 });
 
 
@@ -212,9 +218,9 @@ User = new SimpleSchema({
     created:
     {
         type: Date,
-        autoValue: function() 
+        autoValue: function()
         {
-            if ( this.isInsert ) 
+            if ( this.isInsert )
             {
                 return new Date;
             }

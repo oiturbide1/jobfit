@@ -1,6 +1,6 @@
 /*var compHooks = {
   after: {
-    insert: function(error,result) 
+    insert: function(error,result)
     {
       if (error){
       	console.log(error);
@@ -33,10 +33,10 @@ var checkHooks = {
   }
 };
 
-AutoForm.addHooks('companyInfoForm', checkHooks);
-AutoForm.addHooks('companyInfoForm', 
+//AutoForm.addHooks('companyInfoForm', checkHooks);
+AutoForm.addHooks('companyInfoForm',
 {
-  onSuccess: function() 
+  onSuccess: function()
   {
     Session.set('currentCompany', this.docId);
     var currentCompany = Session.get('currentCompany');
@@ -47,9 +47,9 @@ AutoForm.addHooks('companyInfoForm',
 
 
 /*AutoForm.hooks({
-  companyInfoForm: 
+  companyInfoForm:
   {
-    onSuccess: function(error,result) 
+    onSuccess: function(error,result)
     {
       if (error){
         console.log(error);
@@ -61,6 +61,6 @@ AutoForm.addHooks('companyInfoForm',
         console.log(this.docId);
       }
     }
-  } 
+  }
 });
 */
