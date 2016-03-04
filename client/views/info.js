@@ -95,13 +95,18 @@ Template.skills.events({
       // Prevent default browser form submit
       event.preventDefault();
 
+      
       // Get value from form element
-      var skill1 = event.target.skill1.value;
-      var skill2= event.target.skill2.value;
-      var skill3= event.target.skill3.value;
+      var skill1 = AutoForm.getFieldValue('skills.0','skillsForm');
+      var skill2 = AutoForm.getFieldValue('skills.1','skillsForm');
+      var skill3 = AutoForm.getFieldValue('skills.2','skillsForm');
+      //var skill2= event.target.'skills.1'.value;
+      //var skill3= event.target.'skills.2'.value;
       //var skill4 = event.target.skill4.value;
       //var skill5 = event.target.skill5.value;
-
+      console.log(skill1);
+      console.log(skill2);
+      console.log(skill3);
      
 
       var user = Meteor.userId;
@@ -116,12 +121,13 @@ Template.skills.events({
         } 
       });
 
-
+    
 
     }
 
-
+  
 });
+
 
 Template.creds.events({
   "submit form": function (event, template) {

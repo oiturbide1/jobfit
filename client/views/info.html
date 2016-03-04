@@ -1,6 +1,6 @@
 <template name = 'information'>
   <h2>Please enter your personal information</h2>
-  <div class = mainBox>
+  <div class = 'container'>
     {{#if currentUser}}
       {{> user}}
     {{/if}}
@@ -27,8 +27,9 @@
 <template name = 'pi'>
   {{#autoForm schema='PersonalInfo' id='personalInFoForm'}}
     <fieldset>
-      {{> afQuickField name='email'}}
       {{> afQuickField name='zip' }}
+      <br>
+      {{> afQuickField name='gender' }}
       <input type="submit" value="Insert">
     </fieldset>
   {{/autoForm}}
@@ -45,32 +46,21 @@
       {{> afQuickField name='degree'}}
       <br>
       {{> afQuickField name='field'}}
-      <br>
-      {{> afQuickField name='educationLevel'}}
-      Education level
+  
+      
       <input type = "submit" value = "Enter education">
     </fieldset>
   {{/autoForm}}
+
+    {{> quickForm id='educLevel' schema='UserEducationLevel' }}
 
 </template>
 
 
 
 <template name = 'skills'>
-  {{#autoForm schema='UserSkills' id='skillsForm'}}
-    <fieldset>
-      <legend>
-        Skills
-      </legend>
-      {{> afQuickField name='skill1'}}
-      <br>
-      {{> afQuickField name='skill2'}}
-      <br>
-      {{> afQuickField name='skill3'}}
-      <br>
-      <input type = "submit" value = "Enter skills">
-      </fieldset>
-    {{/autoForm}}
+  <h3>Please enter up to 5 skills</h3>
+  {{> quickForm schema='UserSkills' id='skillsForm' input-col-class="col-sm-5"}}
 
 
 </template>

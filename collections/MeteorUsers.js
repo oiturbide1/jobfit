@@ -1,76 +1,48 @@
-PersonalSurvey = new Meteor.Collection('personal_survey');
-
-PersonalSurveySchema = new SimpleSchema({
-    timeStamp:
-    {
-        type: Date,
-        autoValue: function() {
-            if ( this.isInsert ) {
-                return new Date;
-     }
-   }
-    },
-    worklife_self:
-    {
-        type: Number
-    },
-    jobsec_self:
-    {
-        type: Number
-    },
-    td_self:
-    {
-        type: Number
-    },
-    workload_self:
-    {
-        type: Number
-    },
-    careerpath_self:
-    {
-        type: Number
-    },
-    promocrit_self:
-    {
-        type: Number
-    },
-    promo_self:
-    {
-        type: Number
-    },
-    auton_self:
-    {
-        type: Number
-    },
-    salary_self:
-    {
-        type: Number
-    },
-    goodsup_self:
-    {
-        type: Number
-    }
-});
-
-PersonalSurvey.attachSchema(PersonalSurveySchema);
 
 
 
 
 PersonalInfo = new SimpleSchema({
-	email:
-	{
-		type:String,
-		label: 'Email',
-		optional:true
-	},
-
 	zip:
 	{
 		type: Number,
 		label: 'Zip Code'
-	}
+	},
+    gender:
+    {
+        type: String,
+        label: 'Gender',
+        optional: true
+    }
 });
+
+
+UserEducationLevel = new SimpleSchema({ 
+    education_level: {
+        type: String,
+        label: "Education Level",
+        optional:true,
+        autoform: {
+            type: 'select-radio',
+            options: function (){
+                return [
+                    {label: 'Some High School', value: 'some hs'},
+                    {label: 'High School Diploma', value: 'hs_diploma'},
+                    {label: 'Associates Degree', value: 'assoc'},
+                    {label: 'Bachelors Degree', value: 'ba'},
+                    {label: 'Some Graduate', value: 'somegr'},
+                    {label: 'Masters Degree', value: 'ms'},
+                    {label: 'All but differation doctoral work', value: 'diff'},
+                    {label: 'Juris Doctor Degree', value: 'jd'},
+                    {label: 'PhD Degree', value: 'phd'},
+                    {label: 'Other: ', value: 'other'}
+            ];
+        }
+      }
+    }
+
+});
+
 
 
 UserEducation = new SimpleSchema({
@@ -86,23 +58,50 @@ UserEducation = new SimpleSchema({
       type: String,
       label: "Field"
     },
-    educationLevel: {
-      type: String,
-      label: "Education Level",
-      optional:true
+    education_level: 
+    {
+        type: String,
+        label: "Education Level",
+        optional:true,
+        autoform: {
+            type: "select-radio",
+            options: function () {
+                return [
+                    {label: 'Some High School', value: 'somehs'},
+                    {label: 'High School Diploma', value: 'hs_diploma'},
+                    {label: 'Associates Degree', value: 'assoc'},
+                    {label: 'Bachelors Degree', value: 'ba'},
+                    {label: 'Some Graduate', value: 'somegr'},
+                    {label: 'Masters Degree', value: 'ms'},
+                    {label: 'All but differation doctoral work', value: 'diff'},
+                    {label: 'Juris Doctor Degree', value: 'jd'},
+                    {label: 'PhD Degree', value: 'phd'},
+                    {label: 'Other: ', value: 'other'}
+            ];
+        }
+      }
     }
-
+    
 });
 
 
+
+
+
 UserSkills = new SimpleSchema({
-    skill1:
-		{
-        type: String,
-        label: "Skill1",
-		optional: true
-        },
-    skill2: {
+    skills:
+	{
+        type: Array,
+        label: "Skills",
+		optional: true,
+        minCount: 1,
+        maxCount: 5
+    },
+    'skills.$':
+    {
+        type: String
+    }
+    /*skill2: {
         type: String,
         label: 'Skill2',
         optional: true
@@ -111,7 +110,7 @@ UserSkills = new SimpleSchema({
         type: String,
         label: 'Skill3',
         optional: true
-    }
+    }*/
 
 });
 
@@ -177,16 +176,16 @@ UserProfile = new SimpleSchema({
         type: UserCreds,
         optional: true
     },
-		occupation_info:
-		{
-			type: UserOccupation,
-      optional: true
-		},
-    personal_survey:
-    {
-        type: [PersonalSurvey],
+	occupation_info:
+	{
+		type: UserOccupation,
         optional: true
-    }
+	}
+    //personal_survey:
+    //{
+        //type: [PersonalSurvey],
+        //optional: true
+    //}
 });
 
 

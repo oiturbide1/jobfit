@@ -27,3 +27,31 @@ Template.talentviewsurvey.events({
 
 
 });
+
+
+
+UserEducationLevel = new SimpleSchema({ 
+    education_level: {
+        type: String,
+        label: "Education Level",
+        optional:true,
+        autoform: {
+            type: 'select-radio',
+            options: function (){
+                return [
+                    {label: 'Some High School', value: 'some hs'},
+                    {label: 'High School Diploma', value: 'hs_diploma'},
+                    {label: 'Associates Degree', value: 'assoc'},
+                    {label: 'Bachelors Degree', value: 'ba'},
+                    {label: 'Some Graduate', value: 'somegr'},
+                    {label: 'Masters Degree', value: 'ms'},
+                    {label: 'All but differation doctoral work', value: 'diff'},
+                    {label: 'Juris Doctor Degree', value: 'jd'},
+                    {label: 'PhD Degree', value: 'phd'},
+                    {label: 'Other: ', value: 'other'}
+            ];
+        }
+      }
+    }
+
+});
