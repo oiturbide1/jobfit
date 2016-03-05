@@ -1,5 +1,5 @@
 <template name = 'rateWhich'>
-	<div id = 'rateCurrentBox'>
+	<div id = 'container'>
     	<p>Would you like to rate current employer(s)?</p>
     	<a href="{{pathFor route='rateCurrentEmployerInfo'}}" class="reg_button_link">Enter employer information</a>
   </div>
@@ -17,7 +17,7 @@
 
 
 <template name = 'rateCurrentEmployerInfo'>
-  {{#autoForm collection='Company' id='companyInfoForm' type= 'insert'}} 
+  {{#autoForm collection='Company' id='companyInfoForm' type= 'insert'}}
       <fieldset>
         <legend>
           Employer Information

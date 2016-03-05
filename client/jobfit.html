@@ -1,7 +1,7 @@
 <template name = 'home'>
-  <div id = 'mainBox'>
-    <h1>JobFit</h1>
-    
+  <div id = 'container'>
+    <h1>Employer Match</h1>
+
 
 
 
@@ -46,12 +46,13 @@
 
 <template name="registerTalent">
 
-  <div class = 'registerBox'>
-    <form id = 'registerT'>
-      <input class = 'regEmail' type="email" name="registerEmail" placeholder="Email" required>
+  <div class = 'container'>
+    <form class = 'form-signin'>
+      <input class = 'regEmail' type="email" name="registerEmail" placeholder="Email" required autofocus="">
       <input id = 'registerPassword' type="password" name="registerPassword" placeholder="Password" required>
       <input class = 'matchedPassword' type="password" name="matchedPassword" placeholder="Confirm Password" required>
-      <input class = "reg_button_link"  type="submit" value="Find your best fit">
+      <button class="btn btn-sm btn-primary btn-block" type="submit">Find your best fit</button>
+
     </form>
   </div>
 
