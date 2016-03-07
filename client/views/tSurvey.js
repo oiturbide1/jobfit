@@ -30,28 +30,37 @@ Template.talentviewsurvey.events({
 
 
 
-UserEducationLevel = new SimpleSchema({ 
-    education_level: {
-        type: String,
-        label: "Education Level",
-        optional:true,
-        autoform: {
-            type: 'select-radio',
-            options: function (){
-                return [
-                    {label: 'Some High School', value: 'some hs'},
-                    {label: 'High School Diploma', value: 'hs_diploma'},
-                    {label: 'Associates Degree', value: 'assoc'},
-                    {label: 'Bachelors Degree', value: 'ba'},
-                    {label: 'Some Graduate', value: 'somegr'},
-                    {label: 'Masters Degree', value: 'ms'},
-                    {label: 'All but differation doctoral work', value: 'diff'},
-                    {label: 'Juris Doctor Degree', value: 'jd'},
-                    {label: 'PhD Degree', value: 'phd'},
-                    {label: 'Other: ', value: 'other'}
-            ];
-        }
+
+CollectionSchema = new SimpleSchema({
+  wlb: {
+    type: Number,
+    label: 'Work Life Balance',
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        type: "range",
+        min: 1,
+        max:5,
+        steps: 1,
+        value: 3,
+        label: 'test'
       }
     }
+  }
+});
+
+Template.slidertest.events({
+  "submit form": function (event, template) {
+      // Prevent default browser form submit
+      event.preventDefault();
+
+      var wlb = AutoForm.getFieldValue('wlb','foo');
+      console.log(wlb);
+     
+
+
+
+  }
+
 
 });

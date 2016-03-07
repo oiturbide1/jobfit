@@ -9,12 +9,20 @@
   </p>
 
   {{> talentviewsurvey}}
+  {{> slidertest}}
 
   <a href="{{pathFor route='home'}}">Home</a>
   <a href="{{pathFor route='currentEmp'}}">Current Employer info</a>
 
 </template>
 
+
+
+<template name = 'slidertest'>
+  <p>Test for slider</p>
+    {{> quickForm schema='CollectionSchema' id="foo"}}
+  
+</template>
 
 
 <template name = 'talentviewsurvey'>
