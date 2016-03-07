@@ -3,6 +3,9 @@ Template.talentviewsurvey.events({
       // Prevent default browser form submit
       event.preventDefault();
 
+      var wb = event.target.wlb.value;
+      console.log(wb);
+
       var wlb = template.find('input:radio[name=wlBalance]:checked');
       var balance = $(wlb).val();
 	  console.log(balance);
@@ -43,7 +46,7 @@ CollectionSchema = new SimpleSchema({
         max:5,
         steps: 1,
         value: 3,
-        label: 'test'
+        list: 'options'
       }
     }
   }

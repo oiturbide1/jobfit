@@ -4,12 +4,17 @@
     Job Views
   </h2>
 
-  <p>
+  <p id = 'question'>
     When you think about life at work, how important are these things to you?
   </p>
 
+  <p>Please fill out survey with 1 being  <strong>Not Important at all</strong> to 5 being <strong>Absolutely Essential.</strong> </p>
+  <br>
+  <br>
+  <br>
+
   {{> talentviewsurvey}}
-  {{> slidertest}}
+ 
 
   <a href="{{pathFor route='home'}}">Home</a>
   <a href="{{pathFor route='currentEmp'}}">Current Employer info</a>
@@ -18,86 +23,52 @@
 
 
 
-<template name = 'slidertest'>
-  <p>Test for slider</p>
-    {{> quickForm schema='CollectionSchema' id="foo"}}
-  
-</template>
-
-
 <template name = 'talentviewsurvey'>
   <form>
-      Work Life Balance
+    Work Life Balance
       <br>
-      <input type = "radio" name = "wlBalance" value = "1">Not important at all
-      <input type = "radio" name = "wlBalance" value = "2">Of little importance
-      <input type = "radio" name = "wlBalance" value = "3">Of average importance
-      <input type = "radio" name = "wlBalance" value = "4">Very important
-      <input type = "radio" name = "wlBalance" value = "5">Absolutely essential
+      <input type = 'range' min='1' max = '5' value = '3' step = '1' name = 'wlb' >
       <br>
-      Job Security
       <br>
-      <input type = "radio" name = "security" value = "1">Not important at all
-      <input type = "radio" name = "security" value = "2">Of little importance
-      <input type = "radio" name = "security" value = "3">Of average importance
-      <input type = "radio" name = "security" value = "4">Very important
-      <input type = "radio" name = "security" value = "5">Absolutely essential
+    Job Security
       <br>
-      Training and development opportunities
+      <input type = 'range' min='1' max = '5' name = 'jobSec' value = '3' step = '1'>
       <br>
-      <input type = "radio" name = "develop" value = "1">Not important at all
-      <input type = "radio" name = "develop" value = "2">Of little importance
-      <input type = "radio" name = "develop" value = "3">Of average importance
-      <input type = "radio" name = "develop" value = "4">Very important
-      <input type = "radio" name = "develop" value = "5">Absolutely essential
+      <br>
+    Training and development opportunities
+      <br>
+      <input type = 'range' min='1' max = '5' name = 'develop' value = '3' step = '1'>
+      <br>
       <br>
       A Manageable Workload
       <br>
-      <input type = "radio" name = "wload" value = "1">Not important at all
-      <input type = "radio" name = "wload" value = "2">Of little importance
-      <input type = "radio" name = "wload" value = "3">Of average importance
-      <input type = "radio" name = "wload" value = "4">Very important
-      <input type = "radio" name = "wload" value = "5">Absolutely essential
+      <input type = 'range' min='1' max = '5' name = 'wload' value = '3' step = '1'>
+      <br>
       <br>
       A clear career path at my employer
       <br>
-      <input type = "radio" name = "path" value = "1">Not important at all
-      <input type = "radio" name = "path" value = "2">Of little importance
-      <input type = "radio" name = "path" value = "3">Of average importance
-      <input type = "radio" name = "path" value = "4">Very important
-      <input type = "radio" name = "path" value = "5">Absolutely essential
+      <input type = 'range' min='1' max = '5' name = 'path' value = '3' step = '1'>
+      <br>
       <br>
       Clear promotion criteria
       <br>
-      <input type = "radio" name = "criteria" value = "not important">Not important at all
-      <input type = "radio" name = "criteria" value = "little">Of little importance
-      <input type = "radio" name = "criteria" value = "neutral">Of average importance
-      <input type = "radio" name = "criteria" value = "important">Very important
-      <input type = "radio" name = "criteria" value = "essential">Absolutely essential
+      <input type = 'range' min='1' max = '5' name = 'criteria' value = '3' step = '1'>
+      <br>
       <br>
       Opportunities for promotion
       <br>
-      <input type = "radio" name = "prom" value = "not important">Not important at all
-      <input type = "radio" name = "prom" value = "little">Of little importance
-      <input type = "radio" name = "prom" value = "neutral">Of average importance
-      <input type = "radio" name = "prom" value = "important">Very important
-      <input type = "radio" name = "prom" value = "essential">Absolutely essential
+      <input type = 'range' min='1' max = '5' name = 'opportunities' value = '3' step = '1'>
+      <br>
       <br>
       The freedom to perform my job in the way that i think is best
       <br>
-      <input type = "radio" name = "freedom" value = "not important">Not important at all
-      <input type = "radio" name = "freedom" value = "little">Of little importance
-      <input type = "radio" name = "freedom" value = "neutral">Of average importance
-      <input type = "radio" name = "freedom" value = "important">Very important
-      <input type = "radio" name = "freedom" value = "essential">Absolutely essential
+      <input type = 'range' min='1' max = '5' name = 'freedom' value = '3' step = '1'>
+      <br>
       <br>
       A high salary
       <br>
-      <input type = "radio" name = "salary" value = "not important">Not important at all
-      <input type = "radio" name = "salary" value = "little">Of little importance
-      <input type = "radio" name = "salary" value = "neutral">Of average importance
-      <input type = "radio" name = "salary" value = "important">Very important
-      <input type = "radio" name = "salary" value = "essential">Absolutely essential
+      <input type = 'range' min='1' max = '5' name = 'salary' value = '3' step = '1'>
+      <br>
       <br>
       Good supervisors and managers
       <br>
