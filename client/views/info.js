@@ -1,10 +1,44 @@
+//function to whether zip code is valid
+$.validator.addMethod("zipcodeUS", function(value, element) {
+    return this.optional(element) || /\d{5}-\d{4}$|^\d{5}$/.test(value)
+}, "The specified US ZIP Code is invalid");
+
+
+Template.pi.onRendered(function(){
+    $('#personalInFoForm').validate(
+
+      {
+          rules:
+          {
+            zip:
+            {
+              required: true,
+              zipcodeUS: true
+            }
+          },
+
+          messages:
+          {
+              zip:
+              {
+                required: "You must enter your zip.",
+                zipcodeUS: 'Your zip is invalid'
+              }
+          }
+
+      });
+    });
+
+
+
+
 Template.pi.events({
   "submit form": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
 
       // Get value from form element
-      var email = event.target.email.value;
+      var gender = event.target.gender.value;
       var zipCode= event.target.zip.value;
       var currentUserId = Meteor.userId;
       var user = Meteor.users.findOne(Meteor.userId);
@@ -29,12 +63,16 @@ Template.pi.events({
 
       // Insert a task into the collection
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.info.zip": zipCode} }
-      );
+        {_id: Meteor.userId()}, 
+        {$set: {
+          "profile.info.zip": zipCode,
+          "profile.info.gender": gender 
+      }
+      });
 
 
       // Clear form
-      event.target.email.value = "";
+     
       event.target.zip.value = '';
 
       console.log('updated');
@@ -59,6 +97,7 @@ Template.educ.events({
       var school = event.target.school.value;
       var degree= event.target.degree.value;
       var subject= event.target.field.value;
+      var level= event.target.level.value;
       var user = Meteor.userId;
 
 
@@ -69,7 +108,8 @@ Template.educ.events({
         {$set: {
           "profile.education.school": school,
           "profile.education.degree": degree, 
-          "profile.education.field": subject 
+          "profile.education.field": subject,
+          "profile.education.level": level
         } 
         });
 
@@ -80,7 +120,8 @@ Template.educ.events({
       event.target.field.value = '';
 
       console.log(school);
-      //console.log(array);
+      console.log(level);
+      
 
 
     }
@@ -115,10 +156,7 @@ Template.skills.events({
       // Add skill info to profile
       Meteor.users.update(
         {_id: Meteor.userId()}, {$set: 
-          {"profile.skills.skill1": skill1, 
-          'profile.skills.skill2': skill2, 
-          'profile.skills.skill3':skill3 
-        } 
+          {"profile.skills.skills": [skill1, skill2, skill3] } 
       });
 
     
@@ -135,8 +173,12 @@ Template.creds.events({
       event.preventDefault();
 
       // Get value from form element
-      var credentials = event.target.creds.value;
-      var certificate= event.target.certificate.value;
+      var cred1 = AutoForm.getFieldValue('creds.0','credsForm');
+      var cred2 = AutoForm.getFieldValue('creds.1','credsForm');
+      
+      console.log(cred1);
+      console.log(cred2);
+  
 
      
       var user = Meteor.userId;
@@ -145,9 +187,7 @@ Template.creds.events({
       // Add skill info to profile
       Meteor.users.update(
         {_id: Meteor.userId()}, {$set: 
-          {"profile.credentials.creds": credentials, 
-          'profile.credentials.certificate': certificate
-        } 
+          {"profile.credentials.creds": [ cred1, cred2] } 
       });
 
 
@@ -166,17 +206,21 @@ Template.occupationInfo.events({
       // Get value from form element
       var industry = event.target.industry.value;
       var occupation= event.target.occupation.value;
-      var level= event.target.jobLevel.value;
-    
-    
+      var joblevel= event.target.jobLevel.value;
+
+
+      console.log(industry);
+      console.log(occupation);
+      console.log(joblevel);
+        
       var user = Meteor.userId;
 
-      // Add skill info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {
-          "profile.ocupation_info.industry": industry,
-          "profile.ocupation_info.occupation": occupation, 
-          "profile.ocupation_info.jobLevel": level 
+        {_id: Meteor.userId()}, 
+        {$set: {
+          "profile.occupation_info.industry": industry,
+          "profile.occupation_info.occupation": occupation, 
+          "profile.occupation_info.jobLevel": joblevel
         } 
       });
 

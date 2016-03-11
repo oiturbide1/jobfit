@@ -11,8 +11,21 @@ PersonalInfo = new SimpleSchema({
     gender:
     {
         type: String,
+        allowedValues: ['Male','Female'],
+        optional: true,
         label: 'Gender',
-        optional: true
+        autoform: {
+            options: [
+            {
+                label: 'Male',
+                value: 'Male'
+            },
+            {
+                label: 'Female',
+                value: 'Female'
+            }
+            ]
+        }
     }
 });
 
@@ -52,13 +65,35 @@ UserEducation = new SimpleSchema({
     },
     degree: {
         type: String,
-        label: "Degree Earned"
+        label: "Degree Earned",
+        //allowedValues: ['B.A','B.S','Associates','M.S'],
+        optional: true,
+        autoform: {
+            options: [
+            {
+                label: 'B.A',
+                value: 'ba'
+            },
+            {
+                label: 'B.S',
+                value: 'bs'
+            },
+            {
+                label: 'Associates',
+                value: 'assoc'
+            },
+            {
+                label: 'M.S',
+                value: 'ms'
+            }
+            ]
+        }
     },
     field: {
       type: String,
       label: "Field"
     },
-    education_level: 
+    level: 
     {
         type: String,
         label: "Education Level",
@@ -116,16 +151,16 @@ UserSkills = new SimpleSchema({
 
 
 UserCreds = new SimpleSchema({
-    certificate:
-        {
-        type: String,
-        label: "Certificate",
-        optional: true
-        },
     creds: {
-        type: String,
+        type: Array,
         label: 'Credentials',
-        optional: true
+        optional: true,
+        minCount: 1,
+        maxCount: 5
+    },
+    'creds.$':
+    {
+        type: String
     }
 
 });
@@ -156,11 +191,11 @@ UserOccupation = new SimpleSchema({
 
 
 UserProfile = new SimpleSchema({
-		info:
-		{
-		  type: PersonalInfo,
-          optional: true
-		},
+	info:
+	{
+		type: PersonalInfo,
+        optional: true
+	},
     education:
     {
         type: UserEducation,

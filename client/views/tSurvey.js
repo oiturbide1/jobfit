@@ -6,24 +6,25 @@ Template.talentviewsurvey.events({
       var wb = event.target.wlb.value;
       console.log(wb);
 
-      var wlb = template.find('input:radio[name=wlBalance]:checked');
-      var balance = $(wlb).val();
-	  console.log(balance);
-
-	  var js = template.find('input:radio[name=security]:checked');
-	  var security = $(js).val();
-	  console.log(security);
-
       var user = Meteor.userId;
 
 
       // Add skill info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {
-					"profile.personal_survey.worklife_self": balance,
-					"profile.personal_survey.jobsec_self": security
-				}
+      PersonalSurvey.insert({
+        'worklife_self': wb
+      
 			});
+
+
+
+
+      // Get logic for entering current PersonalSurvey object into user's profile
+      Meteor.users.update(
+        {_id: Meteor.userId()}, 
+        {$set: {
+          "profile.personal_survey": PersonalSurvey
+        } 
+        });
 
 
   }
@@ -52,18 +53,3 @@ CollectionSchema = new SimpleSchema({
   }
 });
 
-Template.slidertest.events({
-  "submit form": function (event, template) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-      var wlb = AutoForm.getFieldValue('wlb','foo');
-      console.log(wlb);
-     
-
-
-
-  }
-
-
-});

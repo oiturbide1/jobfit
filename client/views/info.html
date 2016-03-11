@@ -46,13 +46,16 @@
       {{> afQuickField name='degree'}}
       <br>
       {{> afQuickField name='field'}}
+      <br>
+      {{> afQuickField name= 'level'}}
+
+      <input type="submit" value="Education">
   
       
-      <input type = "submit" value = "Enter education">
+     
     </fieldset>
   {{/autoForm}}
 
-    {{> quickForm id='educLevel' schema='UserEducationLevel' }}
 
 </template>
 
@@ -70,10 +73,8 @@
   {{#autoForm schema='UserCreds' id='credsForm'}}
     <fieldset>
       <legend>
-      Credentials and certificates
+      Credentials and certificates - List any credentials or certificates 
       </legend>
-      {{> afQuickField name='certificate'}}
-      <br>
       {{> afQuickField name='creds'}}
       <br>
       <input type = "submit" value = "Enter creds">

@@ -102,8 +102,7 @@ $.validator.setDefaults({
 //function to check password for criteria of at least 1 number and 1 alphabet
 $.validator.addMethod('valid', function(value, element) {
         return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
-    },
-    'Password must contain at least one numeric and one alphabetic character.');
+    });
 
 Template.login.events({
         'submit form': function(event) {
@@ -223,7 +222,8 @@ Template.registerTalent.onRendered(function(){
               registerPassword:
               {
                 required: "You must enter a password.",
-                minlength: "Your password must be at least {0} characters."
+                minlength: "Your password must be at least {0} characters.",
+                valid: 'Password must contain at least one numeric and one alphabetic character.'
               },
 
               matchedPassword:
