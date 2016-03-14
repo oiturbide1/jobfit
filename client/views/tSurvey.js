@@ -4,17 +4,50 @@ Template.talentviewsurvey.events({
       event.preventDefault();
 
       var wb = event.target.wlb.value;
+      var js = event.target.jobSec.value;
+      var td = event.target.develop.value;
+      var wload = event.target.wload.value;
+      var cpath = event.target.path.value;
+      var crit = event.target.criteria.value;
+      var opp = event.target.opportunities.value;
+      var free = event.target.freedom.value;
+      var sal = event.target.salary.value;
+
+
       console.log(wb);
 
       var user = Meteor.userId;
 
+      survey = 
+      {'worklife_self': wb, 
+      'jobsec_self': js, 
+      'td_self':td, 
+      'workload_self': wload,
+      'careerpath_self': cpath,
+      'promocrit_self': crit,
+      'promo_self': opp,
+      'auton_self': free,
+      'salary_self': sal
+      }
 
+      PersonalSurvey.insert(survey, function(err,docsInserted)
+      {
+        var sid = '';
+        console.log(docsInserted);
+      });
+
+      /*
       // Add skill info to profile
       PersonalSurvey.insert({
         'worklife_self': wb
       
 			});
 
+      var find= PersonalSurvey.find({worklife_self: 1}).fetch();
+      Session.set('currentSurvey', find)
+
+      var check = Session.get('currentSurvey');
+      console.log(check);
 
 
 
@@ -25,7 +58,7 @@ Template.talentviewsurvey.events({
           "profile.personal_survey": PersonalSurvey
         } 
         });
-
+      */
 
   }
 

@@ -1,3 +1,4 @@
+/*
 //function to whether zip code is valid
 $.validator.addMethod("zipcodeUS", function(value, element) {
     return this.optional(element) || /\d{5}-\d{4}$|^\d{5}$/.test(value)
@@ -28,7 +29,7 @@ Template.pi.onRendered(function(){
 
       });
     });
-
+*/
 
 
 
