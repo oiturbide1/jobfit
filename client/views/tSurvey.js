@@ -32,33 +32,16 @@ Template.talentviewsurvey.events({
 
       PersonalSurvey.insert(survey, function(err,docsInserted)
       {
-        var sid = '';
+        var sur = PersonalSurvey.find({_id: docsInserted});
+        console.log(sur);
         console.log(docsInserted);
-      });
-
-      /*
-      // Add skill info to profile
-      PersonalSurvey.insert({
-        'worklife_self': wb
-      
-			});
-
-      var find= PersonalSurvey.find({worklife_self: 1}).fetch();
-      Session.set('currentSurvey', find)
-
-      var check = Session.get('currentSurvey');
-      console.log(check);
-
-
-
-      // Get logic for entering current PersonalSurvey object into user's profile
-      Meteor.users.update(
+        Meteor.users.update(
         {_id: Meteor.userId()}, 
-        {$set: {
-          "profile.personal_survey": PersonalSurvey
+        {$push: {
+          "profile.personal_survey": docsInserted
         } 
         });
-      */
+      });
 
   }
 

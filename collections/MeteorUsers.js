@@ -1,7 +1,6 @@
 
 
 
-
 PersonalInfo = new SimpleSchema({
 	zip:
 	{
@@ -215,12 +214,17 @@ UserProfile = new SimpleSchema({
 	{
 		type: UserOccupation,
         optional: true
-	}
-    //personal_survey:
-    //{
-        //type: [PersonalSurvey],
-        //optional: true
-    //}
+	},
+    personal_survey:
+    {
+        type: Array,
+        optional: true
+    },
+    'personal_survey.$':
+    {
+        type: String,
+        optional: true
+    }
 });
 
 

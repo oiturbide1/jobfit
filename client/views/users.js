@@ -308,7 +308,8 @@ Template.employerInfo.events({
 
       // Get value from form element
       var company = event.target.companyName.value;
-      var street= event.target.street.value;
+      var remote = event.target.remote.value;
+      var street= event.target.address.value;
       var city= event.target.city.value;
       var state = event.target.state.value;
       var zipcode = event.target.zip.value;
@@ -316,28 +317,17 @@ Template.employerInfo.events({
 
 
       // Add current employer info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.currentEmployer": [company,street,city,state,zipcode]} }
-      );
+      //Meteor.users.update(
+        //{_id: Meteor.userId()}, {$set: {"profile.currentEmployer": [company,street,city,state,zipcode]} }
+      //);
 
 
-      // Clear form
-      event.target.companyName.value = "";
-      event.target.street.value = '';
-      event.target.city.value = '';
-      event.target.state.value = '';
-      event.target.zip.value = '';
+      
 
       console.log('company info');
+      console.log(remote);
+      console.log(city);
 
-
-      var selected = template.findAll( "input[type=checkbox]:checked");
-
-      var array = selected.map(function(item)
-      { return item.value})
-
-
-      console.log(array);
 
     }
 
@@ -351,36 +341,30 @@ Template.jobInfo.events({
       event.preventDefault();
 
       // Get value from form element
-      var title = event.target.jobtitle.value;
-      var pDate= event.target.promotiondate.value;
-      var sDate= event.target.startdate.value;
-      var pTimes = event.target.timespromoted.value;
+      var title = event.target.title.value;
+      //var pDate= event.target.promotiondate.value;
+      var sDate= event.target.start_date.value;
+      var promo = event.target.promoted.value;
+      //var pTimes = event.target.timespromoted.value;
       var user = Meteor.userId;
 
 
       // Add job info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.jobInfo": [title,pDate,sDate,pTimes]} }
-      );
+      //Meteor.users.update(
+        //{_id: Meteor.userId()}, {$set: {"profile.jobInfo": [title,pDate,sDate,pTimes]} }
+      //);
 
 
       // Clear form
-      event.target.jobtitle.value = "";
-      event.target.promotiondate.value = '';
-      event.target.startdate.value = '';
-      event.target.timespromoted.value = '';
+      
 
 
       console.log('job info');
+      console.log(promo);
+      console.log(sDate);
 
 
-      var selected = template.findAll( "input[type=checkbox]:checked");
-
-      var array = selected.map(function(item)
-      { return item.value})
-
-
-      console.log(array);
+  
 
     }
 

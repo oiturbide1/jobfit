@@ -150,10 +150,22 @@ CompanySchema = new SimpleSchema({
    type: String,
    label: "Company Name"
   },
+  remote:
+  {
+    type: Boolean,
+    label: 'Do You Work Remotely?',
+    autoform:
+    {
+      type: 'boolean-radios',
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+      value: false
+    }
+  },
  address:
  {
    type: String,
-   label: "Company Address"
+   label: "Street Address"
  },
  city:
  {

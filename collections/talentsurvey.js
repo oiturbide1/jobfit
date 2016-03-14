@@ -1,3 +1,4 @@
+
 PersonalSurvey = new Meteor.Collection('personal_survey');
 
 PersonalSurveySchema = new SimpleSchema({
@@ -97,4 +98,3 @@ PersonalSurveySchema = new SimpleSchema({
 });
 
 PersonalSurvey.attachSchema(PersonalSurveySchema);
-
