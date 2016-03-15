@@ -20,16 +20,10 @@
 
 
 <template name = 'currentEmployerRatings'>
-  <form>
+  {{#autoForm collection='CurrentEmployerSurvey' id='CESurveyForm' type='insert'}}
 	<fieldset>
-	  <script type="text/javascript">
-        function updateTextInput(val, input) {
-          document.getElementById(input).value=val;
-      }
-	  </script>
-      Supporting Work Life Balance
+      {{> afQuickField name='work_life_balance'}}
       <br>
-      <input type="text" id="work_life_bal" name = 'jobBal' value="">
       <input type = 'range' min='0' max = '100' name = 'job sat' 
 		value = '50' step = '1' onchange="updateTextInput(this.value, 'work_life_bal');" >
       <br>
@@ -98,6 +92,6 @@
       <br>
       <input type='submit' value='Add ratings'>
 	  </fieldset>
-  </form>
+  {{/autoForm}}
 
 </template>

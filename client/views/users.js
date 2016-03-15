@@ -442,26 +442,36 @@ Template.skills.events({
 });
 
 
-Template.jobFeeling.events({
+Template.reason.events({
   "submit form": function (event, template) {
       // Prevent default browser form submit
       event.preventDefault();
 
       // Get value from form element
-      var test = event.target.jobSatTest.value;
-
-      var user = Meteor.userId;
-
-
-      // Add current employer info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {"profile.jobSatisfaction": [test]} }
-      );
+      var test = event.target.choice.value;
+      var s= event.target.yes_reasons.value;
+     
 
 
+      // Add job info to profile
+      //Meteor.users.update(
+        //{_id: Meteor.userId()}, {$set: {"profile.jobInfo": [title,pDate,sDate,pTimes]} }
+      //);
+
+
+      // Clear form
+      
+
+
+      console.log();
       console.log(test);
+      console.log(s);
+
+
+  
 
     }
 
+  });
 
-});
+
