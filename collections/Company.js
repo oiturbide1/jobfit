@@ -154,6 +154,7 @@ CompanySchema = new SimpleSchema({
   {
     type: Boolean,
     label: 'Work Remotely?',
+    optional: true,
     autoform:
     {
       type: 'boolean-radios',

@@ -300,7 +300,7 @@ Template.home.events({
       });
 
 
-
+/*
 Template.employerInfo.events({
   "submit form": function (event, template) {
       // Prevent default browser form submit
@@ -333,6 +333,8 @@ Template.employerInfo.events({
 
 
 });
+*/
+
 
 
 Template.jobInfo.events({
