@@ -22,7 +22,7 @@ Template.employerInfo.events({
     {
       var cp = Company.find({_id: docsInserted});
       console.log(cp);
-      //Session.set('current_company', docsInserted);
+      Session.set('current_company', docsInserted);
 
       //Meteor.users.update(
       //{_id: Meteor.userId()}, 
