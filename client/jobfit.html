@@ -1,45 +1,93 @@
 <template name = 'home'>
-  <div id = 'container'>
-    <h1>Employer Match</h1>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Employer Match</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Employer Match</h1>
+        <p>Do you want to know whether you are a match at your current or prospective company? How about wanting to know about your former company?</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        {{> rateOnly}}
+        {{> selectTalent}}
+        {{> selectRep}}
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2015 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
 
 
-
-
-
-  {{#if currentUser}}
-    {{> dashboard}}
-  {{else}}
-    <button id = 'loginButton'>Login</button>
-    {{> rateOnly}}
-    {{> selectTalent}}
-    {{> selectRep}}
+    {{#if currentUser}}
+      {{> dashboard}}
+    {{else}}
+      <button id = 'loginButton'>Login</button>
+    
+   
+    
 
 
   {{/if}}
-</div>
+
+
+
 
 </template>
 
 
 <template name = 'rateOnly'>
-  <div id = 'rateBox'>
+  <div class="col-md-4">
+    <h2>Rate Anonymously</h2>
     <p>Do you want to rate your employers?</p>
-    <a href="{{pathFor route='rateWhich'}}" class="reg_button_link">Rate employers</a>
+    <p><a class="btn btn-default" href="{{pathFor route='rateWhich'}}" role="button">Rate Employers &raquo;</a></p>
   </div>
 </template>
 
 
 <template name = 'selectTalent'>
-  <div id = 'talentBox'>
-    <p>Are you happy with your job?</p>
-    <a href="{{pathFor route='registerTalent'}}" class="reg_button_link">Start your journey to find perfect fit!</a>
+  <div class="col-md-4">
+    <h2>Rate current/former company(s)</h2>
+    <p>Are you happy with your job? </p>
+    <p><a class="btn btn-default" href="{{pathFor route='registerTalent'}}" role="button">Start your journey to find perfect fit! &raquo;</a></p>
   </div>
 </template>
 
 <template name = 'selectRep'>
-  <div id = 'repBox'>
+  <div class="col-md-4">
+    <h2>Find perfect employee fits</h2>
     <p>Finding the right employee is crucial for success</p>
-    <a href="{{pathFor route='registerRep'}}" class="reg_button_link">Find your next star employee</a>
+    <p><a class="btn btn-default" href="{{pathFor route='registerRep'}}" role="button">Find your next star employee &raquo;</a></p>
   </div>
 </template>
 

@@ -337,42 +337,6 @@ Template.employerInfo.events({
 
 
 
-Template.jobInfo.events({
-  "submit form": function (event, template) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-      // Get value from form element
-      var title = event.target.title.value;
-      //var pDate= event.target.promotiondate.value;
-      var sDate= event.target.start_date.value;
-      var promo = event.target.promoted.value;
-      //var pTimes = event.target.timespromoted.value;
-      var user = Meteor.userId;
-
-
-      // Add job info to profile
-      //Meteor.users.update(
-        //{_id: Meteor.userId()}, {$set: {"profile.jobInfo": [title,pDate,sDate,pTimes]} }
-      //);
-
-
-      // Clear form
-      
-
-
-      console.log('job info');
-      console.log(promo);
-      console.log(sDate);
-
-
-  
-
-    }
-
-
-});
-
 /*
 // first, remove configuration entry in case service is already configured
 Accounts.loginServiceConfiguration.remove({

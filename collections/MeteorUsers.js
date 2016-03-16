@@ -215,6 +215,16 @@ UserProfile = new SimpleSchema({
 		type: UserOccupation,
         optional: true
 	},
+    job_info:
+    {
+        type: JobInfo,
+        optional: true
+    },
+    status:
+    {
+        type: EmpStatus,
+        optional: true
+    },
     personal_survey:
     {
         type: Array,
