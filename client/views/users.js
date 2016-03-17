@@ -155,13 +155,7 @@ Template.login.onRendered(function(){
           {
             loginEmail:
             {
-              required: true,
               email: true
-            },
-
-            loginPassword:
-            {
-              required: true
             }
           },
 
@@ -169,13 +163,7 @@ Template.login.onRendered(function(){
           {
               loginEmail:
               {
-                required: "You must enter an email address.",
                 email: "You've entered an invalid email address."
-              },
-
-              loginPassword:
-              {
-                required: "Please enter your password.",
               }
           }
 
