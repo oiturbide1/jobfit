@@ -44,7 +44,6 @@
     {{#if currentUser}}
       {{> dashboard}}
     {{else}}
-      <button id = 'loginButton'>Login</button>
   
 
 
@@ -60,7 +59,7 @@
   <div class="col-md-4">
     <h2>Rate Anonymously</h2>
     <p>Do you want to rate your employers?</p>
-    <p><a class="btn btn-default" href="{{pathFor route='rateWhich'}}" role="button">Rate Employers &raquo;</a></p>
+    <p><a class="btn btn-primary btn-lg" href="{{pathFor route='rateWhich'}}" role="button">Rate Employers &raquo;</a></p>
   </div>
 </template>
 
@@ -69,7 +68,7 @@
   <div class="col-md-4">
     <h2>Rate current/former company(s)</h2>
     <p>Are you happy with your job? </p>
-    <p><a class="btn btn-default" href="{{pathFor route='registerTalent'}}" role="button">Start your journey to find perfect fit! &raquo;</a></p>
+    <p><a class="btn btn-primary btn-lg" href="{{pathFor route='registerTalent'}}" role="button">Start your journey to find perfect fit! &raquo;</a></p>
   </div>
 </template>
 
@@ -77,7 +76,7 @@
   <div class="col-md-4">
     <h2>Find perfect employee fits</h2>
     <p>Finding the right employee is crucial for success</p>
-    <p><a class="btn btn-default" href="{{pathFor route='registerRep'}}" role="button">Find your next star employee &raquo;</a></p>
+    <p><a class="btn btn-primary btn-lg" href="{{pathFor route='registerRep'}}" role="button">Find your next star employee &raquo;</a></p>
   </div>
 </template>
 
