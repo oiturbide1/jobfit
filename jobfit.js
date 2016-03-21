@@ -12,6 +12,7 @@ Router.route('/login');
 Router.route('/rateWhich');
 Router.route('/rateCurrentEmployerInfo');
 Router.route('/rateFormerEmployerInfo');
+Router.route('/employerInfo');
 
 
 /*

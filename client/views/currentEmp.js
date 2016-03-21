@@ -6,8 +6,10 @@ Template.employerInfo.events({
     var company = event.target.companyName.value;
     var address = event.target.address.value;
     var city = event.target.city.value;
+    var remote = event.target.remote.value;
     var state = event.target.state.value;
     var zip = event.target.zip.value;
+    var current = event.target.curr_or_form.value;
 
     comp = 
     {
@@ -34,7 +36,13 @@ Template.employerInfo.events({
 
     var c = Session.get('current_company');
     console.log(c);
+    console.log(remote);
+    console.log(current);
     var check = Session.get('name');
+    if(current){
+      console.log('current employer');
+    }
+    
     //if(check){
       //console.log('found');
     //}

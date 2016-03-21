@@ -183,6 +183,19 @@ CompanySchema = new SimpleSchema({
    type: Number,
    label: "Zip Code"
  },
+ curr_or_form:
+  {
+    type: Boolean,
+    label: 'Current or Former Employer',
+    optional: true,
+    autoform:
+    {
+      type: 'boolean-radios',
+      trueLabel: 'Current',
+      falseLabel: 'Former',
+      value: false
+    }
+  },
  created:
  {
    type: Date,
