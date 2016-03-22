@@ -110,21 +110,31 @@ Template.login.events({
           event.preventDefault();
 
 
-          var emailVar = event.target.loginEmail.value;
-          var passwordVar = event.target.loginPassword.value;
+          var loginEmail = event.target.loginEmail.value;
+          var loginPassword = event.target.loginPassword.value;
 
-          Meteor.loginWithPassword(emailVar, passwordVar, function(err){
+          Meteor.loginWithPassword(loginEmail, loginPassword, function(err){
             if(err)
             {
-                Session.set('alert','login failed!');
+                //alert(err.reason);
+                if(err.reason == "User not found")
+                {
+                  validator.showErrors({
+                      loginEmail: 'No existing user'   
+                  });
+                }
+
+                if(err.reason == "Incorrect password"){
+                  validator.showErrors({
+                      loginPassword: err.reason    
+                  });
+                }
                 return false;
-                console.log('error');
+                
             }
             else
             {
-                Session.set('alert',null);
                 Router.go("/information");
-                console.log('correct');
             }
 
           });
@@ -148,14 +158,19 @@ Template.login.events({
       });
 
 Template.login.onRendered(function(){
-    $('#login').validate(
+    var validator = $('#login').validate(
 
       {
           rules:
           {
             loginEmail:
             {
-              email: true
+              email: true,
+              required: true
+            },
+            loginPassword:
+            {
+              required: true
             }
           },
 
@@ -163,7 +178,13 @@ Template.login.onRendered(function(){
           {
               loginEmail:
               {
-                email: "You've entered an invalid email address."
+                email: "You've entered an invalid email address.",
+                required: 'Email is required'
+              },
+              loginPassword:
+              {
+                required: "Password empty"
+
               }
           }
 
