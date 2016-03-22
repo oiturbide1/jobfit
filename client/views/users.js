@@ -179,8 +179,7 @@ Template.registerTalent.onRendered(function(){
             registerEmail:
             {
               required: true,
-              email: true,
-              valid: false
+              email: true
             },
 
             registerPassword:
