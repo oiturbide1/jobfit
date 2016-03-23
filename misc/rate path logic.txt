@@ -1,0 +1,12 @@
+click enter
+	- create company in db
+	-go to rate emp page
+	-create session var w/ 'cur' or 'form'
+fill out ratings
+	-submit
+		-get session var
+		-if 'curr'
+			-add to current emp survey
+		-if 'form'
+			-add to former ''	''
+

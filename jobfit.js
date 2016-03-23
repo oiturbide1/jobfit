@@ -4,7 +4,7 @@ Router.route('/profile');
 Router.route('/currentEmp');
 Router.route('/formerEmp');
 Router.route('/tSurvey');
-Router.route('/rateCEmployer');
+Router.route('/rateEmployer');
 Router.route('/rateFEmployer');
 Router.route('/registerTalent');
 Router.route('/registerRep');

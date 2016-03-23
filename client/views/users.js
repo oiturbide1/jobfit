@@ -11,17 +11,20 @@
           Accounts.createUser({
             email: emailVar,
             password: passwordVar
+          }, function(error){
+            if(error){
+                console.log(error.reason);
+            } else {
+                Router.go("/information");
+                //var currentUserId = Meteor.userId;
+                var userId = Meteor.userId();
+                Roles.addUsersToRoles(userId,'talent');
+                console.log('submitted');
+
+            }
+
           });
-
-          var currentUserId = Meteor.userId;
-          var userId = Meteor.userId();
-
-          Roles.addUsersToRoles(userId,'talent');
-
-
-
-          Router.go("/information");
-          console.log('submitted');
+    
 
 
         }
@@ -100,7 +103,8 @@ $.validator.setDefaults({
 */
 
 //function to check password for criteria of at least 1 number and 1 alphabet
-$.validator.addMethod('valid', function(value, element) {
+$.validator.addMethod('valid', function(value, element) 
+    {
         return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
     });
 
@@ -197,7 +201,7 @@ Template.registerTalent.onRendered(function(){
             registerPassword:
             {
               required: true,
-              minlength: 10,
+              minlength: 8,
               valid: true
             },
 

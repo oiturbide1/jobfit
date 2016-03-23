@@ -20,28 +20,53 @@ Template.employerInfo.events({
       'zip': zip
     }
 
+    
     Company.insert(comp, function(err,docsInserted)
     {
       var cp = Company.find({_id: docsInserted});
       console.log(cp);
-      Session.set('current_company', docsInserted);
+      var id = docsInserted;
+      Session.set('current_company', id);
 
-      //Meteor.users.update(
+    
+    });
+
+    var c = Session.get('current_company');
+    console.log(c);
+
+    if(remote == 'false')
+    {
+      remot = 'not remotely';
+    }
+    else if(remote == 'true')
+    {
+      remot = 'work remotely';
+    }
+
+    Session.set('rem', remot);
+    var r = Session.get('rem');
+
+
+    if(current == 'true')
+    {
+      var current_former = 'current'
+    }
+    else if (current == 'false'){
+      var current_former = 'former'
+    }
+    Session.set('current_former', current_former);
+    var cf = Session.get('current_former');
+    
+
+
+    //var check = Session.get('name');
+
+    //Meteor.users.update(
       //{_id: Meteor.userId()}, 
       //{$push: {
         //"profile.personal_survey": docsInserted
       //} 
       //});
-    });
-
-    var c = Session.get('current_company');
-    console.log(c);
-    console.log(remote);
-    console.log(current);
-    var check = Session.get('name');
-    if(current){
-      console.log('current employer');
-    }
     
     //if(check){
       //console.log('found');
@@ -53,7 +78,7 @@ Template.employerInfo.events({
 
     //need to add logic for capturing data and inserting into companys in DB
 
-    //Router.go('/rateCEmployer');
+    Router.go('/rateEmployer');
 
   }
 });

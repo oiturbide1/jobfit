@@ -3,7 +3,7 @@ Template.currentEmployerRatings.events({
 
           event.preventDefault();
 
-          var wlb = event.target.jobBal.value;
+          var wlb = event.target.work_life_balance.value;
           var sec = event.target.jobSec.value;
           var dev = event.target.jobDev.value;
           var work = event.target.jobWorkLoad.value;
