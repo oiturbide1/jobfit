@@ -108,59 +108,50 @@ Template.login.events({
         'submit form': function(event) {
 
           event.preventDefault();
-
-
-          var loginEmail = event.target.loginEmail.value;
-          var loginPassword = event.target.loginPassword.value;
-
-          Meteor.loginWithPassword(loginEmail, loginPassword, function(err){
-            if(err)
-            {
-                //alert(err.reason);
-                if(err.reason == "User not found")
-                {
-                  validator.showErrors({
-                      loginEmail: 'No existing user'   
-                  });
-                }
-
-                if(err.reason == "Incorrect password"){
-                  validator.showErrors({
-                      loginPassword: err.reason    
-                  });
-                }
-                return false;
-                
-            }
-            else
-            {
-                Router.go("/information");
-            }
-
-          });
-
-
-
-
-          //user =
-            //email: $('[name="loginEmail"]').val()
-            //password: $('[name="loginPassword"]').val()
-
-
-          //Meteor.loginWithPassword(user.email, user.password, (error)->
-            //alert error.reason if error
-
-
-
-          //var user = Meteor.userId().email;
-          //console.log(user)
+         
         }
+
+
       });
 
 Template.login.onRendered(function(){
     var validator = $('#login').validate(
 
       {
+          submitHandler: function(event)
+          {
+            
+            var loginEmail = event.target.loginEmail.value;
+            var loginPassword = event.target.loginPassword.value;
+
+
+            Meteor.loginWithPassword(loginEmail, loginPassword, function(err){
+              if(err)
+              {
+                //alert(err.reason);
+                if(err.reason == "User not found")
+                {
+                    validator.showErrors({
+                    loginEmail: 'No existing user'   
+                    });
+                }
+
+                if(err.reason == "Incorrect password"){
+                    validator.showErrors({
+                    loginPassword: err.reason    
+                    });
+                }
+                
+              }
+              else
+              {
+                Router.go("/information");
+              }
+
+          });
+          },
+
+
           rules:
           {
             loginEmail:
