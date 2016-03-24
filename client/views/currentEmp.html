@@ -1,15 +1,17 @@
-<template name = 'currentEmp'>
+<template name = 'Emp'>
   <p>
-    Please fill out your current Employer information.
+    Please fill out your Employer information.
   </p>
 
   {{> employerInfo}}
   {{> jobInfo}}
   {{> empStatus}}
-  {{> jobFeeling}}
+  {{#if currentUser}}
+    {{> jobFeeling}}
+  {{/if}}
 
   <a href="{{pathFor route='home'}}">Home</a>
-  <a href="{{pathFor route='rateCEmployer'}}">Rate Current Employer</a>
+  <a href="{{pathFor route='rateEmployer'}}">Rate Employer</a>
 </template>
 
 
