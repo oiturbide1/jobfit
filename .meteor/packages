@@ -19,6 +19,7 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
+msavin:mongol
 accounts-password
 aldeed:autoform
 aldeed:collection2
@@ -27,7 +28,7 @@ email
 accounts-google
 lookback:dropdowns
 themeteorchef:jquery-validation
-msavin:mongol
+
 matb33:collection-hooks
 alanning:roles
 elevatedevdesign:autoform-nouislider

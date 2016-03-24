@@ -234,6 +234,26 @@ UserProfile = new SimpleSchema({
     {
         type: String,
         optional: true
+    },
+    current_survey:
+    {
+        type: Array,
+        optional: true
+    },
+    'current_survey.$':
+    {
+        type: String,
+        optional: true
+    },
+    former_survey:
+    {
+        type: Array,
+        optional: true
+    },
+    'former_survey.$':
+    {
+        type: String,
+        optional: true
     }
 });
 
