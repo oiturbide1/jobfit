@@ -92,46 +92,39 @@
 
 
 <template name = 'jobFeeling'>
-  <form>
+  {{#autoForm schema='feelingSchema' id='feelingsForm'}}
     <fieldset>
       <legend>
         Feelings toward Job
       </legend>
 
-      Overall, I am satisfied with my current job.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'jobSat' value = '50' step = '1'>
+      {{> afQuickField name='job_satisfaction' }}
       <br>
-      I perform my job well.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'perf_well' value = '50' step = '1'>
+      {{> afQuickField name='performance' }}
       <br>
-      I would be glad to spend my whole career with my current employer.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'career' value = '50' step = '1'>
+      {{> afQuickField name='career' }}
       <br>
-      I often think about leaving my current employer.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'leaving' value = '50' step = '1'>
+      {{> afQuickField name='leaving' }}
       <br>
-      My current employer and I share the same values.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'share' value = '50' step = '1'>
+      {{> afQuickField name='values' }}
       <br>
-      I cooperate with my coworkers.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'coop' value = '50' step = '1'>
+      {{> afQuickField name='cooperate' }}
       <br>
-      I assist my coworkers when they need help.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'assist' value = '50' step = '1'>
+      {{> afQuickField name='assist' }}
       <br>
-      I think about how my actions affect my coworkers.
       <br>
-      <input type = 'range' min='0' max = '100' name = 'actions' value = '50' step = '1'>
+      {{> afQuickField name='actions' }}
+      <br>
       <br>
       <input type = "submit" value = "Enter job satisfaction">
     </fieldset>
-  </form>
+  {{/autoForm}}
 
 </template>

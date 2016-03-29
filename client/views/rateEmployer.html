@@ -8,7 +8,7 @@
     How important are these things to your employer?
   </p>
 
-  {{> currentEmployerRatings}}
+  {{> employerRatings}}
 
   <a href="{{pathFor route='home'}}">Home</a>
   {{#if currentUser}}
@@ -19,7 +19,7 @@
 
 
 
-<template name = 'currentEmployerRatings'>
+<template name = 'employerRatings'>
   {{#autoForm collection='CurrentEmployerSurvey' id='CESurveyForm' type='insert'}}
 	<fieldset>
       {{> afQuickField name='work_life_balance'}}

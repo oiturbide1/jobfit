@@ -1,4 +1,4 @@
-Template.currentEmployerRatings.events({
+Template.employerRatings.events({
         'submit form': function(event) {
 
           event.preventDefault();
@@ -16,10 +16,13 @@ Template.currentEmployerRatings.events({
 
           var rem = Session.get('rem');
           var cf = Session.get('current_former');
+          var currentCompany = Session.get('current_comp');
+    
           console.log(cf);
 
 
           survey = {
+            "company": currentCompany,
             "work_life_balance": wlb, 
             'job_security': sec, 
             'development_opportunities': dev, 
@@ -43,8 +46,7 @@ Template.currentEmployerRatings.events({
             CurrentEmployerSurvey.insert(survey, function(err,docsInserted)
             {
               var sur = CurrentEmployerSurvey.find({_id: docsInserted});
-              console.log(sur);
-              console.log(docsInserted);
+              //console.log(docsInserted);
               Meteor.users.update(
               {_id: Meteor.userId()}, 
               {$push: {
@@ -54,53 +56,25 @@ Template.currentEmployerRatings.events({
             });
           }
 
-          /*
-          if(cf == 'former'){
-            FormerEmployerSurvey.insert(survey);
+          
+          if(cf == 'former')
+          {
+            FormerEmployerSurvey.insert(survey, function(err,docsInserted)
+            {
+              var sur = FormerEmployerSurvey.find({_id: docsInserted});
+              //console.log(docsInserted);
+              Meteor.users.update(
+              {_id: Meteor.userId()}, 
+              {$push: {
+                "profile.former_survey": docsInserted
+              } 
+              });
+            });
+
             console.log('added former');
           }
-          */
-
-
-          var currentCompany = Session.get('currentCompany');
-          console.log(currentCompany);
-
-          /*
-          Company.update(
-        {_id: currentCompany}, 
-        {$set: {
-          "work_life_balance": wlb, 
-          'work_life_balance.count': 2, 
-          'job_security.security': sec, 
-          'job_security.count': 1, 
-          'development_opportunities.development': dev, 
-          'development_opportunities.count': 1, 
-          'workload.workload': work, 
-          'workload.count':1, 
-          'career_path.career_path': path, 
-          'career_path.count': 1, 
-          'promotion_criteria.promotion_criteria': criteria, 
-          'promotion_criteria.count': 1, 
-          'promotion_opportunities.promotion_opportunities': opp, 
-          'promotion_opportunities.count': 1, 
-          'freedom.freedom': freedom, 
-          'freedom.count': 1, 
-          'salary.salary': salary, 
-          'salary.count': 1, 
-          'management.management': manage, 
-          'management.count': 1
-
-        } 
-        }
-      );
-        */
-
-
+          
           //Router.go("/information");
-          console.log(wlb);
-          console.log(sec);
-          console.log('data added');
-
 
         }
       });

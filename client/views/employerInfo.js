@@ -23,17 +23,16 @@ Template.employerInfo.events({
     
     Company.insert(comp, function(err,docsInserted)
     {
-      var cp = Company.find({_id: docsInserted});
-      console.log(cp);
-      var id = docsInserted;
-      Session.set('current_company', id);
-
+      console.log(docsInserted);
+      Session.set('current_comp', docsInserted);
     
     });
 
-    var c = Session.get('current_company');
-    console.log(c);
+    
 
+
+    //check whether works remote or not
+    // and sets Session
     if(remote == 'false')
     {
       remot = 'not remotely';
@@ -44,9 +43,10 @@ Template.employerInfo.events({
     }
 
     Session.set('rem', remot);
-    var r = Session.get('rem');
+  
 
-
+    //check whether it is a current or former employer
+    // and sets Session
     if(current == 'true')
     {
       var current_former = 'current'
@@ -55,28 +55,7 @@ Template.employerInfo.events({
       var current_former = 'former'
     }
     Session.set('current_former', current_former);
-    var cf = Session.get('current_former');
-    
-
-
-    //var check = Session.get('name');
-
-    //Meteor.users.update(
-      //{_id: Meteor.userId()}, 
-      //{$push: {
-        //"profile.personal_survey": docsInserted
-      //} 
-      //});
-    
-    //if(check){
-      //console.log('found');
-    //}
-    //else{
-      //console.log('not found');
-    //}
-    //console.log(check);
-
-    //need to add logic for capturing data and inserting into companys in DB
+ 
 
     Router.go('/rateEmployer');
 
@@ -156,6 +135,49 @@ Template.empStatus.events({
 
       console.log('job info');
       console.log(other);
+
+
+  
+
+    }
+
+
+});
+
+Template.jobFeeling.events({
+  "submit form": function (event, template) {
+      // Prevent default browser form submit
+      event.preventDefault();
+
+      // Get value from form element
+      var per = AutoForm.getFieldValue('performance','feelingsForm');
+      var values= AutoForm.getFieldValue('values','feelingsForm');
+      
+      /*
+      if (AutoForm.getFieldValue('other','statusForm'))
+      {
+        var other = event.target.other.value;
+      }
+      var user = Meteor.userId;
+
+
+      //Add job info to profile
+      Meteor.users.update(
+        {_id: Meteor.userId()}, {$set: {
+          "profile.status.status": status,
+          "profile.status.hours": hrs,
+          'profile.status.other': other
+          } }
+      );
+      */
+
+
+      // Clear form
+      
+
+
+      console.log(per);
+      console.log(values);
 
 
   
