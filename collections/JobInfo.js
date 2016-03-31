@@ -16,18 +16,13 @@ JobInfo = new SimpleSchema({
         label: 'Have you been promoted?',
         allowedValues: ['Yes','No']
     },
-    promo_times:
-    {
-        type: Number,
-        label: 'How many times have you been promoted?',
-        optional: true
-    },
     promo_date:
     {
         type: Array,
         optional: true,
-        label: 'Promotion Date',
+        label: 'Please enter dates of promotion',
         minCount: 1,
+        maxCount: 5,
         custom: function(){
             maxCount = AutoForm.getFieldValue('promo_times');
         }
@@ -51,7 +46,7 @@ EmpStatus = new SimpleSchema({
     other:
     {
         type: String,
-        label: 'Other',
+        label: 'Other: Please Explain',
         optional: true
     },
     hours:

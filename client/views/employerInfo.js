@@ -63,6 +63,85 @@ Template.employerInfo.events({
 });
 
 
+Template.employerInfo.onRendered(function(){
+        $('#currentCompanyForm').validate(
+
+        {
+          rules: 
+          {
+            companyName:
+            {
+              required: true
+            },
+            address:
+            {
+              required: true
+            },
+
+            city:
+            {
+              required: true
+            },
+
+            state:
+            {
+              required: true
+            },
+
+            zip:
+            {
+              required: true,
+              maxlength: 5,
+              zipcode: true
+            },
+
+            curr_or_form:
+            {
+              required: true
+            }
+
+
+          },
+
+          messages:
+          {
+            companyName:
+            {
+              required: "No company provided"
+            },
+
+            address:
+            {
+              required: "Address required"
+            },
+
+            city:
+            {
+              required: "City required"
+            },
+
+            state:
+            {
+              required: 'State required'
+            },
+
+            zip:
+            {
+              required: 'Please enter zip'
+            },
+
+            curr_or_form:
+            {
+              required: 'Must enter former or current'
+            }
+
+          }
+
+          });
+
+      });
+
+
 Template.jobInfo.events({
   "submit form": function (event, template) {
       // Prevent default browser form submit

@@ -108,6 +108,11 @@ $.validator.addMethod('valid', function(value, element)
         return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
     });
 
+$.validator.addMethod('zipcode', function(value, element) 
+    {
+        return this.optional(element) || /^\d{5}(?:-\d{4})?$/.test(value);
+    }, 'Invalid zipcode');
+
 Template.login.events({
         'submit form': function(event) {
 

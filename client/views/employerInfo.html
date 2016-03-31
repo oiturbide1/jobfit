@@ -34,9 +34,8 @@
     </div>
   </div>  
 
-  <a href="{{pathFor route='rateEmployer'}}">Rate Employer</a>
+  <p><a class="btn btn-primary btn-sm" href="{{pathFor route='rateEmployer'}}" role="button">Rate Employer&raquo;</a></p>
 </template>
-
 
 
 
@@ -101,10 +100,9 @@
           {{> afQuickField name='promoted' options='allowed' noselect=true}}
         </div>
           {{#if afFieldValueIs name="promoted" value="Yes"}}
-            {{> afQuickField name='promo_times'}}
-            {{#if afFieldValueIs name='promo_times'}}
-              {{> afQuickField name='promo_date' }}
-            {{/if}}
+          <div class = 'col-md-4'>
+            {{> afQuickField name='promo_date' }}
+          </div>
           {{/if}}
       </fieldset>
         
@@ -118,20 +116,24 @@
 
 <template name = 'empStatus'>
   {{#autoForm schema='EmpStatus' id='statusForm'}}
-    <fieldset>
+    <fieldset class = 'form-group'>
       <legend>
         Employment Status
       </legend>
-      Status
-      {{> afQuickField name='status' options='allowed' noselect=true}}
-      {{#if afFieldValueIs name='status' value= 'Other'}}
-        {{> afQuickField name= 'other'}}
-      {{/if}}
-      <br>
 
+      {{> afQuickField name='status' options='allowed' noselect=true}}
+
+      {{#if afFieldValueIs name='status' value= 'Other'}}
+      <div class = 'col-md-4'>
+        {{> afQuickField name= 'other'}}
+      </div>
+      {{/if}}
+      <div class = 'col-md-4'>
       {{> afQuickField name='hours' }}
-      <input type = "submit" value = "Enter status information">
+      </div>
     </fieldset>
+    <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter status information">
+
   {{/autoForm}}
 
 </template>
