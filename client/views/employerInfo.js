@@ -173,6 +173,7 @@ Template.jobInfo.events({
       console.log('job info');
       console.log(promo);
       console.log(sDate);
+      Meteor.call('addInfo');
 
 
   

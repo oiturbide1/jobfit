@@ -1,6 +1,6 @@
 Meteor.methods({
-  'addInfo':function(user){
-    var currentUserId = Meteor.userId();
+  'tester':function(){
+    console.log('test hello');
 
   }
 });
