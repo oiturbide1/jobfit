@@ -76,8 +76,6 @@ Template.pi.events({
      
       event.target.zip.value = '';
 
-      console.log('updated');
-      //console.log(zipCode);
 
     }
 
@@ -120,11 +118,6 @@ Template.educ.events({
       event.target.degree.value = '';
       event.target.field.value = '';
 
-      console.log(school);
-      console.log(level);
-      
-
-
     }
 
 
@@ -142,13 +135,8 @@ Template.skills.events({
       var skill1 = AutoForm.getFieldValue('skills.0','skillsForm');
       var skill2 = AutoForm.getFieldValue('skills.1','skillsForm');
       var skill3 = AutoForm.getFieldValue('skills.2','skillsForm');
-      //var skill2= event.target.'skills.1'.value;
-      //var skill3= event.target.'skills.2'.value;
-      //var skill4 = event.target.skill4.value;
-      //var skill5 = event.target.skill5.value;
-      console.log(skill1);
-      console.log(skill2);
-      console.log(skill3);
+      var skill4 = AutoForm.getFieldValue('skills.3','skillsForm');
+      var skill5 = AutoForm.getFieldValue('skills.4','skillsForm');
      
 
       var user = Meteor.userId;
@@ -157,11 +145,11 @@ Template.skills.events({
       // Add skill info to profile
       Meteor.users.update(
         {_id: Meteor.userId()}, {$set: 
-          {"profile.skills.skills": [skill1, skill2, skill3] } 
+          {"profile.skills.skills": [skill1, skill2, skill3, skill4, skill5] } 
       });
 
     
-
+      
     }
 
   
@@ -176,11 +164,8 @@ Template.creds.events({
       // Get value from form element
       var cred1 = AutoForm.getFieldValue('creds.0','credsForm');
       var cred2 = AutoForm.getFieldValue('creds.1','credsForm');
+      var cred3 = AutoForm.getFieldValue('creds.2','credsForm');
       
-      console.log(cred1);
-      console.log(cred2);
-  
-
      
       var user = Meteor.userId;
 
@@ -188,7 +173,7 @@ Template.creds.events({
       // Add skill info to profile
       Meteor.users.update(
         {_id: Meteor.userId()}, {$set: 
-          {"profile.credentials.creds": [ cred1, cred2] } 
+          {"profile.credentials.creds": [ cred1, cred2, cred3] } 
       });
 
 
@@ -210,9 +195,7 @@ Template.occupationInfo.events({
       var joblevel= event.target.jobLevel.value;
 
 
-      console.log(industry);
-      console.log(occupation);
-      console.log(joblevel);
+     
         
       var user = Meteor.userId;
 
@@ -226,6 +209,9 @@ Template.occupationInfo.events({
       });
 
 
+      event.target.industry.value = "";
+      event.target.occupation.value = '';
+      event.target.jobLevel.value = '';
 
     }
 

@@ -12,7 +12,7 @@ Template.registerTalent.events({
             password: passwordVar
           }, function(error){
             if(error){
-                console.log(error.reason);
+                alert(error.reason);
             } else {
                 Router.go("/information");
                 //var currentUserId = Meteor.userId;
@@ -98,8 +98,7 @@ $.validator.setDefaults({
             registerPassword:
             {
               required: true,
-              minlength: 8,
-              //number: true
+              minlength: 8
             },
 
             matchedPassword:
@@ -313,41 +312,6 @@ Template.home.events({
       });
 
 
-/*
-Template.employerInfo.events({
-  "submit form": function (event, template) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-      // Get value from form element
-      var company = event.target.companyName.value;
-      var remote = event.target.remote.value;
-      var street= event.target.address.value;
-      var city= event.target.city.value;
-      var state = event.target.state.value;
-      var zipcode = event.target.zip.value;
-      var user = Meteor.userId;
-
-
-      // Add current employer info to profile
-      //Meteor.users.update(
-        //{_id: Meteor.userId()}, {$set: {"profile.currentEmployer": [company,street,city,state,zipcode]} }
-      //);
-
-
-
-
-      console.log('company info');
-      console.log(remote);
-      console.log(city);
-
-
-    }
-
-
-});
-*/
-
 
 
 /*
@@ -380,45 +344,6 @@ Template.google.events({
 });
 */
 
-
-
-function addElement(parentId, elementTag, elementId, html) {
-    // Adds an element to the document
-    var p = document.getElementById(parentId);
-    var newElement = document.createElement(elementTag);
-    newElement.setAttribute('id', elementId);
-    newElement.innerHTML = html;
-    p.appendChild(newElement);
-}
-
-function removeElement(elementId) {
-    // Removes an element from the document
-    var element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
-}
-
-var fileId = 0; // used by the addFile() function to keep track of IDs
-function addFile() {
-    fileId++; // increment fileId to get a unique ID for the new element
-    var html = '<input type = "text" name = "skill[]"> '  +
-               '<a href="" onclick="javascript:removeElement(\'file-\' + fileId + \'\'); return false;">Remove</a>';
-    addElement('skillsList', 'p', 'file-' + fileId, html);
-}
-
-
-Template.skills.events({
-  "click #addButton": function (event, template) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-
-      addFile()
-
-
-    }
-
-
-});
 
 
 Template.reason.events({
