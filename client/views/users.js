@@ -1,5 +1,4 @@
-
- Template.registerTalent.events({
+Template.registerTalent.events({
         'submit form': function(event) {
 
           event.preventDefault();
@@ -24,11 +23,68 @@
             }
 
           });
-    
+
 
 
         }
       });
+
+
+Template.registerTalent.onRendered(function(){
+              $('#registerT').validate(
+
+              {
+                rules: {
+                  registerEmail:
+                  {
+                    required: true,
+                    email: true
+                  },
+
+                  registerPassword:
+                  {
+                    required: true,
+                    minlength: 8,
+                    valid: true
+                  },
+
+                  matchedPassword:
+                  {
+                    required: true,
+                    equalTo: registerPassword
+                  }
+
+
+                    },
+
+                  messages:
+                  {
+                    registerEmail:
+                    {
+                      required: "You must enter an email address.",
+                      email: "You've entered an invalid email address."
+                    },
+
+                    registerPassword:
+                    {
+                      required: "You must enter a password.",
+                      minlength: "Your password must be at least {0} characters.",
+                      valid: 'Password must contain at least one numeric and one alphabetic character.'
+                    },
+
+                    matchedPassword:
+                    {
+                      required: "You must enter matching password",
+                      equalTo: "Passwords do not match"
+
+                    }
+
+                  }
+                });
+
+            });
+
+
 
 /*
 $.validator.setDefaults({
@@ -103,21 +159,24 @@ $.validator.setDefaults({
 */
 
 //function to check password for criteria of at least 1 number and 1 alphabet
-$.validator.addMethod('valid', function(value, element) 
+$.validator.addMethod('valid', function(value, element)
     {
         return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
     });
 
-$.validator.addMethod('zipcode', function(value, element) 
+/*
+$.validator.addMethod('zipcode', function(value, element)
     {
         return this.optional(element) || /^\d{5}(?:-\d{4})?$/.test(value);
     }, 'Invalid zipcode');
+
+*/
 
 Template.login.events({
         'submit form': function(event) {
 
           event.preventDefault();
-         
+
         }
 
 
@@ -129,7 +188,7 @@ Template.login.onRendered(function(){
       {
           submitHandler: function(event)
           {
-            
+
             var loginEmail = event.target.loginEmail.value;
             var loginPassword = event.target.loginPassword.value;
 
@@ -141,16 +200,16 @@ Template.login.onRendered(function(){
                 if(err.reason == "User not found")
                 {
                     validator.showErrors({
-                    loginEmail: 'No existing user'   
+                    loginEmail: 'No existing user'
                     });
                 }
 
                 if(err.reason == "Incorrect password"){
                     validator.showErrors({
-                    loginPassword: err.reason    
+                    loginPassword: err.reason
                     });
                 }
-                
+
               }
               else
               {
@@ -191,60 +250,6 @@ Template.login.onRendered(function(){
       });
     });
 
-
-Template.registerTalent.onRendered(function(){
-        $('#registerT').validate(
-
-        {
-          rules: {
-            registerEmail:
-            {
-              required: true,
-              email: true
-            },
-
-            registerPassword:
-            {
-              required: true,
-              minlength: 8,
-              valid: true
-            },
-
-            matchedPassword:
-            {
-              required: true,
-              equalTo: registerPassword
-            }
-
-
-              },
-
-            messages:
-            {
-              registerEmail:
-              {
-                required: "You must enter an email address.",
-                email: "You've entered an invalid email address."
-              },
-
-              registerPassword:
-              {
-                required: "You must enter a password.",
-                minlength: "Your password must be at least {0} characters.",
-                valid: 'Password must contain at least one numeric and one alphabetic character.'
-              },
-
-              matchedPassword:
-              {
-                required: "You must enter matching password",
-                equalTo: "Passwords do not match"
-
-              }
-
-            }
-          });
-
-      });
 
 
 Template.registerRep.events({
@@ -330,7 +335,7 @@ Template.employerInfo.events({
       //);
 
 
-      
+
 
       console.log('company info');
       console.log(remote);
@@ -424,7 +429,7 @@ Template.reason.events({
       // Get value from form element
       var test = event.target.choice.value;
       var s= event.target.yes_reasons.value;
-     
+
 
 
       // Add job info to profile
@@ -434,7 +439,7 @@ Template.reason.events({
 
 
       // Clear form
-      
+
 
 
       console.log();
@@ -442,10 +447,8 @@ Template.reason.events({
       console.log(s);
 
 
-  
+
 
     }
 
   });
-
-
