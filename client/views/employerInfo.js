@@ -11,7 +11,7 @@ Template.employerInfo.events({
     var zip = event.target.zip.value;
     var current = event.target.curr_or_form.value;
 
-    comp = 
+    comp =
     {
       'companyName': company,
       'address': address,
@@ -20,15 +20,15 @@ Template.employerInfo.events({
       'zip': zip
     }
 
-    
+
     Company.insert(comp, function(err,docsInserted)
     {
       console.log(docsInserted);
       Session.set('current_comp', docsInserted);
-    
+
     });
 
-    
+
 
 
     //check whether works remote or not
@@ -43,7 +43,7 @@ Template.employerInfo.events({
     }
 
     Session.set('rem', remot);
-  
+
 
     //check whether it is a current or former employer
     // and sets Session
@@ -55,9 +55,9 @@ Template.employerInfo.events({
       var current_former = 'former'
     }
     Session.set('current_former', current_former);
- 
 
-    Router.go('/rateEmployer');
+
+    //Router.go('/rateEmployer');
 
   }
 });
@@ -67,7 +67,7 @@ Template.employerInfo.onRendered(function(){
         $('#currentCompanyForm').validate(
 
         {
-          rules: 
+          rules:
           {
             companyName:
             {
@@ -167,7 +167,7 @@ Template.jobInfo.events({
 
 
       // Clear form
-      
+
 
 
       console.log('job info');
@@ -176,7 +176,7 @@ Template.jobInfo.events({
       Meteor.call('addInfo');
 
 
-  
+
 
     }
 
@@ -191,7 +191,7 @@ Template.empStatus.events({
       // Get value from form element
       var status = event.target.status.value;
       var hrs= event.target.hours.value;
-      
+
       if (AutoForm.getFieldValue('other','statusForm'))
       {
         var other = event.target.other.value;
@@ -210,14 +210,14 @@ Template.empStatus.events({
 
 
       // Clear form
-      
+
 
 
       console.log('job info');
       console.log(other);
 
 
-  
+
 
     }
 
@@ -232,7 +232,7 @@ Template.jobFeeling.events({
       // Get value from form element
       var per = AutoForm.getFieldValue('performance','feelingsForm');
       var values= AutoForm.getFieldValue('values','feelingsForm');
-      
+
       /*
       if (AutoForm.getFieldValue('other','statusForm'))
       {
@@ -253,14 +253,14 @@ Template.jobFeeling.events({
 
 
       // Clear form
-      
+
 
 
       console.log(per);
       console.log(values);
 
 
-  
+
 
     }
 
