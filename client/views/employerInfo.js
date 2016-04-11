@@ -20,13 +20,18 @@ Template.employerInfo.events({
       'zip': zip
     }
 
-
-    Company.insert(comp, function(err,docsInserted)
+    
+    Meteor.call('insert_company', comp, function(error, result)
     {
-      console.log(docsInserted);
-      Session.set('current_comp', docsInserted);
+        Session.set('current_comp', result);
+        //console.log(result);
 
     });
+  
+
+    var u = Session.get('current_comp');
+    console.log(u);
+
 
 
 
@@ -43,6 +48,7 @@ Template.employerInfo.events({
     }
 
     Session.set('rem', remot);
+    
 
 
     //check whether it is a current or former employer
@@ -57,12 +63,22 @@ Template.employerInfo.events({
     Session.set('current_former', current_former);
 
 
-    //Router.go('/rateEmployer');
+    if(!Meteor.userId()){
+      Router.go('/rateEmployer');
+    }
+    
 
   }
 });
 
 
+Template.employerInfo.helpers({
+  insert_id: function() {
+    return Session.get('new');
+  }
+});
+
+/*
 Template.employerInfo.onRendered(function(){
         $('#currentCompanyForm').validate(
 
@@ -91,8 +107,7 @@ Template.employerInfo.onRendered(function(){
             zip:
             {
               required: true,
-              maxlength: 5,
-              zipcode: true
+              maxlength: 5
             },
 
             curr_or_form:
@@ -142,6 +157,9 @@ Template.employerInfo.onRendered(function(){
       });
 
 
+*/
+
+
 Template.jobInfo.events({
   "submit form": function (event, template) {
       // Prevent default browser form submit
@@ -157,7 +175,7 @@ Template.jobInfo.events({
 
       //Add job info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {
+        {_id: Meteor.userId()}, {$push: {
           "profile.job_info.title": title,
           "profile.job_info.start_date": sDate,
           'profile.job_info.promoted': promo,
@@ -173,7 +191,7 @@ Template.jobInfo.events({
       console.log('job info');
       console.log(promo);
       console.log(sDate);
-      Meteor.call('addInfo');
+      
 
 
 

@@ -98,6 +98,10 @@ Template.talentviewsurvey.events({
 
 
 
+      Router.go('/Emp');
+
+
+
     
      
 

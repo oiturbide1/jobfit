@@ -48,7 +48,7 @@
 
 
 <template name = 'user'>
-  <p>Welcome {{email}}</p>
+  <p>Currently logged in as {{email}}</p>
 </template>
 
 <template name = 'pi'>
@@ -57,7 +57,7 @@
       {{> afQuickField name='zip' }}
       <br>
       {{> afQuickField name='gender' }}
-      <input type="submit" value="Insert">
+      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter information">
     </fieldset>
   {{/autoForm}}
 </template>
@@ -76,7 +76,7 @@
       <br>
       {{> afQuickField name= 'level'}}
 
-      <input type="submit" value="Education">
+      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Education">
 
 
 
@@ -104,7 +104,7 @@
       </legend>
       {{> afQuickField name='creds'}}
       <br>
-      <input type = "submit" value = "Enter creds">
+      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter credentials">
     </fieldset>
   {{/autoForm}}
 
@@ -123,7 +123,7 @@
       <br>
       {{> afQuickField name='jobLevel'}}
       <br>
-      <input type = "submit" value = "Enter occupation info">
+      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter occupation">
     </fieldset>
   {{/autoForm}}
 

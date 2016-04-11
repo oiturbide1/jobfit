@@ -226,6 +226,7 @@ CompanySchema = new SimpleSchema({
   {
     type: Boolean,
     label: 'Current or Former Employer',
+    optional: true,
     autoform:
     {
       type: 'boolean-radios',

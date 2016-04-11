@@ -23,7 +23,7 @@ PersonalSurveySchema = new SimpleSchema({
           step: 1,    
           noUiSlider_pipsOptions: {
             mode: 'steps',
-            density: 1
+            density: 5
           }
         }
     },

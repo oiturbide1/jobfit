@@ -26,15 +26,14 @@
         {{> employerInfo}}
         <br>
         <br>
-        {{> jobInfo}}
-        {{> empStatus}}
         {{#if currentUser}}
+          {{> jobInfo}}
+          {{> empStatus}}
           {{> jobFeeling}}
         {{/if}}
     </div>
   </div>  
 
-  <p><a class="btn btn-primary btn-sm" href="{{pathFor route='rateEmployer'}}" role="button">Rate Employer&raquo;</a></p>
 </template>
 
 
@@ -74,8 +73,13 @@
           {{> afQuickField name='curr_or_form'}}
         </div>
       </fieldset>
-      
-      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Finish employer information">
+      {{#if currentUser}}
+        <input type = "submit" class = 'btn btn-primary btn-lg' value = "Finish employer information">
+      {{else}}
+        <input type = "submit" class = 'btn btn-primary btn-lg' href="{{pathFor route='rateEmployer'}}" value = "Rate Employer">
+        
+      {{/if}}
+
       
     
   {{/autoForm}}

@@ -3,16 +3,16 @@ Template.employerRatings.events({
 
           event.preventDefault();
 
-          var wlb = event.target.work_life_balance.value;
-          var sec = event.target.job_security.value;
-          var dev = event.target.development_opportunities.value;
-          var work = event.target.workload.value;
-          var path = event.target.career_path.value;
-          var criteria = event.target.promotion_criteria.value;
-          var opp = event.target.promotion_opportunities.value;
-          var freedom = event.target.freedom.value;
-          var salary = event.target.salary.value;
-          var manage = event.target.good_sup.value;
+          var wlb = AutoForm.getFieldValue('work_life_balance','CESurveyForm');
+          var sec = AutoForm.getFieldValue('job_security','CESurveyForm');
+          var dev = AutoForm.getFieldValue('development_opportunities','CESurveyForm');
+          var work = AutoForm.getFieldValue('workload','CESurveyForm');
+          var path = AutoForm.getFieldValue('career_path','CESurveyForm');
+          var criteria = AutoForm.getFieldValue('promotion_criteria','CESurveyForm');
+          var opp = AutoForm.getFieldValue('promotion_opportunities','CESurveyForm');
+          var freedom = AutoForm.getFieldValue('freedom','CESurveyForm');
+          var salary = AutoForm.getFieldValue('salary','CESurveyForm');
+          var manage = AutoForm.getFieldValue('good_sup','CESurveyForm');
 
           var rem = Session.get('rem');
           var cf = Session.get('current_former');
@@ -72,6 +72,12 @@ Template.employerRatings.events({
             });
 
             console.log('added former');
+          }
+          
+          if(!Meteor.userId()){
+            <div class="alert alert-success" role ='alert'>
+              <strong>'Thank you for entering company ratings! Click here to return home'</strong>
+            </div>
           }
           
           //Router.go("/information");
