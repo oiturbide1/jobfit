@@ -45,7 +45,7 @@ Template.pi.events({
       var user = Meteor.users.findOne(Meteor.userId);
 
       var loggedInUser = Meteor.user();
-      
+
       /*
       if (Roles.userIsInRole(loggedInUser, 'talent')) {
         // NOTE: This example assumes the user is not using groups.
@@ -64,16 +64,18 @@ Template.pi.events({
 
       // Insert a task into the collection
       Meteor.users.update(
-        {_id: Meteor.userId()}, 
+        {_id: Meteor.userId()},
         {$set: {
           "profile.info.zip": zipCode,
-          "profile.info.gender": gender 
+          "profile.info.gender": gender
       }
       });
 
+      JobExplorer.insert({'gender': gender});
+
 
       // Clear form
-     
+
       event.target.zip.value = '';
 
 
@@ -103,13 +105,13 @@ Template.educ.events({
 
       // Add education info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, 
+        {_id: Meteor.userId()},
         {$set: {
           "profile.education.school": school,
-          "profile.education.degree": degree, 
+          "profile.education.degree": degree,
           "profile.education.field": subject,
           "profile.education.level": level
-        } 
+        }
         });
 
 
@@ -130,29 +132,29 @@ Template.skills.events({
       // Prevent default browser form submit
       event.preventDefault();
 
-      
+
       // Get value from form element
       var skill1 = AutoForm.getFieldValue('skills.0','skillsForm');
       var skill2 = AutoForm.getFieldValue('skills.1','skillsForm');
       var skill3 = AutoForm.getFieldValue('skills.2','skillsForm');
       var skill4 = AutoForm.getFieldValue('skills.3','skillsForm');
       var skill5 = AutoForm.getFieldValue('skills.4','skillsForm');
-     
+
 
       var user = Meteor.userId;
 
 
       // Add skill info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: 
-          {"profile.skills.skills": [skill1, skill2, skill3, skill4, skill5] } 
+        {_id: Meteor.userId()}, {$set:
+          {"profile.skills.skills": [skill1, skill2, skill3, skill4, skill5] }
       });
 
-    
-      
+
+
     }
 
-  
+
 });
 
 
@@ -165,15 +167,15 @@ Template.creds.events({
       var cred1 = AutoForm.getFieldValue('creds.0','credsForm');
       var cred2 = AutoForm.getFieldValue('creds.1','credsForm');
       var cred3 = AutoForm.getFieldValue('creds.2','credsForm');
-      
-     
+
+
       var user = Meteor.userId;
 
 
       // Add skill info to profile
       Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: 
-          {"profile.credentials.creds": [ cred1, cred2, cred3] } 
+        {_id: Meteor.userId()}, {$set:
+          {"profile.credentials.creds": [ cred1, cred2, cred3] }
       });
 
 
@@ -195,17 +197,17 @@ Template.occupationInfo.events({
       var joblevel= event.target.jobLevel.value;
 
 
-     
-        
+
+
       var user = Meteor.userId;
 
       Meteor.users.update(
-        {_id: Meteor.userId()}, 
+        {_id: Meteor.userId()},
         {$set: {
           "profile.occupation_info.industry": industry,
-          "profile.occupation_info.occupation": occupation, 
+          "profile.occupation_info.occupation": occupation,
           "profile.occupation_info.jobLevel": joblevel
-        } 
+        }
       });
 
 

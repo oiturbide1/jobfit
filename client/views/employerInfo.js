@@ -20,17 +20,15 @@ Template.employerInfo.events({
       'zip': zip
     }
 
-    
+    var comp = null;
+
     Meteor.call('insert_company', comp, function(error, result)
     {
         Session.set('current_comp', result);
-        //console.log(result);
+
 
     });
-  
 
-    var u = Session.get('current_comp');
-    console.log(u);
 
 
 
@@ -48,7 +46,7 @@ Template.employerInfo.events({
     }
 
     Session.set('rem', remot);
-    
+
 
 
     //check whether it is a current or former employer
@@ -66,14 +64,14 @@ Template.employerInfo.events({
     if(!Meteor.userId()){
       Router.go('/rateEmployer');
     }
-    
+
 
   }
 });
 
 
 
-Template.Emp.helpers({  
+Template.Emp.helpers({
   isFormer: function(curr_or_form) {
     var formerCheck = Session.get('current_former')
     if (formerCheck == 'former'){
@@ -83,7 +81,7 @@ Template.Emp.helpers({
       var former = false;
     }
     return former;
-    
+
   }
 });
 
@@ -200,7 +198,7 @@ Template.jobInfo.events({
       console.log('job info');
       console.log(promo);
       console.log(sDate);
-      
+
 
 
 
@@ -259,7 +257,7 @@ Template.jobFeeling.events({
       var assist= AutoForm.getFieldValue('assist','feelingsForm');
       var actions= AutoForm.getFieldValue('actions','feelingsForm');
 
-      
+
       var user = Meteor.userId;
 
 
@@ -276,8 +274,8 @@ Template.jobFeeling.events({
           'profile.job_feelings.actions':actions
           } }
       );
-      
-      
+
+
 
       // Clear form
 
@@ -302,11 +300,11 @@ Template.reasons_left.events({
       // Get value from form element
       var choice = event.target.choice.value;
       var yes = event.target.yes_reasons.value;
-      
+
 
       console.log(choice);
       console.log(yes);
-      
+
       var user = Meteor.userId;
 
 
@@ -326,15 +324,15 @@ Template.reasons_left.events({
           'profile.job_feelings.actions':actions
           } }
       );
-      
-      
+
+
 
       // Clear form
 
 
       */
       Router.go('/rateEmployer');
-      
+
 
 
 
