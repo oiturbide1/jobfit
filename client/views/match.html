@@ -1,0 +1,17 @@
+<template name = 'match'>
+
+  <h2>
+    Match Results
+  </h2>
+
+  <p>
+    How important are these things to your employer?
+  </p>
+
+ 
+  <a href="{{pathFor route='home'}}">Home</a>
+  {{#if currentUser}}
+    <a href="{{pathFor route='formerEmp'}}">Former Employer information</a>
+  {{/if}}
+
+</template>
