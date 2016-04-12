@@ -1,4 +1,4 @@
-feelingSchema = new SimpleSchema({
+JobFeelings = new SimpleSchema({
   job_satisfaction:
   {
     type: Number,
@@ -10,7 +10,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -25,7 +26,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -40,7 +42,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -55,7 +58,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -70,7 +74,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -85,7 +90,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -100,7 +106,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }
@@ -115,7 +122,8 @@ feelingSchema = new SimpleSchema({
       type: "noUiSlider",
       step: 1,    
       noUiSlider_pipsOptions: {
-        mode: 'steps',
+        mode: 'positions',
+        values: [20,40,60,80,100],
         density: 5
       }
     }

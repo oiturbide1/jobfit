@@ -29,8 +29,15 @@
         {{#if currentUser}}
           {{> jobInfo}}
           {{> empStatus}}
-          {{> jobFeeling}}
+          {{#if isFormer}}
+            {{> reasons_left}}
+          {{else}}
+            {{> jobFeeling}}
+          {{/if}}
+          
         {{/if}}
+
+        
     </div>
   </div>  
 
@@ -84,6 +91,8 @@
     
   {{/autoForm}}
 </template>
+
+
 
 <template name = 'jobInfo'>
   {{#autoForm schema='JobInfo' id='jobInfoForm'}}
@@ -145,7 +154,7 @@
 
 
 <template name = 'jobFeeling'>
-  {{#autoForm schema='feelingSchema' id='feelingsForm'}}
+  {{#autoForm schema='JobFeelings' id='feelingsForm'}}
     <fieldset>
       <legend>
         Feelings toward Job
@@ -176,8 +185,33 @@
       {{> afQuickField name='actions' }}
       <br>
       <br>
-      <input type = "submit" value = "Enter job satisfaction">
+      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter job satisfaction">
     </fieldset>
+  {{/autoForm}}
+
+</template>
+
+
+
+<template name = 'reasons_left'>
+  {{#autoForm schema='Reasons' id='reasonsForm'}}
+    <fieldset>
+      <legend>
+        Reason for leaving former employer
+      </legend>
+      {{> afQuickField name='choice' options='allowed' noselect=true }}
+      <br>
+      {{#if afFieldValueIs name="choice" value="Yes"}}
+          {{> afQuickField name='yes_reasons' options='allowed' noselect=true}}
+          {{#if afFieldValueIs name='yes_reasons' value='Other'}}
+            {{> afQuickField name='other'}}
+          {{/if}}
+      {{/if}}
+      {{#if afFieldValueIs name='choice' value="No"}}
+        {{> afQuickField name='no_reasons' options='allowed' noselect=true}}
+      {{/if}}
+    </fieldset>
+    <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter reason">
   {{/autoForm}}
 
 </template>

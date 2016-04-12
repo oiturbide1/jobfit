@@ -21,7 +21,7 @@ JobInfo = new SimpleSchema({
     {
         type: Array,
         optional: true,
-        label: 'Please enter dates of promotion',
+        label: 'Please enter your dates of promotion',
         minCount: 1,
         maxCount: 5
         

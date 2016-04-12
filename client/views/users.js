@@ -1,110 +1,71 @@
-Template.registerTalent.events({
+Template.talentRegistration.events({
         'submit form': function(event) {
 
           event.preventDefault();
-
-          var emailVar = event.target.registerEmail.value;
-          var passwordVar = event.target.registerPassword.value;
-
-
-          Accounts.createUser({
-            email: emailVar,
-            password: passwordVar
-          }, function(error){
-            if(error){
-                alert(error.reason);
-            } else {
-                Router.go("/information");
-                //var currentUserId = Meteor.userId;
-                var userId = Meteor.userId();
-                Roles.addUsersToRoles(userId,'talent');
-                console.log('submitted');
-
-            }
-
-          });
-
-
 
         }
       });
 
 
-Template.registerTalent.onRendered(function(){
-              $('#registerT').validate(
-
-              {
-                rules: {
-                  registerEmail:
+Template.talentRegistration.onRendered(function(){
+              var validator = $('.registration').validate({
+                  submitHandler: function(event)
                   {
-                    required: true,
-                    email: true
-                  },
+                    var email = $('[name=regEmail]').val();
+                    var password = $('[name=regPassword]').val();
 
-                  registerPassword:
-                  {
-                    required: true,
-                    minlength: 8,
-                    valid: true
-                  },
+                    console.log(email);
+                    console.log(password);
 
-                  matchedPassword:
-                  {
-                    required: true,
-                    equalTo: registerPassword
+
+                    Accounts.createUser({
+                      email: email,
+                      password: password
+                    }, function(error)
+                    {
+                      if(error){
+                        if(error.reason == 'Email already exists."'){
+                          validator.showErrors({
+                            email: 'That email is already in the system'
+                          });
+                        }
+                          
+                      } 
+                      else 
+                      {
+                          Router.go("/information");
+                          //var currentUserId = Meteor.userId;
+                          var userId = Meteor.userId();
+                          Roles.addUsersToRoles(userId,'talent');
+                      }
+
+                    });
                   }
 
-
-                    },
-
-                  messages:
-                  {
-                    registerEmail:
-                    {
-                      required: "You must enter an email address.",
-                      email: "You've entered an invalid email address."
-                    },
-
-                    registerPassword:
-                    {
-                      required: "You must enter a password.",
-                      minlength: "Your password must be at least {0} characters.",
-                      valid: 'Password must contain at least one numeric and one alphabetic character.'
-                    },
-
-                    matchedPassword:
-                    {
-                      required: "You must enter matching password",
-                      equalTo: "Passwords do not match"
-
-                    }
-
-                  }
-                });
-
+              });
             });
 
 
 
-/*
+
 $.validator.setDefaults({
     rules: {
-            registerEmail:
+            regEmail:
             {
               required: true,
               email: true
             },
 
-            registerPassword:
+            regPassword:
             {
               required: true,
               minlength: 8
             },
 
-            matchedPassword:
+            matchedpassword:
             {
               required: true,
-              equalTo: registerPassword
+              equalTo: '#reg_password'
             },
 
             loginPassword:
@@ -123,19 +84,19 @@ $.validator.setDefaults({
 
             messages:
             {
-              registerEmail:
+              regEmail:
               {
                 required: "You must enter an email address.",
-                email: "You've entered an invalid email address."
+                email: "You've entered invalid email address."
               },
 
-              registerPassword:
+              regPassword:
               {
                 required: "You must enter a password.",
                 minlength: "Your password must be at least {0} characters."
               },
 
-              matchedPassword:
+              matchedpassword:
               {
                 required: "You must enter matching password",
                 equalTo: "Passwords do not match"
@@ -155,7 +116,7 @@ $.validator.setDefaults({
             }
 });
 
-*/
+
 
 //function to check password for criteria of at least 1 number and 1 alphabet
 $.validator.addMethod('valid', function(value, element)
@@ -163,13 +124,7 @@ $.validator.addMethod('valid', function(value, element)
         return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
     });
 
-/*
-$.validator.addMethod('zipcode', function(value, element)
-    {
-        return this.optional(element) || /^\d{5}(?:-\d{4})?$/.test(value);
-    }, 'Invalid zipcode');
 
-*/
 
 Template.login.events({
         'submit form': function(event) {

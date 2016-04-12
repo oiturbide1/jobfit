@@ -232,7 +232,7 @@ CompanySchema = new SimpleSchema({
       type: 'boolean-radios',
       trueLabel: 'Current',
       falseLabel: 'Former',
-      value: false
+      value: true
     }
   },
  created:

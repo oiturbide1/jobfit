@@ -72,9 +72,18 @@ Template.employerInfo.events({
 });
 
 
-Template.employerInfo.helpers({
-  insert_id: function() {
-    return Session.get('new');
+
+Template.Emp.helpers({  
+  isFormer: function(curr_or_form) {
+    var formerCheck = Session.get('current_former')
+    if (formerCheck == 'former'){
+      var former = true;
+    }
+    else{
+      var former = false;
+    }
+    return former;
+    
   }
 });
 
@@ -230,13 +239,6 @@ Template.empStatus.events({
       // Clear form
 
 
-
-      console.log('job info');
-      console.log(other);
-
-
-
-
     }
 
 
@@ -250,32 +252,89 @@ Template.jobFeeling.events({
       // Get value from form element
       var per = AutoForm.getFieldValue('performance','feelingsForm');
       var values= AutoForm.getFieldValue('values','feelingsForm');
+      var job_sat= AutoForm.getFieldValue('job_satisfaction','feelingsForm');
+      var career= AutoForm.getFieldValue('career','feelingsForm');
+      var leave= AutoForm.getFieldValue('leaving','feelingsForm');
+      var coop= AutoForm.getFieldValue('cooperate','feelingsForm');
+      var assist= AutoForm.getFieldValue('assist','feelingsForm');
+      var actions= AutoForm.getFieldValue('actions','feelingsForm');
 
-      /*
-      if (AutoForm.getFieldValue('other','statusForm'))
-      {
-        var other = event.target.other.value;
-      }
+      
       var user = Meteor.userId;
 
 
       //Add job info to profile
       Meteor.users.update(
         {_id: Meteor.userId()}, {$set: {
-          "profile.status.status": status,
-          "profile.status.hours": hrs,
-          'profile.status.other': other
+          "profile.job_feelings.job_satisfaction": job_sat,
+          'profile.job_feelings.performance': per,
+          'profile.job_feelings.career': career,
+          'profile.job_feelings.leaving': leave,
+          'profile.job_feelings.values': values,
+          'profile.job_feelings.cooperate': coop,
+          'profile.job_feelings.assist':assist,
+          'profile.job_feelings.actions':actions
           } }
       );
-      */
-
+      
+      
 
       // Clear form
 
 
 
-      console.log(per);
-      console.log(values);
+      Router.go('/rateEmployer');
+
+
+
+
+    }
+
+
+});
+
+
+Template.reasons_left.events({
+  "submit form": function (event, template) {
+      // Prevent default browser form submit
+      event.preventDefault();
+
+      // Get value from form element
+      var choice = event.target.choice.value;
+      var yes = event.target.yes_reasons.value;
+      
+
+      console.log(choice);
+      console.log(yes);
+      
+      var user = Meteor.userId;
+
+
+      //FormerEmployerSurvey.update(survey, function(err,docsInserted)
+
+      /*
+      //Add job info to profile
+      FormerEmployer.update(
+        {_id: Meteor.userId()}, {$set: {
+          "profile.job_feelings.job_satisfaction": job_sat,
+          'profile.job_feelings.performance': per,
+          'profile.job_feelings.career': career,
+          'profile.job_feelings.leaving': leave,
+          'profile.job_feelings.values': values,
+          'profile.job_feelings.cooperate': coop,
+          'profile.job_feelings.assist':assist,
+          'profile.job_feelings.actions':actions
+          } }
+      );
+      
+      
+
+      // Clear form
+
+
+      */
+      Router.go('/rateEmployer');
+      
 
 
 

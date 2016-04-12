@@ -73,6 +73,21 @@ FESurveySchema = new SimpleSchema({
     type: String,
     optional: true
  },
+ left_by_choice:
+ {
+    type: String,
+    optional: true
+ },
+ reasons_left:
+ {
+    type: Array,
+    optional: true
+ },
+ 'reasons_left.$':
+ {
+    type: String,
+    optional: true
+ },
  created:
  {
    type: Date,

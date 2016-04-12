@@ -75,12 +75,9 @@ Template.employerRatings.events({
           }
           
           if(!Meteor.userId()){
-            <div class="alert alert-success" role ='alert'>
-              <strong>'Thank you for entering company ratings! Click here to return home'</strong>
-            </div>
+            Router.go("/success");
           }
           
-          //Router.go("/information");
 
         }
       });
