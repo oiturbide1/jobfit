@@ -14,9 +14,6 @@ Template.talentRegistration.onRendered(function(){
                     var email = $('[name=regEmail]').val();
                     var password = $('[name=regPassword]').val();
 
-                    console.log(email);
-                    console.log(password);
-
 
                     Accounts.createUser({
                       email: email,
@@ -47,7 +44,7 @@ Template.talentRegistration.onRendered(function(){
 
 
 
-
+// validation rules and messages
 $.validator.setDefaults({
     rules: {
             regEmail:
@@ -119,10 +116,10 @@ $.validator.setDefaults({
 
 
 //function to check password for criteria of at least 1 number and 1 alphabet
-$.validator.addMethod('valid', function(value, element)
-    {
-        return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
-    });
+//$.validator.addMethod('valid', function(value, element)
+    //{
+        //return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
+    //});
 
 
 
@@ -143,8 +140,8 @@ Template.login.onRendered(function(){
           submitHandler: function(event)
           {
 
-            var loginEmail = event.target.loginEmail.value;
-            var loginPassword = event.target.loginPassword.value;
+            var loginEmail = $('[name=loginEmail]').val();
+            var loginPassword = $('[name=loginPassword]').val();
 
 
             Meteor.loginWithPassword(loginEmail, loginPassword, function(err){
@@ -171,35 +168,8 @@ Template.login.onRendered(function(){
               }
 
           });
-          },
-
-
-          rules:
-          {
-            loginEmail:
-            {
-              email: true,
-              required: true
-            },
-            loginPassword:
-            {
-              required: true
-            }
-          },
-
-          messages:
-          {
-              loginEmail:
-              {
-                email: "You've entered an invalid email address.",
-                required: 'Email is required'
-              },
-              loginPassword:
-              {
-                required: "Password empty"
-
-              }
           }
+          
 
       });
     });

@@ -20,45 +20,71 @@ Template.employerInfo.events({
       'zip': zip
     }
 
-    var comp = null;
 
-    Meteor.call('insert_company', comp, function(error, result)
+    Meteor.call('insert_company', comp, function(error, insertedCompany)
     {
-        Session.set('current_comp', result);
+        if (error){
+          console.log(error);
+        }
+        else
+        {
+          Session.set('current_comp', insertedCompany);
+          
+          //check whether it is a current or former employer
+          // and sets Session
+          if (current == 'true')
+          {
+            var current_former = 1;
+            Session.set('current_or_former', current_former);
 
+            Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+            {
+              if (error)
+              {
+                console.log(error);
+              }
+              else
+              {
+                Session.set('Survey', insertedSurvey);
+                
+              }
+
+            });
+
+          }
+
+          // **
+          // for some reason, it adds to current employer survey also
+          // adds to both former and current 
+          // **
+
+          else if(current == 'false')
+          {
+            var current_former = 0;
+            Session.set('current_or_former', current_former);
+
+            Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+            {
+              if (error)
+              {
+                console.log(error);
+              }
+              else
+              {
+                Session.set('Survey', insertedSurvey);
+                
+              }
+
+            });
+      
+    
+          }
+
+
+        }
 
     });
 
-
-
-
-
-
-    //check whether works remote or not
-    // and sets Session
-    if(remote == 'false')
-    {
-      remot = 'not remotely';
-    }
-    else if(remote == 'true')
-    {
-      remot = 'work remotely';
-    }
-
-    Session.set('rem', remot);
-
-
-
-    //check whether it is a current or former employer
-    // and sets Session
-    if(current == 'true')
-    {
-      var current_former = 'current'
-    }
-    else if (current == 'false'){
-      var current_former = 'former'
-    }
-    Session.set('current_former', current_former);
 
 
     if(!Meteor.userId()){
@@ -73,8 +99,8 @@ Template.employerInfo.events({
 
 Template.Emp.helpers({
   isFormer: function(curr_or_form) {
-    var formerCheck = Session.get('current_former')
-    if (formerCheck == 'former'){
+    var formerCheck = Session.get('current_or_former')
+    if (formerCheck == 0){
       var former = true;
     }
     else{
@@ -173,14 +199,26 @@ Template.jobInfo.events({
       event.preventDefault();
 
       // Get value from form element
-      var pDate= AutoForm.getFieldValue('promo_date.0','jobInfoForm');
+      var p1= AutoForm.getFieldValue('promo_date.0','jobInfoForm');
+      var p2= AutoForm.getFieldValue('promo_date.1','jobInfoForm');
+      var p3= AutoForm.getFieldValue('promo_date.2','jobInfoForm');
+      var p4= AutoForm.getFieldValue('promo_date.3','jobInfoForm');
+      var p5= AutoForm.getFieldValue('promo_date.4','jobInfoForm');
       var title = event.target.title.value;
       var sDate= event.target.start_date.value;
       var promo = event.target.promoted.value;
-      var user = Meteor.userId;
+      
+      //var promoDates = [p1,p2,p3,p4,p5];
+
+
+      var sur = Session.get('Survey');
+   
+
+      Meteor.call('update_currentSurvey_jobInfo', sur, title, sDate, p1, p2, p3, p4, p5);
 
 
       //Add job info to profile
+      /*
       Meteor.users.update(
         {_id: Meteor.userId()}, {$push: {
           "profile.job_info.title": title,
@@ -189,16 +227,10 @@ Template.jobInfo.events({
           'profile.job_info.promo_date':[pDate]
           } }
       );
+      */
 
 
       // Clear form
-
-
-
-      console.log('job info');
-      console.log(promo);
-      console.log(sDate);
-
 
 
 

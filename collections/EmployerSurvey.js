@@ -1,15 +1,20 @@
 //schema to define companies
-CurrentEmployerSurvey = new Meteor.Collection( 'currentemployersurvey' );
+EmployerSurvey = new Meteor.Collection( 'employersurvey' );
 
 function filter20( value, type ){
   return value % 20 ? 2 : 1;
 }
 
 
-CESurveySchema = new SimpleSchema({
+ESurvey = new SimpleSchema({
   company:
   {
     type: String,
+    optional: true
+  },
+  cur_or_form:
+  {
+    type: Number,
     optional: true
   },
   job_security:
@@ -187,27 +192,94 @@ CESurveySchema = new SimpleSchema({
     type: String,
     optional: true
  },
- created:
+ job_title:
  {
-   type: Date,
-   autoValue: function() {
-     if ( this.isInsert ) {
-       return new Date;
-     }
-   }
- },
- updated:
- {
-   type: Date,
-   optional:true,
-   autoValue: function() {
-     if ( this.isUpdate ) {
-       return new Date;
-     }
-   }
- }
+    type: String,
+    label: 'Job Title',
+    optional: true
+  },
+  start_date:
+  {
+    type: Date,
+    optional: true,
+    label: 'Start Date'
+  },
+  promoted:
+  {
+    type: String,
+    label: 'Have you been promoted?',
+    optional: true,
+    allowedValues: ['Yes','No']
+  },
+  promo_date:
+  {
+    type: Array,
+    optional: true,
+    label: 'Please enter your dates of promotion',
+    minCount: 1,
+    maxCount: 5
+      
+  },
+  'promo_date.$':
+  {
+    type: Date,
+    optional: true
+  }, 
+  status:
+  {
+    type: String,
+    label: 'Status',
+    allowedValues: ['Full Time', 'Part Time', 'Other'],
+    optional: true
+  },
+  other:
+  {
+    type: String,
+    label: 'Other: Please Explain',
+    optional: true
+  },
+  hours:
+  {
+    type: Number,
+    label: 'Average Hours',
+    optional: true
+  },
+  //job_feelings:
+  //{
+    //type: Job_Feelings,
+    //optional: true
+  //},
+  //reasons_left:
+  //{
+    //type: Reasons,
+    //optional:true
+  //},
+  timeStamp:
+  {
+    type: Date,
+    autoValue: function() {
+      if ( this.isInsert ) {
+        return new Date;
+      }
+    }
+  },
+  updated:
+  {
+    type: Date,
+    optional:true,
+    autoValue: function() {
+      if ( this.isUpdate ) {
+        return new Date;
+      }
+    }
+  },
+  comments:
+  {
+   type: String,
+   optional: true
+  }
 
 
 });
 
-CurrentEmployerSurvey.attachSchema(CESurveySchema);
+EmployerSurvey.attachSchema(ESurvey);
