@@ -24,14 +24,15 @@ Template.talentRegistration.onRendered(function(){
                     }, function(error)
                     {
                       if(error){
+                        console.log(error);
                         if(error.reason == 'Email already exists."'){
                           validator.showErrors({
                             email: 'That email is already in the system'
                           });
                         }
-                          
-                      } 
-                      else 
+
+                      }
+                      else
                       {
                           Router.go("/information");
                           //var currentUserId = Meteor.userId;
@@ -119,10 +120,10 @@ $.validator.setDefaults({
 
 
 //function to check password for criteria of at least 1 number and 1 alphabet
-$.validator.addMethod('valid', function(value, element)
-    {
-        return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
-    });
+//$.validator.addMethod('valid', function(value, element)
+    //{
+        //return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
+    //});
 
 
 
