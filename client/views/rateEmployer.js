@@ -14,65 +14,46 @@ Template.employerRatings.events({
           var salary = AutoForm.getFieldValue('salary','CESurveyForm');
           var manage = AutoForm.getFieldValue('good_sup','CESurveyForm');
 
-          var rem = Session.get('rem');
-          var cf = Session.get('current_former');
-          var currentCompany = Session.get('current_comp');
-    
-          console.log(cf);
-
-
-          survey = {
-            "company": currentCompany,
-            "work_life_balance": wlb, 
-            'job_security': sec, 
-            'development_opportunities': dev, 
-            'workload': work, 
-            'career_path': path, 
-            'promotion_criteria': criteria, 
-            'promotion_opportunities': opp, 
-            'freedom': freedom, 
-            'salary': salary,  
-            'good_sup': manage, 
-            'remote': rem
-
-          }
-
           var user = Meteor.userId;
+          var currentSurvey = Session.get('Survey');
+          console.log(path);
+    
+
+          var survey = 
+          [
+            wlb, 
+            sec, 
+            dev, 
+            work, 
+            path, 
+            criteria, 
+            opp, 
+            freedom, 
+            salary,  
+            manage
+          ];
+
+          console.log(wlb);
+          console.log(survey[0]);
+
+          Meteor.call('add_Survey', currentSurvey, survey, function( err, docInserted)
+          {
+            if (err)
+            {
+              console.log(err);
+            }
+            else
+            {
+              console.log(docInserted);
+              if(user)
+              {
+                //Meteor.call('update_usercurrentSurvey', docInserted)
+              }
+              
+            }
+          });
 
           
-          if(cf == 'current')
-          {
-            console.log('added current');
-            CurrentEmployerSurvey.insert(survey, function(err,docsInserted)
-            {
-              var sur = CurrentEmployerSurvey.find({_id: docsInserted});
-              //console.log(docsInserted);
-              Meteor.users.update(
-              {_id: Meteor.userId()}, 
-              {$push: {
-                "profile.current_survey": docsInserted
-              } 
-              });
-            });
-          }
-
-          
-          if(cf == 'former')
-          {
-            FormerEmployerSurvey.insert(survey, function(err,docsInserted)
-            {
-              var sur = FormerEmployerSurvey.find({_id: docsInserted});
-              //console.log(docsInserted);
-              Meteor.users.update(
-              {_id: Meteor.userId()}, 
-              {$push: {
-                "profile.former_survey": docsInserted
-              } 
-              });
-            });
-
-            console.log('added former');
-          }
           
           if(!Meteor.userId()){
             Router.go("/success");
