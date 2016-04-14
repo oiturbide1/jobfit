@@ -3,62 +3,50 @@ Template.employerRatings.events({
 
           event.preventDefault();
 
-          var wlb = AutoForm.getFieldValue('work_life_balance','CESurveyForm');
-          var sec = AutoForm.getFieldValue('job_security','CESurveyForm');
-          var dev = AutoForm.getFieldValue('development_opportunities','CESurveyForm');
-          var work = AutoForm.getFieldValue('workload','CESurveyForm');
-          var path = AutoForm.getFieldValue('career_path','CESurveyForm');
-          var criteria = AutoForm.getFieldValue('promotion_criteria','CESurveyForm');
-          var opp = AutoForm.getFieldValue('promotion_opportunities','CESurveyForm');
-          var freedom = AutoForm.getFieldValue('freedom','CESurveyForm');
-          var salary = AutoForm.getFieldValue('salary','CESurveyForm');
-          var manage = AutoForm.getFieldValue('good_sup','CESurveyForm');
-
+          var wlb = AutoForm.getFieldValue('work_life_balance','ESurveyForm');
+          var sec = AutoForm.getFieldValue('job_security','ESurveyForm');
+          var dev = AutoForm.getFieldValue('development_opportunities','ESurveyForm');
+          var work = AutoForm.getFieldValue('workload','ESurveyForm');
+          var path = AutoForm.getFieldValue('career_path','ESurveyForm');
+          var criteria = AutoForm.getFieldValue('promotion_criteria','ESurveyForm');
+          var opp = AutoForm.getFieldValue('promotion_opportunities','ESurveyForm');
+          var freedom = AutoForm.getFieldValue('freedom','ESurveyForm');
+          var salary = AutoForm.getFieldValue('salary','ESurveyForm');
+          var manage = AutoForm.getFieldValue('good_sup','ESurveyForm');
           var user = Meteor.userId;
           var currentSurvey = Session.get('Survey');
-          console.log(path);
-    
 
-          var survey = 
+
+
+          var survey =
           [
-            wlb, 
-            sec, 
-            dev, 
-            work, 
-            path, 
-            criteria, 
-            opp, 
-            freedom, 
-            salary,  
+            wlb,
+            sec,
+            dev,
+            work,
+            path,
+            criteria,
+            opp,
+            freedom,
+            salary,
             manage
           ];
 
-          console.log(wlb);
-          console.log(survey[0]);
 
-          Meteor.call('add_Survey', currentSurvey, survey, function( err, docInserted)
+
+          Meteor.call('add_Survey', currentSurvey, survey);
+          if(user)
           {
-            if (err)
-            {
-              console.log(err);
-            }
-            else
-            {
-              console.log(docInserted);
-              if(user)
-              {
-                //Meteor.call('update_usercurrentSurvey', docInserted)
-              }
-              
-            }
-          });
+            Meteor.call('update_userSurvey', currentSurvey);
+          }
+        
 
-          
-          
+
           if(!Meteor.userId()){
             Router.go("/success");
           }
-          
+
+
 
         }
       });

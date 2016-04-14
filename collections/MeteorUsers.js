@@ -29,7 +29,7 @@ PersonalInfo = new SimpleSchema({
 });
 
 
-UserEducationLevel = new SimpleSchema({ 
+UserEducationLevel = new SimpleSchema({
     education_level: {
         type: String,
         label: "Education Level",
@@ -92,7 +92,7 @@ UserEducation = new SimpleSchema({
       type: String,
       label: "Field"
     },
-    level: 
+    level:
     {
         type: String,
         label: "Education Level",
@@ -115,7 +115,7 @@ UserEducation = new SimpleSchema({
         }
       }
     }
-    
+
 });
 
 
@@ -235,22 +235,12 @@ UserProfile = new SimpleSchema({
         type: String,
         optional: true
     },
-    current_survey:
+    employer_survey:
     {
         type: Array,
         optional: true
     },
-    'current_survey.$':
-    {
-        type: String,
-        optional: true
-    },
-    former_survey:
-    {
-        type: Array,
-        optional: true
-    },
-    'former_survey.$':
+    'employer_survey.$':
     {
         type: String,
         optional: true

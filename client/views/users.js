@@ -170,7 +170,7 @@ Template.login.onRendered(function(){
 
           });
           }
-          
+
 
       });
     });
@@ -220,6 +220,12 @@ Template.dashboard.events({
         event.preventDefault();
         Meteor.logout();
     }
+});
+
+Template.dashboard.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
 });
 
 

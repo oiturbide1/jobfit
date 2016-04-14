@@ -29,7 +29,7 @@ Template.employerInfo.events({
         else
         {
           Session.set('current_comp', insertedCompany);
-          
+
           //check whether it is a current or former employer
           // and sets Session
           if (current == 'true')
@@ -46,7 +46,7 @@ Template.employerInfo.events({
               else
               {
                 Session.set('Survey', insertedSurvey);
-                
+
               }
 
             });
@@ -55,7 +55,7 @@ Template.employerInfo.events({
 
           // **
           // for some reason, it adds to current employer survey also
-          // adds to both former and current 
+          // adds to both former and current
           // **
 
           else if(current == 'false')
@@ -72,12 +72,12 @@ Template.employerInfo.events({
               else
               {
                 Session.set('Survey', insertedSurvey);
-                
+
               }
 
             });
-      
-    
+
+
           }
 
 
@@ -207,12 +207,12 @@ Template.jobInfo.events({
       var title = event.target.title.value;
       var sDate= event.target.start_date.value;
       var promo = event.target.promoted.value;
-      
+
       //var promoDates = [p1,p2,p3,p4,p5];
 
 
       var sur = Session.get('Survey');
-   
+
 
       Meteor.call('update_currentSurvey_jobInfo', sur, title, sDate, p1, p2, p3, p4, p5);
 
@@ -292,7 +292,7 @@ Template.jobFeeling.events({
 
       var user = Meteor.userId;
 
-
+      /*
       //Add job info to profile
       Meteor.users.update(
         {_id: Meteor.userId()}, {$set: {
@@ -306,6 +306,7 @@ Template.jobFeeling.events({
           'profile.job_feelings.actions':actions
           } }
       );
+      */
 
 
 

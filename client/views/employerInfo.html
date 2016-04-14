@@ -34,12 +34,12 @@
           {{else}}
             {{> jobFeeling}}
           {{/if}}
-          
+
         {{/if}}
 
-        
+
     </div>
-  </div>  
+  </div>
 
 </template>
 
@@ -51,7 +51,7 @@
         <legend>
           Employer Information
         </legend>
-        
+
         <div class = 'col-md-5'>
           {{> afQuickField name='companyName' }}
         </div>
@@ -84,11 +84,11 @@
         <input type = "submit" class = 'btn btn-primary btn-lg' value = "Finish employer information">
       {{else}}
         <input type = "submit" class = 'btn btn-primary btn-lg' href="{{pathFor route='rateEmployer'}}" value = "Rate Employer">
-        
+
       {{/if}}
 
-      
-    
+
+
   {{/autoForm}}
 </template>
 
@@ -118,8 +118,8 @@
           </div>
           {{/if}}
       </fieldset>
-        
-      
+
+
         <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter job information">
     {{/autoForm}}
 </template>
@@ -154,7 +154,7 @@
 
 
 <template name = 'jobFeeling'>
-  {{#autoForm schema='JobFeelings' id='feelingsForm'}}
+  {{#autoForm schema='Job_Feelings' id='feelingsForm'}}
     <fieldset>
       <legend>
         Feelings toward Job
