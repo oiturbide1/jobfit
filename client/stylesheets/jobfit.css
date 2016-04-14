@@ -92,6 +92,13 @@ footer {
     }
 }
 
+.error
+{
+    background-color:rgb(255, 231, 231);
+    border-color: #ebccd1;
+    padding:1px 20px 1px 20px;
+}
+
 
 
 

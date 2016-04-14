@@ -35,3 +35,4 @@ twbs:bootstrap
 standard-minifier-css
 standard-minifier-js
 cfs:ejson-file
+fortawesome:fontawesome
