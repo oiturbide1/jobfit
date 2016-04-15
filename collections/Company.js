@@ -213,7 +213,40 @@ CompanySchema = new SimpleSchema({
     {
       label: 'CT',
       value: 'CT'
+    },
+    {
+      label: 'DE',
+      value: 'DE'
+    },
+    {
+      label: 'FL',
+      value: 'FL'
+    },
+    {
+      label: 'GA',
+      value: 'GA'
+    },
+    {
+      label: 'HI',
+      value: 'HI'
+    },
+    {
+      label: 'ID',
+      value: 'ID'
+    },
+    {
+      label: 'IL',
+      value: 'IL'
+    },
+    {
+      label: 'IN',
+      value: 'IN'
+    },
+    {
+      label: 'IA',
+      value: 'IA'
     }
+
     ]
   }
  },

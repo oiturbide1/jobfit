@@ -22,7 +22,7 @@ Template.talentRegistration.onRendered(function(){
                     {
                       if(error){
                         console.log(error);
-                        if(error.reason == 'Email already exists."'){
+                        if(error.reason == '"Email already exists."'){
                           validator.showErrors({
                             email: 'That email is already in the system'
                           });
@@ -51,19 +51,22 @@ $.validator.setDefaults({
             regEmail:
             {
               required: true,
-              email: true
+              email: true,
+              valid: false
             },
 
             regPassword:
             {
               required: true,
-              minlength: 8
+              minlength: 8,
+              valid: true
             },
 
             matchedpassword:
             {
               required: true,
-              equalTo: '#reg_password'
+              equalTo: '#reg_password',
+              valid: true
             },
 
             loginPassword:
@@ -91,7 +94,8 @@ $.validator.setDefaults({
               regPassword:
               {
                 required: "You must enter a password.",
-                minlength: "Your password must be at least {0} characters."
+                minlength: "Your password must be at least {0} characters.",
+                valid: 'Password must contain at least 1 number and 1 letter'
               },
 
               matchedpassword:
@@ -103,7 +107,7 @@ $.validator.setDefaults({
 
               loginEmail:
               {
-                required: "You need to enter your email address."
+                required: "You need to enter your email address"
               },
 
               loginPassword:
@@ -111,16 +115,32 @@ $.validator.setDefaults({
                 required: "You need to enter your password."
               }
 
+            },
+
+            tooltip_options:
+            {
+              loginEmail: 
+              {
+                trigger: "click",
+                placement: 'bottom',
+                html: true
+              },
+              loginPassword: 
+              {
+                trigger: "hover",
+                placement: 'left'
+              },
+
             }
 });
 
 
 
 //function to check password for criteria of at least 1 number and 1 alphabet
-//$.validator.addMethod('valid', function(value, element)
-    //{
-        //return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
-    //});
+jQuery.validator.addMethod('valid', function(value, element)
+    {
+        return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
+    }, "The password is invalid" );
 
 
 
@@ -136,8 +156,9 @@ Template.login.events({
 
 Template.login.onRendered(function(){
     var validator = $('#login').validate(
-
       {
+
+
           submitHandler: function(event)
           {
 
@@ -175,6 +196,12 @@ Template.login.onRendered(function(){
       });
     });
 
+
+
+Template.home.onRendered(function() 
+{
+   $('[data-toggle="tooltip"]').tooltip() //initialize all tooltips in this template
+});
 
 
 Template.registerRep.events({

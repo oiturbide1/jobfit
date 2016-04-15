@@ -3,7 +3,7 @@
 $.validator.addMethod("zipcodeUS", function(value, element) {
     return this.optional(element) || /\d{5}-\d{4}$|^\d{5}$/.test(value)
 }, "The specified US ZIP Code is invalid");
-
+*/
 
 Template.pi.onRendered(function(){
     $('#personalInFoForm').validate(
@@ -14,7 +14,8 @@ Template.pi.onRendered(function(){
             zip:
             {
               required: true,
-              zipcodeUS: true
+              zipcodeUS: true,
+              valid: false
             }
           },
 
@@ -29,7 +30,6 @@ Template.pi.onRendered(function(){
 
       });
     });
-*/
 
 
 

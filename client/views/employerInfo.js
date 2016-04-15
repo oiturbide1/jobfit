@@ -111,7 +111,7 @@ Template.Emp.helpers({
   }
 });
 
-/*
+
 Template.employerInfo.onRendered(function(){
         $('#currentCompanyForm').validate(
 
@@ -140,7 +140,9 @@ Template.employerInfo.onRendered(function(){
             zip:
             {
               required: true,
-              maxlength: 5
+              zipcodeUS: true,
+              valid: false
+              //maxlength: 5
             },
 
             curr_or_form:
@@ -175,7 +177,8 @@ Template.employerInfo.onRendered(function(){
 
             zip:
             {
-              required: 'Please enter zip'
+              required: 'Please enter zip',
+              zipcodeUS: 'Zip code must be of format XXXXX'
             },
 
             curr_or_form:
@@ -189,8 +192,12 @@ Template.employerInfo.onRendered(function(){
 
       });
 
+jQuery.validator.addMethod("zipcodeUS", function(value, element) {
+  return this.optional(element) || /\d{5}-\d{4}$|^\d{5}$/.test(value);
+}, "The specified US ZIP Code is invalid");
 
-*/
+
+
 
 
 Template.jobInfo.events({
