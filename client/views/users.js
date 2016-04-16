@@ -13,6 +13,9 @@ Template.talentRegistration.onRendered(function(){
                   {
                     var email = $('[name=regEmail]').val();
                     var password = $('[name=regPassword]').val();
+                    var usertype = $('[name=talent_rep]').val();
+
+                    console.log(usertype);
 
 
                     Accounts.createUser({
@@ -119,13 +122,13 @@ $.validator.setDefaults({
 
             tooltip_options:
             {
-              loginEmail: 
+              loginEmail:
               {
                 trigger: "click",
                 placement: 'bottom',
                 html: true
               },
-              loginPassword: 
+              loginPassword:
               {
                 trigger: "hover",
                 placement: 'left'
@@ -198,13 +201,14 @@ Template.login.onRendered(function(){
 
 
 
-Template.home.onRendered(function() 
+Template.home.onRendered(function()
 {
    $('[data-toggle="tooltip"]').tooltip() //initialize all tooltips in this template
 });
 
 
 Template.registerRep.events({
+
         'submit form': function(event) {
 
           event.preventDefault();
