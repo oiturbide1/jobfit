@@ -183,37 +183,121 @@ PersonalSurveySchema = new SimpleSchema({
     flex_self:
     {
     	type: Number,
-        optional: true
+        optional: true,
+        label: 'Supporting a flexible work schedule',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     },
     rewperf_self:
     {
     	type: Number,
-        optional:true
+        optional: true,
+        label: 'Rewarding employees based on their performance',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     },
     mission_self:
     {
     	type: Number,
-        optional: true
+        optional: true,
+        label: 'A clear mission',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     },
     health_self:
     {
     	type: Number,
-        optional: true
+        optional: true,
+        label: 'Providing good health benefits',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     },
     rewrecog_self:
     {
     	type: Number,
-        optional: true
+        optional: true,
+        label: 'Providing rewards and recognition',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     },
     workspace_self:
     {
     	type: Number,
-        optional:true
+        optional: true,
+        label: 'My own private office or work space',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     },
     poorperfs_self:
     {
     	type: Number,
-        optional: true
+        optional: true,
+        label: 'That my employer takes actions to deal with poor performers',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,    
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
     }
 });
 

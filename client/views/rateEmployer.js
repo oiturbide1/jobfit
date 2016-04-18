@@ -13,6 +13,17 @@ Template.employerRatings.events({
           var freedom = AutoForm.getFieldValue('freedom','ESurveyForm');
           var salary = AutoForm.getFieldValue('salary','ESurveyForm');
           var manage = AutoForm.getFieldValue('good_sup','ESurveyForm');
+          var check = AutoForm.getFieldValue('careless','ESurveyForm');
+          var miss = AutoForm.getFieldValue('mission','ESurveyForm');
+          var health = AutoForm.getFieldValue('health','ESurveyForm');
+          var space = AutoForm.getFieldValue('workspace','ESurveyForm');
+          var recog = AutoForm.getFieldValue('rewrecog','ESurveyForm');
+          var poor = AutoForm.getFieldValue('poor_perfs','ESurveyForm');
+          var flex = AutoForm.getFieldValue('flex','ESurveyForm');
+          var perf = AutoForm.getFieldValue('rew_perf','ESurveyForm');
+
+
+
           var user = Meteor.userId();
           var currentSurvey = Session.get('Survey');
 
@@ -29,7 +40,15 @@ Template.employerRatings.events({
             opp,
             freedom,
             salary,
-            manage
+            manage,
+            check,
+            miss,
+            health,
+            space,
+            recog,
+            poor,
+            flex,
+            perf
           ];
 
 

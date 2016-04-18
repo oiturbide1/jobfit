@@ -13,6 +13,13 @@ Template.talentviewsurvey.events({
       var free = AutoForm.getFieldValue('auton_self','talentsurvey');
       var sal = AutoForm.getFieldValue('salary_self','talentsurvey');
       var sup = AutoForm.getFieldValue('goodsup_self','talentsurvey');
+      var flex = AutoForm.getFieldValue('flex_self','talentsurvey');
+      var perf = AutoForm.getFieldValue('rewperf_self','talentsurvey');
+      var miss = AutoForm.getFieldValue('mission_self','talentsurvey');
+      var health = AutoForm.getFieldValue('health_self','talentsurvey');
+      var recog = AutoForm.getFieldValue('rewrecog_self','talentsurvey');
+      var space = AutoForm.getFieldValue('workspace_self','talentsurvey');
+      var poor = AutoForm.getFieldValue('poorperfs_self','talentsurvey');
 
 
 
@@ -30,7 +37,14 @@ Template.talentviewsurvey.events({
       'promo_self': opp,
       'auton_self': free,
       'salary_self': sal,
-      'goodsup_self': sup
+      'goodsup_self': sup,
+      'flex_self':flex,
+      'rewperf_self':perf,
+      'mission_self':miss,
+      'health_self':health,
+      'rewrecog_self':recog,
+      'workspace_self':space,
+      'poorperfs_self':poor
       }
 
       PersonalSurvey.insert(survey, function(err,docsInserted)

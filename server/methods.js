@@ -1,3 +1,7 @@
+Meteor.startup(function () {
+ process.env.MAIL_URL = 'smtp://postmaster@sandboxbf71083cbdc44a4c9ebcfd82601ba1d2.mailgun.org:c28807c983f8c2566445a9f4ab57cfa2@smtp.mailgun.org:587';});
+
+
 Meteor.methods(
 {
 
@@ -82,7 +86,23 @@ Meteor.methods(
           "profile.employer_survey": object
         }
       });
+  },
+
+
+  'sendEmail'(email) 
+  {
+      // send the email!
+      Email.send({to:email, from:'empMatch@gmail.com', subject:'Thank you for signing up for our project', text:'We will share with you some news about us in a near future. See you soon!'});
+  },
+
+  'sendVerificationLink'() 
+  {
+    var userId = Meteor.userId();
+    if ( userId ) {
+      return Accounts.sendVerificationEmail( userId );
+    }
   }
+ 
 
 
 

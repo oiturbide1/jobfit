@@ -1,3 +1,17 @@
+// Change Bert's time on screen to be two seconds instead of the 
+// default three and a half.
+Bert.defaults.hideDelay = 2000;
+
+// Change Bert's default type to be a warning instead of default.
+Bert.defaults.type = 'danger';
+
+// Change Bert's default style to be a growl-top-right 
+// instead of fixed-top.
+Bert.defaults.style = 'growl-top-right';
+
+
+
+
 Template.talentRegistration.events({
         'submit form': function(event) {
 
@@ -24,16 +38,22 @@ Template.talentRegistration.onRendered(function(){
                       }, function(error)
                       {
                         if(error){
-                          console.log(error);
-                          if(error.reason == '"Email already exists."'){
-                            validator.showErrors({
-                              email: 'That email is already in the system'
-                            });
-                          }
+                          Bert.alert(error.reason);  
 
                         }
                         else
                         {
+                          Meteor.call( 'sendVerificationLink', ( err, response ) =>
+                          {
+                            if (err)
+                            {
+                              Bert.alert(err.reason);
+                            }
+                            else
+                            {
+                              Bert.alert('Welcome!','success');
+                            }
+                          });
                             Router.go("/information");
                             //var currentUserId = Meteor.userId;
                             var userId = Meteor.userId();
@@ -51,13 +71,11 @@ Template.talentRegistration.onRendered(function(){
                         password: password
                       }, function(error)
                       {
-                        if(error){
-                          console.log(error);
-                          if(error.reason == '"Email already exists."'){
-                            validator.showErrors({
-                              email: 'That email is already in the system'
-                            });
-                          }
+                        if(error)
+                        {
+                          Bert.alert(error.reason); 
+                          
+                          
 
                         }
                         else
@@ -151,7 +169,8 @@ $.validator.setDefaults({
 
               loginPassword:
               {
-                required: "You need to enter your password."
+                required: "You need to enter your password.",
+                valid: 'Incorrect password'
               }
 
             },
@@ -211,21 +230,31 @@ Template.login.onRendered(function(){
                 //alert(err.reason);
                 if(err.reason == "User not found")
                 {
-                    validator.showErrors({
-                    loginEmail: 'No existing user'
-                    });
+                  Bert.alert('User not found');
+                  //validator.showErrors({
+                    //loginEmail: 'No existing user'
+                    //});
                 }
 
                 if(err.reason == "Incorrect password"){
-                    validator.showErrors({
-                    loginPassword: err.reason
-                    });
+                  Bert.alert('Incorrect password');
+                  //validator.showErrors({
+                    //loginPassword: err.reason
+                    //});
                 }
 
               }
               else
               {
-                Router.go("/information");
+                if(Roles.userIsInRole(Meteor.userId(), 'talent'))
+                {
+                  Router.go("/information");
+                }
+                else
+                {
+                  Router.go("/Emp");
+                }
+                
               }
 
           });
@@ -243,45 +272,8 @@ Template.home.onRendered(function()
 });
 
 
-Template.registerRep.events({
-
-        'submit form': function(event) {
-
-          event.preventDefault();
-
-          var emailVar = event.target.registerEmail.value;
-          var passwordVar = event.target.registerPassword.value;
 
 
-          Accounts.createUser({
-            email: emailVar,
-            password: passwordVar,
-            profile: { role: "rep" }
-          });
-
-
-          Router.go("/information");
-          console.log('submittedR');
-
-
-        }
-      });
-/*
-Template.loginRep.events({
-        'submit form': function(event) {
-
-          event.preventDefault();
-
-          var usernameVar = event.target.loginUsername.value;
-          var passwordVar = event.target.loginPassword.value;
-
-          Meteor.loginWithPassword(usernameVar, passwordVar);
-          console.log('logged inR');
-
-        }
-      });
-
-*/
 Template.dashboard.events({
     'click .logout': function(event){
         event.preventDefault();
@@ -297,20 +289,14 @@ Template.dashboard.helpers({
 
 
 
-
-Template.home.events({
-  "click #loginButton": function (event, template) {
-          // Prevent default browser form submit
-          event.preventDefault();
-
-          Router.go("/login");
-          console.log('clicked login')
-
-        }
-
-      });
-
-
+Template.email.events({
+    'click #btn': function () {
+      // if someone click on the button ( tag), then we ask the server to execute the function sendEmail (RPC call)
+      Meteor.call('sendEmail', $('#email').val());
+      Session.set('done', true);
+    }
+  });
+  Template.email.done = function () { return Session.equals('done', true); }
 
 
 /*
@@ -343,36 +329,3 @@ Template.google.events({
 });
 */
 
-
-
-Template.reason.events({
-  "submit form": function (event, template) {
-      // Prevent default browser form submit
-      event.preventDefault();
-
-      // Get value from form element
-      var test = event.target.choice.value;
-      var s= event.target.yes_reasons.value;
-
-
-
-      // Add job info to profile
-      //Meteor.users.update(
-        //{_id: Meteor.userId()}, {$set: {"profile.jobInfo": [title,pDate,sDate,pTimes]} }
-      //);
-
-
-      // Clear form
-
-
-
-      console.log();
-      console.log(test);
-      console.log(s);
-
-
-
-
-    }
-
-  });

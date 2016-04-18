@@ -187,6 +187,142 @@ ESurvey = new SimpleSchema({
       }
     }
  },
+ flex:
+ {
+    type: Number,
+    optional: true,
+    label: 'Providing a flexible work schedule',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ rew_perf:
+ {
+    type: Number,
+    optional: true,
+    label: 'Rewarding employees based on their performance',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ mission:
+ {
+    type: Number,
+    optional: true,
+    label: 'A clear mission',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ health:
+ {
+    type: Number,
+    optional: true,
+    label: 'Providing good health benefits',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ rewrecog:
+ {
+    type: Number,
+    optional: true,
+    label: 'Providing rewards and recognition',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ workspace:
+ {
+    type: Number,
+    optional: true,
+    label: 'Providing a private office or work space',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ poor_perfs:
+ {
+    type: Number,
+    optional: true,
+    label: 'That my employer takes actions to deal with poor performers',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
+ careless:
+ {
+    type: Number,
+    optional: true,
+    label: 'Please choose 40 as your answer',
+    max: 100,
+    min: 0,
+    autoform: {
+     type: "noUiSlider",
+     step: 1,    
+     noUiSlider_pipsOptions: {
+       mode: 'positions',
+       values: [20,40,60,80,100],
+       density: 5
+      }
+    }
+ },
  remote:
  {
     type: String,
