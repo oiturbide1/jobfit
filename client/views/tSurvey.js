@@ -17,13 +17,13 @@ Template.talentviewsurvey.events({
 
 
       var user = Meteor.userId;
-      
 
 
-      survey = 
-      {'worklife_self': worklife, 
-      'jobsec_self': jobsec, 
-      'td_self':td, 
+
+      survey =
+      {'worklife_self': worklife,
+      'jobsec_self': jobsec,
+      'td_self':td,
       'workload_self': workload,
       'careerpath_self': cpath,
       'promocrit_self': crit,
@@ -39,10 +39,10 @@ Template.talentviewsurvey.events({
         //console.log(sur);
         //console.log(docsInserted);
         Meteor.users.update(
-        {_id: Meteor.userId()}, 
+        {_id: Meteor.userId()},
         {$push: {
           "profile.personal_survey": docsInserted
-        } 
+        }
         });
       });
 
@@ -56,11 +56,12 @@ Template.talentviewsurvey.events({
       }
 
       var survey_date = PersonalSurvey.findOne({_id: survey_id});
+			console.log(survey_date.timeStamp);
 
       var utc = new Date();
       console.log(utc);
 
-      if (survey_date == utc){
+      if (survey_date.timeStamp == utc){
         console.log('today');
       }
 
@@ -75,7 +76,7 @@ Template.talentviewsurvey.events({
       console.log(withoutOffset);
 
 
-      function days_between(date1, date2) 
+      function days_between(date1, date2)
       {
 
         // The number of milliseconds in one day
@@ -102,8 +103,8 @@ Template.talentviewsurvey.events({
 
 
 
-    
-     
+
+
 
   }
 

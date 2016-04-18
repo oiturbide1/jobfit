@@ -13,7 +13,7 @@ Template.employerRatings.events({
           var freedom = AutoForm.getFieldValue('freedom','ESurveyForm');
           var salary = AutoForm.getFieldValue('salary','ESurveyForm');
           var manage = AutoForm.getFieldValue('good_sup','ESurveyForm');
-          var user = Meteor.userId;
+          var user = Meteor.userId();
           var currentSurvey = Session.get('Survey');
 
 
@@ -35,14 +35,16 @@ Template.employerRatings.events({
 
 
           Meteor.call('add_Survey', currentSurvey, survey);
+
           if(user)
           {
             Meteor.call('update_userSurvey', currentSurvey);
           }
-        
 
 
-          if(!Meteor.userId()){
+
+          if(!user)
+          {
             Router.go("/success");
           }
 

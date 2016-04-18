@@ -13,34 +13,68 @@ Template.talentRegistration.onRendered(function(){
                   {
                     var email = $('[name=regEmail]').val();
                     var password = $('[name=regPassword]').val();
-                    var usertype = $('[name=talent_rep]').val();
-
-                    console.log(usertype);
+                    var usertype = $('input[name=userType]:checked').val();
 
 
-                    Accounts.createUser({
-                      email: email,
-                      password: password
-                    }, function(error)
+                    if (usertype == 'Talent')
                     {
-                      if(error){
-                        console.log(error);
-                        if(error.reason == '"Email already exists."'){
-                          validator.showErrors({
-                            email: 'That email is already in the system'
-                          });
+                      Accounts.createUser({
+                        email: email,
+                        password: password
+                      }, function(error)
+                      {
+                        if(error){
+                          console.log(error);
+                          if(error.reason == '"Email already exists."'){
+                            validator.showErrors({
+                              email: 'That email is already in the system'
+                            });
+                          }
+
+                        }
+                        else
+                        {
+                            Router.go("/information");
+                            //var currentUserId = Meteor.userId;
+                            var userId = Meteor.userId();
+                            Roles.addUsersToRoles(userId,'talent');
                         }
 
-                      }
-                      else
-                      {
-                          Router.go("/information");
-                          //var currentUserId = Meteor.userId;
-                          var userId = Meteor.userId();
-                          Roles.addUsersToRoles(userId,'talent');
-                      }
+                      });
 
-                    });
+                    }
+
+                    else if (usertype == 'Rep')
+                    {
+                      Accounts.createUser({
+                        email: email,
+                        password: password
+                      }, function(error)
+                      {
+                        if(error){
+                          console.log(error);
+                          if(error.reason == '"Email already exists."'){
+                            validator.showErrors({
+                              email: 'That email is already in the system'
+                            });
+                          }
+
+                        }
+                        else
+                        {
+                            Router.go("/Emp");
+                            //var currentUserId = Meteor.userId;
+                            var userId = Meteor.userId();
+                            Roles.addUsersToRoles(userId,'rep');
+                        }
+
+                      });
+                    }
+
+
+
+
+
                   }
 
               });
@@ -74,13 +108,15 @@ $.validator.setDefaults({
 
             loginPassword:
             {
-              required: true
+              required: true,
+              valid: true
             },
 
             loginEmail:
             {
               required: true,
-              email: true
+              email: true,
+              valid: false
             }
 
 

@@ -1,10 +1,39 @@
 Meteor.methods(
 {
-  'show'(object)
+
+  'addUser'(email, password, type)
   {
-    console.log(object);
+    Accounts.createUser(
+      {
+      email: email,
+      password: password
+      },
+      function(error)
+      {
+        if(error)
+        {
+          console.log(error);
+          if(error.reason == '"Email already exists."'){
+            validator.showErrors({
+              email: 'That email is already in the system'
+            });
+          }
+
+        }
+        else
+        {
+            Router.go("/information");
+
+            var userId = Meteor.userId();
+            Roles.addUsersToRoles(userId,type);
+        }
+
+      });
+
 
   },
+
+
 
   'insert_company'(company)
   {

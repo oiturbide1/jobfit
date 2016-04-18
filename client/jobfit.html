@@ -200,16 +200,12 @@
       <input id = 'reg_password' type="password" name="regPassword" placeholder="Password" >
       <label for="matched_password" class="sr-only">Confirm Password</label>
       <input class = 'matched_password' type="password" name="matchedpassword" placeholder="Confirm Password" >
-      <div class="radio">
-        <label>
-          <input type="radio" name='talent_rep' > Talent
-        </label>
+      <div id = 'userCheck'>
+          <input type="radio" name="userType" value = 'Talent'>Talent
+          <input type="radio" name="userType" value = 'Rep'>Rep
       </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name='talent_rep' > Rep
-        </label>
-      </div>
+
+
 
       <button class="btn btn-lg btn-primary btn-block" name = 'regButton' type="submit">Sign up</button>
     </form>

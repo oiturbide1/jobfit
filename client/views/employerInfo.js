@@ -85,6 +85,11 @@ Template.employerInfo.events({
 
     });
 
+    var role_check = Roles.userIsInRole(Meteor.userId(), 'rep');
+    if (role_check)
+    {
+      Router.go('/rateEmployer');
+    }
 
 
     if(!Meteor.userId()){
@@ -120,21 +125,25 @@ Template.employerInfo.onRendered(function(){
           {
             companyName:
             {
-              required: true
+              required: true,
+              valid: false
             },
             address:
             {
-              required: true
+              required: true,
+              valid: false
             },
 
             city:
             {
-              required: true
+              required: true,
+              valid: false
             },
 
             state:
             {
-              required: true
+              required: true,
+              valid: false
             },
 
             zip:
@@ -147,7 +156,8 @@ Template.employerInfo.onRendered(function(){
 
             curr_or_form:
             {
-              required: true
+              required: true,
+              valid: false
             }
 
 
