@@ -5,6 +5,21 @@ $.validator.addMethod("zipcodeUS", function(value, element) {
 }, "The specified US ZIP Code is invalid");
 */
 
+Template.information.events({
+  'click .resend-verification-link' ( event, template ) {
+    Meteor.call('sendVerificationLink', ( error, response ) => {
+      if ( error ) {
+        Bert.alert( error.reason);
+      } else {
+        var email = Meteor.user().emails[ 0 ].address;
+        Bert.alert( `Verification sent to ${ email }!`, 'success', 'growl-top-right');
+      }
+    });
+  }
+
+});
+
+
 Template.pi.onRendered(function(){
     $('#personalInFoForm').validate(
 

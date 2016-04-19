@@ -16,3 +16,5 @@ Router.route('/employerInfo');
 Router.route('/Emp');
 Router.route('/success');
 Router.route('/verify-email/:token');
+Router.route('/about');
+Router.route('/contact');

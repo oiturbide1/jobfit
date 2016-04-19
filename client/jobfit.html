@@ -12,11 +12,18 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{pathFor route='about'}}">About</a></li>
+          <li><a href="{{pathFor route='contact'}}">Contact</a></li>
+          {{#if currentUser}}
+            <li><a href="{{pathFor route='information'}}">Information</a></li>
+            <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
+          {{/if}}
         </ul>
-
-          {{> login}}
+          {{#if currentUser}}
+            {{> dashboard}}
+          {{else}}
+            {{> login}}
+          {{/if}}
         </div><!--/.navbar-collapse -->
       </div>
   </nav>
@@ -101,17 +108,6 @@
         interval: 5000 //changes the speed
     })
     </script>
-
-
-
-    {{#if currentUser}}
-      {{> dashboard}}
-    {{else}}
-
-
-
-  {{/if}}
-
 
 
 </template>
@@ -269,15 +265,14 @@
 </template>
 
 
-<template name="loginButton">
-  <button></button>
-</template>
-
-
 
 <template name="dashboard">
-    <p>You're logged in as {{email}}</p>
-    <p><a href="#" class="logout">Logout</a></p>
+    <div class="row navbar-right">
+      <p>Logged in as {{email}}</p>
+    </div>
+      <button type="submit" class="btn btn-info logout">Logout</button>
+      
+    
 </template>
 
 <template name = 'google'>
