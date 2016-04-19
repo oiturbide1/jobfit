@@ -15,4 +15,4 @@ Router.route('/rateFormerEmployerInfo');
 Router.route('/employerInfo');
 Router.route('/Emp');
 Router.route('/success');
-
+Router.route('/verify-email/:token');

@@ -26,6 +26,12 @@
         {{#if currentUser}}
           {{> user}}
         {{/if}}
+        {{#if currentUser}}
+          <p>Test</p>
+          <p class="alert alert-warning">You need to verify your email address before using EmployerMatch. <a href="#" class="resend-verification-link">Resend verification link</a>.</p>
+        {{else}}
+          <p class="alert alert-warning">You need to verify your email address before using EmployerMatch. <a href="#" class="resend-verification-link">Resend verification link</a>.</p>
+        {{/if}}
         <br>
         <br>
         {{> pi}}
