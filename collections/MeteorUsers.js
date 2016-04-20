@@ -245,11 +245,11 @@ UserProfile = new SimpleSchema({
         type: String,
         optional: true
     },
-		login_attempts:
-		{
-				type: Number,
-				optional: true
-		}
+	login_attempts:
+	{
+		type: Number,
+		optional: true
+	}
 });
 
 

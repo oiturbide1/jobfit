@@ -152,7 +152,7 @@ $.validator.setDefaults({
               {
                 required: "You must enter a password.",
                 minlength: "Your password must be at least {0} characters.",
-                valid: 'Password must contain at least 1 number and 1 letter'
+                valid: 'Password is not strong enough. Password must contain at least 1 number and 1 letter'
               },
 
               matchedpassword:
@@ -207,6 +207,13 @@ Template.login.events({
 
           event.preventDefault();
 
+
+        },
+
+        'click #forgot_pass_button': function(event)
+        {
+          event.preventDefault();
+          Router.go('/forgot');
         }
 
 

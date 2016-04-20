@@ -18,3 +18,5 @@ Router.route('/success');
 Router.route('/verify-email/:token');
 Router.route('/about');
 Router.route('/contact');
+Router.route('/forgot');
+Router.route('/changePassword');

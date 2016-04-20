@@ -72,7 +72,15 @@ Meteor.methods(
           'promotion_opportunities': survey[6],
           'freedom': survey[7],
           'salary': survey[8],
-          'good_sup': survey[9]
+          'good_sup': survey[9],
+          'flex': survey[16],
+          'rew_perf': survey[17],
+          'mission': survey[11],
+          'health': survey[12],
+          'rewrecog': survey[14],
+          'workspace': survey[13],
+          'poor_perfs': survey[15],
+          'careless': survey[10]
         }
       });
   },

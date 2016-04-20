@@ -219,13 +219,17 @@
     <div class="form-group">
       <input type="password" name='loginPassword' data-toggle ="tooltip" placeholder="Password" class="form-control">
     </div>
-      <button type="submit" class="btn btn-success">Login</button>
+    <button type="submit" class="btn btn-success">Login</button>
+    <div class="form-group">
+      <button class="btn btn-sm btn-primary btn-block"  id = 'forgot_pass_button'>Forgot Password</button>
+    </div>
+      
   </form>
 </template>
 
 
 
-<template name = 'registerRep'>
+<template name = 'forgot'>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -248,18 +252,30 @@
     </div>
   </nav>
 
-  <div class = 'register_container'>
+  <div class = 'recover_container'>
     <form class = 'registration form-signin'>
-      <h2 class="form-signin-heading">Register</h2>
-      <label for="registerEmail" class="sr-only">Email address</label>
-      <input class = 'reg_email' type="email" name="regEmail" placeholder="Email" autofocus>
-      <label for="registerPassword" class="sr-only">Password</label>
-      <input id = 'reg_password' type="password" name="regPassword" placeholder="Password" >
-      <label for="matched_password" class="sr-only">Confirm Password</label>
-      <input class = 'matched_password' type="password" name="matchedpassword" placeholder="Confirm Password" >
+      {{#if resetPassword}}
+      <h2 class="form-signin-heading">Recover Password</h2>
+      <label for="new_password" class="sr-only">New Password</label>
+      <input id = 'new_password' type="password" name="new_password" placeholder="New Password" >
+      <label for="confirm_new_password" class="sr-only">Confirm Password</label>
+      <input class = 'confirm_new_password' type="password" name="confirm_new_password" placeholder="Confirm Password" >
 
-      <button class="btn btn-lg btn-primary btn-block" name = 'regButton' type="submit">Sign up</button>
+      <button class="btn btn-lg btn-primary btn-block" id = 'resetButton'>Set New Password</button>
+      
+    
+
+    {{else}}
+    <h2 class="form-signin-heading">Forgot Password</h2>
+      <label for="user_email" class="sr-only">Email address</label>
+      <input id = 'user_email' type="email" name="userEmail" placeholder="Email" autofocus>
+
+      <button class="btn btn-lg btn-primary btn-block" id = 'forgotButton' >Reset Password</button>
+      
+
+      {{/if}}
     </form>
+
   </div>
 
 </template>
