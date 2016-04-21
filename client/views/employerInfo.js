@@ -20,82 +20,145 @@ Template.employerInfo.events({
       'zip': zip
     }
 
-    var compcheck = Company.find({'companyName': company})._id;
+
+    /*
+    could fix this section with collection hooks
+    or functions
+
+
+    */
+    try
+    {
+
+      var compcheck = Company.findOne({'companyName': company});
+    
+    }
+
+    catch(error)
+    {
+      console.log(error);
+    }
+
+    //check if company exists already
+    //if exists, create survey and add existing company to survey
     if (compcheck)
     {
-      Session.set('existing_company',compcheck);
-      console.log('existing');
+    
+      Session.set('existing_company',compcheck._id);
 
-    }
-    else {
-      console.log('not found');
-    }
+      if (current == 'true')
+      {
+        var current_former = 1;
+        Session.set('current_or_former', current_former);
 
-
-
-    Meteor.call('insert_company', comp, function(error, insertedCompany)
-    {
-        if (error){
-          console.log(error);
-        }
-        else
+        Meteor.call('insert_survey', compcheck._id, remote, current_former, function(error, insertedSurvey)
         {
-          Session.set('current_comp', insertedCompany);
-
-          //check whether it is a current or former employer
-          // and sets Session
-          if (current == 'true')
+          if (error)
           {
-            var current_former = 1;
-            Session.set('current_or_former', current_former);
-
-            Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
-            {
-              if (error)
-              {
-                console.log(error);
-              }
-              else
-              {
-                Session.set('Survey', insertedSurvey);
-
-              }
-
-            });
+            console.log(error);
+          }
+          else
+          {
+            Session.set('Survey', insertedSurvey);
 
           }
 
-          // **
-          // for some reason, it adds to current employer survey also
-          // adds to both former and current
-          // **
+        });
 
-          else if(current == 'false')
+      }
+
+      else if(current == 'false')
+      {
+        var current_former = 0;
+        Session.set('current_or_former', current_former);
+
+        Meteor.call('insert_survey', compcheck._id, remote, current_former, function(error, insertedSurvey)
+        {
+          if (error)
           {
-            var current_former = 0;
-            Session.set('current_or_former', current_former);
+            console.log(error);
+          }
+          else
+          {
+            Session.set('Survey', insertedSurvey);
 
-            Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+          }
+
+        });
+
+
+      }
+      
+
+    }
+
+    //if doesnt exist, insert company and create survey
+    else 
+    {
+
+      Meteor.call('insert_company', comp, function(error, insertedCompany)
+      {
+          if (error)
+          {
+            console.log(error);
+          }
+          else
+          {
+            Session.set('current_comp', insertedCompany);
+
+            //check whether it is a current or former employer
+            // and sets Session
+            if (current == 'true')
             {
-              if (error)
-              {
-                console.log(error);
-              }
-              else
-              {
-                Session.set('Survey', insertedSurvey);
+              var current_former = 1;
+              Session.set('current_or_former', current_former);
 
-              }
+              Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+              {
+                if (error)
+                {
+                  console.log(error);
+                }
+                else
+                {
+                  Session.set('Survey', insertedSurvey);
 
-            });
+                }
+
+              });
+
+            }
+
+
+            else if(current == 'false')
+            {
+              var current_former = 0;
+              Session.set('current_or_former', current_former);
+
+              Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+              {
+                if (error)
+                {
+                  console.log(error);
+                }
+                else
+                {
+                  Session.set('Survey', insertedSurvey);
+
+                }
+
+              });
+
+
+            }
 
 
           }
 
+      });
+    }
 
-        }
 
-    });
 
     var role_check = Roles.userIsInRole(Meteor.userId(), 'rep');
     if (role_check)
