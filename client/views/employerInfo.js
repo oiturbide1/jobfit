@@ -20,6 +20,18 @@ Template.employerInfo.events({
       'zip': zip
     }
 
+    var compcheck = Company.find({'companyName': company})._id;
+    if (compcheck)
+    {
+      Session.set('existing_company',compcheck);
+      console.log('existing');
+
+    }
+    else {
+      console.log('not found');
+    }
+
+
 
     Meteor.call('insert_company', comp, function(error, insertedCompany)
     {
