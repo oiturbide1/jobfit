@@ -57,7 +57,7 @@ Template.employerRatings.events({
 
           if(user)
           {
-            Meteor.call('update_userSurvey', currentSurvey);
+            Meteor.call('update_userSurvey', currentSurvey, 'employer');
           }
 
 

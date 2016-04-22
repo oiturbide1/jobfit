@@ -29,40 +29,43 @@ Template.talentviewsurvey.events({
 
 
       survey =
-      {'worklife_self': worklife,
-      'jobsec_self': jobsec,
-      'td_self':td,
-      'workload_self': workload,
-      'careerpath_self': cpath,
-      'promocrit_self': crit,
-      'promo_self': opp,
-      'auton_self': free,
-      'salary_self': sal,
-      'goodsup_self': sup,
-      'flex_self':flex,
-      'rewperf_self':perf,
-      'mission_self':miss,
-      'health_self':health,
-      'rewrecog_self':recog,
-      'workspace_self':space,
-      'poorperfs_self':poor,
-			'careless_self': check
+      {
+        worklife,
+        jobsec,
+        td,
+        workload,
+        cpath,
+        crit,
+        opp,
+        free,
+        sal,
+        sup,
+        flex,
+        perf,
+        miss,
+        health,
+        recog,
+        space,
+        poor,
+  			check
       }
 
-      PersonalSurvey.insert(survey, function(err,docsInserted)
-      {
-        var sur = PersonalSurvey.find({_id: docsInserted});
-        //console.log(sur);
-        //console.log(docsInserted);
-        Meteor.users.update(
-        {_id: Meteor.userId()},
-        {$push: {
-          "profile.personal_survey": docsInserted
-        }
-        });
 
-				Meteor.call('checkSurveyDate',docsInserted, 'personal');
+      Meteor.call('add_Personal_Survey',survey, function(error, insertedSurvey)
+      {
+        if (error)
+        {
+          console.log(error);
+        }
+        else
+        {
+          console.log(insertedSurvey);
+        }
       });
+
+      //Method.call('update_userSurvey', ,'personal');
+
+			//Meteor.call('checkSurveyDate',docsInserted, 'personal');
 
 
 

@@ -85,41 +85,49 @@ Meteor.methods(
       });
   },
 
-  'add_Personal_Survey'(id, survey)
+  'add_Personal_Survey'(survey)
   {
-    PersonalSurvey.update(
-      {_id: id},
-      {$set:
-        {
-          "work_life_balance": survey[0],
-          'job_security': survey[1],
-          'development_opportunities': survey[2],
-          'workload': survey[3],
-          'career_path': survey[4],
-          'promotion_criteria': survey[5],
-          'promotion_opportunities': survey[6],
-          'freedom': survey[7],
-          'salary': survey[8],
-          'good_sup': survey[9],
-          'flex': survey[16],
-          'rew_perf': survey[17],
-          'mission': survey[11],
-          'health': survey[12],
-          'rewrecog': survey[14],
-          'workspace': survey[13],
-          'poor_perfs': survey[15],
-          'careless': survey[10]
-        }
+    var inserted = PersonalSurvey.insert({
+      "worklife_self": survey[0],
+      'jobsec_self': survey[1],
+      'td_self': survey[2],
+      'workload_self': survey[3],
+      'careerpath_self': survey[4],
+      'promocrit_self': survey[5],
+      'promotion_opportunities': survey[6],
+      'auton_self': survey[7],
+      'salary_self': survey[8],
+      'goodsup_self': survey[9],
+      'flex_self': survey[10],
+      'rewperf_self': survey[11],
+      'mission_self': survey[12],
+      'health_self': survey[13],
+      'rewrecog_self': survey[14],
+      'workspace_self': survey[15],
+      'poorperfs_self': survey[16],
+      'careless_self': survey[17]
+        
       });
+    return inserted;
   },
 
-  'update_userSurvey'(object)
+  'update_userSurvey'(objectID, survey_type)
   {
+    var collection;
+    if (survey_type == 'personal')
+    {
+      collection = "profile.personal_survey";
+    }
+    else if (survey_type == 'employer')
+    {
+      collection = "profile.employer_survey";
+    }
+
     Meteor.users.update(
       {_id: Meteor.userId()},
       {$push:
         {
-          "profile.employer_survey": object
+          collection: objectID
         }
       });
   },
