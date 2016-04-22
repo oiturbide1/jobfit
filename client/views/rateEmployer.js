@@ -58,6 +58,7 @@ Template.employerRatings.events({
           if(user)
           {
             Meteor.call('update_userSurvey', currentSurvey, 'employer');
+            Bert.alert('Ratings added','success');
           }
 
 

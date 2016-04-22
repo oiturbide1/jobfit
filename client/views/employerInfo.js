@@ -10,6 +10,7 @@ Template.employerInfo.events({
     var state = event.target.state.value;
     var zip = event.target.zip.value;
     var current = event.target.curr_or_form.value;
+    var userType;
 
     comp =
     {
@@ -20,6 +21,19 @@ Template.employerInfo.events({
       'zip': zip
     }
 
+    if (Roles.userIsInRole(Meteor.userId(), 'rep'))
+    {
+      userType = 'rep';
+    }
+    else if (Roles.userIsInRole(Meteor.userId(), 'talent'))
+    {
+      userType = 'talent';
+    }
+
+    else
+    {
+      userType = 'anon';
+    }
 
     /*
     could fix this section with collection hooks
@@ -31,7 +45,7 @@ Template.employerInfo.events({
     {
 
       var compcheck = Company.findOne({'companyName': company});
-    
+
     }
 
     catch(error)
@@ -43,7 +57,7 @@ Template.employerInfo.events({
     //if exists, create survey and add existing company to survey
     if (compcheck)
     {
-    
+
       Session.set('existing_company',compcheck._id);
 
       if (current == 'true')
@@ -51,7 +65,7 @@ Template.employerInfo.events({
         var current_former = 1;
         Session.set('current_or_former', current_former);
 
-        Meteor.call('insert_survey', compcheck._id, remote, current_former, function(error, insertedSurvey)
+        Meteor.call('insert_survey', compcheck._id, remote, current_former, userType, function(error, insertedSurvey)
         {
           if (error)
           {
@@ -72,7 +86,7 @@ Template.employerInfo.events({
         var current_former = 0;
         Session.set('current_or_former', current_former);
 
-        Meteor.call('insert_survey', compcheck._id, remote, current_former, function(error, insertedSurvey)
+        Meteor.call('insert_survey', compcheck._id, remote, current_former, userType, function(error, insertedSurvey)
         {
           if (error)
           {
@@ -88,12 +102,12 @@ Template.employerInfo.events({
 
 
       }
-      
+
 
     }
 
     //if doesnt exist, insert company and create survey
-    else 
+    else
     {
 
       Meteor.call('insert_company', comp, function(error, insertedCompany)
@@ -113,7 +127,7 @@ Template.employerInfo.events({
               var current_former = 1;
               Session.set('current_or_former', current_former);
 
-              Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+              Meteor.call('insert_survey', insertedCompany, remote, current_former, userType, function(error, insertedSurvey)
               {
                 if (error)
                 {
@@ -135,7 +149,7 @@ Template.employerInfo.events({
               var current_former = 0;
               Session.set('current_or_former', current_former);
 
-              Meteor.call('insert_survey', insertedCompany, remote, current_former, function(error, insertedSurvey)
+              Meteor.call('insert_survey', insertedCompany, remote, current_former, userType, function(error, insertedSurvey)
               {
                 if (error)
                 {
@@ -227,6 +241,11 @@ Template.employerInfo.onRendered(function(){
               zipcodeUS: true,
               valid: false
               //maxlength: 5
+            },
+
+            gender:
+            {
+              valid: false
             },
 
             curr_or_form:

@@ -27,12 +27,16 @@
         <br>
         <br>
         {{#if currentUser}}
-          {{> jobInfo}}
-          {{> empStatus}}
-          {{#if isFormer}}
-            {{> reasons_left}}
-          {{else}}
-            {{> jobFeeling}}
+          {{#if isInRole 'talent'}}
+            {{> jobInfo}}
+            {{> empStatus}}
+
+            {{#if isFormer}}
+              {{> reasons_left}}
+            {{else}}
+              {{> jobFeeling}}
+            {{/if}}
+            
           {{/if}}
 
         {{/if}}

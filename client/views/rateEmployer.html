@@ -30,12 +30,14 @@
         {{> employerRatings}}
         <br>
         {{#if currentUser}}
-          
-          <p><a class="btn btn-primary btn-lg" href="{{pathFor route='Emp'}}" role="button">Add another employer &raquo;</a></p>
           <p><a class="btn btn-primary btn-lg" href="#" role="button">View Matches &raquo;</a></p>
+          {{#if isInRole 'talent'}}
+            <p><a class="btn btn-primary btn-lg" href="{{pathFor route='Emp'}}" role="button">Add another employer &raquo;</a></p>
+
+          {{/if}}
         {{/if}}
     </div>
-  </div> 
+  </div>
 
 
 </template>

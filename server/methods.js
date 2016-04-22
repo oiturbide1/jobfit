@@ -1,6 +1,11 @@
 Meteor.startup(function () {
  process.env.MAIL_URL = 'smtp://postmaster@sandboxbf71083cbdc44a4c9ebcfd82601ba1d2.mailgun.org:c28807c983f8c2566445a9f4ab57cfa2@smtp.mailgun.org:587';});
 
+//get object type
+ function get_type(thing){
+     if(thing===null)return "[object Null]"; // special case
+     return Object.prototype.toString.call(thing);
+ }
 
 Meteor.methods(
 {
@@ -45,12 +50,13 @@ Meteor.methods(
   	return inserted;
   },
 
-  'insert_survey'(company, remote, curr_form)
+  'insert_survey'(company, remote, curr_form, user_type)
   {
     var inserted = EmployerSurvey.insert({
       'company': company,
       'remote': remote,
-      'cur_or_form': curr_form
+      'cur_or_form': curr_form,
+      'user_type': user_type
     });
     return inserted;
 
@@ -106,30 +112,37 @@ Meteor.methods(
       'workspace_self': survey[15],
       'poorperfs_self': survey[16],
       'careless_self': survey[17]
-        
+
       });
     return inserted;
   },
 
   'update_userSurvey'(objectID, survey_type)
   {
-    var collection;
+
     if (survey_type == 'personal')
     {
-      collection = "profile.personal_survey";
+      Meteor.users.update(
+        {_id: Meteor.userId()},
+        {$push:
+          {
+            "profile.personal_survey": objectID
+          }
+        });
     }
     else if (survey_type == 'employer')
     {
-      collection = "profile.employer_survey";
+      Meteor.users.update(
+        {_id: Meteor.userId()},
+        {$push:
+          {
+            "profile.employer_survey": objectID
+          }
+        });
     }
 
-    Meteor.users.update(
-      {_id: Meteor.userId()},
-      {$push:
-        {
-          collection: objectID
-        }
-      });
+
+
   },
 
 

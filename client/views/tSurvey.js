@@ -29,7 +29,7 @@ Template.talentviewsurvey.events({
 
 
       survey =
-      {
+      [
         worklife,
         jobsec,
         td,
@@ -48,10 +48,11 @@ Template.talentviewsurvey.events({
         space,
         poor,
   			check
-      }
+      ]
 
 
-      Meteor.call('add_Personal_Survey',survey, function(error, insertedSurvey)
+
+      Meteor.call('add_Personal_Survey', survey, function(error, insertedSurvey)
       {
         if (error)
         {
@@ -60,10 +61,10 @@ Template.talentviewsurvey.events({
         else
         {
           console.log(insertedSurvey);
+					Meteor.call('update_userSurvey', insertedSurvey,'personal');
         }
       });
 
-      //Method.call('update_userSurvey', ,'personal');
 
 			//Meteor.call('checkSurveyDate',docsInserted, 'personal');
 

@@ -12,6 +12,12 @@ ESurvey = new SimpleSchema({
     type: String,
     optional: true
   },
+  user_type:
+  {
+    type: String,
+    optional: true,
+    allowedValues: ['talent','rep', 'anon']
+  },
   cur_or_form:
   {
     type: Number,
@@ -26,7 +32,7 @@ ESurvey = new SimpleSchema({
    min: 0,
    autoform: {
     type: "noUiSlider",
-    step: 1,    
+    step: 1,
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -43,7 +49,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -60,7 +66,7 @@ ESurvey = new SimpleSchema({
    min: 0,
    autoform: {
     type: "noUiSlider",
-    step: 1,    
+    step: 1,
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -77,7 +83,7 @@ ESurvey = new SimpleSchema({
    min: 0,
    autoform: {
     type: "noUiSlider",
-    step: 1,    
+    step: 1,
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -94,7 +100,7 @@ ESurvey = new SimpleSchema({
    min: 0,
    autoform: {
     type: "noUiSlider",
-    step: 1,    
+    step: 1,
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -111,7 +117,7 @@ ESurvey = new SimpleSchema({
    min: 0,
    autoform: {
     type: "noUiSlider",
-    step: 1,    
+    step: 1,
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -128,7 +134,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -145,7 +151,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -162,7 +168,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -179,7 +185,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -196,7 +202,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -213,7 +219,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -230,7 +236,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -247,7 +253,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -264,7 +270,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -281,7 +287,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -298,7 +304,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -315,7 +321,7 @@ ESurvey = new SimpleSchema({
     min: 0,
     autoform: {
      type: "noUiSlider",
-     step: 1,    
+     step: 1,
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -354,13 +360,13 @@ ESurvey = new SimpleSchema({
     label: 'Please enter your dates of promotion',
     minCount: 1,
     maxCount: 5
-      
+
   },
   'promo_date.$':
   {
     type: Date,
     optional: true
-  }, 
+  },
   status:
   {
     type: String,
