@@ -1,0 +1,87 @@
+<template name = 'match'>
+  
+  <body>  
+        {{>matchAlg}}
+        {{#if foundUser}}
+          <div class="container">
+            <div class="starter-template">
+              <h1>Results</h1>
+              <h2>Click on Employer names for Details</h2>
+
+        
+              {{>result}}
+              <h2>Employer Ratings</h2>
+              {{#if employer}}
+
+                {{>info}}
+              {{/if}}
+      
+            </div>
+          </div> 
+        {{/if}}
+        <br>
+        <br>
+        <br>
+
+      
+  </body>
+
+ 
+  <a href="{{pathFor route='home'}}">Home</a>
+  {{#if currentUser}}
+    <a href="{{pathFor route='formerEmp'}}">Former Employer information</a>
+  {{/if}}
+
+</template>
+
+<template name = 'matchAlg'>
+  <li>
+    <span class="text">{{matches}}</span>  
+  </li>
+</template>
+
+<template name = 'result'>
+  {{#each resultSet}}
+
+    <span style = "color:blue" id = 'returned'> {{emp.name}}</span>
+    <span> {{rank}}</span>
+    <br>
+  {{/each}}
+</template>
+
+<template name = 'info'>
+  <span>Company: {{texts.name}}</span>
+  <br>
+  <span>Job Security: {{texts.jobsec}}</span>
+  <br>
+  <span>Career Path: {{texts.careerpath}}</span>
+  <br>
+  <span>Flexibility: {{texts.flex}}</span>
+  <br>
+  <span>Autonomy: {{texts.auton}}</span>
+  <br>
+  <span>Mission Statement: {{texts.mission}}</span>
+  <br>
+  <span>Poor Performance Discipline: {{texts.poorperfs}}</span>
+  <br>
+  <span>Promotion Opportunities: {{texts.promo}}</span>
+  <br>
+  <span>Promotion Criteria: {{texts.promocrit}}</span>
+  <br>
+  <span>Salary: {{texts.salary}}</span>
+  <br>
+  <span>Work-life Balance: {{texts.worklife}}</span>
+  <br>
+  <span>Workspace: {{texts.workspace}}</span>
+  <br>
+  <span>Workload: {{texts.workload}}</span>
+  <br>
+  <span>Healthcare/Insurance: {{texts.health}}</span>
+  <br>
+  <!--<span>{{texts.rewperf}}</span>
+  <br>
+  <span>{{texts.rewrecog}}</span>
+  <br>
+  <span>{{texts.goodsup}}</span>-->
+  <br>
+</template>
