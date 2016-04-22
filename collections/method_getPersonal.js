@@ -7,43 +7,43 @@
 Meteor.methods({
 	'createEmployerSurvey' : function(name,street,city,state,cur_form){
 		var inserted = Employers.insert({
-			"cur_or_form" : cur_form, 
-    		"jobsec_cur" : 0, 
-    		"worklife_cur" : null, 
-    		"workload_cur" : null, 
-    		"careerpath_cur" :null, 
-    		"td_cur" : null, 
-		    "promo_cur" : null, 
-		    "goodsup_cur" : null, 
-		    "auton_cur" : null, 
-		    "promocrit_cur" : null, 
-		    "salary_cur" : null, 
-		    "flex_cur" : null, 
-		    "rewperf_cur" : null, 
-		    "mission_cur" : null, 
-		    "health_cur" : null, 
-		    "rewrecog_cur" : null, 
-		    "workspace_cur" : null, 
-		    "poorperfs_cur" : null, 
-		    "jobsat" : null, 
-		    "commit" : null, 
-		    "itl" : null, 
-		    "values" : null, 
-		    "jobperf" : null, 
-		    "coop" :null, 
-		    "help" : null, 
-		    "court" : null, 
-		    "cur_emp_name" : name, 
-		    "cur_state" : state, 
-		    "cur_town" : city, 
-		    "curr_city_country" : street, 
-		    "cur_ten_years" : null, 
-		    "cur_ten_mos" : null, 
-		    "hours_per_week_work" : null, 
-		    "comments" : null, 
+			"cur_or_form" : cur_form,
+    		"jobsec_cur" : 0,
+    		"worklife_cur" : null,
+    		"workload_cur" : null,
+    		"careerpath_cur" :null,
+    		"td_cur" : null,
+		    "promo_cur" : null,
+		    "goodsup_cur" : null,
+		    "auton_cur" : null,
+		    "promocrit_cur" : null,
+		    "salary_cur" : null,
+		    "flex_cur" : null,
+		    "rewperf_cur" : null,
+		    "mission_cur" : null,
+		    "health_cur" : null,
+		    "rewrecog_cur" : null,
+		    "workspace_cur" : null,
+		    "poorperfs_cur" : null,
+		    "jobsat" : null,
+		    "commit" : null,
+		    "itl" : null,
+		    "values" : null,
+		    "jobperf" : null,
+		    "coop" :null,
+		    "help" : null,
+		    "court" : null,
+		    "cur_emp_name" : name,
+		    "cur_state" : state,
+		    "cur_town" : city,
+		    "curr_city_country" : street,
+		    "cur_ten_years" : null,
+		    "cur_ten_mos" : null,
+		    "hours_per_week_work" : null,
+		    "comments" : null,
 		    "timeStamp" : null
 		});
-		return inserted; 
+		return inserted;
 	},
 	'createJobExplorer' : function(){
 		var inserted = Items.insert({
@@ -119,7 +119,7 @@ Meteor.methods({
 		if(surveyType == 0){
 			Items.update(
 			{_id: expId},
-			{$push: 
+			{$push:
 				{'personalSurvey': surveyID }
 			});
 			return 1;
@@ -168,10 +168,10 @@ rewrecog: 0, workspace: 0, poorperfs: 0};
     	// skip loop if the property is from prototype
     		if (!returnType.hasOwnProperty(key)) continue;
     		returnType[key] *= 20;
-    		
+
 		}
 		//console.log(returnType.jobsec);
-		
+
 		return returnType;
 	},
 	/*
@@ -185,12 +185,14 @@ rewrecog: 0, workspace: 0, poorperfs: 0};
 	}
 	*/
 
+
+  /*
 	'getEmployers' : function(){
 		var emps = Employers.find().fetch();
 		//var emps = Employers.find( distinct: "cur_emp_name" );
 		return emps;
 	},
-	
+
 	'lastPersonalSurvey' :function(value){
 		var id = new Meteor.Collection.ObjectID(value);
 		var je = Items.findOne(id);
@@ -227,7 +229,7 @@ rewrecog: 0, workspace: 0, poorperfs: 0};
 		var as = Employers.find({}).fetch();
 		var emps = [];
 		if(as == null)
-			return emps;		
+			return emps;
     	var temp = { name : as[0].cur_emp_name, count: 1
     				, jobsec: as[0].jobsec_cur, worklife: as[0].worklife_cur, workload: as[0].workload_cur
     				,careerpath: as[0].careerpath_cur, td: as[0].td_cur,   promocrit: as[0].promocrit_cur,
@@ -237,7 +239,7 @@ rewrecog: as[0].rewrecog_cur, workspace: as[0].workspace_cur, poorperfs: as[0].p
 		emps.push(temp);
     	var k = 0;
     	var ent;
-    	
+
 		for (var key in as) {
 			k++;
 			if(k == 1){
@@ -260,7 +262,7 @@ rewrecog: as[0].rewrecog_cur, workspace: as[0].workspace_cur, poorperfs: as[0].p
     				emps[i].td /= ct;
     				emps[i].promocrit = (oct * emps[i].promocrit) + as[key].promocrit_cur;
     				emps[i].promocrit /= ct;
-					emps[i].promo = (oct * emps[i].promo) + as[key].promo_cur; 
+					emps[i].promo = (oct * emps[i].promo) + as[key].promo_cur;
 					emps[i].promo /= ct;
 					emps[i].auton = (oct * emps[i].auton ) + as[key].auton_cur;
 					emps[i].auton /= ct;
@@ -286,11 +288,13 @@ rewrecog: as[0].rewrecog_cur, workspace: as[0].workspace_cur, poorperfs: as[0].p
 					/*for(var j = 2; j < emps[i].length; j++){
 						emps[i][j] /= emps[i].count;
 					}*/
+
+          /*
 					ent = true;
 					break;
     			}
-    			
-    			
+
+
     		}
     		if(ent == false){
     			var x;
@@ -302,17 +306,20 @@ flex: as[key].flex_cur, rewperf: as[key].rewperf_cur, mission: as[key].mission_c
 rewrecog: as[key].rewrecog_cur, workspace: as[key].workspace_cur, poorperfs: as[key].poorperfs_cur};
     			emps.push(x);
     		}
-    		
-    			
-    		
+
+
+
 		}
-		
-		
+
+
 		return emps;
 	}
 
 
 });
+*/
+
+
 /*
 //Matching Algorithm
 var userinfo;
@@ -327,7 +334,7 @@ Meteor.call('getPersonalSurvey', "56bf8474e7ebfe1d2cb334fe", function(error, res
     		if (!result.hasOwnProperty(key)) continue;
     		var obj = result[key];
     		//console.log(obj);
-    		
+
 		}
 		userinfo = result;
 	}
@@ -373,7 +380,7 @@ Meteor.call('lastPersonalSurvey', "56bf8474e7ebfe1d2cb33500", function(error, re
 	if(error)
 		console.log(error);
 	else{
-		
+
 		var date = new Date(result.timeStamp);
 		var newdate = new Date(new Date(result.timeStamp).setMonth(date.getMonth() + 6));
 		console.log(newdate);
@@ -382,7 +389,7 @@ Meteor.call('lastPersonalSurvey', "56bf8474e7ebfe1d2cb33500", function(error, re
 			console.log("Change it");
 		}
 	}
-		
+
 });
 //Retrieve Employers
 
@@ -407,20 +414,20 @@ Meteor.call('getEmployers', function(error, result){
 	}
 	else{
 		Meteor.call('getRank',user_rating, result[0],  function(err, res){
-			if(err){ 
+			if(err){
 				console.log("sec error");
 				console.log(err);
 		}
-		
+
 			else{
 				console.log("I have an answer");
 				console.log(res.rank);
 				console.log(res.emp.cur_emp_name)
 			}
 		});
-	
+
 	}
-		
+
 });
 
 */
@@ -445,9 +452,7 @@ Meteor.call('getPersonalSurvey', "56bf8474e7ebfe1d2cb334fe", function(error, res
     		if (!result.hasOwnProperty(key)) continue;
     		var obj = result[key];
     		console.log(obj);
-    		
+
 		}
 	}
 });*/
-
-*/

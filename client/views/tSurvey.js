@@ -20,6 +20,7 @@ Template.talentviewsurvey.events({
       var recog = AutoForm.getFieldValue('rewrecog_self','talentsurvey');
       var space = AutoForm.getFieldValue('workspace_self','talentsurvey');
       var poor = AutoForm.getFieldValue('poorperfs_self','talentsurvey');
+			var check = AutoForm.getFieldValue('careless_self','talentsurvey');
 
 
 
@@ -44,7 +45,8 @@ Template.talentviewsurvey.events({
       'health_self':health,
       'rewrecog_self':recog,
       'workspace_self':space,
-      'poorperfs_self':poor
+      'poorperfs_self':poor,
+			'careless_self': check
       }
 
       PersonalSurvey.insert(survey, function(err,docsInserted)
@@ -58,9 +60,13 @@ Template.talentviewsurvey.events({
           "profile.personal_survey": docsInserted
         }
         });
+
+				Meteor.call('checkSurveyDate',docsInserted, 'personal');
       });
 
 
+
+			/*
       var survey_id = Meteor.user().profile.personal_survey[0];
       if (survey_id){
         console.log('true');
@@ -110,6 +116,8 @@ Template.talentviewsurvey.events({
 
       //var test = days_between(utc, survey_date);
       //console.log(test);
+
+			*/
 
 
 

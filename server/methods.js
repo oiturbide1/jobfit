@@ -57,9 +57,37 @@ Meteor.methods(
   },
 
 
-  'add_Survey'(id, survey)
+  'update_Emp_Survey'(id, survey)
   {
     EmployerSurvey.update(
+      {_id: id},
+      {$set:
+        {
+          "work_life_balance": survey[0],
+          'job_security': survey[1],
+          'development_opportunities': survey[2],
+          'workload': survey[3],
+          'career_path': survey[4],
+          'promotion_criteria': survey[5],
+          'promotion_opportunities': survey[6],
+          'freedom': survey[7],
+          'salary': survey[8],
+          'good_sup': survey[9],
+          'flex': survey[16],
+          'rew_perf': survey[17],
+          'mission': survey[11],
+          'health': survey[12],
+          'rewrecog': survey[14],
+          'workspace': survey[13],
+          'poor_perfs': survey[15],
+          'careless': survey[10]
+        }
+      });
+  },
+
+  'add_Personal_Survey'(id, survey)
+  {
+    PersonalSurvey.update(
       {_id: id},
       {$set:
         {
@@ -97,20 +125,45 @@ Meteor.methods(
   },
 
 
-  'sendEmail'(email) 
+  'sendEmail'(email)
   {
       // send the email!
       Email.send({to:email, from:'empMatch@gmail.com', subject:'Thank you for signing up for our project', text:'We will share with you some news about us in a near future. See you soon!'});
   },
 
-  'sendVerificationLink'() 
+  'sendVerificationLink'()
   {
     var userId = Meteor.userId();
     if ( userId ) {
       return Accounts.sendVerificationEmail( userId );
     }
-  }
- 
+  },
+
+  'checkSurveyDate'(id, type)
+  {
+		//var id = new Meteor.Collection.ObjectID(value);
+		var surv;
+		//Personal Survey
+		if(type == 'personal'){
+			surv = PersonalSurvey.findOne(id);
+			//console.log(surv.timeStamp);
+		}
+		//Employer
+		else if(type == 'employer'){
+			surv = EmployerSurvey.findOne(id);
+		}else {return false;}
+		if(surv == null)
+			return false;
+		var date = new Date(surv.timeStamp);
+		var newdate = new Date(new Date(surv.timeStamp).setMonth(date.getMonth() + 6));
+		if(new Date() > newdate)
+    {
+      console.log('test');
+			return true;
+    }
+		return false;
+    console.log('too soon');
+ }
 
 
 

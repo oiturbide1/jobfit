@@ -20,7 +20,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -37,7 +37,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -54,7 +54,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -71,7 +71,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -88,7 +88,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -105,7 +105,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -122,7 +122,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -139,7 +139,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -156,7 +156,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -173,7 +173,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -190,7 +190,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -207,7 +207,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -224,7 +224,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -241,7 +241,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -258,7 +258,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -275,7 +275,7 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
@@ -292,7 +292,24 @@ PersonalSurveySchema = new SimpleSchema({
         optional: true,
         autoform: {
           type: "noUiSlider",
-          step: 1,    
+          step: 1,
+          noUiSlider_pipsOptions: {
+            mode: 'steps',
+            density: 5
+          }
+        }
+    },
+    careless_self:
+    {
+    	type: Number,
+        optional: true,
+        label: 'Please enter 2 as value',
+        max: 5,
+        min: 1,
+        optional: true,
+        autoform: {
+          type: "noUiSlider",
+          step: 1,
           noUiSlider_pipsOptions: {
             mode: 'steps',
             density: 5
