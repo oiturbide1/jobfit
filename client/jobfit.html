@@ -21,7 +21,7 @@
           {{/if}}
         </ul>
           {{#if currentUser}}
-            {{> dashboard}}
+            {{> mainDashboard}}
           {{else}}
             {{> login}}
           {{/if}}
@@ -248,6 +248,7 @@
 
 
 <template name = 'forgot'>
+  {{#if currentUser}}
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -295,17 +296,19 @@
     </form>
 
   </div>
+  {{else}}
+		<p>Sorry not logged in. Access Forbidden.</p>
+	{{/if}}
 
 </template>
 
 
 
-<template name="dashboard">
+<template name="mainDashboard">
     <div class="row navbar-right">
       <p class = 'logged_in_name'>Logged in as {{email}}</p>
       <button type="submit" class="btn btn-info logout">Logout</button>
     </div>
-
 
 
 </template>

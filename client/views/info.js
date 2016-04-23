@@ -1,9 +1,16 @@
-/*
-//function to whether zip code is valid
-$.validator.addMethod("zipcodeUS", function(value, element) {
-    return this.optional(element) || /\d{5}-\d{4}$|^\d{5}$/.test(value)
-}, "The specified US ZIP Code is invalid");
-*/
+Template.infoDashboard.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+    }
+});
+
+Template.infoDashboard.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
+});
+
 
 Template.information.events({
   'click .resend-verification-link' ( event, template ) {

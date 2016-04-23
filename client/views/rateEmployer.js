@@ -72,3 +72,12 @@ Template.employerRatings.events({
 
         }
       });
+
+
+Template.rateEmployer.events({
+  'click #matchButton':function(event){
+    event.preventDefault();
+
+    Router.go('/match');
+  }
+});

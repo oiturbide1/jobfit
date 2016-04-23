@@ -1,11 +1,11 @@
-// Change Bert's time on screen to be two seconds instead of the 
+// Change Bert's time on screen to be two seconds instead of the
 // default three and a half.
 Bert.defaults.hideDelay = 2000;
 
 // Change Bert's default type to be a warning instead of default.
 Bert.defaults.type = 'danger';
 
-// Change Bert's default style to be a growl-top-right 
+// Change Bert's default style to be a growl-top-right
 // instead of fixed-top.
 Bert.defaults.style = 'growl-top-right';
 
@@ -38,7 +38,7 @@ Template.talentRegistration.onRendered(function(){
                       }, function(error)
                       {
                         if(error){
-                          Bert.alert(error.reason);  
+                          Bert.alert(error.reason);
 
                         }
                         else
@@ -73,9 +73,9 @@ Template.talentRegistration.onRendered(function(){
                       {
                         if(error)
                         {
-                          Bert.alert(error.reason); 
-                          
-                          
+                          Bert.alert(error.reason);
+
+
 
                         }
                         else
@@ -261,7 +261,7 @@ Template.login.onRendered(function(){
                 {
                   Router.go("/Emp");
                 }
-                
+
               }
 
           });
@@ -281,14 +281,14 @@ Template.home.onRendered(function()
 
 
 
-Template.dashboard.events({
+Template.mainDashboard.events({
     'click .logout': function(event){
         event.preventDefault();
         Meteor.logout();
     }
 });
 
-Template.dashboard.helpers({
+Template.mainDashboard.helpers({
   email: function() {
     return Meteor.user().emails[0].address;
   }
@@ -335,4 +335,3 @@ Template.google.events({
 
 });
 */
-

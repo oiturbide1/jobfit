@@ -1,4 +1,5 @@
 <template name = 'success'>
+	{{#if existingSurvey}}
 	<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -27,7 +28,7 @@
 
 	        <div class="cover-container">
 
-	          
+
 
 	          <div class="inner cover">
 	            <h1 class="cover-heading">Congratulations!</h1>
@@ -37,7 +38,7 @@
 	            </p>
 	          </div>
 
-	          
+
 
 	        </div>
 
@@ -45,5 +46,8 @@
 
 	    </div>
 	</div>
+	{{else}}
+	<p>Nothing to see here. Move along please!</p>
+	{{/if}}
 
 </template>

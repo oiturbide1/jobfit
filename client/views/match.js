@@ -1,3 +1,4 @@
+/*
 var last_list;
 var empInfo;
 Template.matchAlg.helpers({
@@ -7,10 +8,10 @@ Template.matchAlg.helpers({
 			if(error)
 				console.log(error);
 			else{
-				
+
 				Session.set('temp', result);
 			}
-				
+
 		});
 		var temp2 = Meteor.call('getPersonalSurvey',id,function(err, res){
 			if(err)
@@ -20,7 +21,7 @@ Template.matchAlg.helpers({
 			}
 		});
 		return false;
-		
+
 		//return temp.length;
 	}
 
@@ -31,11 +32,11 @@ Template.matchAlg.helpers({
 Template.match.helpers({
 	'foundUser': function() {
 		if(Session.get('surv') != null){
-			//console.log(Session.get('temp').length); 
-    		return Session.get('temp');	
+			//console.log(Session.get('temp').length);
+    		return Session.get('temp');
 		}
 		return null;
-		
+
   	}
 
 });
@@ -80,23 +81,23 @@ Template.match.events({
 					Session.set('employerInfo', emps[i]);
 					break;
 				}
-				
+
 			}
 
-			
+
 
 		}
 		return false;
 		//console.log(event.target.id);
 	}
 });
-  
-    
+
+
 
 function getRank(user, emp){
 		var rank = {emp: null, rank: 0.0};
 
-		
+
 		if (user.length != emp.length){
 			return 0;
 		}
@@ -119,10 +120,11 @@ function getRank(user, emp){
 		matchAvg += Math.abs(user.rewrecog - emp.rewrecog);
 		matchAvg += Math.abs(user.workspace - emp.workspace);
 		matchAvg += Math.abs(user.poorperfs - emp.poorperfs);
-		
+
 		matchAvg = matchAvg / 17;
 		rank.emp = emp;
 		rank.rank = matchAvg;
 		return rank;
 
 }
+*/

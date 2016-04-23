@@ -1,6 +1,6 @@
 // schemas for field objects
 wlbSchema = new SimpleSchema({
-  work_life_balance: 
+  work_life_balance:
   {
     type: Number,
     max: 100,
@@ -10,11 +10,11 @@ wlbSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 securitySchema = new SimpleSchema({
-  security: 
+  security:
   {
     type: Number,
     max: 100,
@@ -24,11 +24,11 @@ securitySchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 developmentSchema = new SimpleSchema({
-  development: 
+  development:
   {
     type: Number,
     max: 100,
@@ -38,11 +38,11 @@ developmentSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 workloadSchema = new SimpleSchema({
-  workload: 
+  workload:
   {
     type: Number,
     max: 100,
@@ -52,11 +52,11 @@ workloadSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 pathSchema = new SimpleSchema({
-  career_path: 
+  career_path:
   {
     type: Number,
     max: 100,
@@ -66,11 +66,11 @@ pathSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 criteriaSchema = new SimpleSchema({
-  promotion_criteria: 
+  promotion_criteria:
   {
     type: Number,
     max: 100,
@@ -80,11 +80,11 @@ criteriaSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 opportunitiesSchema = new SimpleSchema({
-  promotion_opportunities: 
+  promotion_opportunities:
   {
     type: Number,
     max: 100,
@@ -94,11 +94,11 @@ opportunitiesSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 freedomSchema = new SimpleSchema({
-  freedom: 
+  freedom:
   {
     type: Number,
     max: 100,
@@ -108,11 +108,11 @@ freedomSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 salarySchema = new SimpleSchema({
-  salary: 
+  salary:
   {
     type: Number,
     max: 100,
@@ -122,11 +122,11 @@ salarySchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 managementSchema = new SimpleSchema({
-  management: 
+  management:
   {
     type: Number,
     max: 100,
@@ -136,7 +136,7 @@ managementSchema = new SimpleSchema({
   {
     type: Number
   }
-  
+
 });
 
 
@@ -176,15 +176,16 @@ CompanySchema = new SimpleSchema({
  state:
  {
    type: String,
-   allowedValues: 
+   allowedValues:
    [
-   'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC',
-   'ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WY','DC','AS','GU','MP','PR','UM','VI'
+   'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO',
+   'MT','NE','NV','NH','NJ','NM','NY','NC', 'ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WY','DC',
+   'AS','GU','MP','PR','UM','VI'
    ],
    label: "State",
-   autoform: 
+   autoform:
    {
-    options: 
+    options:
     [
     {
       label: 'AL',
@@ -245,7 +246,169 @@ CompanySchema = new SimpleSchema({
     {
       label: 'IA',
       value: 'IA'
+    },
+    {
+      label: 'KS',
+      value: 'KS'
+    },
+    {
+      label: 'KY',
+      value: 'KY'
+    },
+    {
+      label: 'LA',
+      value: 'LA'
+    },
+    {
+      label: 'MD',
+      value: 'MD'
+    },
+    {
+      label: 'ME',
+      value: 'ME'
+    },
+    {
+      label: 'MA',
+      value: 'MA'
+    },
+    {
+      label: 'MI',
+      value: 'MI'
+    },
+    {
+      label: 'MN',
+      value: 'MN'
+    },
+    {
+      label: 'MS',
+      value: 'MS'
+    },
+    {
+      label: 'MO',
+      value: 'MO'
+    },
+    {
+      label: 'MT',
+      value: 'MT'
+    },
+    {
+      label: 'NC',
+      value: 'NC'
+    },
+    {
+      label: 'ND',
+      value: 'ND'
+    },
+    {
+      label: 'NE',
+      value: 'NE'
+    },
+    {
+      label: 'NV',
+      value: 'NV'
+    },
+    {
+      label: 'NH',
+      value: 'NH'
+    },
+    {
+      label: 'NJ',
+      value: 'NJ'
+    },
+    {
+      label: 'NY',
+      value: 'NY'
+    },
+    {
+      label: 'OH',
+      value: 'OH'
+    },
+    {
+      label: 'OK',
+      value: 'OK'
+    },
+    {
+      label: 'OR',
+      value: 'OR'
+    },
+    {
+      label: 'PA',
+      value: 'PA'
+    },
+    {
+      label: 'RI',
+      value: 'RI'
+    },
+    {
+      label: 'SC',
+      value: 'SC'
+    },
+    {
+      label: 'SD',
+      value: 'SD'
+    },
+    {
+      label: 'TN',
+      value: 'TN'
+    },
+    {
+      label: 'TX',
+      value: 'TX'
+    },
+    {
+      label: 'UT',
+      value: 'UT'
+    },
+    {
+      label: 'VT',
+      value: 'VT'
+    },
+    {
+      label: 'VA',
+      value: 'VA'
+    },
+    {
+      label: 'WZ',
+      value: 'WA'
+    },
+    {
+      label: 'WV',
+      value: 'WV'
+    },
+    {
+      label: 'WY',
+      value: 'WY'
+    },
+    {
+      label: 'DC',
+      value: 'DC'
+    },
+    {
+      label: 'AS',
+      value: 'AS'
+    },
+    {
+      label: 'GU',
+      value: 'GU'
+    },
+    {
+      label: 'MP',
+      value: 'MP'
+    },
+    {
+      label: 'PR',
+      value: 'PR'
+    },
+    {
+      label: 'UM',
+      value: 'UM'
+    },
+    {
+      label: 'VI',
+      value: 'VI'
     }
+
+
 
     ]
   }
@@ -290,7 +453,7 @@ CompanySchema = new SimpleSchema({
  work_life_balance:
  {
     type: wlbSchema,
-    optional: true 
+    optional: true
  },
  job_security:
  {
@@ -347,23 +510,23 @@ Company.attachSchema(CompanySchema);
 /*
 Company.allow(
 {
-  insert() 
+  insert()
   {
-    if ( Meteor.user() ) 
+    if ( Meteor.user() )
     {
       return true;
-    } 
-    else 
+    }
+    else
     {
       return false;
       console.log('not logged in');
     }
   },
-  update() 
+  update()
   {
     // When we will ALLOW updates on the client.
   },
-  remove() 
+  remove()
   {
     // When we will ALLOW removes on the client.
   }
@@ -372,26 +535,24 @@ Company.allow(
 
 Company.deny(
 {
-  insert() 
+  insert()
   {
-    if ( Meteor.user() ) 
+    if ( Meteor.user() )
     {
       return false;
-    } 
-    else 
+    }
+    else
     {
       return true;
     }
   },
-  update() 
+  update()
   {
     // When we will ALLOW updates on the client.
   },
-  remove() 
+  remove()
   {
     // When we will ALLOW removes on the client.
   }
 });
 */
-
-

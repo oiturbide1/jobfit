@@ -1,4 +1,4 @@
-Template.changePassword.events({  
+Template.changePassword.events({
     'submit .change-password': function(event, template) {
 
         var currentPassword = $('[name=current_password]').val();
@@ -24,4 +24,18 @@ Template.changePassword.events({
 
         return false;
     }
+});
+
+
+Template.changeDashboard.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+    }
+});
+
+Template.changeDashboard.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
 });
