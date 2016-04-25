@@ -58,7 +58,6 @@ Template.talentviewsurvey.events({
 				}
 				else
 				{
-					console.log(editable);
 					if (editable)
 					{
 						//allow
@@ -70,7 +69,6 @@ Template.talentviewsurvey.events({
 			        }
 			        else
 			        {
-			          console.log(insertedSurvey);
 								Meteor.call('update_userSurvey', insertedSurvey,'personal');
 
 			        }

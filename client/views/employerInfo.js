@@ -319,13 +319,14 @@ Template.jobInfo.events({
       var sDate= event.target.start_date.value;
       var promo = event.target.promoted.value;
 
-      //var promoDates = [p1,p2,p3,p4,p5];
+      var promoDates = [p1,p2,p3,p4,p5];
 
 
       var sur = Session.get('Survey');
+      var info = [title, sDate, promo, promoDates]
 
 
-      Meteor.call('update_currentSurvey_jobInfo', sur, title, sDate, p1, p2, p3, p4, p5);
+      Meteor.call('add_job_info', sur, info);
 
 
       //Add job info to profile

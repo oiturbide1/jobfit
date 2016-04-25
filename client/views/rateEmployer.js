@@ -51,7 +51,7 @@ Template.employerRatings.events({
             perf
           ];
 
-
+          //Meteor.call('isAdmin');
 
           Meteor.call('update_Emp_Survey', currentSurvey, survey);
 

@@ -38,6 +38,10 @@ Template.pi.onRendered(function(){
               required: true,
               zipcodeUS: true,
               valid: false
+            },
+            gender:
+            {
+              valid: false
             }
           },
 

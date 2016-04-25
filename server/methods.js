@@ -7,6 +7,8 @@ Meteor.startup(function () {
      return Object.prototype.toString.call(thing);
  }
 
+
+
 Meteor.methods(
 {
 
@@ -145,6 +147,22 @@ Meteor.methods(
 
   },
 
+  'add_job_info'(surveyID, info)
+  {
+      EmployerSurvey.update(
+      {_id: surveyID},
+      {$set:
+        {
+          "job_title": info[0],
+          'start_date': info[1],
+          'promoted': info[2],
+          'promo_date': info[3]
+        }
+      });
+
+
+  },
+
 
   'sendEmail'(email)
   {
@@ -162,7 +180,6 @@ Meteor.methods(
 
   'checkSurveyDate'(type)
   {
-		//var id = new Meteor.Collection.ObjectID(value);
 		var surv;
     var user = Meteor.user();
 		//Personal Survey
@@ -179,7 +196,7 @@ Meteor.methods(
       surv = user.profile.personal_survey[survCheck];
       var temp = PersonalSurvey.findOne(surv).timeStamp;
 
-			console.log(temp);
+			//console.log(temp);
 		}
 		//Employer
 		else if(type == 'employer'){
@@ -200,6 +217,17 @@ Meteor.methods(
 		return false;
  }
 
+ /*
+ 'isAdmin'()
+ {
+    var user = this.userId;
+    console.log(user);
+    var foundUser = Meteor.users.find({'_id': user});
+    //console.log(foundUser);
+    var role = foundUser.roles;
+    //console.log(role);
+ }
+  */
 
 
 });
