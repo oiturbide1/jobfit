@@ -160,14 +160,26 @@ Meteor.methods(
     }
   },
 
-  'checkSurveyDate'(id, type)
+  'checkSurveyDate'(type)
   {
 		//var id = new Meteor.Collection.ObjectID(value);
 		var surv;
+    var user = Meteor.user();
 		//Personal Survey
 		if(type == 'personal'){
-			surv = PersonalSurvey.findOne(id);
-			//console.log(surv.timeStamp);
+      var survey_array = user.profile.personal_survey;
+      if (survey_array == null)
+      {
+        return true;
+      }
+			var survCheck = survey_array.length - 1;
+      if (survCheck < 0){
+        return false;
+      }
+      surv = user.profile.personal_survey[survCheck];
+      var temp = PersonalSurvey.findOne(surv).timeStamp;
+
+			console.log(temp);
 		}
 		//Employer
 		else if(type == 'employer'){
@@ -175,15 +187,17 @@ Meteor.methods(
 		}else {return false;}
 		if(surv == null)
 			return false;
-		var date = new Date(surv.timeStamp);
-		var newdate = new Date(new Date(surv.timeStamp).setMonth(date.getMonth() + 6));
+
+		var date = new Date(temp);
+    console.log(date);
+		var newdate = new Date(new Date(temp).setMonth(date.getMonth() + 6));
+    console.log(newdate);
 		if(new Date() > newdate)
     {
-      console.log('test');
 			return true;
+      //good to edit
     }
 		return false;
-    console.log('too soon');
  }
 
 

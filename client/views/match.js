@@ -1,4 +1,4 @@
-/*
+
 var last_list;
 var empInfo;
 Template.matchAlg.helpers({
@@ -127,4 +127,3 @@ function getRank(user, emp){
 		return rank;
 
 }
-*/

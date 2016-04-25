@@ -51,22 +51,40 @@ Template.talentviewsurvey.events({
       ]
 
 
+			Meteor.call('checkSurveyDate', 'personal', function(err, editable){
+				if (err)
+				{
+					console.log(err);
+				}
+				else
+				{
+					console.log(editable);
+					if (editable)
+					{
+						//allow
+						Meteor.call('add_Personal_Survey', survey, function(error, insertedSurvey)
+			      {
+			        if (error)
+			        {
+			          console.log(error);
+			        }
+			        else
+			        {
+			          console.log(insertedSurvey);
+								Meteor.call('update_userSurvey', insertedSurvey,'personal');
 
-      Meteor.call('add_Personal_Survey', survey, function(error, insertedSurvey)
-      {
-        if (error)
-        {
-          console.log(error);
-        }
-        else
-        {
-          console.log(insertedSurvey);
-					Meteor.call('update_userSurvey', insertedSurvey,'personal');
-        }
-      });
+			        }
+			      });
+
+					}
+					else{
+						Bert.alert('too soon');
+					}
+				}
+			});
 
 
-			//Meteor.call('checkSurveyDate',docsInserted, 'personal');
+
 
 
 

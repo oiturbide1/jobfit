@@ -7,9 +7,7 @@ Router.route('/rateEmployer');
 Router.route('/talentRegistration');
 Router.route('/registerRep');
 Router.route('/login');
-//Router.route('/rateWhich');
-//Router.route('/rateCurrentEmployerInfo');
-//Router.route('/rateFormerEmployerInfo');
+
 Router.route('/employerInfo');
 Router.route('/Emp');
 Router.route('/success');
