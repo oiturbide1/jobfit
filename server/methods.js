@@ -11,36 +11,15 @@ Meteor.startup(function () {
 
 Meteor.methods(
 {
+  'type'(thing){
+    if(thing===null)return "[object Null]"; // special case
+     return Object.prototype.toString.call(thing);
+  },
 
-  'addUser'(email, password, type)
+  'addUserRole'(userid, role)
   {
-    Accounts.createUser(
-      {
-      email: email,
-      password: password
-      },
-      function(error)
-      {
-        if(error)
-        {
-          return error;
-          if(error.reason == '"Email already exists."'){
-            validator.showErrors({
-              email: 'That email is already in the system'
-            });
-          }
-
-        }
-        else
-        {
-            Router.go("/information");
-
-            var userId = this.userId;
-            Roles.addUsersToRoles(userId,type);
-        }
-
-      });
-
+    Roles.addUsersToRoles(userid,role);
+    
 
   },
 
@@ -170,8 +149,8 @@ Meteor.methods(
       {$set:
         {
           "status": status[0],
-          'other': status[1],
-          'hours':status[2]
+          'other': status[2],
+          'hours':status[1]
         }
       });
 
@@ -185,6 +164,20 @@ Meteor.methods(
       {$set:
         {
           "job_feelings": feelings
+        }
+      });
+
+
+  },
+
+  'add_reasons_left'(surveyID, choice, reasons)
+  {
+      EmployerSurvey.update(
+      {_id: surveyID},
+      {$set:
+        {
+          "voluntary": choice,
+          "reasons_left": reasons.map(r => r)
         }
       });
 
@@ -210,14 +203,17 @@ Meteor.methods(
   {
 		var surv;
     var user = Meteor.user();
+    var survey_array;
+    var survCheck;
 		//Personal Survey
-		if(type == 'personal'){
-      var survey_array = user.profile.personal_survey;
+		if(type == 'personal')
+    {
+      survey_array = user.profile.personal_survey;
       if (survey_array == null)
       {
         return true;
       }
-			var survCheck = survey_array.length - 1;
+			survCheck = survey_array.length - 1;
       if (survCheck < 0){
         return false;
       }
@@ -227,9 +223,22 @@ Meteor.methods(
 			//console.log(temp);
 		}
 		//Employer
-		else if(type == 'employer'){
-			surv = EmployerSurvey.findOne(id);
-		}else {return false;}
+		else if(type == 'employer')
+    {
+			survey_array = user.profile.employer_survey;
+      if (survey_array == null)
+      {
+        return true;
+      }
+      survCheck = survey_array.length - 1;
+      if (survCheck < 0){
+        return false;
+      }
+      surv = user.profile.employer_survey[survCheck];
+      var temp = EmployerSurvey.findOne(surv).timeStamp;
+		}
+    else {return false;}
+
 		if(surv == null)
 			return false;
 

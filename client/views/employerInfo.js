@@ -21,18 +21,18 @@ Template.employerInfo.events({
       'zip': zip
     }
 
-    if (Roles.userIsInRole(Meteor.userId(), 'rep'))
+    if (Roles.userIsInRole(Meteor.userId(), 'Rep'))
     {
-      userType = 'rep';
+      userType = 'Rep';
     }
-    else if (Roles.userIsInRole(Meteor.userId(), 'talent'))
+    else if (Roles.userIsInRole(Meteor.userId(), 'Talent'))
     {
-      userType = 'talent';
+      userType = 'Talent';
     }
 
     else
     {
-      userType = 'anon';
+      userType = 'Anon';
     }
 
     /*
@@ -174,7 +174,7 @@ Template.employerInfo.events({
 
 
 
-    var role_check = Roles.userIsInRole(Meteor.userId(), 'rep');
+    var role_check = Roles.userIsInRole(Meteor.userId(), 'Rep');
     if (role_check)
     {
       Router.go('/rateEmployer');
@@ -395,8 +395,12 @@ Template.jobFeeling.events({
         'actions':actions
       };
 
+      console.log(feelings);
+
       var sur = Session.get('Survey');
 
+      //Need to fix this
+      // getting empty object
       Meteor.call('add_job_feelings', sur, feelings);
 
       // Clear form
@@ -417,39 +421,23 @@ Template.reasons_left.events({
 
       // Get value from form element
       var choice = event.target.choice.value;
-      var yes = event.target.yes_reasons.value;
+      var yes = AutoForm.getFieldValue('yes_reasons','reasonsForm');
+      var no = AutoForm.getFieldValue('no_reasons','reasonsForm');
 
+      var sur = Session.get('Survey');
 
-      console.log(choice);
-      console.log(yes);
+      
+      if (yes)
+        Meteor.call('add_reasons_left', sur, choice, yes);
 
-      var user = Meteor.userId;
-
-
-      //FormerEmployerSurvey.update(survey, function(err,docsInserted)
-
-      /*
-      //Add job info to profile
-      FormerEmployer.update(
-        {_id: Meteor.userId()}, {$set: {
-          "profile.job_feelings.job_satisfaction": job_sat,
-          'profile.job_feelings.performance': per,
-          'profile.job_feelings.career': career,
-          'profile.job_feelings.leaving': leave,
-          'profile.job_feelings.values': values,
-          'profile.job_feelings.cooperate': coop,
-          'profile.job_feelings.assist':assist,
-          'profile.job_feelings.actions':actions
-          } }
-      );
-
-
+      if(no)
+        Meteor.call('add_reasons_left', sur, choice, no);
+    
 
       // Clear form
 
 
-      */
-      Router.go('/rateEmployer');
+      //Router.go('/rateEmployer');
 
 
     }

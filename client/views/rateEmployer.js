@@ -51,15 +51,31 @@ Template.employerRatings.events({
             perf
           ];
 
-          //Meteor.call('isAdmin');
-
-          Meteor.call('update_Emp_Survey', currentSurvey, survey);
-
-          if(user)
+          Meteor.call('checkSurveyDate', 'employer', function(err, editable){
+          if (err)
           {
-            Meteor.call('update_userSurvey', currentSurvey, 'employer');
-            Bert.alert('Ratings added','success');
+            console.log(err);
           }
+          else
+          {
+            if (editable)
+            {
+              //allow
+              Meteor.call('update_Emp_Survey', currentSurvey, survey);
+              
+              if(user)
+              {
+                Meteor.call('update_userSurvey', currentSurvey, 'employer');
+                Bert.alert('Ratings added','success');
+              }
+
+            }
+            else
+            {
+              Bert.alert('too soon');
+            }
+          }
+        });
 
 
 
@@ -79,5 +95,12 @@ Template.rateEmployer.events({
     event.preventDefault();
 
     Router.go('/match');
+  }
+});
+
+Template.rateEmployer.helpers({
+  'surveyCheck': function()
+  {
+    return Session.get('Survey');
   }
 });

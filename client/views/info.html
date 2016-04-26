@@ -1,4 +1,5 @@
 <template name = 'information'>
+  {{#if currentUser}}
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -53,6 +54,10 @@
   </div>
 
   <p><a class="btn btn-primary btn-sm" href="{{pathFor route='tSurvey'}}" role="button">Talent Survey&raquo;</a></p>
+
+  {{else}}
+    {{> infoForbidden}}
+  {{/if}}
 
 </template>
 
@@ -146,6 +151,38 @@
       <p class = 'logged_in_name'>Logged in as {{email}}</p>
       <button type="submit" class="btn btn-info logout">Logout</button>
     </div>
+
+
+</template>
+
+<template name="infoForbidden">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor route='home'}}">Employer Match</a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="{{pathFor route='home'}}">Home</a></li>
+          <li><a href="{{pathFor route='about'}}">About</a></li>
+          <li><a href="{{pathFor route='contact'}}">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class = 'forbidden_container'>
+    <p>Access Forbidden</p>
+
+
+  </div>
 
 
 </template>

@@ -16,7 +16,7 @@ ESurvey = new SimpleSchema({
   {
     type: String,
     optional: true,
-    allowedValues: ['talent','rep', 'anon']
+    allowedValues: ['Talent','Rep', 'Anon']
   },
   cur_or_form:
   {
@@ -396,11 +396,16 @@ ESurvey = new SimpleSchema({
     type: String,
     optional: true
   },
-  //reasons_left:
-  //{
-    //type: Reasons,
-    //optional:true
-  //},
+  reasons_left:
+  {
+    type: Array,
+    optional:true
+  },
+  'reasons_left.$':
+  {
+    type: String,
+    optional: true
+  },
   timeStamp:
   {
     type: Date,

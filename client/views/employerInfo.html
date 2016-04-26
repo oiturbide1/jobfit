@@ -27,7 +27,7 @@
         <br>
         <br>
         {{#if currentUser}}
-          {{#if isInRole 'talent'}}
+          {{#if isInRole 'Talent'}}
             {{> jobInfo}}
             {{> empStatus}}
 
@@ -213,6 +213,9 @@
       {{/if}}
       {{#if afFieldValueIs name='choice' value="No"}}
         {{> afQuickField name='no_reasons' options='allowed' noselect=true}}
+        {{#if afFieldValueIs name='no_reasons' value='Other'}}
+            {{> afQuickField name='other'}}
+        {{/if}}
       {{/if}}
     </fieldset>
     <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter reason">

@@ -29,17 +29,15 @@ Template.talentRegistration.onRendered(function(){
                     var password = $('[name=regPassword]').val();
                     var usertype = $('input[name=userType]:checked').val();
 
-                    //Meteor.call('addUser', email, password, userType);
 
-
-                    if (usertype == 'Talent')
-                    {
-                      Accounts.createUser({
+            
+                    Accounts.createUser({
                         email: email,
                         password: password
                       }, function(error)
                       {
-                        if(error){
+                        if(error)
+                        {
                           Bert.alert(error.reason);
 
                         }
@@ -53,44 +51,22 @@ Template.talentRegistration.onRendered(function(){
                             }
                             else
                             {
-                              Bert.alert('Welcome!','success');
+                              Bert.alert('Welcome ' + email,'success');
                             }
                           });
-                            Router.go("/information");
-                            //var currentUserId = Meteor.userId;
+
+                            
+                            
                             var userId = Meteor.userId();
-                            Roles.addUsersToRoles(userId,'talent');
+                            Meteor.call('addUserRole', userId, usertype)
+
+                            if (usertype == 'Talent')
+                              Router.go("/information");
+                            else
+                              Router.go("/Emp");
                         }
 
                       });
-
-                    }
-
-                    else if (usertype == 'Rep')
-                    {
-                      Accounts.createUser({
-                        email: email,
-                        password: password
-                      }, function(error)
-                      {
-                        if(error)
-                        {
-                          Bert.alert(error.reason);
-
-
-
-                        }
-                        else
-                        {
-                            Router.go("/Emp");
-                            //var currentUserId = Meteor.userId;
-                            var userId = Meteor.userId();
-                            Roles.addUsersToRoles(userId,'rep');
-                        }
-
-                      });
-                    }
-
 
 
 
@@ -287,6 +263,7 @@ Template.mainDashboard.events({
     'click .logout': function(event){
         event.preventDefault();
         Meteor.logout();
+        
     }
 });
 

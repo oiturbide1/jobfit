@@ -1,4 +1,5 @@
 <template name = 'rateEmployer'>
+  {{#if surveyCheck}}
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -38,7 +39,9 @@
         {{/if}}
     </div>
   </div>
-
+  {{else}}
+  <p>Need to enter company innfo first</p>
+  {{/if}}
 
 </template>
 

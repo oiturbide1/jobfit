@@ -321,7 +321,7 @@ User = new SimpleSchema({
         type: [String],
         optional: true,
 				blackbox: true,
-				allowedValues: ['talent','rep', 'admin']
+				allowedValues: ['Talent','Rep', 'Admin',]
     },
     // In order to avoid an 'Exception in setInterval callback' from Meteor
     heartbeat: {
