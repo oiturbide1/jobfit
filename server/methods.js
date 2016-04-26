@@ -23,7 +23,7 @@ Meteor.methods(
       {
         if(error)
         {
-          console.log(error);
+          return error;
           if(error.reason == '"Email already exists."'){
             validator.showErrors({
               email: 'That email is already in the system'
@@ -35,7 +35,7 @@ Meteor.methods(
         {
             Router.go("/information");
 
-            var userId = Meteor.userId();
+            var userId = this.userId;
             Roles.addUsersToRoles(userId,type);
         }
 
@@ -163,6 +163,34 @@ Meteor.methods(
 
   },
 
+  'add_job_status'(surveyID, status)
+  {
+      EmployerSurvey.update(
+      {_id: surveyID},
+      {$set:
+        {
+          "status": status[0],
+          'other': status[1],
+          'hours':status[2]
+        }
+      });
+
+
+  },
+
+  'add_job_feelings'(surveyID, feelings)
+  {
+      EmployerSurvey.update(
+      {_id: surveyID},
+      {$set:
+        {
+          "job_feelings": feelings
+        }
+      });
+
+
+  },
+
 
   'sendEmail'(email)
   {
@@ -206,9 +234,7 @@ Meteor.methods(
 			return false;
 
 		var date = new Date(temp);
-    console.log(date);
 		var newdate = new Date(new Date(temp).setMonth(date.getMonth() + 6));
-    console.log(newdate);
 		if(new Date() > newdate)
     {
 			return true;

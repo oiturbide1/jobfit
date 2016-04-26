@@ -329,19 +329,6 @@ Template.jobInfo.events({
       Meteor.call('add_job_info', sur, info);
 
 
-      //Add job info to profile
-      /*
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$push: {
-          "profile.job_info.title": title,
-          "profile.job_info.start_date": sDate,
-          'profile.job_info.promoted': promo,
-          'profile.job_info.promo_date':[pDate]
-          } }
-      );
-      */
-
-
       // Clear form
 
 
@@ -365,18 +352,13 @@ Template.empStatus.events({
       {
         var other = event.target.other.value;
       }
-      var user = Meteor.userId;
+
+      var sur = Session.get('Survey');
+      var status_info = [status, hrs, other];
 
 
-      //Add job info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {
-          "profile.status.status": status,
-          "profile.status.hours": hrs,
-          'profile.status.other': other
-          } }
-      );
-
+      //Add job info to survey
+      Meteor.call('add_job_status', sur, status_info);
 
       // Clear form
 
@@ -402,34 +384,25 @@ Template.jobFeeling.events({
       var actions= AutoForm.getFieldValue('actions','feelingsForm');
 
 
-      var user = Meteor.userId;
+      var feelings = {
+        "job_satisfaction": job_sat,
+        'performance': per,
+        'career': career,
+        'leaving': leave,
+        'values': values,
+        'cooperate': coop,
+        'assist':assist,
+        'actions':actions
+      };
 
-      /*
-      //Add job info to profile
-      Meteor.users.update(
-        {_id: Meteor.userId()}, {$set: {
-          "profile.job_feelings.job_satisfaction": job_sat,
-          'profile.job_feelings.performance': per,
-          'profile.job_feelings.career': career,
-          'profile.job_feelings.leaving': leave,
-          'profile.job_feelings.values': values,
-          'profile.job_feelings.cooperate': coop,
-          'profile.job_feelings.assist':assist,
-          'profile.job_feelings.actions':actions
-          } }
-      );
-      */
+      var sur = Session.get('Survey');
 
-
+      Meteor.call('add_job_feelings', sur, feelings);
 
       // Clear form
 
 
-
       Router.go('/rateEmployer');
-
-
-
 
     }
 
@@ -477,9 +450,6 @@ Template.reasons_left.events({
 
       */
       Router.go('/rateEmployer');
-
-
-
 
 
     }

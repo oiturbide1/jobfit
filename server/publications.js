@@ -1,4 +1,4 @@
-//need to make an isAdmin function 
+//need to make an isAdmin function
 
 function isAdmin()
 {
@@ -27,7 +27,7 @@ function isAdmin()
 
 
 
-Meteor.publish('users', function() 
+Meteor.publish('users', function()
 {
     var currentUserId = this.userId;
     if(isAdmin(currentUserId)){
@@ -38,20 +38,29 @@ Meteor.publish('users', function()
 });
 
 
-Meteor.publish('personal_surveys', function() 
+Meteor.publish('personal_surveys', function()
 {
     var currentUserId = this.userId;
     if(currentUserId){
       return PersonalSurvey.find();
   	}
-    
+
 });
 
-Meteor.publish('employer_surveys', function() 
+Meteor.publish('employer_surveys', function()
 {
     var currentUserId = this.userId;
     if(currentUserId){
       return EmployerSurvey.find();
   	}
-    
+
+});
+
+Meteor.publish('roles', function()
+{
+    var currentUserId = this.userId;
+    if(Roles.userIsInRole(currentUserId, 'talent')){
+      return Meteor.talent.find();
+  	}
+
 });

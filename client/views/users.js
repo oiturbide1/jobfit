@@ -29,6 +29,8 @@ Template.talentRegistration.onRendered(function(){
                     var password = $('[name=regPassword]').val();
                     var usertype = $('input[name=userType]:checked').val();
 
+                    //Meteor.call('addUser', email, password, userType);
+
 
                     if (usertype == 'Talent')
                     {

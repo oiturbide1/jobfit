@@ -386,11 +386,16 @@ ESurvey = new SimpleSchema({
     label: 'Average Hours',
     optional: true
   },
-  //job_feelings:
-  //{
-    //type: Job_Feelings,
-    //optional: true
-  //},
+  job_feelings:
+  {
+    type: Object,
+    optional: true
+  },
+  voluntary:
+  {
+    type: String,
+    optional: true
+  },
   //reasons_left:
   //{
     //type: Reasons,
