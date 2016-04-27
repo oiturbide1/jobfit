@@ -5,7 +5,7 @@ Template.changePassword.events({
         var newPassword = $('[name=new_password]').val()
         var newPasswordRepeated = $('[name=confirm_new_password]').val();
 
-        // You will want to validate your passwords better than this
+        // validatepasswords better than this
         //if (newPassword !== newPasswordRepeated) {
             //template.find('#form-messages').html("The new passwords don't match!");
 

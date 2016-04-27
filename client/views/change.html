@@ -21,6 +21,7 @@
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
             <li><a href="{{pathFor route='information'}}">Information</a></li>
             <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
+            <li><a href="{{pathFor route='#'}}">Matches</a></li>
           {{/if}}
         </ul>
         {{#if currentUser}}
@@ -30,23 +31,31 @@
     </div>
   </nav>
 
-  <div class = 'change_container'>
-    <form class = 'registration form-signin change-password'>
-      <h2 class="form-signin-heading">Change Password</h2>
-      <label for="current_password" class="sr-only">Current Password</label>
-      <input id = 'current_password' type="password" name="current_password" placeholder="Current Password" >
+  <div id = 'gray-container'>
+    <div class="site-wrapper">      
 
-      <label for="new_password" class="sr-only">New Password</label>
-      <input class = 'new_password' type="password" name="new_password" placeholder="New Password" >
+          <div class="cover-container">
+           
+              <form class = 'registration form-signin change-password'>
+                <h2 class="form-signin-heading">Change Password</h2>
+                <label for="current_password" class="sr-only">Current Password</label>
+                <input id = 'current_password' type="password" name="current_password" placeholder="Current Password" >
 
-      <label for="confirm_new_password" class="sr-only">Confirm new Password</label>
-      <input class = 'confirm_new_password' type="password" name="confirm_new_password" placeholder="Confirm Password" >
+                <label for="new_password" class="sr-only">New Password</label>
+                <input class = 'new_password' type="password" name="new_password" placeholder="New Password" >
 
-      <button class="btn btn-lg btn-primary btn-block" id = 'changeButton'>Change Password</button>
+                <label for="confirm_new_password" class="sr-only">Confirm new Password</label>
+                <input class = 'confirm_new_password' type="password" name="confirm_new_password" placeholder="Confirm Password" >
 
-    </form>
+                <button class="btn btn-lg btn-primary btn-block" id = 'changeButton'>Change Password</button>
 
+              </form>
+
+          </div>
+
+      </div>
   </div>
+
 
   {{else}}
 		{{> changeForbidden}}

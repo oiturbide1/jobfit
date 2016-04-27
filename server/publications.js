@@ -56,19 +56,7 @@ Meteor.publish('employer_surveys', function()
 
 });
 
-Meteor.publish('roles', function()
-{
-    var currentUserId = this.userId;
-    if(Roles.userIsInRole(currentUserId, 'Talent'))
-    {
-      return Meteor.Talent.find();
-  	}
-    else if(Roles.userIsInRole(currentUserId, 'Rep'))
-    {
-      return Meteor.Rep.find();
-    }
 
-});
 
 Meteor.publish('company', function()
 {

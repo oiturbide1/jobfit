@@ -386,9 +386,44 @@ ESurvey = new SimpleSchema({
     label: 'Average Hours',
     optional: true
   },
-  job_feelings:
+  job_satisfaction:
   {
-    type: Object,
+    type: String,
+    optional: true
+  },
+  performance:
+  {
+    type: Number,
+    optional: true
+  },
+  career:
+  {
+    type: Number,
+    optional: true
+  },
+  leaving:
+  {
+    type: Number,
+    optional: true
+  },
+  values:
+  {
+    type: Number,
+    optional: true
+  },
+  cooperate:
+  {
+    type: Number,
+    optional: true
+  },
+  assist:
+  {
+    type: Number,
+    optional: true
+  },
+  actions:
+  {
+    type: Number,
     optional: true
   },
   voluntary:

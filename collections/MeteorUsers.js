@@ -249,7 +249,16 @@ UserProfile = new SimpleSchema({
 	{
 		type: Number,
 		optional: true
-	}
+	},
+    timeStamp:
+    {
+        type: Date,
+        autoValue: function() {
+          if ( this.isInsert ) {
+            return new Date;
+          }
+        }
+    },
 });
 
 
@@ -278,17 +287,7 @@ User = new SimpleSchema({
     "emails.$.verified": {
         type: Boolean
     },
-    created:
-    {
-        type: Date,
-        autoValue: function()
-        {
-            if ( this.isInsert )
-            {
-                return new Date;
-            }
-        }
-    },
+
     profile:
     {
         type: UserProfile,

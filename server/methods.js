@@ -163,7 +163,14 @@ Meteor.methods(
       {_id: surveyID},
       {$set:
         {
-          "job_feelings": feelings
+          "job_satisfaction": feelings.job_satisfaction,
+          'performance': feelings.performance,
+          'career': feelings.career,
+          'leaving': feelings.leaving,
+          'values': feelings.values,
+          'cooperate': feelings.cooperate,
+          'assist':feelings.assist,
+          'actions':feelings.actions
         }
       });
 

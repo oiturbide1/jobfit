@@ -384,7 +384,7 @@ Template.jobFeeling.events({
       var actions= AutoForm.getFieldValue('actions','feelingsForm');
 
 
-      var feelings = {
+      feelings = {
         "job_satisfaction": job_sat,
         'performance': per,
         'career': career,
@@ -393,17 +393,12 @@ Template.jobFeeling.events({
         'cooperate': coop,
         'assist':assist,
         'actions':actions
-      };
+      }
 
-      console.log(feelings);
 
       var sur = Session.get('Survey');
 
-      //Need to fix this
-      // getting empty object
       Meteor.call('add_job_feelings', sur, feelings);
-
-      // Clear form
 
 
       Router.go('/rateEmployer');
@@ -442,5 +437,12 @@ Template.reasons_left.events({
 
     }
 
+
+});
+
+Template.empDashboard.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
 
 });

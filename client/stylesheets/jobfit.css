@@ -348,3 +348,13 @@ h2
   width: auto;
 }
 */
+
+#gray-container-form {
+  height: 350%;
+  background-color: #333;
+}
+#gray-container-form {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}

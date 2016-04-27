@@ -19,6 +19,7 @@
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
             <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
+            <li><a href="{{pathFor route='#'}}">Matches</a></li>
           {{/if}}
         </ul>
         {{#if currentUser}}
@@ -31,9 +32,7 @@
   <div class="container">
     <div class="starter-template">
         <h1>Please fill out your Personal information.</h1>
-        {{#if currentUser}}
-          {{> user}}
-        {{/if}}
+        
         {{#if currentUser.emails.[0].verified}}
           <p>Test</p>
         {{else}}
@@ -53,8 +52,10 @@
     </div>
   </div>
 
-  <p><a class="btn btn-primary btn-sm" href="{{pathFor route='tSurvey'}}" role="button">Talent Survey&raquo;</a></p>
-
+  <div>
+    <br>
+    <p><a class="btn btn-primary btn-lg" href="{{pathFor route='tSurvey'}}" role="button">Talent Survey&raquo;</a></p>
+  </div>
   {{else}}
     {{> infoForbidden}}
   {{/if}}
@@ -117,7 +118,7 @@
   {{#autoForm schema='UserCreds' id='credsForm'}}
     <fieldset>
       <legend>
-      Credentials and certificates - List any credentials or certificates
+      Credentials and certificates - List up to 5 credentials or certificates
       </legend>
       {{> afQuickField name='creds'}}
       <br>

@@ -104,3 +104,10 @@ Template.rateEmployer.helpers({
     return Session.get('Survey');
   }
 });
+
+Template.rateDashboard.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
+
+});

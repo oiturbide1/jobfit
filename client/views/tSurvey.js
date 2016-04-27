@@ -22,10 +22,7 @@ Template.talentviewsurvey.events({
       var poor = AutoForm.getFieldValue('poorperfs_self','talentsurvey');
 			var check = AutoForm.getFieldValue('careless_self','talentsurvey');
 
-
-
       var user = Meteor.userId;
-
 
 
       survey =
@@ -75,7 +72,9 @@ Template.talentviewsurvey.events({
 			      });
 
 					}
-					else{
+					else
+          {
+            Session.set('allow_survey', false);
 						Bert.alert('too soon');
 					}
 				}
@@ -103,5 +102,11 @@ Template.tSurveyDashboard.events({
 Template.tSurveyDashboard.helpers({
   email: function() {
     return Meteor.user().emails[0].address;
+  }
+});
+
+Template.tSurvey.helpers({
+  allowSurvey: function(){
+    return Session.get('allow_survey');
   }
 });

@@ -1,5 +1,5 @@
 <template name = 'tSurvey'>
-  {{#if currentUser}}
+{{#if currentUser}}
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -19,6 +19,7 @@
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
             <li><a href="{{pathFor route='information'}}">Information</a></li>
+            <li><a href="{{pathFor route='#'}}">Matches</a></li>
           {{/if}}
         </ul>
         {{#if currentUser}}
@@ -28,26 +29,38 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="starter-template">
-        <h1>Job Views</h1>
+  {{#if allowSurvey}}
 
-        <p id = 'question'>
-          When you think about life at work, how important are these things to you?
-        </p>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">      
 
-        <p>Please fill out survey with 1 being  <strong>Not Important at all</strong> to 5 being <strong>Absolutely Essential.</strong> </p>
-        <br>
-        <br>
-        <br>
+          <div class="cover-container">
+           
+              <h1>Job Views</h1>
 
-        {{> talentviewsurvey}}
-    </div>
+              <p class = 'lead'>
+                When you think about life at work, how important are these things to you?
+              </p>
+
+              <p>Please fill out survey with 1 being  <strong>Not Important at all</strong> to 5 being <strong>Absolutely Essential.</strong> </p>
+              <br>
+              <br>
+              <br>
+
+              {{> talentviewsurvey}}
+
+          </div>
+
+      </div>
   </div>
-
   {{else}}
-		{{> tSurveyForbidden}}
-	{{/if}}
+    <p>Survey completed already. You need to wait until</p>
+  {{/if}}
+
+
+{{else}}
+	{{> tSurveyForbidden}}
+{{/if}}
 
 
 </template>
@@ -55,7 +68,9 @@
 
 
 <template name = 'talentviewsurvey'>
+  <div id = 'gray-container-form'>
   {{#autoForm schema='PersonalSurveySchema' id='talentsurvey'}}
+  
   <fieldset>
     {{> afQuickField name='worklife_self' }}
       <br>
@@ -113,6 +128,7 @@
       <input type = "submit" class = 'btn btn-primary btn-lg' value = "Employer Info&raquo;">
     </fieldset>
   {{/autoForm}}
+</div>
 
 </template>
 
