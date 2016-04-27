@@ -31,8 +31,11 @@
 
   <div id = 'profile-container'>
 	<h1>{{email}}'s Profile</h1>
+	 <img src="img/ShakingHands2.jpg" class="center-block img-thumbnail" alt="Profile Pic" width=10% height=10%>
 
 	<p><a class="btn btn-primary btn-lg" href="{{pathFor route='changePassword'}}" role="button">Change Password</a></p>
+	<p>Joined on </p>
+	<p>Date of last personal survey: {{date}}</p>
   </div>
 	{{else}}
 		<p>Sorry not logged in. Access Forbidden.</p>
