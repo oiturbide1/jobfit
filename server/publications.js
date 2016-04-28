@@ -41,8 +41,11 @@ Meteor.publish('users', function()
 Meteor.publish('personal_surveys', function()
 {
     var currentUserId = this.userId;
+		var user = Meteor.users.findOne(currentUserId);
+		var p = user.profile.personal_survey[0];
+
     if(currentUserId){
-      return PersonalSurvey.find();
+      return PersonalSurvey.findOne(p);
   	}
 
 });

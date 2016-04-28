@@ -29,13 +29,26 @@
     </div>
   </nav>
 
-  {{#if allowSurvey}}
+  {{> survey_block}}
 
+
+
+
+{{else}}
+	{{> tSurveyForbidden}}
+{{/if}}
+
+
+</template>
+
+
+<template name = 'survey_block'>
   <div id = 'gray-container'>
-    <div class="site-wrapper">      
+    {{#if allowSurvey}}
+    <div class="site-wrapper">
 
           <div class="cover-container">
-           
+
               <h1>Job Views</h1>
 
               <p class = 'lead'>
@@ -52,17 +65,23 @@
           </div>
 
       </div>
+      {{else}}
+      <div class="site-wrapper">
+
+            <div class="cover-container">
+
+                <h1>Survey completed already</h1>
+
+                <p class = 'lead'>
+                  When you think about life at work, how important are these things to you?
+                </p>
+
+            </div>
+
+        </div>
+
+      {{/if}}
   </div>
-  {{else}}
-    <p>Survey completed already. You need to wait until</p>
-  {{/if}}
-
-
-{{else}}
-	{{> tSurveyForbidden}}
-{{/if}}
-
-
 </template>
 
 
@@ -70,7 +89,7 @@
 <template name = 'talentviewsurvey'>
   <div id = 'gray-container-form'>
   {{#autoForm schema='PersonalSurveySchema' id='talentsurvey'}}
-  
+
   <fieldset>
     {{> afQuickField name='worklife_self' }}
       <br>

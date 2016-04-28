@@ -19,7 +19,7 @@ Meteor.methods(
   'addUserRole'(userid, role)
   {
     Roles.addUsersToRoles(userid,role);
-    
+
 
   },
 
