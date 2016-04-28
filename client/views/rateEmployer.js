@@ -72,7 +72,8 @@ Template.employerRatings.events({
             }
             else
             {
-              Bert.alert('too soon');
+              Session.set('allow_emp_survey', false);
+              //Bert.alert('too soon');
             }
           }
         });
@@ -110,4 +111,10 @@ Template.rateDashboard.helpers({
     return Meteor.user().emails[0].address;
   }
 
+});
+
+Template.rateEmployer.helpers({
+  allowSurvey: function(){
+    return Session.get('allow_emp_survey');
+  }
 });

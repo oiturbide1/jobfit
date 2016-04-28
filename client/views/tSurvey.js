@@ -75,7 +75,7 @@ Template.talentviewsurvey.events({
 					else
           {
             Session.set('allow_survey', false);
-						Bert.alert('too soon');
+						//Bert.alert('too soon');
 					}
 				}
 			});

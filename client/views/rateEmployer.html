@@ -1,5 +1,4 @@
 <template name = 'rateEmployer'>
-  {{#if surveyCheck}}
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -30,30 +29,60 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="starter-template">
-        <h1>Rate Employer</h1>
-
-        <h2>
-          How important are these things to your employer?
-        </h2>
-        {{> employerRatings}}
-        <br>
-        {{#if currentUser}}
-          <p><a class="btn btn-primary btn-lg" href="#" role="button" id ='matchButton'>View Matches &raquo;</a></p>
-          {{#if isInRole 'talent'}}
-            <p><a class="btn btn-primary btn-lg" href="{{pathFor route='Emp'}}" role="button">Add another employer &raquo;</a></p>
-
-          {{/if}}
-        {{/if}}
-    </div>
-  </div>
-  {{else}}
-  <p>Need to enter company innfo first</p>
-  {{/if}}
+  {{> eSurvey_block}}
+  
 
 </template>
 
+
+<template name = 'eSurvey_block'>
+  <div id ="gray-container">
+    {{#if allowSurvey}}
+    <div class="site-wrapper">
+
+          <div class="cover-container">
+
+              <h1>Rate Employer</h1>
+
+              <h2>
+                How important are these things to your employer?
+              </h2>
+
+              {{> employerRatings}}
+              <br>
+              {{#if currentUser}}
+                <p><a class="btn btn-primary btn-lg" href="#" role="button" id ='matchButton'>View Matches &raquo;</a></p>
+                {{#if isInRole 'talent'}}
+                  <p><a class="btn btn-primary btn-lg" href="{{pathFor route='Emp'}}" role="button">Add another employer &raquo;</a></p>
+
+              {{/if}}
+            {{/if}}
+
+
+          </div>
+
+      </div>
+      {{else}}
+      <div class="site-wrapper">
+
+            <div class="cover-container">
+
+                <h1>Survey completed already</h1>
+
+                <p class = 'lead'>
+                  You will able to edit 
+                </p>
+
+            </div>
+
+        </div>
+
+      {{/if}}
+
+
+  </div>
+
+</template>
 
 
 <template name = 'employerRatings'>
