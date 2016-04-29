@@ -45,7 +45,6 @@
 
 <template name = 'survey_block'>
   <div id = 'gray-container'>
-    {{#if allowSurvey}}
     <div class="site-wrapper">
 
           <div class="cover-container">
@@ -66,22 +65,7 @@
           </div>
 
       </div>
-      {{else}}
-      <div class="site-wrapper">
 
-            <div class="cover-container">
-
-                <h1>Survey completed already</h1>
-
-                <p class = 'lead'>
-                  You will able to edit 
-                </p>
-
-            </div>
-
-        </div>
-
-      {{/if}}
   </div>
 </template>
 

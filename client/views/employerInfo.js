@@ -421,18 +421,18 @@ Template.reasons_left.events({
 
       var sur = Session.get('Survey');
 
-      
+
       if (yes)
         Meteor.call('add_reasons_left', sur, choice, yes);
 
       if(no)
         Meteor.call('add_reasons_left', sur, choice, no);
-    
+
 
       // Clear form
 
 
-      //Router.go('/rateEmployer');
+      Router.go('/rateEmployer');
 
 
     }

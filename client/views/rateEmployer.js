@@ -62,7 +62,7 @@ Template.employerRatings.events({
             {
               //allow
               Meteor.call('update_Emp_Survey', currentSurvey, survey);
-              
+
               if(user)
               {
                 Meteor.call('update_userSurvey', currentSurvey, 'employer');
@@ -73,7 +73,7 @@ Template.employerRatings.events({
             else
             {
               Session.set('allow_emp_survey', false);
-              //Bert.alert('too soon');
+              Bert.alert('too soon');
             }
           }
         });
