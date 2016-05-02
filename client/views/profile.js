@@ -8,6 +8,16 @@ Template.profileMain.helpers({
 
     return user_date;
   },
+
+  employers: function(){
+    var user_eSurveys = Meteor.user().profile.employer_survey;
+    for (survey in user_eSurveys)
+    {
+      return EmployerSurvey.find(survey).fetch().company;
+    }
+
+
+  }
 });
 
 
@@ -26,12 +36,14 @@ Template.profileDashboard.helpers({
 
 });
 
-Template.profile.events({
+Template.profileMain.events({
     'click #test': function () {
 
-      var user = Meteor.user().profile.timeStamp;
-      //var p = user;
-      //var s = PersonalSurvey.find(user).fetch()[0].timeStamp;
-      console.log(user);
+      var user_eSurveys = Meteor.user().profile.employer_survey;
+      for (survey in user_eSurveys)
+      {
+        console.log(survey);
+      }
+      console.log(user_eSurveys);
     }
   });

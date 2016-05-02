@@ -51,6 +51,16 @@ Template.employerRatings.events({
             perf
           ];
 
+
+          Meteor.call('update_Emp_Survey', currentSurvey, survey);
+
+              if(user)
+              {
+                Meteor.call('update_userSurvey', currentSurvey, 'employer');
+                Bert.alert('Ratings added','success');
+              }
+
+          /*   
           Meteor.call('checkSurveyDate', 'employer', function(err, editable){
           if (err)
           {
@@ -77,6 +87,7 @@ Template.employerRatings.events({
             }
           }
         });
+        */
 
 
 
