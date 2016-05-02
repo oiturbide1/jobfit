@@ -1,5 +1,18 @@
 <template name = 'tSurvey'>
 {{#if currentUser}}
+  {{> tSurveyNav}}
+
+  {{> tSurveyMain}}
+
+{{else}}
+	{{> tSurveyForbidden}}
+{{/if}}
+
+
+</template>
+
+
+<template name = 'tSurveyNav'>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -20,7 +33,7 @@
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
             <li><a href="{{pathFor route='information'}}">Information</a></li>
             <li><a href="{{pathFor route='rateEmployer'}}">Rate Employer</a></li>
-            <li><a href="{{pathFor route='#'}}">Matches</a></li>
+            <li><a href="#">Matches</a></li>
           {{/if}}
         </ul>
         {{#if currentUser}}
@@ -30,20 +43,10 @@
     </div>
   </nav>
 
-  {{> survey_block}}
-
-
-
-
-{{else}}
-	{{> tSurveyForbidden}}
-{{/if}}
-
-
 </template>
 
 
-<template name = 'survey_block'>
+<template name = 'tSurveyMain'>
   <div id = 'gray-container'>
     <div class="site-wrapper">
 

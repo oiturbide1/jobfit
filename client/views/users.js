@@ -30,7 +30,7 @@ Template.talentRegistration.onRendered(function(){
                     var usertype = $('input[name=userType]:checked').val();
 
 
-            
+
                     Accounts.createUser({
                         email: email,
                         password: password
@@ -55,15 +55,14 @@ Template.talentRegistration.onRendered(function(){
                             }
                           });
 
-                            
-                            
+
+
                             var userId = Meteor.userId();
                             Meteor.call('addUserRole', userId, usertype)
 
-                            if (usertype == 'Talent')
-                              Router.go("/information");
-                            else
-                              Router.go("/Emp");
+
+                            Router.go("/overview");
+
                         }
 
                       });
@@ -231,14 +230,7 @@ Template.login.onRendered(function(){
               }
               else
               {
-                if(Roles.userIsInRole(Meteor.userId(), 'talent'))
-                {
-                  Router.go("/information");
-                }
-                else
-                {
-                  Router.go("/Emp");
-                }
+                Router.go("/profile");
 
               }
 
@@ -263,7 +255,7 @@ Template.mainDashboard.events({
     'click .logout': function(event){
         event.preventDefault();
         Meteor.logout();
-        
+
     }
 });
 

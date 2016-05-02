@@ -1,4 +1,12 @@
 <template name = 'about'>
+  {{> aboutNav}}
+
+  {{> aboutMain}}
+
+</template>
+
+<!--/.Nav bar -->
+<template name = 'aboutNav'>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -29,15 +37,16 @@
     </div>
   </nav>
 
+</template>
 
+<!--/.Main box-->
+<template name = 'aboutMain'>
   <div id = 'gray-container'>
     <div class="site-wrapper">
 
         <div class="site-wrapper-inner">
 
           <div class="cover-container">
-
-
 
             <div class="inner cover">
               <h1 class="cover-heading">About Employer Match</h1>
@@ -46,15 +55,12 @@
               </p>
             </div>
 
-
-
           </div>
 
         </div>
 
       </div>
   </div>
-
 </template>
 
 
@@ -63,6 +69,5 @@
       <p class = 'logged_in_name'>Logged in as {{email}}</p>
       <button type="submit" class="btn btn-info logout">Logout</button>
     </div>
-
 
 </template>

@@ -1,16 +1,18 @@
-<template name = 'profile'>
+<template name = 'overview'>
 	{{#if currentUser}}
-		{{> profileNav}}
-		{{> profileMain}}
+		{{> overNav}}
+
+		{{> overMain}}
 
 	{{else}}
-		{{> profileForbidden}}
+		{{> overForbidden}}
 	{{/if}}
 
 </template>
 
 
-<template name = 'profileNav'>
+
+<template name = 'overNav'>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -36,7 +38,7 @@
           {{/if}}
         </ul>
 				{{#if currentUser}}
-          {{> profileDashboard}}
+          {{> overDashboard}}
         {{/if}}
       </div><!--/.nav-collapse -->
     </div>
@@ -45,20 +47,25 @@
 </template>
 
 
-<template name = 'profileMain'>
+<!--/.Main box  -->
+<template name = 'overMain'>
 	<div id = 'gray-container'>
 		<div class="site-wrapper">
 
 					<div class="cover-container">
 
-							<h1>{{email}}'s Profile</h1>
-							<img src="img/ShakingHands2.jpg" class="center-block img-thumbnail" alt="Profile Pic" width=20% height=20%>
+							<h1>Overview</h1>
 
-							<p class = 'lead'>Joined on {{join_date}}</p>
-							<p class = 'lead'>Employers rated</p>
-							<p class = 'lead'>Date of last personal survey: </p>
 
-							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='changePassword'}}" role="button">Change Password</a></p>
+							<p class = 'lead'>Are you ready to get started?</p>
+							<p class = 'lead'>Complete at your own pace</p>
+
+							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='information'}}" role="button">Enter your information</a></p>
+							{{#if talent}}
+								<p><a class="btn btn-primary btn-lg" href="{{pathFor route='tSurvey'}}" role="button">Complete the personal survey</a></p>
+							{{/if}}
+							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='Emp'}}" role="button">Complete the employer survey</a></p>
+							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='match'}}" role="button">Find your matches!</a></p>
 
 					</div>
 
@@ -67,8 +74,7 @@
 
 </template>
 
-
-<template name="profileDashboard">
+<template name="overDashboard">
     <div class="row navbar-right">
       <p class = 'logged_in_name'>Logged in as {{email}}</p>
       <button type="submit" class="btn btn-info logout">Logout</button>
@@ -77,7 +83,7 @@
 
 </template>
 
-<template name="profileForbidden">
+<template name="overForbidden">
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
