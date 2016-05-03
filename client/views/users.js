@@ -283,6 +283,10 @@ Meteor.call('get_companies_rated', function(error,result){
   Session.set('rated_companies', result);
 });
 
+Meteor.call('get_date_rated', function(error,dates){
+  Session.set('rating_dates', dates);
+});
+
 /*
 // first, remove configuration entry in case service is already configured
 Accounts.loginServiceConfiguration.remove({

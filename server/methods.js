@@ -257,41 +257,89 @@ Meteor.methods(
       //good to edit
     }
 		return false;
- },
+  },
+
+  'get_employer_surveys'()
+  {
+    var surveys = [];
+    var user_eSurveys = Meteor.user().profile.employer_survey;
+    for (number in user_eSurveys)
+    {
+      var survey = user_eSurveys[number];
+      if (survey == null)
+      {
+          survey = '';
+      }
+
+      surveys.push(survey);
+    }
+
+    return surveys;
+
+  },
+
+  'get_personal_surveys'()
+  {
+    var surveys = [];
+    var user_pSurveys = Meteor.user().profile.personal_survey;
+    for (number in user_pSurveys)
+    {
+      var survey = user_pSurveys[number];
+      if (survey == null)
+      {
+          survey = '';
+      }
+
+      surveys.push(survey);
+    }
+
+    return surveys;
+  },
+
+  'get_date_rated'()
+  {
+    var dates = [];
+    var surveys = Meteor.call('get_employer_surveys');
+    for (num in surveys)
+     {
+       var id = surveys[num];
+       if (id != '')
+        dates.push(EmployerSurvey.findOne(id).timeStamp);
+
+     }
+
+     return dates;
+
+  },
  'get_companies_rated'()
- {
-   var surveys = [];
-   var companies = [];
-   var user_eSurveys = Meteor.user().profile.employer_survey;
-   for (number in user_eSurveys)
-   {
-     var survey = user_eSurveys[number];
-     surveys.push(survey);
-   }
+  {
+ 
+     var companies = [];
+     var surveys = Meteor.call('get_employer_surveys');
+     
+     for (num in surveys)
+     {
+       var id = surveys[num];
+       if (id != '')
+        companies.push(EmployerSurvey.findOne(id).company);
 
-   for (num in surveys)
-   {
-     var id = surveys[num];
-     companies.push(EmployerSurvey.findOne(id).company);
+     }
 
-   }
-
-   return companies;
- },
+     return companies;
+  },
 
  'check_if_company_rated'(name_check)
- {
-   var rated = Meteor.call('get_companies_rated');
-   if (rated.indexOf(name_check))
-   {
-     return true;
-   }
-   else{
-    return false;
-   }
+  {
+     var rated = Meteor.call('get_companies_rated');
+     if (rated.indexOf(name_check))
+     {
+       return true;
+     }
+     else{
+      return false;
+     }
 
-
- }
+  }
 
  /*
  'isAdmin'()

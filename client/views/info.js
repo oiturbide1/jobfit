@@ -24,6 +24,23 @@ Template.information.events({
     });
   }
 
+  /*
+  //closes the sidebar menu
+  'click .menu-close'(event) 
+  {
+    event.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+  },
+
+  // Opens the sidebar menu
+  "click #menu-toggle"(e) 
+  {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+  }
+  */
+
+
 });
 
 
@@ -65,8 +82,9 @@ Template.pi.events({
       event.preventDefault();
 
       // Get value from form element
-      var gender = event.target.gender.value;
-      var zipCode= event.target.zip.value;
+      var zipCode = $('[name=zip]').val();
+      var gender = $('[name=gender]').val();
+     
       var currentUserId = Meteor.userId;
       var user = Meteor.users.findOne(Meteor.userId);
 

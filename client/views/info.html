@@ -1,6 +1,28 @@
 <template name = 'information'>
+  <!-- Custom Theme JavaScript -->
+    <script>
+    
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
   {{#if currentUser}}
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top" data-target = '#first'>
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,10 +40,10 @@
           <li><a href="{{pathFor route='contact'}}">Contact</a></li>
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
-            <li class="active"><a href="{{pathFor route='information'}}">Information</a></li>
+            <li class="active"><a href="{{pathFor route='information'}}">About You</a></li>
             <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
             <li><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
-            <li><a href="{{pathFor route='#'}}">Matches</a></li>
+            <li><a href="#">Matches</a></li>
           {{/if}}
         </ul>
         {{#if currentUser}}
@@ -31,33 +53,14 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="starter-template">
-        <h1>Please fill out your Personal information.</h1>
-        
-        {{#if currentUser.emails.[0].verified}}
-          <p>Test</p>
-        {{else}}
-          <p class="alert alert-warning">You need to verify your email address before using EmployerMatch. <a href="#" class="resend-verification-link">Resend verification link</a>.</p>
-        {{/if}}
-        <br>
-        <br>
-        {{> pi}}
-        <br>
-        {{> educ}}
-        <br>
-        {{> skills}}
-        <br>
-        {{> creds}}
-        <br>
-        {{> occupationInfo}}
-    </div>
+  <div id = 'container'>
+    
+          {{> pi}}
+            
+
+       
   </div>
 
-  <div>
-    <br>
-    <p><a class="btn btn-primary btn-lg" href="{{pathFor route='tSurvey'}}" role="button">Talent Survey&raquo;</a></p>
-  </div>
   {{else}}
     {{> infoForbidden}}
   {{/if}}
@@ -73,12 +76,26 @@
 
 <template name = 'pi'>
   {{#autoForm schema='PersonalInfo' id='personalInFoForm'}}
-    <fieldset>
-      {{> afQuickField name='zip' }}
-      <br>
-      {{> afQuickField name='gender' }}
-      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter information">
-    </fieldset>
+   
+          <h1>
+            Basic Information
+          </h1>
+          <form class = 'form-inline'>
+            <div class = 'form-group'>
+              
+              {{> afQuickField name='zip' placeholder ='Your Zip Code'}}
+            </div>
+          </form>
+          <form class = 'form-inline'>
+            <div class = 'form-group clearfix'>
+            {{> afQuickField name='gender' }}
+            
+            </div>
+          </form>
+          <input type = "submit" class = 'btn btn-primary btn-lg info-submit pull-right' value = "Next">
+       
+
+            
   {{/autoForm}}
 </template>
 

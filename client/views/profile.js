@@ -11,8 +11,33 @@ Template.profileMain.helpers({
 
   employers: function(){
     return Session.get('rated_companies');
+  },
 
+  date_rated: function(){
+    return Session.get('rating_dates');
+  },
 
+  emp_rate_check: function()
+  {
+    Meteor.call('get_employer_surveys', function(err,result){
+        if (result.length >0)
+          return true;
+        else
+          return false;
+      });
+  },
+
+  per_rate_check: function()
+  {
+    var check = null;
+    Meteor.call('get_personal_surveys', function(err,result){
+        if (result.length >0)
+          check = true;
+        else
+          check = false;
+      });
+
+    return check;
   }
 });
 
@@ -35,7 +60,13 @@ Template.profileDashboard.helpers({
 Template.profileMain.events({
     'click #test': function () {
 
-      Meteor.call('check_if_company_rated','snickers');
+      Meteor.call('get_personal_surveys', function(err,result){
+        if (result.length >0)
+          console.log(result.length);
+        else
+          console.log('nothing');
+      });
+      
 
     }
   });

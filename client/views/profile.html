@@ -30,7 +30,7 @@
           <li><a href="{{pathFor route='contact'}}">Contact</a></li>
 					{{#if currentUser}}
             <li class="active"><a href="{{pathFor route='profile'}}">Profile</a></li>
-            <li><a href="{{pathFor route='information'}}">Information</a></li>
+            <li><a href="{{pathFor route='information'}}">About You</a></li>
             <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
             <li><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
             <li><a href="#">Matches</a></li>
@@ -56,14 +56,27 @@
 							<img src="img/ShakingHands2.jpg" class="center-block img-thumbnail" alt="Profile Pic" width=20% height=20%>
 
 							<p class = 'lead'>Joined on {{join_date}}</p>
-							<p class = 'lead'>Employers rated  </p>
-							<ul>
-								{{#each employers}}
-									{{this}}<br>
-								{{/each}}
-							</ul>
 
-							<p class = 'lead'>Date of last personal survey: </p>
+
+              {{#if emp_rate_check}}
+                <p class = 'lead'>Complete the employer survey in order to unlock the matching tool! </p>
+              {{else}}
+                <p class = 'lead'>Employers rated  </p>
+                <ul>
+                  {{#each employers}}
+                    {{this}}<br>
+                  {{/each}}
+                </ul>
+                <p>Rated {{date_rated}}</p>
+              {{/if}}
+							
+              {{#if per_rate_check}}
+                <p class = 'lead'>Date of last personal survey: </p>
+              {{else}}
+                <p class = 'lead'>Complete your personal survey in order to unlock the matching tool! </p>
+							  
+              {{/if}}
+              
 
 							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='changePassword'}}" role="button">Change Password</a></p>
               <p><a class="btn btn-primary btn-lg" href="#" id = 'test' role="button">test</a></p>
