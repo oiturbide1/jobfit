@@ -12,6 +12,16 @@ Template.employerInfo.events({
     var current = event.target.curr_or_form.value;
     var userType;
 
+    /*
+    Meteor.call('check_if_company_rated',company, function(error,res){
+      if(res)
+      {
+        Bert.alert('Sorry, already rated this company');
+      }
+    });
+    */
+
+
     comp =
     {
       'companyName': company,
@@ -65,7 +75,7 @@ Template.employerInfo.events({
         var current_former = 1;
         Session.set('current_or_former', current_former);
 
-        Meteor.call('insert_survey', compcheck._id, remote, current_former, userType, function(error, insertedSurvey)
+        Meteor.call('insert_survey', company, remote, current_former, userType, function(error, insertedSurvey)
         {
           if (error)
           {
@@ -86,7 +96,7 @@ Template.employerInfo.events({
         var current_former = 0;
         Session.set('current_or_former', current_former);
 
-        Meteor.call('insert_survey', compcheck._id, remote, current_former, userType, function(error, insertedSurvey)
+        Meteor.call('insert_survey', company, remote, current_former, userType, function(error, insertedSurvey)
         {
           if (error)
           {
@@ -127,7 +137,7 @@ Template.employerInfo.events({
               var current_former = 1;
               Session.set('current_or_former', current_former);
 
-              Meteor.call('insert_survey', insertedCompany, remote, current_former, userType, function(error, insertedSurvey)
+              Meteor.call('insert_survey', company, remote, current_former, userType, function(error, insertedSurvey)
               {
                 if (error)
                 {
@@ -149,7 +159,7 @@ Template.employerInfo.events({
               var current_former = 0;
               Session.set('current_or_former', current_former);
 
-              Meteor.call('insert_survey', insertedCompany, remote, current_former, userType, function(error, insertedSurvey)
+              Meteor.call('insert_survey', company, remote, current_former, userType, function(error, insertedSurvey)
               {
                 if (error)
                 {

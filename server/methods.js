@@ -257,6 +257,40 @@ Meteor.methods(
       //good to edit
     }
 		return false;
+ },
+ 'get_companies_rated'()
+ {
+   var surveys = [];
+   var companies = [];
+   var user_eSurveys = Meteor.user().profile.employer_survey;
+   for (number in user_eSurveys)
+   {
+     var survey = user_eSurveys[number];
+     surveys.push(survey);
+   }
+
+   for (num in surveys)
+   {
+     var id = surveys[num];
+     companies.push(EmployerSurvey.findOne(id).company);
+
+   }
+
+   return companies;
+ },
+
+ 'check_if_company_rated'(name_check)
+ {
+   var rated = Meteor.call('get_companies_rated');
+   if (rated.indexOf(name_check))
+   {
+     return true;
+   }
+   else{
+    return false;
+   }
+
+
  }
 
  /*

@@ -10,11 +10,7 @@ Template.profileMain.helpers({
   },
 
   employers: function(){
-    var user_eSurveys = Meteor.user().profile.employer_survey;
-    for (survey in user_eSurveys)
-    {
-      return EmployerSurvey.find(survey).fetch().company;
-    }
+    return Session.get('rated_companies');
 
 
   }
@@ -39,11 +35,7 @@ Template.profileDashboard.helpers({
 Template.profileMain.events({
     'click #test': function () {
 
-      var user_eSurveys = Meteor.user().profile.employer_survey;
-      for (survey in user_eSurveys)
-      {
-        console.log(survey);
-      }
-      console.log(user_eSurveys);
+      Meteor.call('check_if_company_rated','snickers');
+
     }
   });

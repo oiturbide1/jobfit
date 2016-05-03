@@ -43,6 +43,8 @@ Template.talentRegistration.onRendered(function(){
                         }
                         else
                         {
+                          Bert.alert('Welcome ' + email,'success');
+                          /*
                           Meteor.call( 'sendVerificationLink', ( err, response ) =>
                           {
                             if (err)
@@ -54,8 +56,7 @@ Template.talentRegistration.onRendered(function(){
                               Bert.alert('Welcome ' + email,'success');
                             }
                           });
-
-
+                          */
 
                             var userId = Meteor.userId();
                             Meteor.call('addUserRole', userId, usertype)
@@ -276,6 +277,11 @@ Template.email.events({
   });
   Template.email.done = function () { return Session.equals('done', true); }
 
+
+//get companies user rated and set session variable
+Meteor.call('get_companies_rated', function(error,result){
+  Session.set('rated_companies', result);
+});
 
 /*
 // first, remove configuration entry in case service is already configured

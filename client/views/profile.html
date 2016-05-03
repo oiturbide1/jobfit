@@ -56,7 +56,13 @@
 							<img src="img/ShakingHands2.jpg" class="center-block img-thumbnail" alt="Profile Pic" width=20% height=20%>
 
 							<p class = 'lead'>Joined on {{join_date}}</p>
-							<p class = 'lead'>Employers rated  {{employers}}</p>
+							<p class = 'lead'>Employers rated  </p>
+							<ul>
+								{{#each employers}}
+									{{this}}<br>
+								{{/each}}
+							</ul>
+
 							<p class = 'lead'>Date of last personal survey: </p>
 
 							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='changePassword'}}" role="button">Change Password</a></p>
