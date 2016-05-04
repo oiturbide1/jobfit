@@ -44,18 +44,26 @@ Meteor.publish('personal_surveys', function()
 		//var user = Meteor.users.findOne(currentUserId);
 		//var p = user.profile.personal_survey[0];
 
-    if(currentUserId){
-      return PersonalSurvey.find();
-  	}
+		return PersonalSurvey.find({'_id':'Qe4Fa9kKAPhKNAykC'});
+
+
+
+    //if(currentUserId){
+      //return PersonalSurvey.find();
+  	//}
 
 });
 
 Meteor.publish('employer_surveys', function()
 {
     var currentUserId = this.userId;
-    if(currentUserId){
-      return EmployerSurvey.find();
-  	}
+
+
+		return EmployerSurvey.find();
+
+    //if(currentUserId){
+      //return EmployerSurvey.find();
+  	//}
 
 });
 

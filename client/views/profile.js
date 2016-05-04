@@ -60,13 +60,19 @@ Template.profileDashboard.helpers({
 Template.profileMain.events({
     'click #test': function () {
 
-      Meteor.call('get_personal_surveys', function(err,result){
+      Meteor.call('get_employer_surveys', function(err,result){
         if (result.length >0)
-          console.log(result.length);
+        {
+          console.log(result);
+          for (x in result){
+            var test = EmployerSurvey.find({'_id': result[x]}).fetch();
+          console.log(test);
+        }
+        }
         else
           console.log('nothing');
       });
-      
+
 
     }
   });
