@@ -75,23 +75,23 @@
 </template>
 
 <template name = 'pi'>
-  {{#autoForm schema='PersonalInfo' id='personalInFoForm'}}
+  {{#autoForm schema='PersonalInfo' id='personalInFoForm' class = 'form-horizontal'}}
    
           <h1>
             Basic Information
           </h1>
-          <form class = 'form-inline'>
+        
             <div class = 'form-group'>
               
               {{> afQuickField name='zip' placeholder ='Your Zip Code'}}
             </div>
-          </form>
-          <form class = 'form-inline'>
+       
+         
             <div class = 'form-group clearfix'>
             {{> afQuickField name='gender' }}
             
             </div>
-          </form>
+      
           <input type = "submit" class = 'btn btn-primary btn-lg info-submit pull-right' value = "Next">
        
 

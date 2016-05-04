@@ -1,12 +1,12 @@
-<template name = 'rateEmployer'>
-  {{> eSurveyNav}}
+<template name = 'rateEmployer3'>
+  {{> eSurveyNav3}}
 
-  {{> eSurveyMain}}
+  {{> eSurveyMain3}}
 
 
 </template>
 
-<template name = 'eSurveyNav'>
+<template name = 'eSurveyNav3'>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -32,7 +32,7 @@
           {{/if}}
         </ul>
         {{#if currentUser}}
-          {{> rateDashboard}}
+          {{> rateDashboard3}}
         {{/if}}
       </div><!--/.nav-collapse -->
     </div>
@@ -40,7 +40,7 @@
 
 </template>
 
-<template name = 'eSurveyMain'>
+<template name = 'eSurveyMain3'>
   <div id ="gray-container">
 
     <div class="site-wrapper">
@@ -50,14 +50,11 @@
               <h1>Employer Work Values</h1>
 
              
-              {{> empFirst}}
-        
+              {{> empThird}}
 
 
           </div>
-
       </div>
-
 
   </div>
 
@@ -65,39 +62,32 @@
 
 
 
-<template name = 'empFirst'>
-  {{#autoForm collection='EmployerSurvey' id='ESurveyForm1'}}
+<template name = 'empThird'>
+  {{#autoForm collection='EmployerSurvey' id='ESurveyForm3'}}
   <fieldset>
 
+      {{> afQuickField name='careless'}}
       <br>
       <br>
-      {{> afQuickField name='work_life_balance'}}
+      {{> afQuickField name='mission'}}
       <br>
       <br>
-      {{> afQuickField name='job_security'}}
+      {{> afQuickField name='workspace'}}
       <br>
       <br>
-      {{> afQuickField name='development_opportunities'}}
+      {{> afQuickField name='poor_perfs'}}
       <br>
       <br>
-      {{> afQuickField name='workload'}}
+      {{> afQuickField name='flex'}}
       <br>
       <br>
-      {{> afQuickField name='career_path'}}
-      <br>
-      <br>
-  </fieldset>
-  <input type = "submit" class = 'btn btn-primary btn-lg pull-right' value = "Next">
-  {{/autoForm}}
-
-
+    </fieldset>
+    <input type = "submit" class = 'btn btn-primary btn-lg pull-right' value = "Next">
+    {{/autoForm}}
 
 </template>
 
-
-
-
-<template name="rateDashboard">
+<template name="rateDashboard3">
     <div class="row navbar-right">
       <p class = 'logged_in_name'>Logged in as {{email}}</p>
       <button type="submit" class="btn btn-info logout">Logout</button>

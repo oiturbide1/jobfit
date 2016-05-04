@@ -148,30 +148,45 @@ CompanySchema = new SimpleSchema({
   companyName:
   {
    type: String,
-   label: "Company Name"
+   autoform:
+   {
+    label: false
+    }
   },
+
   remote:
   {
-    type: Boolean,
-    label: 'Work Remotely?',
+    type: String,
+    label: 'Do you work remotely?',
     optional: true,
     autoform:
     {
-      type: 'boolean-radios',
-      trueLabel: 'Yes',
-      falseLabel: 'No',
-      value: false
+      type: "select-radio",
+      options: function () 
+      {
+        return [
+          {label: "Yes", value: 'yes'},
+          {label: "No", value: 'no'},
+          {label: "Sometimes", value: 'sometime'}
+        ];
+      }
     }
   },
  address:
  {
    type: String,
-   label: "Street Address"
+   autoform:
+   {
+    label: false
+    }
  },
  city:
  {
    type: String,
-   label: "City"
+   autoform:
+   {
+    label: false
+    }
  },
  state:
  {
@@ -182,9 +197,9 @@ CompanySchema = new SimpleSchema({
    'MT','NE','NV','NH','NJ','NM','NY','NC', 'ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WY','DC',
    'AS','GU','MP','PR','UM','VI'
    ],
-   label: "State",
    autoform:
    {
+    label: false,
     options:
     [
     {
@@ -368,7 +383,7 @@ CompanySchema = new SimpleSchema({
       value: 'VA'
     },
     {
-      label: 'WZ',
+      label: 'WA',
       value: 'WA'
     },
     {
@@ -416,7 +431,10 @@ CompanySchema = new SimpleSchema({
  zip:
  {
    type: Number,
-   label: "Zip Code"
+   autoform:
+   {
+    label: false
+    }
  },
  curr_or_form:
   {
@@ -431,7 +449,7 @@ CompanySchema = new SimpleSchema({
       value: true
     }
   },
- created:
+ timeStamp:
  {
    type: Date,
    autoValue: function() {

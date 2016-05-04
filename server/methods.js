@@ -263,15 +263,20 @@ Meteor.methods(
   {
     var surveys = [];
     var user_eSurveys = Meteor.user().profile.employer_survey;
-    for (number in user_eSurveys)
+    if (user_eSurveys == null)
+      console.log('null');
+    else
     {
-      var survey = user_eSurveys[number];
-      if (survey == null)
+      for (number in user_eSurveys)
       {
-          survey = '';
-      }
+        var survey = user_eSurveys[number];
+        if (survey == null)
+        {
+            survey = '';
+        }
 
-      surveys.push(survey);
+        surveys.push(survey);
+      }
     }
 
     return surveys;

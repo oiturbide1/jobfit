@@ -18,3 +18,6 @@ Router.route('/forgot');
 Router.route('/changePassword');
 Router.route('/match');
 Router.route('/overview');
+Router.route('rateEmployer2');
+Router.route('rateEmployer3');
+Router.route('rateEmployer4');

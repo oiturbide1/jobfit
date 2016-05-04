@@ -1,4 +1,13 @@
 <template name = 'Emp'>
+  {{> empNav}}
+
+  {{> empMain}}
+
+</template>
+
+
+
+<template name = 'empNav'>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -17,7 +26,7 @@
           <li><a href="{{pathFor route='contact'}}">Contact</a></li>
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
-            <li><a href="{{pathFor route='information'}}">Information</a></li>
+            <li><a href="{{pathFor route='information'}}">About You</a></li>
             <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
             <li class="active"><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
             <li><a href="#">Matches</a></li>
@@ -30,74 +39,104 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="starter-template">
-        <h1>Please fill out your Employer information.</h1>
-        {{> employerInfo}}
-        <br>
-        <br>
-        {{#if currentUser}}
-          {{#if isInRole 'Talent'}}
-            {{> jobInfo}}
-            {{> empStatus}}
-
-            {{#if isFormer}}
-              {{> reasons_left}}
-            {{else}}
-              {{> jobFeeling}}
-            {{/if}}
-
-          {{/if}}
-
-        {{/if}}
-
-
-    </div>
-  </div>
-
 </template>
 
 
+<template name = 'empMain'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+            {{> employerInfo}}
+            <br>
+            <br>
+            {{#if currentUser}}
+              {{#if isInRole 'Talent'}}
+                {{> jobInfo}}
+                {{> empStatus}}
+
+                {{#if isFormer}}
+                  {{> reasons_left}}
+                {{else}}
+                  {{> jobFeeling}}
+                {{/if}}
+
+              {{/if}}
+
+            {{/if}}
+              
+          </div>
+      </div>
+  </div>
+
+
+</template>
 
 <template name = 'employerInfo'>
-  {{#autoForm schema='CompanySchema' id='currentCompanyForm'}}
-      <fieldset class = 'form-group'>
-        <legend>
-          Employer Information
-        </legend>
+  {{#autoForm schema='CompanySchema' id='currentCompanyForm' class = 'form-horizontal'}}
+  <fieldset>
+    <legend id = 'empLegend'>Employer information</legend>
+          <div class = 'form-group'>
+            <label for="companyName" class="col-md-2 control-label">Company</label>
+            <div class = 'col-sm-3'>
+              {{> afQuickField name='companyName' placeholder = 'Company'}}
+            </div>
+          </div>
+        
 
-        <div class = 'col-md-5'>
-          {{> afQuickField name='companyName' }}
-        </div>
-        <div class = 'col-md-5'>
-          {{> afQuickField name='address' }}
-        </div>
-        <div class = 'col-md-5'>
-          {{> afQuickField name='city' }}
-        </div>
-        <div class = 'col-md-5'>
-          {{> afQuickField name='state'}}
-        </div>
-        <div class = 'col-md-3'>
-          {{> afQuickField name='zip'}}
-        </div>
-      </fieldset>
+        
+          <div class = 'form-group'>
+            <label for="address" class="col-md-2 control-label">Address </label>
+            <div class = 'col-sm-3'>
+              {{> afQuickField name='address' placeholder = 'Company Address'}}
+            </div>
+          </div>
+        
 
-      <fieldset class = 'form-group'>
-        <div class = 'col-md-4'>
+        
+          <div class = 'form-group col md-2'>
+            <label for="city" class="col-md-2 control-label">City</label>
+            <div class = 'col-sm-3'>
+              {{> afQuickField name='city' placeholder = 'City'}}
+            </div>
+          </div>
+        
+        
+      
+          <div class = 'form-group col md-1'>
+            <label for="state" class="col-md-2 control-label">State</label>
+            <div class = 'col-sm-3'>
+              {{> afQuickField name='state' }}
+            </div>
+          </div>
+        
+        
+        
+          <div class = 'form-group'>
+            <label for="zip" class="col-md-2 control-label">Zip Code</label>
+            <div class = 'col-sm-2'>
+              {{> afQuickField name='zip' placeholder = 'Zip Code e.g. 10001'}}
+            </div>
+          </div>
+       
+        
+     
+
+      <div class = 'form-group'>
+        <div class = 'col-sm-5'>
           {{> afQuickField name='remote' }}
         </div>
-      </fieldset>
+      </div>
 
-      <fieldset class = 'form-group'>
-        <div class = 'col-md-4'>
+      <div class = 'form-group'>
+        <div class = 'col-sm-4'>
           {{> afQuickField name='curr_or_form'}}
         </div>
-      </fieldset>
+      </div>
+  </fieldset>
       {{#if currentUser}}
-        <input type = "submit" class = 'btn btn-primary btn-lg' value = "Finish employer information">
+        <input type = "submit" class = 'btn btn-primary btn-lg' value = "Submit">
       {{else}}
-        <input type = "submit" class = 'btn btn-primary btn-lg' href="{{pathFor route='rateEmployer'}}" value = "Rate Employer">
+        <input type = "submit" class = 'btn btn-primary btn-lg pull-right' href="{{pathFor route='rateEmployer'}}" value = "Rate Employer">
 
       {{/if}}
 

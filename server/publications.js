@@ -71,9 +71,9 @@ Meteor.publish('employer_surveys', function()
 
 Meteor.publish('company', function()
 {
-    var currentUserId = this.userId;
-    if(currentUserId){
+    //var currentUserId = this.userId;
+    //if(currentUserId){
       return Company.find();
-    }
+    //}
 
 });

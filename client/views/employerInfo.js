@@ -1,16 +1,18 @@
 Template.employerInfo.events({
-  "submit form": function(event, template)
+  "submit form": function(event)
   {
     event.preventDefault();
 
-    var company = event.target.companyName.value;
-    var address = event.target.address.value;
-    var city = event.target.city.value;
+    var company = $('[name=companyName]').val();
+    var address = $('[name=address]').val();
+    var city = $('[name=city]').val();
+    var state = $('[name=state]').val();
+    var zip = $('[name=zip]').val();
+  
     var remote = event.target.remote.value;
-    var state = event.target.state.value;
-    var zip = event.target.zip.value;
     var current = event.target.curr_or_form.value;
     var userType;
+
 
     /*
     Meteor.call('check_if_company_rated',company, function(error,res){
@@ -50,7 +52,7 @@ Template.employerInfo.events({
     or functions
 
 
-    */
+    
     try
     {
 
@@ -62,11 +64,12 @@ Template.employerInfo.events({
     {
       console.log(error);
     }
+    
+
 
     //check if company exists already
     //if exists, create survey and add existing company to survey
-    if (compcheck)
-    {
+    
 
       Session.set('existing_company',compcheck._id);
 
@@ -113,12 +116,11 @@ Template.employerInfo.events({
 
       }
 
-
-    }
+      */
+    
 
     //if doesnt exist, insert company and create survey
-    else
-    {
+   
 
       Meteor.call('insert_company', comp, function(error, insertedCompany)
       {
@@ -180,7 +182,7 @@ Template.employerInfo.events({
           }
 
       });
-    }
+    
 
 
 
