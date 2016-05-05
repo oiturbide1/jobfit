@@ -1,3 +1,8 @@
+Template.empFirst.onRendered(function(){
+  console.log('hello');
+});
+
+
 Template.empFirst.events({
         'submit form': function(event) {
 
