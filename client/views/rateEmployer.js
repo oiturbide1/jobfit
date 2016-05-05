@@ -12,6 +12,8 @@ Template.empFirst.events({
 
           Router.go('rateEmployer2');
 
+          console.log(wlb);
+
         }
       });
 
@@ -64,15 +66,15 @@ Template.empFourth.events({
 
     Router.go('rateEmployer4');
 
-    
-         
+
+
 
           /*
-          
 
-          
 
-          
+
+
+
 
 
 
@@ -112,7 +114,7 @@ Template.empFourth.events({
                 Bert.alert('Ratings added','success');
               }
 
-          /*   
+          /*
           Meteor.call('checkSurveyDate', 'employer', function(err, editable){
           if (err)
           {

@@ -33,6 +33,8 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
+    disabled: true,
+    start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -50,6 +52,7 @@ ESurvey = new SimpleSchema({
     autoform: {
      type: "noUiSlider",
      step: 1,
+     start: [50],
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],
@@ -67,6 +70,8 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
+    disabled: true,
+    start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -84,6 +89,8 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
+    disabled: true,
+    start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
@@ -101,6 +108,7 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
+    start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',
       values: [20,40,60,80,100],
