@@ -1,0 +1,25 @@
+{
+  "name": "jobfit",
+  "version": "1.0.0",
+  "description": "slider",
+  "main": "jobfit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RalphGorham05/jobfit.git"
+  },
+  "keywords": [
+    "slider"
+  ],
+  "author": "Ralph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RalphGorham05/jobfit/issues"
+  },
+  "homepage": "https://github.com/RalphGorham05/jobfit",
+  "dependencies": {
+    "bootstrap-slider": "^7.0.2"
+  }
+}

@@ -34,3 +34,6 @@ standard-minifier-js
 cfs:ejson-file
 fortawesome:fontawesome
 themeteorchef:bert
+kidovate:bootstrap-slider
+rcy:nouislider
+matdutour:popup-confirm

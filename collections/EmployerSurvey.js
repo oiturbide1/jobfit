@@ -33,7 +33,6 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
-    disabled: true,
     start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',
@@ -70,7 +69,6 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
-    disabled: true,
     start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',
@@ -89,7 +87,6 @@ ESurvey = new SimpleSchema({
    autoform: {
     type: "noUiSlider",
     step: 1,
-    disabled: true,
     start: [50],
     noUiSlider_pipsOptions: {
       mode: 'positions',

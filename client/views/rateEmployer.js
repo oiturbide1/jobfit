@@ -1,23 +1,53 @@
-Template.empFirst.onRendered(function(){
-  console.log('hello');
-});
-
 
 Template.empFirst.events({
         'submit form': function(event) {
 
+
           event.preventDefault();
 
+
+
           //1st group
+
           var wlb = AutoForm.getFieldValue('work_life_balance','ESurveyForm1');
           var sec = AutoForm.getFieldValue('job_security','ESurveyForm1');
           var dev = AutoForm.getFieldValue('development_opportunities','ESurveyForm1');
           var work = AutoForm.getFieldValue('workload','ESurveyForm1');
           var path = AutoForm.getFieldValue('career_path','ESurveyForm1');
 
-          Router.go('rateEmployer2');
+          var f = [wlb, sec, dev, work, path];
+
+          var un = [];
+          for (i in f)
+          {
+            if(f[i] == undefined)
+              un.push(i);
+          }
+
+          console.log(un);
+          for(elem in un)
+          {
+            console.log(f[elem]);
+          }
+
+
+
+          //Router.go('rateEmployer2');
 
           console.log(wlb);
+          console.log(sec);
+
+
+          new Confirmation({
+  message: "Are you sure ?",
+  title: "Confirmation",
+  cancelText: "Cancel",
+  okText: "Ok",
+  success: true, // whether the button should be green or red
+  focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+}, function (ok) {
+  // ok is true if the user clicked on "ok", false otherwise
+});
 
         }
       });
