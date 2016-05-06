@@ -52,6 +52,7 @@ ESurvey = new SimpleSchema({
      type: "noUiSlider",
      step: 1,
      start: [50],
+     behaviour: 'snap',
      noUiSlider_pipsOptions: {
        mode: 'positions',
        values: [20,40,60,80,100],

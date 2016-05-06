@@ -29,6 +29,7 @@ cfs:ejson-file@0.1.4
 cfs:file@0.1.15
 cfs:storage-adapter@0.1.1
 check@1.2.1
+crystalhelix:wnumb@1.0.1
 dburles:mongo-collection-instances@0.3.4
 ddp@1.2.5
 ddp-client@1.2.7

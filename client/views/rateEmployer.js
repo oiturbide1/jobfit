@@ -5,7 +5,22 @@ Template.empFirst.events({
 
           event.preventDefault();
 
+       
 
+          /*
+          slider1.setAttribute('disabled', true);
+
+
+           $('#slidertest .noUi-handle-' + 'upper')
+        .addClass('noUi-disabled')
+        .off();
+
+          $('#slidertest .noUi-connect')
+        .removeClass('noUi-dragable')
+        .off();
+
+          $('#slidertest .noUi-base').off();
+          */
 
           //1st group
 
@@ -15,31 +30,33 @@ Template.empFirst.events({
           var work = AutoForm.getFieldValue('workload','ESurveyForm1');
           var path = AutoForm.getFieldValue('career_path','ESurveyForm1');
 
-          var f = [wlb, sec, dev, work, path];
+          var first = {
+            'work life balance':wlb, 
+            'job security':sec, 
+            'dev':dev, 
+            'work': work, 
+            'path': path};
 
           var un = [];
-          for (i in f)
+          for (i in first)
           {
-            if(f[i] == undefined)
+            if(first[i] == undefined)
               un.push(i);
           }
 
           console.log(un);
-          for(elem in un)
-          {
-            console.log(f[elem]);
-          }
+          //alert('you skipped ' + un.length + ' question(s)');
+          //console.log()
+        
 
+          //console.log(first);
 
 
           //Router.go('rateEmployer2');
 
-          console.log(wlb);
-          console.log(sec);
-
 
           new Confirmation({
-  message: "Are you sure ?",
+  message: "Are you sure this are the correct values? You will not be able to change once submitted",
   title: "Confirmation",
   cancelText: "Cancel",
   okText: "Ok",
