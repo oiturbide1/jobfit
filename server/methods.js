@@ -281,6 +281,40 @@ Meteor.methods(
 
     return surveys;
 
+  },  'get_personal_detail'(id){
+    var pes = PersonalSurvey.findOne(id);
+
+    var returnType = { worklife: 0, jobsec: 0,
+        td: 0, workload: 0, careerpath: 0, promocrit: 0,
+        promo: 0, auton: 0, salary: 0, goodsup: 0,
+        flex: 0, rewperf: 0, mission: 0, health: 0,
+        rewrecog: 0, workspace: 0, poorperfs: 0};
+
+    returnType.worklife = pes.worklife_self;
+    returnType.jobsec = pes.jobsec_self;
+    returnType.td = pes.td_self;
+    returnType.workload = pes.workload_self;
+    returnType.careerpath = pes.careerpath_self;
+    returnType.promocrit = pes.promocrit_self;
+    //returnType.promo = pes.promo_self;
+    returnType.promo = pes.careless_self;
+    returnType.auton = pes.auton_self;
+    returnType.salary = pes.salary_self;
+    returnType.goodsup = pes.goodsup_self;
+    returnType.flex = pes.flex_self;
+    returnType.rewperf = pes.rewperf_self;
+    returnType.mission = pes.mission_self;
+    returnType.health = pes.health_self;
+    returnType.rewrecog = pes.rewrecog_self;
+    returnType.workspace = pes.workspace_self;
+    returnType.poorperfs = pes.poorperfs_self;
+    for (var key in returnType) {
+      // skip loop if the property is from prototype
+        if (!returnType.hasOwnProperty(key)) continue;
+        returnType[key] *= 20;
+        
+    }
+    return returnType;
   },
 
   'get_personal_surveys'()
@@ -299,6 +333,102 @@ Meteor.methods(
     }
 
     return surveys;
+  },
+  'gather_employers'(){
+    var as = EmployerSurvey.find({}).fetch();
+    var emps = [];
+    var item;
+    if(as == null)
+      return emps;  
+    //console.log(as);
+    as = emp_null_to_zero(as);
+    
+    var temp = { name : Company.findOne(as[0].company).companyName, count: 1
+            , jobsec: as[0].job_security, worklife: as[0].work_life_balance
+            , workload: as[0].workload ,careerpath: as[0].career_path
+            , td: as[0].development_opportunities, promocrit: as[0].promotion_criteria
+            , promo: as[0].promotion_opportunities, auton: as[0].freedom
+            , salary: as[0].salary, goodsup: as[0].good_sup, flex: as[0].flex, rewperf: as[0].rew_perf
+            , mission: as[0].mission, health: as[0].health, rewrecog: as[0].rewrecog
+            , workspace: as[0].workspace, poorperfs: as[0].poor_perfs};
+    emps.push(temp);
+    var k = 0;
+    var ent;
+    //console.log(temp);
+    for (var key in as) {
+      k++;
+      if(k == 1){
+        continue;
+      }
+      ent = false;
+      // skip loop if the property is from prototype
+        if (!as.hasOwnProperty(key)) continue;
+        for(var i = 0; i < emps.length; i++){
+          if(emps[i].name == as[key].company){
+            
+            emps[i].count++;
+            var ct = emps[i].count;
+            var oct = emps[i].count - 1;
+            emps[i].jobsec = ((oct * emps[i].jobsec) + as[key].job_security)/ct;
+            emps[i].worklife = ((oct * emps[i].worklife) + as[key].worklife_life_balance)/ct;
+            emps[i].workload = ((oct * emps[i].workload) + as[key].workload)/ct;
+            emps[i].careerpath = ((oct * emps[i].careerpath) + as[key].career_path)/ct;
+            emps[i].td = (oct * emps[i].td) + as[key].development_opportunities;
+            emps[i].td /= ct;
+            emps[i].promocrit = (oct * emps[i].promocrit) + as[key].promotion_criteria;
+            emps[i].promocrit /= ct;
+          emps[i].promo = (oct * emps[i].promo) + as[key].promotion_opportunities; 
+          emps[i].promo /= ct;
+          emps[i].auton = (oct * emps[i].auton ) + as[key].freedom;
+          emps[i].auton /= ct;
+          emps[i].salary = (oct * emps[i].salary) + as[key].salary;
+          emps[i].salary /= ct;
+          emps[i].goodsup = (oct * emps[i].goodsup) + as[key].good_sup;
+          emps[i].goodsup /= ct;
+          emps[i].flex = (oct * emps[i].flex) + as[key].flex;
+          emps[i].flex /= ct;
+          emps[i].rewperf = (emps[i].rewperf * oct) + as[key].rew_perf;
+          emps[i].rewperf /= ct;
+          emps[i].mission = (emps[i].mission * oct ) + as[key].mission;
+          emps[i].mission /= ct;
+          emps[i].health = (emps[i].health * oct) + as[key].health;
+          emps[i].health /= ct;
+          emps[i].rewrecog = (emps[i].rewrecog * oct) + as[key].rewrecog;
+          emps[i].rewrecog /=ct;
+          emps[i].workspace = (oct * emps[i].workspace) + as[key].workspace;
+          emps[i].workspace /= ct;
+          emps[i].poorperfs = (oct * emps[i].workspace) +  as[key].poor_perfs;
+          emps[i].poorperfs /= ct;
+
+          /*for(var j = 2; j < emps[i].length; j++){
+            emps[i][j] /= emps[i].count;
+          }*/
+          ent = true;
+          break;
+          }
+          
+          
+        }
+        if(ent == false){
+          var x;
+          x = { name : Company.findOne(as[key].company).companyName, count: 1
+            , jobsec: as[key].job_security, worklife: as[key].work_life_balance
+            , workload: as[key].workload ,careerpath: as[key].career_path
+            , td: as[key].development_opportunities, promocrit: as[key].promotion_criteria
+            , promo: as[key].promotion_opportunities, auton: as[key].freedom
+            , salary: as[key].salary, goodsup: as[key].good_sup, flex: as[key].flex
+            , rewperf: as[key].rew_perf, mission: as[key].mission
+            , health: as[key].health, rewrecog: as[key].rewrecog
+            , workspace: as[key].workspace, poorperfs: as[key].poor_perfs };
+          emps.push(x);
+        }
+        
+          
+        
+    }
+    
+    
+    return emps;
   },
 
   'get_date_rated'()
