@@ -5,16 +5,18 @@ PersonalInfo = new SimpleSchema({
 	zip:
 	{
 		type: Number,
-        label: 'Please enter the zip code for the location where you spend most of your time'
+		autoform:
+		{
+		 label: false
+		}
 
 	},
     gender:
     {
         type: String,
-        //allowedValues: ['Male','Female'],
         optional: true,
-        label: 'Gender',
         autoform: {
+						label: false,
             options: [
             {
                 label: 'I am a man.',
@@ -24,6 +26,7 @@ PersonalInfo = new SimpleSchema({
                 label: 'I am a woman.',
                 value: 'Female'
             }
+
             ]
         }
     }

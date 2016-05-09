@@ -60,14 +60,13 @@ Meteor.methods(
           'freedom': survey[7],
           'salary': survey[8],
           'good_sup': survey[9],
-          'flex': survey[16],
-          'rew_perf': survey[17],
-          'mission': survey[11],
-          'health': survey[12],
-          'rewrecog': survey[14],
-          'workspace': survey[13],
-          'poor_perfs': survey[15],
-          'careless': survey[10]
+          'flex': survey[13],
+          'rew_perf': survey[16],
+          'mission': survey[10],
+          'health': survey[11],
+          'rewrecog': survey[15],
+          'workspace': survey[12],
+          'poor_perfs': survey[14]
         }
       });
   },
@@ -318,10 +317,10 @@ Meteor.methods(
   },
  'get_companies_rated'()
   {
- 
+
      var companies = [];
      var surveys = Meteor.call('get_employer_surveys');
-     
+
      for (num in surveys)
      {
        var id = surveys[num];

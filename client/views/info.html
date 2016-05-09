@@ -1,7 +1,7 @@
 <template name = 'information'>
   <!-- Custom Theme JavaScript -->
     <script>
-    
+
 
     // Scrolls to the selected menu item on the page
     $(function() {
@@ -22,6 +22,21 @@
     </script>
 
   {{#if currentUser}}
+    {{> infoNav}}
+    {{> infoInnerNav}}
+
+    {{> infoMain}}
+
+
+  {{else}}
+    {{> infoForbidden}}
+  {{/if}}
+
+</template>
+
+
+
+<template name = 'infoNav'>
   <nav class="navbar navbar-inverse navbar-fixed-top" data-target = '#first'>
     <div class="container">
       <div class="navbar-header">
@@ -52,23 +67,33 @@
       </div><!--/.nav-collapse -->
     </div>
   </nav>
+</template>
 
-  <div id = 'container'>
-    
-          {{> pi}}
-            
-
-       
+<template name = 'infoInnerNav'>
+  <div class="navbar-right">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li><a href="#" class = 'btn btn-primary btn-lg info' value = "Basic"></a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
   </div>
-
-  {{else}}
-    {{> infoForbidden}}
-  {{/if}}
-
+</div>
 </template>
 
 
+<template name = 'infoMain'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
 
+            {{> pi}}
+          </div>
+    </div>
+
+  </div>
+</template>
 
 <template name = 'user'>
   <p>Currently logged in as {{email}}</p>
@@ -76,26 +101,30 @@
 
 <template name = 'pi'>
   {{#autoForm schema='PersonalInfo' id='personalInFoForm' class = 'form-horizontal'}}
-   
-          <h1>
-            Basic Information
-          </h1>
-        
-            <div class = 'form-group'>
-              
-              {{> afQuickField name='zip' placeholder ='Your Zip Code'}}
-            </div>
-       
-         
-            <div class = 'form-group clearfix'>
-            {{> afQuickField name='gender' }}
-            
-            </div>
-      
-          <input type = "submit" class = 'btn btn-primary btn-lg info-submit pull-right' value = "Next">
-       
+  <fieldset>
+   <h1>
+      Basic Information
+  </h1>
 
-            
+  <div class = 'form-group'>
+    <label for="zip" class="col-md-3 control-label">Please enter the zip code for the location where you spend most of your time</label>
+    <div class = 'col-sm-3'>
+      {{> afQuickField name='zip' placeholder ='Zip Code'}}
+    </div>
+  </div>
+
+
+  <div class = 'form-group'>
+    <label for="gender" class="col-md-2 control-label">Gender</label>
+    <div class = 'col-sm-1'>
+      {{> afQuickField name='gender' }}
+    </div>
+  </div>
+
+  <input type = "submit" class = 'btn btn-primary btn-lg info-submit pull-right' value = "Next">
+
+
+  </fieldset>
   {{/autoForm}}
 </template>
 

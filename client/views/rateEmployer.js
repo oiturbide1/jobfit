@@ -5,22 +5,7 @@ Template.empFirst.events({
 
           event.preventDefault();
 
-       
 
-          /*
-          slider1.setAttribute('disabled', true);
-
-
-           $('#slidertest .noUi-handle-' + 'upper')
-        .addClass('noUi-disabled')
-        .off();
-
-          $('#slidertest .noUi-connect')
-        .removeClass('noUi-dragable')
-        .off();
-
-          $('#slidertest .noUi-base').off();
-          */
 
           //1st group
 
@@ -31,11 +16,12 @@ Template.empFirst.events({
           var path = AutoForm.getFieldValue('career_path','ESurveyForm1');
 
           var first = {
-            'work life balance':wlb, 
-            'job security':sec, 
-            'dev':dev, 
-            'work': work, 
-            'path': path};
+            'work life balance':wlb,
+            'job security':sec,
+            'dev':dev,
+            'work': work,
+            'path': path
+          };
 
           var un = [];
           for (i in first)
@@ -44,15 +30,16 @@ Template.empFirst.events({
               un.push(i);
           }
 
-          console.log(un);
+          //console.log(un);
           //alert('you skipped ' + un.length + ' question(s)');
           //console.log()
-        
-
-          //console.log(first);
 
 
-          //Router.go('rateEmployer2');
+          console.log(first);
+
+
+          Session.set('first_added',first);
+          Router.go('rateEmployer2');
 
 
           new Confirmation({
@@ -82,6 +69,26 @@ Template.empSecond.events({
     var salary = AutoForm.getFieldValue('salary','ESurveyForm2');
     var manage = AutoForm.getFieldValue('good_sup','ESurveyForm2');
 
+    var second = {
+      'promotion_criteria':criteria,
+      'promotion_opportunities':opp,
+      'freedom':freedom,
+      'salary': salary,
+      'good_sup': manage
+    };
+
+
+    var survey = Session.get('first_added');
+
+    for (item in second)
+    {
+      survey[item] = second[item];
+    }
+
+
+
+    Session.set('second_added', survey);
+
     Router.go('rateEmployer3');
 
     }
@@ -94,11 +101,31 @@ Template.empThird.events({
     event.preventDefault();
 
     //3rd group
-    var check = AutoForm.getFieldValue('careless','ESurveyForm3');
     var miss = AutoForm.getFieldValue('mission','ESurveyForm3');
     var health = AutoForm.getFieldValue('health','ESurveyForm3');
     var space = AutoForm.getFieldValue('workspace','ESurveyForm3');
-    var recog = AutoForm.getFieldValue('rewrecog','ESurveyForm3');
+    var flex = AutoForm.getFieldValue('flex','ESurveyForm3');
+    var poor = AutoForm.getFieldValue('poor_perfs','ESurveyForm3');
+
+
+    var third = {
+      'mission':miss,
+      'health':health,
+      'workspace':space,
+      'flex': flex,
+      'poor_perfs': poor
+    };
+
+    var survey = Session.get('second_added');
+
+    for (item in third)
+    {
+      survey[item] = third[item];
+    }
+
+
+
+    Session.set('third_added',survey);
 
     Router.go('rateEmployer4');
 
@@ -112,16 +139,46 @@ Template.empFourth.events({
     event.preventDefault();
 
     //4th group
-    var poor = AutoForm.getFieldValue('poor_perfs','ESurveyForm4');
-    var flex = AutoForm.getFieldValue('flex','ESurveyForm4');
+    var recog = AutoForm.getFieldValue('rewrecog','ESurveyForm4');
     var perf = AutoForm.getFieldValue('rew_perf','ESurveyForm4');
 
-    Router.go('rateEmployer4');
+    var fourth = {
+      'rewrecog':recog,
+      'rew_perf':perf
+    };
+
+    var survey = Session.get('third_added');
+
+    for (item in fourth)
+    {
+      survey[item] = fourth[item];
+    }
+
+    var survey_values = new Array();
+    for (key in survey)
+    {
+      survey_values.push(survey[key]);
+    }
+
+
+
+    var user = Meteor.userId();
+    var currentSurvey = Session.get('Survey');
+
+
+    Meteor.call('update_Emp_Survey', currentSurvey, survey_values);
+
+    if(user)
+    {
+      Meteor.call('update_userSurvey', currentSurvey, 'employer');
+      Bert.alert('Ratings added','success');
+    }
 
 
 
 
-          /*
+
+    //Router.go('rateEmployer4');
 
 
 
@@ -130,41 +187,6 @@ Template.empFourth.events({
 
 
 
-          var user = Meteor.userId();
-          var currentSurvey = Session.get('Survey');
-
-
-
-          var survey =
-          [
-            wlb,
-            sec,
-            dev,
-            work,
-            path,
-            criteria,
-            opp,
-            freedom,
-            salary,
-            manage,
-            check,
-            miss,
-            health,
-            space,
-            recog,
-            poor,
-            flex,
-            perf
-          ];
-
-
-          Meteor.call('update_Emp_Survey', currentSurvey, survey);
-
-              if(user)
-              {
-                Meteor.call('update_userSurvey', currentSurvey, 'employer');
-                Bert.alert('Ratings added','success');
-              }
 
           /*
           Meteor.call('checkSurveyDate', 'employer', function(err, editable){
@@ -197,10 +219,10 @@ Template.empFourth.events({
 
 
 
-          //if(!user)
-          //{
-            //Router.go("/success");
-          //}
+          if(!user)
+          {
+            Router.go("/success");
+          }
 
           }
     });
@@ -219,6 +241,13 @@ Template.rateEmployer.helpers({
   'surveyCheck': function()
   {
     return Session.get('Survey');
+  },
+
+  //for check for potential editing
+  //going back in browser and editing survey
+  'survey_completed': function()
+  {
+    return Session.get('first_added');
   }
 });
 
