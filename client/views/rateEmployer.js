@@ -43,7 +43,7 @@ Template.empFirst.events({
 
 
           new Confirmation({
-  message: "Are you sure this are the correct values? You will not be able to change once submitted",
+  message: "Are you sure this are the correct values? You will not be able to change once submitted.  You skipped " + un.length +  " question(s)", 
   title: "Confirmation",
   cancelText: "Cancel",
   okText: "Ok",
