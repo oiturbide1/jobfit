@@ -70,11 +70,12 @@
 </template>
 
 <template name = 'infoInnerNav'>
-  <div class="navbar-right">
-  <div class="navbar-inner">
-    <ul class="nav">
-      <li><a href="#" class = 'btn btn-primary btn-lg info' value = "Basic"></a></li>
-      <li><a href="#">Link</a></li>
+  <body data-spy="scroll" data-target="#gray-container">
+    <div class="navbar-right">
+    <div class="navbar-inner">
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#basic" class = 'btn btn-primary btn-lg info' value = "Basic"></a></li>
+      <li><a href="#occupation" class = 'fa fa-angle-double-right btn btn-primary btn-lg info' value = "Occupation"></a></li>
       <li><a href="#">Link</a></li>
       <li><a href="#">Link</a></li>
     </ul>
@@ -84,15 +85,21 @@
 
 
 <template name = 'infoMain'>
+  
   <div id = 'gray-container'>
     <div class="site-wrapper">
           <div class="cover-container">
-
+            <div id = 'basic'>
             {{> pi}}
+            </div>
+            <div id = 'occupation'>
+              <p>test test testseradaferwadfadsfa</p>
+            </div>
           </div>
     </div>
 
   </div>
+</body>
 </template>
 
 <template name = 'user'>
