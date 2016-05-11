@@ -388,7 +388,7 @@ Meteor.methods(
     //console.log(as);
     as = emp_null_to_zero(as);
     
-    var temp = { name : Company.findOne(as[0].company).companyName, count: 1
+    var temp = { name : as[0].company, count: 1
             , jobsec: as[0].job_security, worklife: as[0].work_life_balance
             , workload: as[0].workload ,careerpath: as[0].career_path
             , td: as[0].development_opportunities, promocrit: as[0].promotion_criteria
@@ -456,7 +456,7 @@ Meteor.methods(
         }
         if(ent == false){
           var x;
-          x = { name : Company.findOne(as[key].company).companyName, count: 1
+          x = { name : as[key].company, count: 1
             , jobsec: as[key].job_security, worklife: as[key].work_life_balance
             , workload: as[key].workload ,careerpath: as[key].career_path
             , td: as[key].development_opportunities, promocrit: as[key].promotion_criteria
