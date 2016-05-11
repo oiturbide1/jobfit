@@ -2,10 +2,7 @@
 Template.empFirst.events({
         'submit form': function(event) {
 
-
           event.preventDefault();
-
-
 
           //1st group
 
@@ -15,43 +12,89 @@ Template.empFirst.events({
           var work = AutoForm.getFieldValue('workload','ESurveyForm1');
           var path = AutoForm.getFieldValue('career_path','ESurveyForm1');
 
-          var first = {
-            'work life balance':wlb,
-            'job security':sec,
-            'dev':dev,
-            'work': work,
-            'path': path
+          var survey = {
+            'work life balance':{'value': wlb, 'lock': 0, 'skipped': 0},
+            'job security':{'value':sec, 'lock':0, 'skipped': 0},
+            'dev':{'value':dev, 'lock':0, 'skipped': 0},
+            'work': {'value':work, 'lock':0, 'skipped': 0},
+            'path': {'value':path, 'lock':0, 'skipped': 0},
+            'promotion_criteria':{'value':-1, 'lock':0, 'skipped': 0},
+            'promotion_opportunities':{'value':-1, 'lock':0, 'skipped': 0},
+            'freedom':{'value':-1, 'lock':0, 'skipped': 0},
+            'salary': {'value':-1, 'lock':0, 'skipped': 0},
+            'good_sup': {'value':-1, 'lock':0, 'skipped': 0},
+            'mission':{'value':-1, 'lock':0, 'skipped': 0},
+            'health':{'value':-1, 'lock':0, 'skipped': 0},
+            'workspace':{'value':-1, 'lock':0, 'skipped': 0},
+            'flex': {'value':-1, 'lock':0, 'skipped': 0},
+            'poor_perfs': {'value':-1, 'lock':0, 'skipped': 0},
+            'rewrecog':{'value':-1, 'lock':0, 'skipped': 0},
+            'rew_perf':{'value':-1, 'lock':0, 'skipped': 0}
           };
 
-          var un = [];
-          for (i in first)
+        
+          for (i in survey)
           {
-            if(first[i] == undefined)
-              un.push(i);
+            // log questions skipped
+            if (survey[i].value != -1 && survey[i].value == undefined)
+              survey[i].skipped = 1;
+            // lock questions that were changed
+            else if (survey[i].value != -1 && survey[i].value != undefined)
+              survey[i].lock = 1;
+            
           }
 
-          //console.log(un);
-          //alert('you skipped ' + un.length + ' question(s)');
-          //console.log()
+          skip = [];
+
+          for (k in survey)
+          {
+            if (survey[k].skipped == 1)
+              skip.push(k);
+          }
 
 
-          console.log(first);
 
-
-          Session.set('first_added',first);
-          Router.go('rateEmployer2');
-
-
+        if (skip.length > 0)
+        {
           new Confirmation({
-  message: "Are you sure this are the correct values? You will not be able to change once submitted.  You skipped " + un.length +  " question(s)",
-  title: "Confirmation",
-  cancelText: "Cancel",
-  okText: "Ok",
-  success: true, // whether the button should be green or red
-  focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
-}, function (ok) {
-  // ok is true if the user clicked on "ok", false otherwise
-});
+            message: "Are you sure this are the correct values? You will not be able to change once submitted.  You skipped " + skip.length +  " question(s)",
+            title: "Confirmation",
+            cancelText: "Cancel",
+            okText: "Ok",
+            success: true, // whether the button should be green or red
+            focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+          }, function (ok) {
+            // ok is true if the user clicked on "ok", false otherwise
+            if (ok)
+              Router.go('rateEmployer2');
+            else
+            {}
+
+          });
+        }
+
+        else
+        {
+          new Confirmation({
+            message: "Are you sure this are the correct values? You will not be able to change once submitted.",
+            title: "Confirmation",
+            cancelText: "Cancel",
+            okText: "Ok",
+            success: true, // whether the button should be green or red
+            focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+          }, function (ok) {
+            // ok is true if the user clicked on "ok", false otherwise
+            if (ok)
+              Router.go('rateEmployer2');
+            else
+            {}
+
+          });
+
+        }
+
+        Session.set('Emp_Survey',survey);
+     
 
         }
       });
@@ -69,27 +112,44 @@ Template.empSecond.events({
     var salary = AutoForm.getFieldValue('salary','ESurveyForm2');
     var manage = AutoForm.getFieldValue('good_sup','ESurveyForm2');
 
-    var second = {
-      'promotion_criteria':criteria,
-      'promotion_opportunities':opp,
-      'freedom':freedom,
-      'salary': salary,
-      'good_sup': manage
-    };
 
 
-    var survey = Session.get('first_added');
+    var survey = Session.get('Emp_Survey');
 
-    for (item in second)
+
+
+    survey['promotion_criteria'].value = criteria;
+    survey['promotion_opportunities'].value = opp;
+    survey['freedom'].value = freedom;
+    survey['salary'].value = salary;
+    survey['good_sup'].value = manage;
+   
+
+
+
+    for (j in survey)
     {
-      survey[item] = second[item];
+      // log questions skipped
+      if (survey[j].value == undefined)
+          survey[j].skipped = 1;
+      // lock questions that were changed
+      //else if (survey[j].value != -1 && survey[j].value != undefined)
+        //survey[j].lock = 1;
+      
     }
+
+    console.log(survey);
+
+    //for (item in second)
+    //{
+      //survey[item] = second[item];
+    //}
 
 
     //object of object idea
-    Session.set('second_added', survey);
+    //Session.set('second_added', survey);
 
-    Router.go('rateEmployer3');
+    //Router.go('rateEmployer3');
 
     }
     });
