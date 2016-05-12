@@ -136,7 +136,7 @@ Template.match.events({
 
 
 		}
-		return false;
+		
 		//console.log(event.target.id);
 	}
 });
