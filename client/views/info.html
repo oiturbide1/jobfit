@@ -34,7 +34,7 @@
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
             <li class="active"><a href="{{pathFor route='information'}}">About You</a></li>
-            <li><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
+            <li><a href="{{pathFor route='Emp'}}">About Your Employer</a></li>
             <li><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
             <li><a href="{{pathFor route='match'}}">Matches</a></li>
           {{/if}}
@@ -263,7 +263,7 @@
       <h1>
       Credentials and certificates
     </h1>
-    
+
       {{> afQuickField name='creds'}}
       <br>
       <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter credentials">
@@ -273,17 +273,63 @@
 </template>
 
 
+<template name = 'occupationView'>
+  {{#if currentUser}}
+    {{> infoNav}}
+    {{> infoInnerNav}}
+
+    {{> occupationMain}}
+
+  {{else}}
+    {{> infoForbidden}}
+  {{/if}}
+
+</template>
+
+<template name = 'occupationMain'>
+
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+
+            {{> occupationInfo}}
+
+          </div>
+    </div>
+
+  </div>
+
+</template>
+
+
 <template name = 'occupationInfo'>
-  {{#autoForm schema='UserOccupation' id='occupationForm'}}
+  {{#autoForm schema='UserOccupation' id='occupationForm' class = 'form-horizontal'}}
     <fieldset>
-      <legend>
+      <h1>
         Occupation
-      </legend>
-      {{> afQuickField name='industry'}}
-      <br>
-      {{> afQuickField name='occupation'}}
-      <br>
-      {{> afQuickField name='jobLevel'}}
+      </h1>
+
+      <div class = 'form-group'>
+        <label for="occupation" class="col-md-3 control-label">Occupation</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='occupation'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="jobLevel" class="col-md-3 control-label">Job Level</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='jobLevel'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="industry" class="col-md-3 control-label">Job industry</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='industry'}}
+        </div>
+      </div>
+
       <br>
       <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter occupation">
     </fieldset>

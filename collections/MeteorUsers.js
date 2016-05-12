@@ -192,20 +192,29 @@ UserOccupation = new SimpleSchema({
     industry:
     {
         type: String,
-        label: "Job Industry",
+				autoform:
+				{
+				 label: false
+			  },
         optional: true
     },
     occupation:
     {
         type: String,
-        label: "Occupation",
-        optional: true
+        optional: true,
+				autoform:
+				{
+				 label: false
+				}
     },
     jobLevel:
     {
       type: String,
-      label: "Job Level",
-      optional: true
+      optional: true,
+			autoform:
+			{
+			 label: false
+			}
     }
 
 });

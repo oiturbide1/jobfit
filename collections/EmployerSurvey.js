@@ -352,6 +352,21 @@ ESurvey = new SimpleSchema({
     type: String,
     optional: true
  },
+ occupation:
+ {
+    type: String,
+    optional: true
+  },
+  job_level:
+  {
+     type: String,
+     optional: true
+  },
+  job_industry:
+  {
+     type: String,
+     optional: true
+  },
  job_title:
  {
     type: String,

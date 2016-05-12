@@ -230,23 +230,17 @@ Template.occupationInfo.events({
       event.preventDefault();
 
       // Get value from form element
-      var industry = event.target.industry.value;
-      var occupation= event.target.occupation.value;
-      var joblevel= event.target.jobLevel.value;
+      var industry = $('[name=industry]').val();
+      var occupation= $('[name=occupation]').val();
+      var joblevel= $('[name=jobLevel]').val();
 
 
-
+      var occupation_info = [industry, occupation, joblevel];
 
       var user = Meteor.userId;
 
-      Meteor.users.update(
-        {_id: Meteor.userId()},
-        {$set: {
-          "profile.occupation_info.industry": industry,
-          "profile.occupation_info.occupation": occupation,
-          "profile.occupation_info.jobLevel": joblevel
-        }
-      });
+      var sur = Session.get('Survey');
+      Meteor.call('add_occupation', sur, occupation_info);
 
 
       event.target.industry.value = "";

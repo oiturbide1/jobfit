@@ -176,6 +176,21 @@ Meteor.methods(
 
   },
 
+  'add_occupation'(surveyID, data)
+  {
+      EmployerSurvey.update(
+      {_id: surveyID},
+      {$set:
+        {
+          "occupation": data[1],
+          'job_industry': data[0],
+          'job_level': data[2]
+        }
+      });
+
+
+  },
+
   'add_reasons_left'(surveyID, choice, reasons)
   {
       EmployerSurvey.update(
@@ -375,7 +390,7 @@ Meteor.methods(
       // skip loop if the property is from prototype
         if (!returnType.hasOwnProperty(key)) continue;
         returnType[key] *= 20;
-        
+
     }
     return returnType;
   },
@@ -384,10 +399,10 @@ Meteor.methods(
     var emps = [];
     var item;
     if(as == null)
-      return emps;  
+      return emps;
     //console.log(as);
     as = emp_null_to_zero(as);
-    
+
     var temp = { name : as[0].company, count: 1
             , jobsec: as[0].job_security, worklife: as[0].work_life_balance
             , workload: as[0].workload ,careerpath: as[0].career_path
@@ -410,7 +425,7 @@ Meteor.methods(
         if (!as.hasOwnProperty(key)) continue;
         for(var i = 0; i < emps.length; i++){
           if(emps[i].name == as[key].company){
-            
+
             emps[i].count++;
             var ct = emps[i].count;
             var oct = emps[i].count - 1;
@@ -422,7 +437,7 @@ Meteor.methods(
             emps[i].td /= ct;
             emps[i].promocrit = (oct * emps[i].promocrit) + as[key].promotion_criteria;
             emps[i].promocrit /= ct;
-          emps[i].promo = (oct * emps[i].promo) + as[key].promotion_opportunities; 
+          emps[i].promo = (oct * emps[i].promo) + as[key].promotion_opportunities;
           emps[i].promo /= ct;
           emps[i].auton = (oct * emps[i].auton ) + as[key].freedom;
           emps[i].auton /= ct;
@@ -451,8 +466,8 @@ Meteor.methods(
           ent = true;
           break;
           }
-          
-          
+
+
         }
         if(ent == false){
           var x;
@@ -467,12 +482,12 @@ Meteor.methods(
             , workspace: as[key].workspace, poorperfs: as[key].poor_perfs };
           emps.push(x);
         }
-        
-          
-        
+
+
+
     }
-    
-    
+
+
     return emps;
   }
 
@@ -492,12 +507,12 @@ Meteor.methods(
 });
 
 function emp_null_to_zero(surveys){
-  
+
   for(var l in surveys){
       if(!surveys[l].hasOwnProperty('job_security'))
       {
         surveys[l].job_security = 0;
-        
+
       }
       if(!surveys[l].hasOwnProperty('work_life_balance'))
         surveys[l].work_life_balance = 0;
@@ -532,6 +547,6 @@ function emp_null_to_zero(surveys){
       if(!surveys[l].hasOwnProperty('poor_perfs'))
         surveys[l].poor_perfs = 0;
     }
-    return surveys;  
+    return surveys;
 
 }

@@ -23,3 +23,4 @@ Router.route('rateEmployer4');
 Router.route('educationView');
 Router.route('skillsView');
 Router.route('credsView');
+Router.route('occupationView');
