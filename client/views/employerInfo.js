@@ -1,3 +1,25 @@
+/*
+{{#if currentUser}}
+              {{#if isInRole 'Talent'}}
+                {{> jobInfo}}
+                {{> empStatus}}
+
+                {{#if isFormer}}
+                  {{> reasons_left}}
+                {{else}}
+                  {{> jobFeeling}}
+                {{/if}}
+
+              {{/if}}
+
+            {{/if}}
+
+
+*/
+
+
+
+
 Template.employerInfo.events({
   "submit form": function(event)
   {
@@ -47,79 +69,13 @@ Template.employerInfo.events({
       userType = 'Anon';
     }
 
-    /*
-    could fix this section with collection hooks
-    or functions
+    
+    //could fix this section with collection hooks
+    //or functions
 
 
     
-    try
-    {
-
-      var compcheck = Company.findOne({'companyName': company});
-
-    }
-
-    catch(error)
-    {
-      console.log(error);
-    }
-    
-
-
-    //check if company exists already
-    //if exists, create survey and add existing company to survey
-    
-
-      Session.set('existing_company',compcheck._id);
-
-      if (current == 'true')
-      {
-        var current_former = 1;
-        Session.set('current_or_former', current_former);
-
-        Meteor.call('insert_survey', company, remote, current_former, userType, function(error, insertedSurvey)
-        {
-          if (error)
-          {
-            console.log(error);
-          }
-          else
-          {
-            Session.set('Survey', insertedSurvey);
-
-          }
-
-        });
-
-      }
-
-      else if(current == 'false')
-      {
-        var current_former = 0;
-        Session.set('current_or_former', current_former);
-
-        Meteor.call('insert_survey', company, remote, current_former, userType, function(error, insertedSurvey)
-        {
-          if (error)
-          {
-            console.log(error);
-          }
-          else
-          {
-            Session.set('Survey', insertedSurvey);
-
-          }
-
-        });
-
-
-      }
-
-      */
-    
-
-    //if doesnt exist, insert company and create survey
+   
    
 
       Meteor.call('insert_company', comp, function(error, insertedCompany)
@@ -186,11 +142,13 @@ Template.employerInfo.events({
 
 
 
-    var role_check = Roles.userIsInRole(Meteor.userId(), 'Rep');
-    if (role_check)
+    var talent_check = Roles.userIsInRole(Meteor.userId(), 'Talent');
+    if (talent_check)
     {
-      Router.go('/rateEmployer');
+      Router.go('occupationView');
     }
+    else
+      Router.go('/rateEmployer');
 
 
     if(!Meteor.userId()){

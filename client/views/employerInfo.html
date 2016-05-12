@@ -27,8 +27,8 @@
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
             <li><a href="{{pathFor route='information'}}">About You</a></li>
-            <li><a href="{{pathFor route='Emp'}}">About Your Employer</a></li>
-            <li class="active"><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
+            <li class="active"><a href="{{pathFor route='Emp'}}">About Your Employer</a></li>
+            <li><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
             <li><a href="{{pathFor route='match'}}">Matches</a></li>
           {{/if}}
         </ul>
@@ -47,22 +47,6 @@
     <div class="site-wrapper">
           <div class="cover-container">
             {{> employerInfo}}
-            <br>
-            <br>
-            {{#if currentUser}}
-              {{#if isInRole 'Talent'}}
-                {{> jobInfo}}
-                {{> empStatus}}
-
-                {{#if isFormer}}
-                  {{> reasons_left}}
-                {{else}}
-                  {{> jobFeeling}}
-                {{/if}}
-
-              {{/if}}
-
-            {{/if}}
 
           </div>
       </div>
@@ -134,7 +118,7 @@
       </div>
   </fieldset>
       {{#if currentUser}}
-        <input type = "submit" class = 'btn btn-primary btn-lg' value = "Submit">
+        <input type = "submit" class = 'btn btn-primary btn-lg pull-right' value = "Submit">
       {{else}}
         <input type = "submit" class = 'btn btn-primary btn-lg pull-right' href="{{pathFor route='rateEmployer'}}" value = "Rate Employer">
 
