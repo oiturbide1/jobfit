@@ -1,13 +1,12 @@
 Router.route('/', {name: 'home', template: 'home'});
 Router.route('/information',{name: 'information', template: 'information'})
 Router.route('/profile');
-
 Router.route('/tSurvey');
 Router.route('/rateEmployer');
 Router.route('/talentRegistration');
 Router.route('/registerRep');
 Router.route('/login');
-
+Router.route('#');
 Router.route('/employerInfo');
 Router.route('/Emp');
 Router.route('/success');
@@ -21,3 +20,6 @@ Router.route('/overview');
 Router.route('rateEmployer2');
 Router.route('rateEmployer3');
 Router.route('rateEmployer4');
+Router.route('educationView');
+Router.route('skillsView');
+Router.route('credsView');

@@ -1,4 +1,5 @@
 
+
 Template.empFirst.events({
         'submit form': function(event) {
 
@@ -32,7 +33,7 @@ Template.empFirst.events({
             'rew_perf':{'value':-1, 'lock':0, 'skipped': 0}
           };
 
-        
+
           for (i in survey)
           {
             // log questions skipped
@@ -41,7 +42,7 @@ Template.empFirst.events({
             // lock questions that were changed
             else if (survey[i].value != -1 && survey[i].value != undefined)
               survey[i].lock = 1;
-            
+
           }
 
           skip = [];
@@ -94,7 +95,7 @@ Template.empFirst.events({
         }
 
         Session.set('Emp_Survey',survey);
-     
+
 
         }
       });
@@ -123,7 +124,7 @@ Template.empSecond.events({
     survey['freedom'].value = freedom;
     survey['salary'].value = salary;
     survey['good_sup'].value = manage;
-   
+
 
 
 
@@ -133,23 +134,63 @@ Template.empSecond.events({
       if (survey[j].value == undefined)
           survey[j].skipped = 1;
       // lock questions that were changed
-      //else if (survey[j].value != -1 && survey[j].value != undefined)
-        //survey[j].lock = 1;
-      
+      else if (survey[j].value != -1 && survey[j].value != undefined)
+        survey[j].lock = 1;
+
     }
 
-    console.log(survey);
+    skip = [];
 
-    //for (item in second)
-    //{
-      //survey[item] = second[item];
-    //}
+    for (k in survey)
+    {
+      if (survey[k].skipped == 1)
+        skip.push(k);
+    }
 
 
-    //object of object idea
-    //Session.set('second_added', survey);
 
-    //Router.go('rateEmployer3');
+  if (skip.length > 0)
+  {
+    new Confirmation({
+      message: "Are you sure this are the correct values? You will not be able to change once submitted.  You skipped " + skip.length +  " question(s)",
+      title: "Confirmation",
+      cancelText: "Cancel",
+      okText: "Ok",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      // ok is true if the user clicked on "ok", false otherwise
+      if (ok)
+        Router.go('rateEmployer3');
+      else
+      {}
+
+    });
+  }
+
+  else
+  {
+    new Confirmation({
+      message: "Are you sure this are the correct values? You will not be able to change once submitted.",
+      title: "Confirmation",
+      cancelText: "Cancel",
+      okText: "Ok",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      // ok is true if the user clicked on "ok", false otherwise
+      if (ok)
+        Router.go('rateEmployer3');
+      else
+      {}
+
+    });
+
+  }
+
+  Session.set('Emp_Survey',survey);
+
+
 
     }
     });
@@ -168,26 +209,78 @@ Template.empThird.events({
     var poor = AutoForm.getFieldValue('poor_perfs','ESurveyForm3');
 
 
-    var third = {
-      'mission':miss,
-      'health':health,
-      'workspace':space,
-      'flex': flex,
-      'poor_perfs': poor
-    };
+    var survey = Session.get('Emp_Survey');
 
-    var survey = Session.get('second_added');
 
-    for (item in third)
+
+    survey['mission'].value = miss;
+    survey['health'].value = health;
+    survey['workspace'].value = space;
+    survey['flex'].value = flex;
+    survey['poor_perfs'].value = poor;
+
+
+    for (j in survey)
     {
-      survey[item] = third[item];
+      // log questions skipped
+      if (survey[j].value == undefined)
+          survey[j].skipped = 1;
+      // lock questions that were changed
+      else if (survey[j].value != -1 && survey[j].value != undefined)
+        survey[j].lock = 1;
+
+    }
+
+    skip = [];
+
+    for (k in survey)
+    {
+      if (survey[k].skipped == 1)
+        skip.push(k);
     }
 
 
+  if (skip.length > 0)
+  {
+    new Confirmation({
+      message: "Are you sure this are the correct values? You will not be able to change once submitted.  You skipped " + skip.length +  " question(s)",
+      title: "Confirmation",
+      cancelText: "Cancel",
+      okText: "Ok",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      // ok is true if the user clicked on "ok", false otherwise
+      if (ok)
+        Router.go('rateEmployer4');
+      else
+      {}
 
-    Session.set('third_added',survey);
+    });
+  }
 
-    Router.go('rateEmployer4');
+  else
+  {
+    new Confirmation({
+      message: "Are you sure this are the correct values? You will not be able to change once submitted.",
+      title: "Confirmation",
+      cancelText: "Cancel",
+      okText: "Ok",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      // ok is true if the user clicked on "ok", false otherwise
+      if (ok)
+        Router.go('rateEmployer4');
+      else
+      {}
+
+    });
+
+  }
+
+  Session.set('Emp_Survey',survey);
+
 
     }
     });
@@ -202,89 +295,114 @@ Template.empFourth.events({
     var recog = AutoForm.getFieldValue('rewrecog','ESurveyForm4');
     var perf = AutoForm.getFieldValue('rew_perf','ESurveyForm4');
 
-    var fourth = {
-      'rewrecog':recog,
-      'rew_perf':perf
-    };
+    var user = Meteor.userId();
+    var currentSurvey = Session.get('Survey');
 
-    var survey = Session.get('third_added');
+    var survey = Session.get('Emp_Survey');
 
-    for (item in fourth)
+
+
+    survey['rewrecog'].value = recog;
+    survey['rew_perf'].value = perf;
+
+
+    for (l in survey)
     {
-      survey[item] = fourth[item];
+      // log questions skipped
+      if (survey[l].value == undefined)
+          survey[l].skipped = 1;
+      // lock questions that were changed
+      else if (survey[l].value != -1 && survey[l].value != undefined)
+        survey[l].lock = 1;
+
     }
+
+    skip = [];
+
+    for (k in survey)
+    {
+      if (survey[k].skipped == 1)
+        skip.push(k);
+    }
+
+
+  if (skip.length > 0)
+  {
+    new Confirmation({
+      message: "Are you sure this are the correct values? You will not be able to change once submitted.  You skipped " + skip.length +  " question(s)",
+      title: "Confirmation",
+      cancelText: "Cancel",
+      okText: "Ok",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      // ok is true if the user clicked on "ok", false otherwise
+      if (ok)
+      {
+        Meteor.call('update_Emp_Survey', currentSurvey, survey_values);
+
+        if(user)
+        {
+          Meteor.call('update_userSurvey', currentSurvey, 'employer');
+          Bert.alert('Ratings added','success');
+        }
+
+        else
+        {
+          Router.go("/success");
+        }
+      }
+      else
+      {}
+
+    });
+  }
+
+  else
+  {
+    new Confirmation({
+      message: "Are you sure this are the correct values? You will not be able to change once submitted.",
+      title: "Confirmation",
+      cancelText: "Cancel",
+      okText: "Ok",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      // ok is true if the user clicked on "ok", false otherwise
+      if (ok)
+      {
+        Meteor.call('update_Emp_Survey', currentSurvey, survey_values);
+
+        if(user)
+        {
+          Meteor.call('update_userSurvey', currentSurvey, 'employer');
+          Bert.alert('Ratings added','success');
+        }
+
+        else
+        {
+          Router.go("/success");
+        }
+      }
+      else
+      {}
+
+    });
+
+  }
 
     var survey_values = new Array();
     for (key in survey)
     {
-      survey_values.push(survey[key]);
+      survey_values.push(survey[key].value);
     }
 
+    console.log(survey);
+    console.log(survey_values);
 
 
-    var user = Meteor.userId();
-    var currentSurvey = Session.get('Survey');
 
-
-    Meteor.call('update_Emp_Survey', currentSurvey, survey_values);
-
-    if(user)
-    {
-      Meteor.call('update_userSurvey', currentSurvey, 'employer');
-      Bert.alert('Ratings added','success');
     }
-
-
-
-
-
-    //Router.go('rateEmployer4');
-
-
-
-
-
-
-
-
-
-          /*
-          Meteor.call('checkSurveyDate', 'employer', function(err, editable){
-          if (err)
-          {
-            console.log(err);
-          }
-          else
-          {
-            if (editable)
-            {
-              //allow
-              Meteor.call('update_Emp_Survey', currentSurvey, survey);
-
-              if(user)
-              {
-                Meteor.call('update_userSurvey', currentSurvey, 'employer');
-                Bert.alert('Ratings added','success');
-              }
-
-            }
-            else
-            {
-              Session.set('allow_emp_survey', false);
-              Bert.alert('too soon');
-            }
-          }
-        });
-        */
-
-
-
-          if(!user)
-          {
-            Router.go("/success");
-          }
-
-          }
     });
 
 

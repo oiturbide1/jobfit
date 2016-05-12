@@ -64,14 +64,16 @@ UserEducationLevel = new SimpleSchema({
 UserEducation = new SimpleSchema({
     school: {
         type: String,
-        label: "School"
+				autoform:
+				{
+				 label: false
+				}
     },
     degree: {
         type: String,
-        label: "Degree Earned",
-        //allowedValues: ['B.A','B.S','Associates','M.S'],
         optional: true,
         autoform: {
+						label: false,
             options: [
             {
                 label: 'B.A',
@@ -85,23 +87,40 @@ UserEducation = new SimpleSchema({
                 label: 'Associates',
                 value: 'assoc'
             },
+						{
+                label: 'Ph.D',
+                value: 'phd'
+            },
+						{
+                label: 'J.D',
+                value: 'jd'
+            },
             {
                 label: 'M.S',
                 value: 'ms'
+            },
+						{
+                label: 'M.A',
+                value: 'ma'
             }
+
             ]
         }
     },
-    field: {
+    field:
+		{
       type: String,
-      label: "Field"
+			autoform:
+			{
+			 label: false
+			}
     },
     level:
     {
         type: String,
-        label: "Education Level",
         optional:true,
         autoform: {
+						label: false,
             type: "select-radio",
             options: function () {
                 return [

@@ -26,14 +26,14 @@ Template.information.events({
 
   /*
   //closes the sidebar menu
-  'click .menu-close'(event) 
+  'click .menu-close'(event)
   {
     event.preventDefault();
     $("#sidebar-wrapper").toggleClass("active");
   },
 
   // Opens the sidebar menu
-  "click #menu-toggle"(e) 
+  "click #menu-toggle"(e)
   {
     e.preventDefault();
     $("#sidebar-wrapper").toggleClass("active");
@@ -84,9 +84,9 @@ Template.pi.events({
       // Get value from form element
       var zipCode = $('[name=zip]').val();
       var gender = $('[name=gender]').val();
-     
+
       var currentUserId = Meteor.userId;
-      var user = Meteor.users.findOne(Meteor.userId);
+
 
       var loggedInUser = Meteor.user();
 
@@ -115,12 +115,13 @@ Template.pi.events({
       }
       });
 
-      JobExplorer.insert({'gender': gender});
-
 
       // Clear form
 
       event.target.zip.value = '';
+
+
+      Router.go('educationView');
 
 
     }
@@ -133,18 +134,17 @@ Template.user.helpers({
   }
 });
 
-Template.educ.events({
+Template.education.events({
   "submit form": function (event, template) {
       // Prevent default browser form submit
       event.preventDefault();
 
       // Get value from form element
-      var school = event.target.school.value;
-      var degree= event.target.degree.value;
-      var subject= event.target.field.value;
+      var school = $('[name=school]').val();
+      var degree= $('[name=degree]').val();
+      var subject= $('[name=field]').val();
       var level= event.target.level.value;
       var user = Meteor.userId;
-
 
 
       // Add education info to profile
@@ -158,11 +158,7 @@ Template.educ.events({
         }
         });
 
-
-      // Clear form
-      event.target.school.value = "";
-      event.target.degree.value = '';
-      event.target.field.value = '';
+      Router.go('skillsView');
 
     }
 
@@ -185,8 +181,6 @@ Template.skills.events({
       var skill5 = AutoForm.getFieldValue('skills.4','skillsForm');
 
 
-      var user = Meteor.userId;
-
 
       // Add skill info to profile
       Meteor.users.update(
@@ -194,7 +188,7 @@ Template.skills.events({
           {"profile.skills.skills": [skill1, skill2, skill3, skill4, skill5] }
       });
 
-
+      Router.go('credsView');
 
     }
 

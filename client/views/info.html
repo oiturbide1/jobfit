@@ -1,26 +1,4 @@
 <template name = 'information'>
-  <!-- Custom Theme JavaScript -->
-    <script>
-
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
-
   {{#if currentUser}}
     {{> infoNav}}
     {{> infoInnerNav}}
@@ -90,12 +68,9 @@
   <div id = 'gray-container'>
     <div class="site-wrapper">
           <div class="cover-container">
-            <div id = 'basic'>
+
             {{> pi}}
-            </div>
-            <div id = 'occupation'>
-              <p>test test testseradaferwadfadsfa</p>
-            </div>
+
           </div>
     </div>
 
@@ -137,19 +112,70 @@
   {{/autoForm}}
 </template>
 
-<template name = 'educ'>
-  {{#autoForm schema='UserEducation' id='educationForm'}}
+<template name = 'educationView'>
+  {{#if currentUser}}
+    {{> infoNav}}
+    {{> infoInnerNav}}
+
+    {{> educationMain}}
+
+  {{else}}
+    {{> infoForbidden}}
+  {{/if}}
+
+</template>
+
+<template name = 'educationMain'>
+
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+
+            {{> education}}
+
+          </div>
+    </div>
+
+  </div>
+
+</template>
+
+<template name = 'education'>
+  {{#autoForm schema='UserEducation' id='educationForm' class = 'form-horizontal'}}
     <fieldset>
-      <legend>
+      <h1>
         Education
-      </legend>
-      {{> afQuickField name='school'}}
+      </h1>
       <br>
-      {{> afQuickField name='degree'}}
-      <br>
-      {{> afQuickField name='field'}}
-      <br>
-      {{> afQuickField name= 'level'}}
+
+      <div class = 'form-group'>
+        <label for="school" class="col-md-3 control-label">Name of degree-granting institution</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='school' placeholder ='School'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="field" class="col-md-3 control-label">Field of Study</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='field'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="degree" class="col-md-3 control-label">Degree Earned</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='degree'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="level" class="col-md-3 control-label">Education Level</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='level'}}
+        </div>
+      </div>
+
 
       <input type = "submit" class = 'btn btn-primary btn-lg' value = "Education">
 
@@ -162,11 +188,71 @@
 </template>
 
 
+<template name = 'skillsView'>
+  {{#if currentUser}}
+    {{> infoNav}}
+    {{> infoInnerNav}}
+
+    {{> skillsMain}}
+
+  {{else}}
+    {{> infoForbidden}}
+  {{/if}}
+
+</template>
+
+<template name = 'skillsMain'>
+
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+
+            {{> skills}}
+
+          </div>
+    </div>
+
+  </div>
+
+</template>
+
 
 <template name = 'skills'>
-  <h3>Please enter up to 5 skills</h3>
+  <h1>
+    Skills
+  </h1>
+  <h3>Enter your top 5 skills</h3>
   {{> quickForm schema='UserSkills' id='skillsForm' input-col-class="col-sm-5"}}
 
+
+</template>
+
+
+<template name = 'credsView'>
+  {{#if currentUser}}
+    {{> infoNav}}
+    {{> infoInnerNav}}
+
+    {{> credsMain}}
+
+  {{else}}
+    {{> infoForbidden}}
+  {{/if}}
+
+</template>
+
+<template name = 'credsMain'>
+
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+
+            {{> creds}}
+
+          </div>
+    </div>
+
+  </div>
 
 </template>
 
@@ -174,9 +260,10 @@
 <template name = 'creds'>
   {{#autoForm schema='UserCreds' id='credsForm'}}
     <fieldset>
-      <legend>
-      Credentials and certificates - List up to 5 credentials or certificates
-      </legend>
+      <h1>
+      Credentials and certificates
+    </h1>
+    
       {{> afQuickField name='creds'}}
       <br>
       <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter credentials">
