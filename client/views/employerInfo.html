@@ -132,18 +132,47 @@
 
 
 
+<template name = 'jobInfoView'>
+  {{> empNav}}
+
+  {{> jobInfoMain}}
+
+</template>
+
+<template name = 'jobInfoMain'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+            {{> jobInfo}}
+
+          </div>
+      </div>
+  </div>
+
+
+</template>
+
 <template name = 'jobInfo'>
-  {{#autoForm schema='JobInfo' id='jobInfoForm'}}
+  {{#autoForm schema='JobInfo' id='jobInfoForm' class = 'form-horizontal'}}
       <fieldset class = 'form-group'>
-        <legend>
+        <h1>
           Job Information
-        </legend>
-        <div class = 'col-md-5'>
-          {{> afQuickField name='title' }}
-        </div>
-        <div class = 'col-md-2'>
-          {{> afQuickField name='start_date' }}
-        </div>
+        </h1>
+
+        <div class = 'form-group'>
+            <label for="Title" class="col-md-2 control-label">Job Title</label>
+            <div class = 'col-sm-3'>
+              {{> afQuickField name='title' placeholder = 'Title'}}
+            </div>
+          </div>
+
+         <div class = 'form-group'>
+            <label for="start_date" class="col-md-2 control-label">Start Date</label>
+            <div class = 'col-sm-3'>
+              {{> afQuickField name='start_date'}}
+            </div>
+          </div>   
+        
       </fieldset>
 
       <fieldset class = 'form-group'>
@@ -157,7 +186,24 @@
           {{/if}}
       </fieldset>
 
+      <fieldset class = 'form-group'>
 
+      {{> afQuickField name='status' options='allowed' noselect=true}}
+
+      {{#if afFieldValueIs name='status' value= 'Other'}}
+      <div class = 'col-md-4'>
+        {{> afQuickField name= 'other'}}
+      </div>
+      {{/if}}
+      <div class = 'form-group'>
+            <label for="hours" class="col-md-2 control-label">Hours Worked</label>
+            <div class = 'col-sm-1'>
+              {{> afQuickField name='hours' placeholder = 'Hours Worked'}}
+            </div>
+      </div>
+     
+    </fieldset>
+        
         <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter job information">
     {{/autoForm}}
 </template>
@@ -168,9 +214,6 @@
 <template name = 'empStatus'>
   {{#autoForm schema='EmpStatus' id='statusForm'}}
     <fieldset class = 'form-group'>
-      <legend>
-        Employment Status
-      </legend>
 
       {{> afQuickField name='status' options='allowed' noselect=true}}
 
@@ -183,7 +226,7 @@
       {{> afQuickField name='hours' }}
       </div>
     </fieldset>
-    <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter status information">
+    <!--<input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter status information">-->
 
   {{/autoForm}}
 

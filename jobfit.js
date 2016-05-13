@@ -27,3 +27,5 @@ Router.route('occupationView');
 Router.route('tSurvey2View');
 Router.route('tSurvey3View');
 Router.route('tSurvey4View');
+Router.route('jobInfoView');
+Router.route('jobFeeling');
