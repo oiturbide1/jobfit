@@ -8,7 +8,18 @@ Template.pSurvey1.events({
       var td = AutoForm.getFieldValue('td_self','talentsurvey');
       var workload = AutoForm.getFieldValue('workload_self','talentsurvey');
       var cpath = AutoForm.getFieldValue('careerpath_self','talentsurvey');
-      var crit = AutoForm.getFieldValue('promocrit_self','talentsurvey');
+
+
+
+
+
+
+
+
+
+
+
+			var crit = AutoForm.getFieldValue('promocrit_self','talentsurvey');
       var opp = AutoForm.getFieldValue('promo_self','talentsurvey');
       var free = AutoForm.getFieldValue('auton_self','talentsurvey');
       var sal = AutoForm.getFieldValue('salary_self','talentsurvey');
