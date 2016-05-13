@@ -2,13 +2,13 @@ JobInfo = new SimpleSchema({
 	title:
 	{
 		type: String,
-		label: 'Job Title'
+		autoform: {label:false}
 	},
     start_date:
     {
         type: Date,
         optional: true,
-        label: 'Start Date'
+        autoform: {label:false}
     },
     promoted:
     {
@@ -30,7 +30,24 @@ JobInfo = new SimpleSchema({
     {
         type: Date,
         optional: true
-    }   
+    },   
+    status:
+    {
+        type: String,
+        label: 'Status',
+        allowedValues: ['Full Time', 'Part Time', 'Other']
+    },
+    other:
+    {
+        type: String,
+        label: 'Other: Please Explain',
+        optional: true
+    },
+    hours:
+    {
+        type: Number,
+        autoform:{label:false}
+    }
 });
 
 EmpStatus = new SimpleSchema({
