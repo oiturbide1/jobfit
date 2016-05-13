@@ -316,7 +316,7 @@ Template.jobInfo.events({
       Meteor.call('add_job_status', sur, status_info);
       // Clear form
       //console.log(status_info);
-      Router.go('jobFeeling');
+      Router.go('jobFeelingView');
 
 
     }
