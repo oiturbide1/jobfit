@@ -288,20 +288,35 @@ Template.jobInfo.events({
       var title = event.target.title.value;
       var sDate= event.target.start_date.value;
       var promo = event.target.promoted.value;
-
+      console.log(title);
+      console.log(promo);
+      console.log(sDate);
       var promoDates = [p1,p2,p3,p4,p5];
 
 
       var sur = Session.get('Survey');
       var info = [title, sDate, promo, promoDates]
-
+      console.log(sur);
 
       Meteor.call('add_job_info', sur, info);
 
+      var status = event.target.status.value;
+      var hrs= event.target.hours.value;
 
+      if (AutoForm.getFieldValue('other','statusForm'))
+      {
+        var other = event.target.other.value;
+      }
+
+      var sur = Session.get('Survey');
+      var status_info = [status, hrs, other];
+      console.log(status_info);
+
+      //Add job info to survey
+      Meteor.call('add_job_status', sur, status_info);
       // Clear form
-
-
+      //console.log(status_info);
+      Router.go('jobFeeling');
 
 
     }
@@ -325,7 +340,7 @@ Template.empStatus.events({
 
       var sur = Session.get('Survey');
       var status_info = [status, hrs, other];
-
+      console.log(status_info);
 
       //Add job info to survey
       Meteor.call('add_job_status', sur, status_info);
