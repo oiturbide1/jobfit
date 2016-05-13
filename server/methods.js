@@ -90,8 +90,7 @@ Meteor.methods(
       'health_self': survey[13],
       'rewrecog_self': survey[14],
       'workspace_self': survey[15],
-      'poorperfs_self': survey[16],
-      'careless_self': survey[17]
+      'poorperfs_self': survey[16]
 
       });
     return inserted;
