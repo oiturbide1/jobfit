@@ -212,7 +212,7 @@
 
 
 <template name = 'empStatus'>
-  {{#autoForm schema='EmpStatus' id='statusForm'}}
+  {{#autoForm schema='EmpStatus' id='statusForm' }}
     <fieldset class = 'form-group'>
 
       {{> afQuickField name='status' options='allowed' noselect=true}}
@@ -234,12 +234,31 @@
 
 
 
+
+<template name = 'jobFeelingView'>
+  {{> empNav}}
+
+  {{> jobFeelingMain}}
+
+</template>
+
+<template name = 'jobFeelingMain'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+            {{> jobFeeling}}
+
+          </div>
+      </div>
+  </div>
+</template>
+
 <template name = 'jobFeeling'>
-  {{#autoForm schema='Job_Feelings' id='feelingsForm'}}
+  {{#autoForm schema='Job_Feelings' id='feelingsForm' class = 'form-horizontal'}}
     <fieldset>
-      <legend>
+      <h1>
         Feelings toward Job
-      </legend>
+      </h1>
 
       <br>
       {{> afQuickField name='job_satisfaction' }}
