@@ -6,24 +6,18 @@ var empInfo;
 Template.matchAlg.helpers({
 	'matches': function(){
 		var id = "56bf8474e7ebfe1d2cb334fe";
-		console.log(Meteor.userId());
-		/*Meteor.call('findPersonalId', Meteor.user().profile.info.jobExpl, function(e,r){
-			if(e)
-				console.log(e);
-			else
-				var temp2 = Meteor.call('getPersonalSurvey',r,function(err, res){
-					if(err)
-						console.log(err);
-					else{
-						Session.set('surv', res);
-					}
-				});
-		});*/
+		
+
+
+
+
+
+
 		Meteor.call('get_personal_surveys', function(err, my_survs){
 		if(err)
 			console.log(err);
 		else{
-			console.log(my_survs);
+			//console.log(my_survs);
 			var arr_size;
 			arr_size = my_survs.length;
 			if(arr_size <= 0)
@@ -46,11 +40,11 @@ Template.matchAlg.helpers({
 			else{
 				for (var k in result){
 					if (!result.hasOwnProperty(k)) continue;
-					console.log(result[k]);
+					//console.log(result[k]);
 					if(result[k] === null)
 						result[k] = 0;
 				}
-				console.log(result);
+				//console.log(result);
 				Session.set('temp', result);
 			}
 				
@@ -80,6 +74,7 @@ Template.match.helpers({
 	'foundUser': function() {
 		if(Session.get('surv') != null){
 			//console.log(Session.get('temp').length); 
+			
     		return Session.get('temp');	
 		}
 		return null;
