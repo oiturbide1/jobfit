@@ -1,4 +1,4 @@
-Template.talentviewsurvey.events({
+Template.pSurvey1.events({
 	"submit form": function (event, template) {
       // Prevent default browser form submit
       event.preventDefault();
@@ -82,7 +82,7 @@ Template.talentviewsurvey.events({
 
 
 
-      Router.go('/Emp');
+      Router.go('/tSurvey2View');
 
 
 

@@ -24,3 +24,6 @@ Router.route('educationView');
 Router.route('skillsView');
 Router.route('credsView');
 Router.route('occupationView');
+Router.route('tSurvey2View');
+Router.route('tSurvey3View');
+Router.route('tSurvey4View');

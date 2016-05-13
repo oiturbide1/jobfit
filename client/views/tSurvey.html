@@ -31,8 +31,8 @@
           <li><a href="{{pathFor route='contact'}}">Contact</a></li>
           {{#if currentUser}}
             <li><a href="{{pathFor route='profile'}}">Profile</a></li>
-            <li><a href="{{pathFor route='information'}}">About You</a></li>
-            <li class="active"><a href="{{pathFor route='tSurvey'}}">Personal Survey</a></li>
+            <li class="active"><a href="{{pathFor route='information'}}">About You</a></li>
+            <li><a href="{{pathFor route='Emp'}}">About Your Employer</a></li>
             <li><a href="{{pathFor route='Emp'}}">Rate Employer</a></li>
             <li><a href="{{pathFor route='match'}}">Matches</a></li>
           {{/if}}
@@ -63,7 +63,7 @@
               <br>
               <br>
 
-              {{> talentviewsurvey}}
+              {{> pSurvey1}}
 
           </div>
 
@@ -74,9 +74,9 @@
 
 
 
-<template name = 'talentviewsurvey'>
+<template name = 'pSurvey1'>
   <div id = 'gray-container-form'>
-  {{#autoForm schema='PersonalSurveySchema' id='talentsurvey'}}
+  {{#autoForm schema='PersonalSurveySchema' id='talentsurvey1'}}
 
   <fieldset>
     {{> afQuickField name='worklife_self' }}
@@ -94,9 +94,65 @@
     {{> afQuickField name='careerpath_self' }}
       <br>
       <br>
+
+
+
+
+  <input type = "submit" class = 'btn btn-primary btn-lg' value = "Employer Info&raquo;">
+</fieldset>
+{{/autoForm}}
+</div>
+
+</template>
+
+
+<template name = 'tSurvey2View'>
+{{#if currentUser}}
+  {{> tSurveyNav}}
+
+  {{> tSurveyMain2}}
+
+{{else}}
+	{{> tSurveyForbidden}}
+{{/if}}
+
+
+</template>
+
+<template name = 'tSurveyMain2'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+
+          <div class="cover-container">
+
+              <h1>Employer Work Values</h1>
+
+              <p class = 'lead'>
+                Think about the things that you are looking for in an employer and rate how important each of those things is to you.
+              </p>
+
+              <p>Please rate how important each of these things are where 0 = not important at all and 100 = absolutely essential. </p>
+              <br>
+              <br>
+
+              {{> pSurvey2}}
+
+          </div>
+
+      </div>
+
+  </div>
+</template>
+
+
+<template name = 'pSurvey2'>
+  <div id = 'gray-container-form'>
+  {{#autoForm schema='PersonalSurveySchema' id='talentsurvey2'}}
+
+  <fieldset>
     {{> afQuickField name='promocrit_self' }}
-      <br>
-      <br>
+    <br>
+    <br>
     {{> afQuickField name='promo_self' }}
       <br>
       <br>
@@ -106,12 +162,66 @@
     {{> afQuickField name='salary_self' }}
       <br>
       <br>
-    {{> afQuickField name='careless_self' }}
+      {{> afQuickField name='goodsup_self' }}
       <br>
       <br>
-    {{> afQuickField name='goodsup_self' }}
-      <br>
-      <br>
+
+
+
+    <input type = "submit" class = 'btn btn-primary btn-lg' value = "Employer Info&raquo;">
+  </fieldset>
+  {{/autoForm}}
+  </div>
+
+</template>
+
+
+<template name = 'tSurvey3View'>
+{{#if currentUser}}
+  {{> tSurveyNav}}
+
+  {{> tSurveyMain3}}
+
+{{else}}
+	{{> tSurveyForbidden}}
+{{/if}}
+
+
+</template>
+
+<template name = 'tSurveyMain3'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+
+          <div class="cover-container">
+
+              <h1>Employer Work Values</h1>
+
+              <p class = 'lead'>
+                Think about the things that you are looking for in an employer and rate how important each of those things is to you.
+              </p>
+
+              <p>Please rate how important each of these things are where 0 = not important at all and 100 = absolutely essential. </p>
+              <br>
+              <br>
+
+              {{> pSurvey3}}
+
+          </div>
+
+      </div>
+
+  </div>
+</template>
+
+<template name = 'pSurvey3'>
+  <div id = 'gray-container-form'>
+  {{#autoForm schema='PersonalSurveySchema' id='talentsurvey3'}}
+
+  <fieldset>
+
+
+
     {{> afQuickField name='flex_self' }}
       <br>
       <br>
@@ -124,9 +234,66 @@
     {{> afQuickField name='health_self' }}
       <br>
       <br>
-    {{> afQuickField name='rewrecog_self' }}
+      {{> afQuickField name='rewrecog_self' }}
       <br>
       <br>
+
+
+
+    <input type = "submit" class = 'btn btn-primary btn-lg' value = "Employer Info&raquo;">
+    </fieldset>
+    {{/autoForm}}
+    </div>
+
+</template>
+
+
+
+<template name = 'tSurvey4View'>
+{{#if currentUser}}
+  {{> tSurveyNav}}
+
+  {{> tSurveyMain4}}
+
+{{else}}
+	{{> tSurveyForbidden}}
+{{/if}}
+
+
+</template>
+
+<template name = 'tSurveyMain4'>
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+
+          <div class="cover-container">
+
+              <h1>Employer Work Values</h1>
+
+              <p class = 'lead'>
+                Think about the things that you are looking for in an employer and rate how important each of those things is to you.
+              </p>
+
+              <p>Please rate how important each of these things are where 0 = not important at all and 100 = absolutely essential. </p>
+              <br>
+              <br>
+
+              {{> pSurvey4}}
+
+          </div>
+
+      </div>
+
+  </div>
+</template>
+
+
+<template name = 'pSurvey4'>
+  <div id = 'gray-container-form'>
+  {{#autoForm schema='PersonalSurveySchema' id='talentsurvey4'}}
+
+  <fieldset>
+
     {{> afQuickField name='workspace_self' }}
       <br>
       <br>
