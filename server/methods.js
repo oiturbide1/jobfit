@@ -385,12 +385,12 @@ Meteor.methods(
     returnType.rewrecog = pes.rewrecog_self;
     returnType.workspace = pes.workspace_self;
     returnType.poorperfs = pes.poorperfs_self;
-    for (var key in returnType) {
+    /*for (var key in returnType) {
       // skip loop if the property is from prototype
         if (!returnType.hasOwnProperty(key)) continue;
         returnType[key] *= 20;
 
-    }
+    }*/
     return returnType;
   },
   'gather_employers'(){
