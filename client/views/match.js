@@ -99,6 +99,7 @@ Template.result.helpers({
 		});
 		var arr = [];
 		var max;
+		console.log(last_list);
 		if(last_list.length > 20)
 			max = 20;
 		else
@@ -160,15 +161,17 @@ function getRank(user, emp){
 		var matchAvg = 0;
 
 		matchAvg += Math.abs(user.worklife - emp.worklife);
-
+	
 		matchAvg += Math.abs(user.td - emp.td);
 		matchAvg += Math.abs(user.workload - emp.workload);
 		matchAvg += Math.abs(user.careerpath - emp.careerpath);
 		matchAvg += Math.abs(user.promocrit - emp.promocrit);
-		matchAvg += Math.abs(user.promo - emp.promo);
+		//matchAvg += Math.abs(user.promo - emp.promo);
+		//console.log(matchAvg);
 		matchAvg += Math.abs(user.auton - emp.auton);
 		matchAvg += Math.abs(user.salary - emp.salary);
 		matchAvg += Math.abs(user.goodsup - emp.goodsup);
+		
 		matchAvg += Math.abs(user.flex - emp.flex);			
 		matchAvg += Math.abs(user.mission - emp.mission);		
 		matchAvg += Math.abs(user.health - emp.health);
@@ -177,7 +180,7 @@ function getRank(user, emp){
 		matchAvg += Math.abs(user.poorperfs - emp.poorperfs);
 		
 		
-		matchAvg = matchAvg / 15;
+		matchAvg = matchAvg / 14;
 		rank.emp = emp;
 		rank.rank = 100 - matchAvg.toFixed(2);
 		return rank;
