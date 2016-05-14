@@ -1,5 +1,6 @@
 <template name = 'Emp'>
   {{> empNav}}
+  {{> empInnerNav}}
 
   {{> empMain}}
 
@@ -38,6 +39,21 @@
     </div>
   </nav>
 
+</template>
+
+
+<template name = 'empInnerNav'>
+    <div class="navbar-right">
+    <div class="navbar-inner">
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="{{pathFor route='Emp'}}" class = 'fa fa-angle-double-right btn btn-primary btn-lg info'>Employer Information</a></li>
+      <li><a href="{{pathFor route='educationView'}}" class = 'fa fa-angle-double-right btn btn-primary btn-lg info'>Employer Work Values</a></li>
+      <li><a href="{{pathFor route='credsView'}}" class = 'fa fa-angle-double-right btn btn-primary btn-lg info'>Your job details</a></li>
+      <li><a href="{{pathFor route='occupationView'}}" class = 'fa fa-angle-double-right btn btn-primary btn-lg info'>Occupation</a></li>
+
+    </ul>
+  </div>
+</div>
 </template>
 
 
@@ -285,6 +301,67 @@
       <br>
       <br>
       <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter job satisfaction">
+    </fieldset>
+  {{/autoForm}}
+
+</template>
+
+
+<template name = 'occupationView'>
+  {{> empNav}}
+  {{> empInnerNav}}
+
+  {{> occupationMain}}
+
+
+</template>
+
+<template name = 'occupationMain'>
+
+  <div id = 'gray-container'>
+    <div class="site-wrapper">
+          <div class="cover-container">
+
+            {{> occupationInfo}}
+
+          </div>
+    </div>
+
+  </div>
+
+</template>
+
+
+<template name = 'occupationInfo'>
+  {{#autoForm schema='UserOccupation' id='occupationForm' class = 'form-horizontal'}}
+    <fieldset>
+      <h1>
+        Occupation
+      </h1>
+
+      <div class = 'form-group'>
+        <label for="occupation" class="col-md-3 control-label">Occupation</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='occupation'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="jobLevel" class="col-md-3 control-label">Job Level</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='jobLevel'}}
+        </div>
+      </div>
+
+      <div class = 'form-group'>
+        <label for="industry" class="col-md-3 control-label">Job industry</label>
+        <div class = 'col-sm-3'>
+          {{> afQuickField name='industry'}}
+        </div>
+      </div>
+
+      <br>
+      <input type = "submit" class = 'btn btn-primary btn-lg' value = "Enter occupation">
     </fieldset>
   {{/autoForm}}
 

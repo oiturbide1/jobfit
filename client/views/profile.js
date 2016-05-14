@@ -4,7 +4,9 @@ Template.profileMain.helpers({
   },
 
   join_date: function(){
-    var user_date = Meteor.user().profile.timeStamp;;
+    var user_date = Meteor.user().profile.timeStamp;
+
+    user_date = moment(user_date).fromNow();
 
     return user_date;
   },

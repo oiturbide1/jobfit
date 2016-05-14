@@ -62,7 +62,7 @@ Template.talentRegistration.onRendered(function(){
                             Meteor.call('addUserRole', userId, usertype)
 
 
-                            Router.go("/overview");
+                            Router.go("/profile");
 
                         }
 

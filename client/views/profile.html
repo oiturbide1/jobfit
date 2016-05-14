@@ -55,7 +55,23 @@
 							<h1>{{email}}'s Profile</h1>
 							<img src="img/ShakingHands2.jpg" class="center-block img-thumbnail" alt="Profile Pic" width=20% height=20%>
 
-							<p class = 'lead'>Joined on {{join_date}}</p>
+							<p class = 'lead'>Joined {{join_date}} </p>
+
+							<div id ="overview-container">
+
+									<h2>Overview</h2>
+
+									<p class = 'lead'>Are you ready to get started?</p>
+									<p class = 'lead'>Complete at your own pace</p>
+
+									<p><a class="btn btn-primary btn-lg" href="{{pathFor route='information'}}" role="button">Enter your information</a></p>
+									{{#if talent}}
+										<p><a class="btn btn-primary btn-lg" href="{{pathFor route='tSurvey'}}" role="button">Complete the personal survey</a></p>
+									{{/if}}
+									<p><a class="btn btn-primary btn-lg" href="{{pathFor route='Emp'}}" role="button">Complete the employer survey</a></p>
+									<p><a class="btn btn-primary btn-lg" href="{{pathFor route='match'}}" role="button">Find your matches!</a></p>
+
+							</div>
 
 
               {{#if emp_rate_check}}
@@ -79,7 +95,7 @@
 
 
 							<p><a class="btn btn-primary btn-lg" href="{{pathFor route='changePassword'}}" role="button">Change Password</a></p>
-              <p><a class="btn btn-primary btn-lg" href="#" id = 'test' role="button">test</a></p>
+
 
 					</div>
 
